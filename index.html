@@ -621,84 +621,154 @@
   <!-- ═══ PROJECTS ══════════════════════════════════════════════════════ -->
   <section class="projects section" id="projects" data-premium-section>
     <div class="container">
-        <div class="projects-header">
-          <div class="skill-category-content">
-            <div class="section-label reveal" data-i18n="projects.label"></div>
+      <header class="case-study-intro">
+        <div class="section-label reveal" data-i18n="projects.label"></div>
+        <div class="case-study-intro-grid">
+          <div>
             <h2 class="section-title reveal reveal-delay-1" data-i18n="projects.title"></h2>
+            <p class="case-study-lead reveal reveal-delay-2" data-i18n="projects.intro"></p>
           </div>
-          <p class="section-subtitle reveal reveal-delay-2 scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="projects.subtitle"></p>
+          <ul class="case-study-meta reveal reveal-delay-2" data-i18n-aria-label="projects.meta.label">
+            <li data-i18n="projects.meta.storefront"></li>
+            <li data-i18n="projects.meta.role"></li>
+            <li data-i18n="projects.meta.languages"></li>
+            <li data-i18n="projects.meta.status"></li>
+          </ul>
+        </div>
+      </header>
+
+      <article class="case-study-overview case-study-surface reveal">
+        <div class="case-study-overview-copy">
+          <div class="case-study-ownership" data-i18n="projects.ownership"></div>
+          <section class="case-study-summary">
+            <h3 data-i18n="projects.context.title"></h3>
+            <p data-i18n="projects.context.copy"></p>
+          </section>
+          <section class="case-study-summary">
+            <h3 data-i18n="projects.challenge.title"></h3>
+            <p data-i18n="projects.challenge.copy"></p>
+          </section>
+          <section class="case-study-summary">
+            <h3 data-i18n="projects.role.title"></h3>
+            <p data-i18n="projects.role.copy"></p>
+          </section>
         </div>
 
-        <div class="projects-grid">
-
-          <!-- Featured Project -->
-          <div class="project-card featured reveal">
-            <div class="project-visual">
-              <div class="project-visual-inner pv-luminary">
-                <div class="project-showcase project-showcase-mystaroptic">
-                  <div class="project-showcase-desktop">
-                    <div class="project-device-laptop-shell project-device-laptop-shell--real">
-                      <div class="device device-macbook-pro device-spacegray project-device-real project-device-real-desktop">
-                        <div class="device-frame">
-                          <img class="device-screen" src="assets/pc.webp" alt="" aria-hidden="true" width="2934" height="1750" loading="lazy" decoding="async" />
-                        </div>
-                        <div class="device-stripe"></div>
-                        <div class="device-header"></div>
-                        <div class="device-sensors"></div>
-                        <div class="device-btns"></div>
-                        <div class="device-power"></div>
-                        <div class="device-home"></div>
-                      </div>
-                      <div class="project-showcase-caption project-showcase-caption-desktop" aria-hidden="true">
-                        <span class="project-showcase-caption-kicker" data-i18n="projects.p1.visualDesktopKicker"></span>
-                        <span class="project-showcase-caption-title" data-i18n="projects.p1.visualDesktop"></span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="project-showcase-mobile">
-                    <div class="project-device-phone-shell project-device-phone-shell--real">
-                      <div class="device device-iphone-14-pro device-black project-device-real project-device-real-mobile">
-                        <div class="device-frame">
-                          <img class="device-screen" src="assets/mobile.webp" alt="" aria-hidden="true" width="850" height="1576" loading="lazy" decoding="async" />
-                        </div>
-                        <div class="device-stripe"></div>
-                        <div class="device-header"></div>
-                        <div class="device-sensors"></div>
-                        <div class="device-btns"></div>
-                        <div class="device-power"></div>
-                        <div class="device-home"></div>
-                      </div>
-                      <div class="project-showcase-caption project-showcase-caption-mobile" aria-hidden="true">
-                        <span class="project-showcase-caption-kicker" data-i18n="projects.p1.visualMobileKicker"></span>
-                        <span class="project-showcase-caption-title" data-i18n="projects.p1.visualMobile"></span>
-                      </div>
-                    </div>
-                  </div>
+        <figure class="case-study-primary-visual">
+          <div class="case-study-device-stage">
+            <div class="case-study-laptop-shell">
+              <div class="device device-macbook-pro device-spacegray case-study-laptop-device">
+                <div class="device-frame">
+                  <img class="device-screen" src="assets/mystar-home.avif" alt="" data-i18n-alt="projects.visual.home.alt" width="1440" height="820" decoding="async" />
                 </div>
+                <div class="device-stripe" aria-hidden="true"></div>
+                <div class="device-header" aria-hidden="true"></div>
+                <div class="device-sensors" aria-hidden="true"></div>
+                <div class="device-btns" aria-hidden="true"></div>
+                <div class="device-power" aria-hidden="true"></div>
+                <div class="device-home" aria-hidden="true"></div>
               </div>
-              <div class="project-visual-overlay"></div>
             </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-type" data-i18n="projects.p1.type"></span>
-                <span class="project-year">2025</span>
-              </div>
-              <h3 class="project-name" data-i18n="projects.p1.name"></h3>
-              <p class="project-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="projects.p1.desc"></p>
-              <div class="project-tech" data-i18n="projects.p1.tech"></div>
-              <div class="project-actions">
-                <a href="https://mystaroptic.com" target="_blank" rel="noreferrer" class="project-btn project-btn-primary">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  <span data-i18n="common.visitWebsite"></span>
-                </a>
+            <div class="case-study-phone-shell">
+              <div class="device device-iphone-14-pro device-black case-study-phone-device">
+                <div class="device-frame">
+                  <img class="device-screen" src="assets/mystar-mobile.avif" alt="" data-i18n-alt="projects.visual.mobile.alt" width="390" height="760" loading="lazy" decoding="async" />
+                </div>
+                <div class="device-stripe" aria-hidden="true"></div>
+                <div class="device-header" aria-hidden="true"></div>
+                <div class="device-sensors" aria-hidden="true"></div>
+                <div class="device-btns" aria-hidden="true"></div>
+                <div class="device-power" aria-hidden="true"></div>
+                <div class="device-home" aria-hidden="true"></div>
               </div>
             </div>
           </div>
+          <figcaption data-i18n="projects.visual.home.caption"></figcaption>
+        </figure>
+      </article>
 
-        </div>
+      <div class="case-study-highlights" role="list" data-i18n-aria-label="projects.highlights.label">
+        <article class="case-study-highlight case-study-surface reveal" role="listitem">
+          <span class="case-study-number">01</span>
+          <h3 data-i18n="projects.highlight1.title"></h3>
+          <p data-i18n="projects.highlight1.copy"></p>
+        </article>
+        <article class="case-study-highlight case-study-surface reveal reveal-delay-1" role="listitem">
+          <span class="case-study-number">02</span>
+          <h3 data-i18n="projects.highlight2.title"></h3>
+          <p data-i18n="projects.highlight2.copy"></p>
+        </article>
+        <article class="case-study-highlight case-study-surface reveal reveal-delay-2" role="listitem">
+          <span class="case-study-number">03</span>
+          <h3 data-i18n="projects.highlight3.title"></h3>
+          <p data-i18n="projects.highlight3.copy"></p>
+        </article>
       </div>
-    </section>
+
+      <article class="case-study-prescription case-study-surface reveal">
+        <div class="case-study-prescription-copy">
+          <div class="case-study-kicker" data-i18n="projects.prescription.label"></div>
+          <h3 data-i18n="projects.prescription.title"></h3>
+          <p data-i18n="projects.prescription.copy"></p>
+          <ul class="case-study-contributions" data-i18n-aria-label="projects.prescription.contributions.label">
+            <li data-i18n="projects.prescription.contribution1"></li>
+            <li data-i18n="projects.prescription.contribution2"></li>
+            <li data-i18n="projects.prescription.contribution3"></li>
+            <li data-i18n="projects.prescription.contribution4"></li>
+          </ul>
+        </div>
+        <figure class="case-study-prescription-visual">
+          <img src="assets/mystar-prescription.avif" alt="" data-i18n-alt="projects.visual.prescription.alt" width="1360" height="900" loading="lazy" decoding="async" />
+          <figcaption data-i18n="projects.visual.prescription.caption"></figcaption>
+        </figure>
+      </article>
+
+      <section class="case-study-proof" aria-labelledby="case-study-proof-title">
+        <div class="case-study-proof-heading reveal">
+          <div class="case-study-kicker" data-i18n="projects.proof.label"></div>
+          <h3 id="case-study-proof-title" data-i18n="projects.proof.title"></h3>
+        </div>
+        <div class="case-study-proof-grid">
+          <figure class="case-study-proof-card case-study-proof-card-collection case-study-surface reveal">
+            <img src="assets/mystar-collection.avif" alt="" data-i18n-alt="projects.visual.collection.alt" width="1360" height="650" loading="lazy" decoding="async" />
+            <figcaption data-i18n="projects.visual.collection.caption"></figcaption>
+          </figure>
+          <figure class="case-study-proof-card case-study-proof-card-product case-study-surface reveal reveal-delay-1">
+            <img src="assets/mystar-product.avif" alt="" data-i18n-alt="projects.visual.product.alt" width="1360" height="818" loading="lazy" decoding="async" />
+            <figcaption data-i18n="projects.visual.product.caption"></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-study-outcomes case-study-surface reveal" aria-labelledby="case-study-outcomes-title">
+        <div class="case-study-outcomes-heading">
+          <div class="case-study-kicker" data-i18n="projects.outcomes.label"></div>
+          <h3 id="case-study-outcomes-title" data-i18n="projects.outcomes.title"></h3>
+        </div>
+        <ul class="case-study-outcome-grid">
+          <li data-i18n="projects.outcome1"></li>
+          <li data-i18n="projects.outcome2"></li>
+          <li data-i18n="projects.outcome3"></li>
+          <li data-i18n="projects.outcome4"></li>
+        </ul>
+        <div class="case-study-outcomes-footer">
+          <ul class="case-study-capabilities" data-i18n-aria-label="projects.capabilities.label">
+            <li data-i18n="projects.capability1"></li>
+            <li data-i18n="projects.capability2"></li>
+            <li data-i18n="projects.capability3"></li>
+            <li data-i18n="projects.capability4"></li>
+            <li data-i18n="projects.capability5"></li>
+            <li data-i18n="projects.capability6"></li>
+            <li data-i18n="projects.capability7"></li>
+          </ul>
+          <a href="https://mystaroptic.com" target="_blank" rel="noreferrer" class="project-btn project-btn-primary case-study-cta">
+            <span data-i18n="projects.cta"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </section>
+    </div>
+  </section>
 
   <div class="divider" aria-hidden="true"></div>
 

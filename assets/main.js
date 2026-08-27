@@ -1168,6 +1168,14 @@
         }
       });
 
+      document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt');
+        const value = translateKey(lang, key);
+        if (value) {
+          el.setAttribute('alt', value);
+        }
+      });
+
       document.querySelectorAll('[data-i18n-content]').forEach(el => {
         const key = el.getAttribute('data-i18n-content');
         const value = translateKey(lang, key);
