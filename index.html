@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en" class="performance-mode">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <meta name="description" content="" data-i18n-content="meta.description" />
+  <link rel="stylesheet" href="assets/devices.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <!-- ═══ NAV ══════════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo">
+        <div class="nav-logo-mark">ER</div>
+        <span class="nav-logo-text">Kristina Glišović</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about" data-i18n="nav.about"></a>
+        <a href="#skills" data-i18n="nav.skills"></a>
+        <a href="#projects" data-i18n="nav.projects"></a>
+        <a href="#experience" data-i18n="nav.process"></a>
+        <a href="#contact" data-i18n="nav.contact"></a>
+      </nav>
+      <div class="nav-right">
+        <div class="nav-controls">
+          <button class="theme-toggle" id="theme-toggle" aria-label="" data-i18n-aria-label="ui.themeToggle">
+            <svg class="theme-icon theme-icon-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme-icon theme-icon-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <div class="lang-toggle" id="lang-toggle">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="sr">SR</button>
+          </div>
+        </div>
+        <a href="#contact" class="nav-cta" data-i18n="nav.cta"></a>
+        <button class="nav-hamburger" id="hamburger" aria-label="" data-i18n-aria-label="ui.menu" aria-controls="nav-mobile" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+    <div class="nav-mobile-panel">
+      <div class="nav-mobile-links">
+        <a href="#about" class="nav-mobile-link" data-i18n="nav.about"></a>
+        <a href="#skills" class="nav-mobile-link" data-i18n="nav.skills"></a>
+        <a href="#projects" class="nav-mobile-link" data-i18n="nav.projects"></a>
+        <a href="#experience" class="nav-mobile-link" data-i18n="nav.process"></a>
+        <a href="#contact" class="nav-mobile-link" data-i18n="nav.contact"></a>
+      </div>
+      <div class="nav-mobile-footer">
+        <a href="#contact" class="nav-mobile-cta" data-i18n="nav.cta"></a>
+        <div class="nav-mobile-controls">
+          <button class="theme-toggle-mobile" id="theme-toggle-mobile" aria-label="" data-i18n-aria-label="ui.themeToggle">
+            <svg class="theme-icon theme-icon-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme-icon theme-icon-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <div class="lang-toggle-mobile">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="sr">SR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-grid"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span data-i18n="hero.badge"></span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="gradient-text">Kristina Glišović</span>
+        </h1>
+        <p class="hero-title" data-i18n="hero.title"></p>
+        <p class="hero-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="hero.desc" data-i18n-fixed-lines="true"></p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">
+            <span data-i18n="hero.cta1"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span data-i18n="hero.cta2"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">6+</div>
+            <div class="hero-stat-label" data-i18n="hero.stat1.label"></div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">50+</div>
+            <div class="hero-stat-label" data-i18n="hero.stat2.label"></div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">100%</div>
+            <div class="hero-stat-label" data-i18n="hero.stat3.label"></div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <span class="scroll-indicator-text" data-i18n="ui.scroll"></span>
+          <span class="scroll-indicator-mouse" aria-hidden="true">
+            <span class="scroll-indicator-wheel"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ ABOUT ═════════════════════════════════════════════════════════ -->
+  <section class="about section" id="about" data-premium-section>
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-image-wrap reveal">
+          <div class="about-avatar">
+            <div class="about-avatar-inner">
+              <div class="about-avatar-aura" aria-hidden="true"></div>
+              <img
+                src="assets/face.webp"
+                alt="Portrait of Kristina Glisovic"
+                class="about-avatar-photo"
+                loading="lazy"
+                decoding="async"
+                width="1400"
+                height="1600"
+              />
+            </div>
+          </div>
+          <div class="about-avatar-decoration"></div>
+          <div class="about-avatar-decoration-2"></div>
+          <div class="about-floating-badge">
+            <div class="about-floating-badge-icon">✦</div>
+            <div class="about-floating-badge-text">
+              <strong data-i18n="about.badge.title"></strong>
+              <span data-i18n="about.badge.subtitle"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <div class="section-label reveal" data-i18n="about.label"></div>
+          <h2 class="section-title reveal reveal-delay-1">
+            <span data-i18n="about.title.line1"></span><br />
+            <span class="gradient-text" data-i18n="about.title.line2"></span>
+          </h2>
+          <p class="about-text-block reveal reveal-delay-2 scroll-line-reveal" data-i18n-lines="about.text1" data-i18n-fixed-lines="true"></p>
+          <p class="about-text-block reveal reveal-delay-3 scroll-line-reveal" data-i18n-lines="about.text2" data-i18n-fixed-lines="true"></p>
+
+          <div class="about-highlights">
+            <div class="about-highlight reveal reveal-delay-2">
+              <span class="about-highlight-icon">⚡</span>
+              <div class="skill-category-content">
+                <strong data-i18n="about.highlight1.title"></strong>
+                <span data-i18n="about.highlight1.desc"></span>
+              </div>
+            </div>
+            <div class="about-highlight reveal reveal-delay-3">
+              <span class="about-highlight-icon">🎨</span>
+              <div class="skill-category-content">
+                <strong data-i18n="about.highlight2.title"></strong>
+                <span data-i18n="about.highlight2.desc"></span>
+              </div>
+            </div>
+            <div class="about-highlight reveal reveal-delay-4">
+              <span class="about-highlight-icon">🛠</span>
+              <div class="skill-category-content">
+                <strong data-i18n="about.highlight3.title"></strong>
+                <span data-i18n="about.highlight3.desc"></span>
+              </div>
+            </div>
+            <div class="about-highlight reveal reveal-delay-5">
+              <span class="about-highlight-icon">🌐</span>
+              <div class="skill-category-content">
+                <strong data-i18n="about.highlight4.title"></strong>
+                <span data-i18n="about.highlight4.desc"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ SKILLS ════════════════════════════════════════════════════════ -->
+  <section class="skills section" id="skills" data-premium-section>
+    <div class="container">
+      <div class="skills-header">
+        <div class="section-label reveal" data-i18n="skills.label"></div>
+        <h2 class="section-title reveal reveal-delay-1" data-i18n="skills.title"></h2>
+        <p class="section-subtitle reveal reveal-delay-2 scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="skills.subtitle"></p>
+      </div>
+
+      <div class="skills-categories">
+
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-category-info">
+            <div class="skill-category-header">
+              <div class="skill-category-icon violet">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="skill-category-content">
+                <div class="skill-category-name" data-i18n="skills.cat1.name"></div>
+                <div class="skill-category-desc" data-i18n="skills.cat1.desc"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-chips" data-i18n="skills.cat1.chips"></div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-category-info">
+            <div class="skill-category-header">
+              <div class="skill-category-icon cyan">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </div>
+              <div class="skill-category-content">
+                <div class="skill-category-name" data-i18n="skills.cat2.name"></div>
+                <div class="skill-category-desc" data-i18n="skills.cat2.desc"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-chips" data-i18n="skills.cat2.chips"></div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <div class="skill-category-info">
+            <div class="skill-category-header">
+              <div class="skill-category-icon purple">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+              </div>
+              <div class="skill-category-content">
+                <div class="skill-category-name" data-i18n="skills.cat3.name"></div>
+                <div class="skill-category-desc" data-i18n="skills.cat3.desc"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-chips" data-i18n="skills.cat3.chips"></div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-4">
+          <div class="skill-category-info">
+            <div class="skill-category-header">
+              <div class="skill-category-icon pink">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <div class="skill-category-content">
+                <div class="skill-category-name" data-i18n="skills.cat4.name"></div>
+                <div class="skill-category-desc" data-i18n="skills.cat4.desc"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-chips" data-i18n="skills.cat4.chips"></div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-5">
+          <div class="skill-category-info">
+            <div class="skill-category-header">
+              <div class="skill-category-icon orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              </div>
+              <div class="skill-category-content">
+                <div class="skill-category-name" data-i18n="skills.cat5.name"></div>
+                <div class="skill-category-desc" data-i18n="skills.cat5.desc"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-chips" data-i18n="skills.cat5.chips"></div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-6">
+          <div class="skill-category-info">
+            <div class="skill-category-header">
+              <div class="skill-category-icon emerald">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15 15 0 0 1 0 20"/>
+                <path d="M12 2a15 15 0 0 0 0 20"/>
+              </svg>
+            </div>
+            <div class="skill-category-content">
+              <div class="skill-category-name" data-i18n="skills.cat6.name"></div>
+              <div class="skill-category-desc" data-i18n="skills.cat6.desc"></div>
+            </div>
+          </div>
+          </div>
+          <div class="skill-chips" data-i18n="skills.cat6.chips"></div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-7">
+          <div class="skill-category-info">
+            <div class="skill-category-header">
+              <div class="skill-category-icon amber">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+              </div>
+              <div class="skill-category-content">
+                <div class="skill-category-name" data-i18n="skills.cat7.name"></div>
+                <div class="skill-category-desc" data-i18n="skills.cat7.desc"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-chips" data-i18n="skills.cat7.chips"></div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-8">
+          <div class="skill-category-info">
+            <div class="skill-category-header">
+            <div class="skill-category-icon indigo">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <div class="skill-category-content">
+              <div class="skill-category-name" data-i18n="skills.cat8.name"></div>
+              <div class="skill-category-desc" data-i18n="skills.cat8.desc"></div>
+            </div>
+          </div>
+          </div>
+          <div class="skill-chips" data-i18n="skills.cat8.chips"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ JOB EXPERIENCE ═══════════════════════════════════════════════ -->
+  <section class="job-experience section" id="job-experience" data-premium-section>
+    <div class="container">
+      <div class="job-experience-grid">
+
+        <div class="job-experience-copy">
+          <div class="section-label reveal" data-i18n="jobs.label"></div>
+          <h2 class="section-title reveal reveal-delay-1">
+            <span data-i18n="jobs.title.line1"></span><br />
+            <span class="gradient-text" data-i18n="jobs.title.line2"></span>
+          </h2>
+          <p class="section-subtitle reveal reveal-delay-2 scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="jobs.subtitle"></p>
+
+          <div class="job-experience-panel reveal reveal-delay-3">
+            <div class="job-experience-panel-label" data-i18n="jobs.panelLabel"></div>
+            <div class="job-experience-panel-list">
+              <div class="job-experience-panel-item">
+                <span class="job-experience-panel-dot"></span>
+                <span class="scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="jobs.panelItem1"></span>
+              </div>
+              <div class="job-experience-panel-item">
+                <span class="job-experience-panel-dot"></span>
+                <span class="scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="jobs.panelItem2"></span>
+              </div>
+              <div class="job-experience-panel-item">
+                <span class="job-experience-panel-dot"></span>
+                <span class="scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="jobs.panelItem3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="job-timeline">
+          <article class="job-card reveal">
+            <div class="job-card-header">
+              <div class="job-company">
+                <div class="job-brand-mark" aria-label="" data-i18n-aria-label="jobs.logoPlaceholder">
+                  <img src="https://www.codersy.com/favicon/favicon-32x32.png" alt="Codersy logo" loading="lazy" />
+                </div>
+                <div>
+                  <div class="job-company-name" data-i18n="jobs.card1.company"></div>
+                  <div class="job-role" data-i18n="jobs.card1.role"></div>
+                </div>
+              </div>
+              <div class="job-period-wrap">
+                <span class="job-current-badge" data-i18n="jobs.current"></span>
+                <span class="job-period" data-i18n="jobs.card1.period"></span>
+              </div>
+            </div>
+            <p class="job-summary scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="jobs.card1.summary"></p>
+            <div class="job-meta">
+              <span class="job-meta-pill" data-i18n="jobs.card1.meta1"></span>
+              <span class="job-meta-pill" data-i18n="jobs.card1.meta2"></span>
+              <span class="job-meta-pill" data-i18n="jobs.card1.meta3"></span>
+            </div>
+          </article>
+
+          <article class="job-card reveal reveal-delay-1">
+            <div class="job-card-header">
+              <div class="job-company">
+                <div class="job-brand-mark job-brand-mark--nelt" aria-label="" data-i18n-aria-label="jobs.logoPlaceholder">
+                  <img src="assets/logo-nelt.jpg" alt="Nelt logo" width="226" height="223" loading="lazy" decoding="async" />
+                </div>
+                <div>
+                  <div class="job-company-name" data-i18n="jobs.card2.company"></div>
+                  <div class="job-role" data-i18n="jobs.card2.role"></div>
+                </div>
+              </div>
+              <div class="job-period-wrap">
+                <span class="job-period" data-i18n="jobs.card2.period"></span>
+              </div>
+            </div>
+            <p class="job-summary scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="jobs.card2.summary"></p>
+            <div class="job-meta">
+              <span class="job-meta-pill" data-i18n="jobs.card2.meta1"></span>
+              <span class="job-meta-pill" data-i18n="jobs.card2.meta2"></span>
+              <span class="job-meta-pill" data-i18n="jobs.card2.meta3"></span>
+            </div>
+          </article>
+
+          <article class="job-card reveal reveal-delay-2">
+            <div class="job-card-header">
+              <div class="job-company">
+                <div class="job-brand-mark job-brand-mark--bvk" aria-label="" data-i18n-aria-label="jobs.logoPlaceholder">
+                  <img src="assets/logo-bvk.jpg" alt="BVK logo" width="900" height="900" loading="lazy" decoding="async" />
+                </div>
+                <div>
+                  <div class="job-company-name" data-i18n="jobs.card3.company"></div>
+                  <div class="job-role" data-i18n="jobs.card3.role"></div>
+                </div>
+              </div>
+              <div class="job-period-wrap">
+                <span class="job-period" data-i18n="jobs.card3.period"></span>
+              </div>
+            </div>
+            <p class="job-summary scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="jobs.card3.summary"></p>
+            <div class="job-meta">
+              <span class="job-meta-pill" data-i18n="jobs.card3.meta1"></span>
+              <span class="job-meta-pill" data-i18n="jobs.card3.meta2"></span>
+              <span class="job-meta-pill" data-i18n="jobs.card3.meta3"></span>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ EDUCATION ═════════════════════════════════════════════════════ -->
+  <section class="education section" id="education" data-premium-section>
+    <div class="container">
+      <div class="education-shell">
+        <div class="education-intro">
+          <div class="section-label reveal" data-i18n="education.label"></div>
+          <h2 class="section-title reveal reveal-delay-1">
+            <span data-i18n="education.title.line1"></span><br />
+            <span class="gradient-text" data-i18n="education.title.line2"></span>
+          </h2>
+          <p class="section-subtitle reveal reveal-delay-2 scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="education.subtitle"></p>
+
+          <div class="education-panel reveal reveal-delay-3">
+            <div class="education-panel-label" data-i18n="education.panelLabel"></div>
+            <div class="education-panel-list">
+              <div class="education-panel-item">
+                <span class="education-panel-dot"></span>
+                <span class="scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="education.panelItem1"></span>
+              </div>
+              <div class="education-panel-item">
+                <span class="education-panel-dot"></span>
+                <span class="scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="education.panelItem2"></span>
+              </div>
+              <div class="education-panel-item">
+                <span class="education-panel-dot"></span>
+                <span class="scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="education.panelItem3"></span>
+              </div>
+              <div class="education-panel-item">
+                <span class="education-panel-dot"></span>
+                <span class="scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="education.panelItem4"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-cards">
+          <article class="education-card education-card-featured reveal">
+            <div class="education-card-top">
+              <div class="education-card-brand education-card-brand-its">
+                <img src="assets/education-its-logo.svg" alt="" aria-hidden="true" width="350" height="120" loading="lazy" decoding="async" />
+              </div>
+              <div class="education-card-awards">
+                <div class="education-card-award" data-i18n="education.card1.award1"></div>
+                <div class="education-card-award education-card-award-secondary" data-i18n="education.card1.award2"></div>
+                <div class="education-card-award education-card-award-tertiary" data-i18n="education.card1.award3"></div>
+              </div>
+            </div>
+            <div class="education-card-eyebrow" data-i18n="education.card1.eyebrow"></div>
+            <h3 class="education-card-title" data-i18n="education.card1.title"></h3>
+            <p class="education-card-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="education.card1.desc"></p>
+            <div class="education-card-meta">
+              <span class="education-card-pill" data-i18n="education.card1.meta1"></span>
+              <span class="education-card-pill" data-i18n="education.card1.meta2"></span>
+              <span class="education-card-pill" data-i18n="education.card1.meta3"></span>
+            </div>
+          </article>
+
+          <article class="education-card reveal reveal-delay-1">
+            <div class="education-card-top">
+              <div class="education-card-brand education-card-brand-ict">
+                <img src="assets/education-ict-logo.png" alt="" aria-hidden="true" width="70" height="80" loading="lazy" decoding="async" />
+              </div>
+              <div class="education-card-eyebrow" data-i18n="education.card2.eyebrow"></div>
+            </div>
+            <h3 class="education-card-title" data-i18n="education.card2.title"></h3>
+            <p class="education-card-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="education.card2.desc"></p>
+            <div class="education-card-meta">
+              <span class="education-card-pill" data-i18n="education.card2.meta1"></span>
+              <span class="education-card-pill" data-i18n="education.card2.meta2"></span>
+              <span class="education-card-pill" data-i18n="education.card2.meta3"></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ CERTIFICATES ══════════════════════════════════════════════════ -->
+  <section class="certificates section" id="certificates" data-premium-section>
+    <div class="container">
+      <div class="certificates-header">
+        <div class="section-label reveal" data-i18n="certs.label"></div>
+        <h2 class="section-title reveal reveal-delay-1">
+          <span data-i18n="certs.title.line1"></span><br />
+          <span class="gradient-text" data-i18n="certs.title.line2"></span>
+        </h2>
+        <p class="section-subtitle reveal reveal-delay-2 scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="certs.subtitle"></p>
+      </div>
+
+      <div class="certificates-grid">
+        <article class="certificate-card reveal">
+          <div class="certificate-card-preview">
+            <div class="certificate-card-preview-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="14" rx="2"></rect>
+                <path d="M7 8h10"></path>
+                <path d="M7 12h7"></path>
+                <path d="m9 18-2 3"></path>
+                <path d="m15 18 2 3"></path>
+              </svg>
+              <span class="certificate-card-preview-badge" data-i18n="certs.card1.preview"></span>
+            </div>
+          </div>
+          <div class="certificate-card-body">
+            <div class="certificate-card-badge" data-i18n="certs.card1.badge"></div>
+            <h3 class="certificate-card-title" data-i18n="certs.card1.title"></h3>
+            <p class="certificate-card-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="certs.card1.desc"></p>
+            <div class="certificate-card-meta">
+              <span class="certificate-card-pill" data-i18n="certs.card1.meta1"></span>
+              <span class="certificate-card-pill" data-i18n="certs.card1.meta2"></span>
+              <span class="certificate-card-pill" data-i18n="certs.card1.meta3"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal reveal-delay-1">
+          <div class="certificate-card-preview">
+            <div class="certificate-card-preview-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 7h16"></path>
+                <rect x="4" y="5" width="16" height="14" rx="2"></rect>
+                <path d="m9 11 2 2 4-4"></path>
+              </svg>
+              <span class="certificate-card-preview-badge" data-i18n="certs.card2.preview"></span>
+            </div>
+          </div>
+          <div class="certificate-card-body">
+            <div class="certificate-card-badge" data-i18n="certs.card2.badge"></div>
+            <h3 class="certificate-card-title" data-i18n="certs.card2.title"></h3>
+            <p class="certificate-card-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="certs.card2.desc"></p>
+            <div class="certificate-card-meta">
+              <span class="certificate-card-pill" data-i18n="certs.card2.meta1"></span>
+              <span class="certificate-card-pill" data-i18n="certs.card2.meta2"></span>
+              <span class="certificate-card-pill" data-i18n="certs.card2.meta3"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal reveal-delay-2">
+          <div class="certificate-card-preview">
+            <div class="certificate-card-preview-inner">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="9" r="3"></circle>
+                <path d="M19 21H5l2.5-6h9z"></path>
+              </svg>
+              <span class="certificate-card-preview-badge" data-i18n="certs.card3.preview"></span>
+            </div>
+          </div>
+          <div class="certificate-card-body">
+            <div class="certificate-card-badge" data-i18n="certs.card3.badge"></div>
+            <h3 class="certificate-card-title" data-i18n="certs.card3.title"></h3>
+            <p class="certificate-card-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="certs.card3.desc"></p>
+            <div class="certificate-card-meta">
+              <span class="certificate-card-pill" data-i18n="certs.card3.meta1"></span>
+              <span class="certificate-card-pill" data-i18n="certs.card3.meta2"></span>
+              <span class="certificate-card-pill" data-i18n="certs.card3.meta3"></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ PROJECTS ══════════════════════════════════════════════════════ -->
+  <section class="projects section" id="projects" data-premium-section>
+    <div class="container">
+        <div class="projects-header">
+          <div class="skill-category-content">
+            <div class="section-label reveal" data-i18n="projects.label"></div>
+            <h2 class="section-title reveal reveal-delay-1" data-i18n="projects.title"></h2>
+          </div>
+          <p class="section-subtitle reveal reveal-delay-2 scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="projects.subtitle"></p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Featured Project -->
+          <div class="project-card featured reveal">
+            <div class="project-visual">
+              <div class="project-visual-inner pv-luminary">
+                <div class="project-showcase project-showcase-mystaroptic">
+                  <div class="project-showcase-desktop">
+                    <div class="project-device-laptop-shell project-device-laptop-shell--real">
+                      <div class="device device-macbook-pro device-spacegray project-device-real project-device-real-desktop">
+                        <div class="device-frame">
+                          <img class="device-screen" src="assets/pc.webp" alt="" aria-hidden="true" width="2934" height="1750" loading="lazy" decoding="async" />
+                        </div>
+                        <div class="device-stripe"></div>
+                        <div class="device-header"></div>
+                        <div class="device-sensors"></div>
+                        <div class="device-btns"></div>
+                        <div class="device-power"></div>
+                        <div class="device-home"></div>
+                      </div>
+                      <div class="project-showcase-caption project-showcase-caption-desktop" aria-hidden="true">
+                        <span class="project-showcase-caption-kicker" data-i18n="projects.p1.visualDesktopKicker"></span>
+                        <span class="project-showcase-caption-title" data-i18n="projects.p1.visualDesktop"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-showcase-mobile">
+                    <div class="project-device-phone-shell project-device-phone-shell--real">
+                      <div class="device device-iphone-14-pro device-black project-device-real project-device-real-mobile">
+                        <div class="device-frame">
+                          <img class="device-screen" src="assets/mobile.webp" alt="" aria-hidden="true" width="850" height="1576" loading="lazy" decoding="async" />
+                        </div>
+                        <div class="device-stripe"></div>
+                        <div class="device-header"></div>
+                        <div class="device-sensors"></div>
+                        <div class="device-btns"></div>
+                        <div class="device-power"></div>
+                        <div class="device-home"></div>
+                      </div>
+                      <div class="project-showcase-caption project-showcase-caption-mobile" aria-hidden="true">
+                        <span class="project-showcase-caption-kicker" data-i18n="projects.p1.visualMobileKicker"></span>
+                        <span class="project-showcase-caption-title" data-i18n="projects.p1.visualMobile"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-visual-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-type" data-i18n="projects.p1.type"></span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-name" data-i18n="projects.p1.name"></h3>
+              <p class="project-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="projects.p1.desc"></p>
+              <div class="project-tech" data-i18n="projects.p1.tech"></div>
+              <div class="project-actions">
+                <a href="https://mystaroptic.com" target="_blank" rel="noreferrer" class="project-btn project-btn-primary">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span data-i18n="common.visitWebsite"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ EXPERIENCE / PROCESS ══════════════════════════════════════════ -->
+  <section class="experience section" id="experience" data-premium-section>
+    <div class="container">
+      <div class="experience-grid">
+
+        <div class="experience-left">
+          <div class="section-label reveal" data-i18n="process.label"></div>
+          <h2 class="section-title reveal reveal-delay-1">
+            <span data-i18n="process.title.line1"></span><br />
+            <span class="gradient-text" data-i18n="process.title.line2"></span>
+          </h2>
+          <p class="experience-text-block reveal reveal-delay-2 scroll-line-reveal" data-i18n-lines="process.text1" data-i18n-fixed-lines="true"></p>
+          <p class="experience-text-block reveal reveal-delay-3 scroll-line-reveal" data-i18n-lines="process.text2" data-i18n-fixed-lines="true"></p>
+          <div class="service-badges reveal reveal-delay-4">
+            <span class="service-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span data-i18n="process.badge1"></span>
+            </span>
+            <span class="service-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path><path d="M8 11h6"></path><path d="M11 8v6"></path></svg>
+              <span data-i18n="process.badge2"></span>
+            </span>
+            <span class="service-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12l-1 7H7L6 2z"></path><path d="M7 9v11a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9"></path><path d="M9 13h6"></path></svg>
+              <span data-i18n="process.badge3"></span>
+            </span>
+            <span class="service-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4.5a4 4 0 0 0-5.66 0L4.5 10.34a4 4 0 0 0 5.66 5.66L12 14.16"></path><path d="M8 19.5a4 4 0 0 0 5.66 0l5.84-5.84a4 4 0 0 0-5.66-5.66L12 9.84"></path></svg>
+              <span data-i18n="process.badge4"></span>
+            </span>
+            <span class="service-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M14 7h7v7"></path></svg>
+              <span data-i18n="process.badge5"></span>
+            </span>
+            <span class="service-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+              <span data-i18n="process.badge6"></span>
+            </span>
+          </div>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <div class="process-step-number">01</div>
+            <div class="process-step-content">
+              <div class="process-step-title" data-i18n="process.step1.title"></div>
+              <div class="process-step-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="process.step1.desc"></div>
+            </div>
+          </div>
+          <div class="process-step reveal reveal-delay-1">
+            <div class="process-step-number">02</div>
+            <div class="process-step-content">
+              <div class="process-step-title" data-i18n="process.step2.title"></div>
+              <div class="process-step-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="process.step2.desc"></div>
+            </div>
+          </div>
+          <div class="process-step reveal reveal-delay-2">
+            <div class="process-step-number">03</div>
+            <div class="process-step-content">
+              <div class="process-step-title" data-i18n="process.step3.title"></div>
+              <div class="process-step-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="process.step3.desc"></div>
+            </div>
+          </div>
+          <div class="process-step reveal reveal-delay-3">
+            <div class="process-step-number">04</div>
+            <div class="process-step-content">
+              <div class="process-step-title" data-i18n="process.step4.title"></div>
+              <div class="process-step-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="process.step4.desc"></div>
+            </div>
+          </div>
+          <div class="process-step reveal reveal-delay-4">
+            <div class="process-step-number">05</div>
+            <div class="process-step-content">
+              <div class="process-step-title" data-i18n="process.step5.title"></div>
+              <div class="process-step-desc scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="process.step5.desc"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ TESTIMONIALS ══════════════════════════════════════════════════ -->
+  <section class="testimonials section" id="testimonials" data-premium-section>
+    <div class="container">
+      <div class="testimonials-shell">
+        <div class="testimonials-header">
+          <div>
+            <div class="section-label reveal" data-i18n="testimonials.label"></div>
+            <h2 class="section-title reveal reveal-delay-1">
+              <span data-i18n="testimonials.title.line1"></span><br />
+              <span class="gradient-text" data-i18n="testimonials.title.line2"></span>
+            </h2>
+          </div>
+          <p class="section-subtitle reveal reveal-delay-2 scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="testimonials.subtitle"></p>
+        </div>
+
+        <div class="testimonials-slider reveal reveal-delay-3" id="testimonials-slider" aria-roledescription="carousel">
+          <div class="testimonials-slider-head">
+            <div class="testimonial-slider-status">
+              <span class="testimonial-slider-status-label" data-i18n="testimonials.slider.label"></span>
+              <div class="testimonial-slider-counter">
+                <span id="testimonial-current">01</span>
+                <span class="testimonial-slider-counter-divider">/</span>
+                <span id="testimonial-total">03</span>
+              </div>
+            </div>
+            <div class="testimonial-slider-controls">
+              <button type="button" class="testimonial-slider-btn" id="testimonial-prev" aria-label="" data-i18n-aria-label="testimonials.slider.prev">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+              </button>
+              <button type="button" class="testimonial-slider-btn" id="testimonial-next" aria-label="" data-i18n-aria-label="testimonials.slider.next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="testimonial-slider-viewport">
+            <div class="testimonial-slider-track" id="testimonial-track">
+              <article class="testimonial-slide" data-slide-index="0">
+                <div class="testimonial-slide-layout">
+                  <div class="testimonial-slide-copy">
+                    <div class="testimonial-quote-mark">“</div>
+                    <p class="testimonial-quote scroll-line-reveal" data-i18n-lines="testimonials.card1.quote"></p>
+                  </div>
+                  <div class="testimonial-person">
+                    <div class="testimonial-person-badge" data-i18n="testimonials.card1.badge"></div>
+                    <div class="testimonial-person-name" data-i18n="testimonials.card1.name"></div>
+                    <div class="testimonial-person-role" data-i18n="testimonials.card1.role"></div>
+                    <div class="testimonial-person-company" data-i18n="testimonials.card1.company"></div>
+                    <p class="testimonial-person-note scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="testimonials.card1.note"></p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="testimonial-slide" data-slide-index="1">
+                <div class="testimonial-slide-layout">
+                  <div class="testimonial-slide-copy">
+                    <div class="testimonial-quote-mark">“</div>
+                    <p class="testimonial-quote scroll-line-reveal" data-i18n-lines="testimonials.card2.quote"></p>
+                  </div>
+                  <div class="testimonial-person">
+                    <div class="testimonial-person-badge" data-i18n="testimonials.card2.badge"></div>
+                    <div class="testimonial-person-name" data-i18n="testimonials.card2.name"></div>
+                    <div class="testimonial-person-role" data-i18n="testimonials.card2.role"></div>
+                    <div class="testimonial-person-company" data-i18n="testimonials.card2.company"></div>
+                    <p class="testimonial-person-note scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="testimonials.card2.note"></p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="testimonial-slide" data-slide-index="2">
+                <div class="testimonial-slide-layout">
+                  <div class="testimonial-slide-copy">
+                    <div class="testimonial-quote-mark">“</div>
+                    <p class="testimonial-quote scroll-line-reveal" data-i18n-lines="testimonials.card3.quote"></p>
+                  </div>
+                  <div class="testimonial-person">
+                    <div class="testimonial-person-badge" data-i18n="testimonials.card3.badge"></div>
+                    <div class="testimonial-person-name" data-i18n="testimonials.card3.name"></div>
+                    <div class="testimonial-person-role" data-i18n="testimonials.card3.role"></div>
+                    <div class="testimonial-person-company" data-i18n="testimonials.card3.company"></div>
+                    <p class="testimonial-person-note scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="testimonials.card3.note"></p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="testimonial-slider-dots" id="testimonial-dots" aria-label="" data-i18n-aria-label="testimonials.slider.pagination">
+            <button type="button" class="testimonial-dot active" data-slide-to="0" aria-label="" data-i18n-aria-label="testimonials.slider.go1"></button>
+            <button type="button" class="testimonial-dot" data-slide-to="1" aria-label="" data-i18n-aria-label="testimonials.slider.go2"></button>
+            <button type="button" class="testimonial-dot" data-slide-to="2" aria-label="" data-i18n-aria-label="testimonials.slider.go3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ QUALITY GUARANTEE ════════════════════════════════════════════ -->
+  <section class="guarantee section" id="guarantee" data-premium-section>
+    <div class="container">
+      <div class="guarantee-card">
+        <div class="guarantee-header">
+          <div class="section-label reveal" data-i18n="guarantee.label"></div>
+          <div class="guarantee-badge reveal reveal-delay-1" data-i18n="guarantee.badge"></div>
+        </div>
+
+        <h2 class="section-title reveal reveal-delay-2">
+          <span data-i18n="guarantee.title.line1"></span><br />
+          <span class="gradient-text" data-i18n="guarantee.title.line2"></span>
+        </h2>
+
+        <div class="guarantee-copy">
+          <p class="guarantee-text reveal reveal-delay-3" data-i18n="guarantee.text1"></p>
+          <p class="guarantee-text reveal reveal-delay-4" data-i18n="guarantee.text2"></p>
+          <p class="guarantee-text reveal reveal-delay-5" data-i18n="guarantee.text3"></p>
+        </div>
+
+        <div class="guarantee-signoff reveal reveal-delay-6">
+          <div class="guarantee-signature-frame">
+            <svg class="guarantee-signature-svg" viewBox="0 0 199 163" aria-hidden="true" focusable="false">
+              <path class="guarantee-signature-path guarantee-signature-path-ghost" d="M0 0 C0.99 0.495 0.99 0.495 2 1 C1.95374599 13.92799601 -0.17685624 30.35371248 -6 42 C-5.10095947 41.88930176 -4.20191895 41.77860352 -3.27563477 41.66455078 C27.12425986 37.9441689 27.12425986 37.9441689 42.125 36.75 C43.11685303 36.67023926 44.10870605 36.59047852 45.13061523 36.50830078 C50.43715806 36.1097002 55.67881984 35.92487746 61 36 C60.65109117 38.76936941 60.21032978 39.81277095 58.09277344 41.69775391 C57.27325195 42.24351074 56.45373047 42.78926758 55.609375 43.3515625 C54.70251953 43.95645508 53.79566406 44.56134766 52.86132812 45.18457031 C48.38540508 48.02441364 43.8394646 50.72345367 39.25 53.375 C32.95748577 57.04677306 26.71193084 60.7456056 20.625 64.75 C15.85538459 67.85963007 11.0211598 70.7701354 6.0625 73.5625 C5.06718262 74.1335144 5.06718262 74.1335144 4.05175781 74.71606445 C0.71778776 76.60064086 -2.58101456 78.28327476 -6.13671875 79.7109375 C-12.19742008 82.26331256 -16.54268 84.21973614 -19.26953125 90.50390625 C-20.87058241 94.92970026 -22.01252235 99.40159663 -23 104 C-22.4750293 104.16943115 -21.95005859 104.3388623 -21.40917969 104.51342773 C-15.28416975 106.51922813 -9.27011375 108.76382802 -3.25 111.0625 C10.72520618 116.35772342 24.85139502 121.19244212 39 126 C38.67 126.66 38.34 127.32 38 128 C28.22137852 125.84694268 18.85863088 122.71048289 9.40869141 119.43920898 C6.87467876 118.56238884 4.33798827 117.69369981 1.80078125 116.82617188 C-5.63512892 114.2731803 -13.04023263 111.71980467 -20.28076172 108.64428711 C-22.00613567 107.88302686 -22.00613567 107.88302686 -24 108 C-25.27341024 111.79080602 -26.54324676 115.58280029 -27.8125 119.375 C-28.16892578 120.43589844 -28.52535156 121.49679688 -28.89257812 122.58984375 C-29.24384766 123.64042969 -29.59511719 124.69101563 -29.95703125 125.7734375 C-30.48224365 127.33529785 -30.48224365 127.33529785 -31.01806641 128.92871094 C-32.20258957 132.63365906 -33.18547971 136.3785769 -34.1003418 140.15869141 C-35 142 -35 142 -37.09301758 142.76708984 C-37.72232178 142.8439502 -38.35162598 142.92081055 -39 143 C-39.32685791 142.39115967 -39.65371582 141.78231934 -39.99047852 141.1550293 C-53.95605041 115.19581345 -66.66175795 96.15665192 -93.8125 83 C-94.77889404 82.53078125 -95.74528809 82.0615625 -96.7409668 81.578125 C-101.79021583 79.21773016 -106.52837712 77.39579376 -112.03393555 76.45703125 C-114.23806747 75.94465885 -116.01763956 75.07720718 -118 74 C-116.8120632 70.30419661 -114.68803489 68.92738648 -111.37573242 67.11083984 C-106.08767726 64.63826241 -100.49185801 62.95425694 -94.9375 61.1875 C-94.26104431 60.97034332 -93.58458862 60.75318665 -92.88763428 60.52944946 C-78.11729091 55.81035952 -63.16707728 52.22399001 -48 49 C-46.84081055 48.74847168 -45.68162109 48.49694336 -44.48730469 48.23779297 C-32.69468095 45.68971396 -21.10483272 43.23819886 -9 43 C-8.97421875 42.44957031 -8.9484375 41.89914063 -8.921875 41.33203125 C-8.46311938 34.60709095 -7.36976151 28.05306878 -6.125 21.4375 C-5.88281738 20.12712769 -5.88281738 20.12712769 -5.63574219 18.7902832 C-2.49098711 2.49098711 -2.49098711 2.49098711 0 0 Z M32.94140625 40.09375 C31.79711655 40.20473022 30.65282684 40.31571045 29.47386169 40.43005371 C25.8364268 40.78356011 22.19946687 41.14171368 18.5625 41.5 C16.08922266 41.7411927 13.61591565 41.9820815 11.14257812 42.22265625 C5.09470414 42.8115845 -0.9527871 43.40432398 -7 44 C-8.12253753 48.4653574 -9.24350239 52.93110559 -10.36303711 57.3972168 C-10.74379396 58.91522787 -11.12497387 60.4331329 -11.5065918 61.95092773 C-12.05630025 64.13757767 -12.60446622 66.32460945 -13.15234375 68.51171875 C-13.3221727 69.18587326 -13.49200165 69.86002777 -13.66697693 70.55461121 C-14.53398877 74.02224952 -15.33535849 77.48773884 -16 81 C4.08720898 75.21216012 22.22615154 61.27415755 38.8515625 49.0078125 C42.58476399 46.2578855 46.42967093 43.70760779 50.32568359 41.19482422 C51.15447021 40.60338623 51.15447021 40.60338623 52 40 C52 39.67 52 39.34 52 39 C45.59194791 38.84049653 39.31425368 39.46087383 32.94140625 40.09375 Z M-19.66796875 45.734375 C-20.55057373 45.89365479 -21.43317871 46.05293457 -22.3425293 46.21704102 C-26.30408343 46.95917374 -30.26516945 47.70272979 -34.22265625 48.46630859 C-35.88795974 48.78631153 -37.55432671 49.10095273 -39.22265625 49.40478516 C-54.36327358 52.17142927 -68.94297879 57.22998805 -83.56471252 61.93867493 C-87.19511368 63.10698988 -90.82880575 64.26222202 -94.47167969 65.39111328 C-95.55562515 65.72708275 -95.55562515 65.72708275 -96.66146851 66.06983948 C-98.02567667 66.49152084 -99.39040875 66.91151269 -100.75576782 67.32945251 C-104.24077824 68.40670022 -107.63501707 69.59103873 -111 71 C-111 71.99 -111 72.98 -111 74 C-110.030625 74.268125 -109.06125 74.53625 -108.0625 74.8125 C-92.21001797 79.37116186 -78.44925069 86.09951649 -66 97 C-65.48453613 97.44827148 -64.96907227 97.89654297 -64.43798828 98.35839844 C-52.97925897 108.5287833 -45.42242283 121.19179092 -39 135 C-38.3370191 136.33516986 -37.67145849 137.66907336 -37 139 C-34.91358554 135.87037831 -33.98030784 133.22554583 -32.8359375 129.65234375 C-32.43632813 128.40775391 -32.03671875 127.16316406 -31.625 125.88085938 C-31.42003906 125.2339917 -31.21507813 124.58712402 -31.00390625 123.9206543 C-30.3755838 121.93934093 -29.73915296 119.96076978 -29.1015625 117.98242188 C-26.9331166 112.10463638 -26.9331166 112.10463638 -26 106 C-30.62 103.69 -35.24 101.38 -40 99 C-40 97.68 -40 96.36 -40 95 C-37.63716995 93.26545428 -35.41968837 91.85042154 -32.875 90.4375 C-31.87726563 89.85838867 -31.87726563 89.85838867 -30.859375 89.26757812 C-27.81365299 87.51479497 -25.03724988 86.01312362 -21.70703125 84.83984375 C-17.43936454 81.93930837 -16.98620821 77.97489076 -15.8125 73.125 C-15.5654834 72.18277588 -15.3184668 71.24055176 -15.06396484 70.26977539 C-14.35039151 67.51886778 -13.67089826 64.76158046 -13 62 C-12.65271671 60.62099977 -12.30510815 59.24208138 -11.95703125 57.86328125 C-10.87981359 53.4279766 -10 49.57876232 -10 45 C-13.32867031 44.93081371 -16.39418091 45.13858817 -19.66796875 45.734375 Z M-21 86 C-23.84032202 87.61301141 -26.67093916 89.24233055 -29.5 90.875 C-30.31082031 91.33519531 -31.12164062 91.79539062 -31.95703125 92.26953125 C-32.72402344 92.71425781 -33.49101563 93.15898438 -34.28125 93.6171875 C-35.34956055 94.22989502 -35.34956055 94.22989502 -36.43945312 94.85498047 C-36.95443359 95.23283691 -37.46941406 95.61069336 -38 96 C-38 96.66 -38 97.32 -38 98 C-33.71 99.65 -29.42 101.3 -25 103 C-24.13670227 100.54453034 -23.28410564 98.08621957 -22.4375 95.625 C-22.0672168 94.57699219 -22.0672168 94.57699219 -21.68945312 93.5078125 C-21.06908951 91.69040925 -20.52893476 89.84608603 -20 88 C-20.33 87.34 -20.66 86.68 -21 86 Z" transform="translate(128,10)"></path>
+              <path class="guarantee-signature-path guarantee-signature-path-fill" d="M0 0 C0.99 0.495 0.99 0.495 2 1 C1.95374599 13.92799601 -0.17685624 30.35371248 -6 42 C-5.10095947 41.88930176 -4.20191895 41.77860352 -3.27563477 41.66455078 C27.12425986 37.9441689 27.12425986 37.9441689 42.125 36.75 C43.11685303 36.67023926 44.10870605 36.59047852 45.13061523 36.50830078 C50.43715806 36.1097002 55.67881984 35.92487746 61 36 C60.65109117 38.76936941 60.21032978 39.81277095 58.09277344 41.69775391 C57.27325195 42.24351074 56.45373047 42.78926758 55.609375 43.3515625 C54.70251953 43.95645508 53.79566406 44.56134766 52.86132812 45.18457031 C48.38540508 48.02441364 43.8394646 50.72345367 39.25 53.375 C32.95748577 57.04677306 26.71193084 60.7456056 20.625 64.75 C15.85538459 67.85963007 11.0211598 70.7701354 6.0625 73.5625 C5.06718262 74.1335144 5.06718262 74.1335144 4.05175781 74.71606445 C0.71778776 76.60064086 -2.58101456 78.28327476 -6.13671875 79.7109375 C-12.19742008 82.26331256 -16.54268 84.21973614 -19.26953125 90.50390625 C-20.87058241 94.92970026 -22.01252235 99.40159663 -23 104 C-22.4750293 104.16943115 -21.95005859 104.3388623 -21.40917969 104.51342773 C-15.28416975 106.51922813 -9.27011375 108.76382802 -3.25 111.0625 C10.72520618 116.35772342 24.85139502 121.19244212 39 126 C38.67 126.66 38.34 127.32 38 128 C28.22137852 125.84694268 18.85863088 122.71048289 9.40869141 119.43920898 C6.87467876 118.56238884 4.33798827 117.69369981 1.80078125 116.82617188 C-5.63512892 114.2731803 -13.04023263 111.71980467 -20.28076172 108.64428711 C-22.00613567 107.88302686 -22.00613567 107.88302686 -24 108 C-25.27341024 111.79080602 -26.54324676 115.58280029 -27.8125 119.375 C-28.16892578 120.43589844 -28.52535156 121.49679688 -28.89257812 122.58984375 C-29.24384766 123.64042969 -29.59511719 124.69101563 -29.95703125 125.7734375 C-30.48224365 127.33529785 -30.48224365 127.33529785 -31.01806641 128.92871094 C-32.20258957 132.63365906 -33.18547971 136.3785769 -34.1003418 140.15869141 C-35 142 -35 142 -37.09301758 142.76708984 C-37.72232178 142.8439502 -38.35162598 142.92081055 -39 143 C-39.32685791 142.39115967 -39.65371582 141.78231934 -39.99047852 141.1550293 C-53.95605041 115.19581345 -66.66175795 96.15665192 -93.8125 83 C-94.77889404 82.53078125 -95.74528809 82.0615625 -96.7409668 81.578125 C-101.79021583 79.21773016 -106.52837712 77.39579376 -112.03393555 76.45703125 C-114.23806747 75.94465885 -116.01763956 75.07720718 -118 74 C-116.8120632 70.30419661 -114.68803489 68.92738648 -111.37573242 67.11083984 C-106.08767726 64.63826241 -100.49185801 62.95425694 -94.9375 61.1875 C-94.26104431 60.97034332 -93.58458862 60.75318665 -92.88763428 60.52944946 C-78.11729091 55.81035952 -63.16707728 52.22399001 -48 49 C-46.84081055 48.74847168 -45.68162109 48.49694336 -44.48730469 48.23779297 C-32.69468095 45.68971396 -21.10483272 43.23819886 -9 43 C-8.97421875 42.44957031 -8.9484375 41.89914063 -8.921875 41.33203125 C-8.46311938 34.60709095 -7.36976151 28.05306878 -6.125 21.4375 C-5.88281738 20.12712769 -5.88281738 20.12712769 -5.63574219 18.7902832 C-2.49098711 2.49098711 -2.49098711 2.49098711 0 0 Z M32.94140625 40.09375 C31.79711655 40.20473022 30.65282684 40.31571045 29.47386169 40.43005371 C25.8364268 40.78356011 22.19946687 41.14171368 18.5625 41.5 C16.08922266 41.7411927 13.61591565 41.9820815 11.14257812 42.22265625 C5.09470414 42.8115845 -0.9527871 43.40432398 -7 44 C-8.12253753 48.4653574 -9.24350239 52.93110559 -10.36303711 57.3972168 C-10.74379396 58.91522787 -11.12497387 60.4331329 -11.5065918 61.95092773 C-12.05630025 64.13757767 -12.60446622 66.32460945 -13.15234375 68.51171875 C-13.3221727 69.18587326 -13.49200165 69.86002777 -13.66697693 70.55461121 C-14.53398877 74.02224952 -15.33535849 77.48773884 -16 81 C4.08720898 75.21216012 22.22615154 61.27415755 38.8515625 49.0078125 C42.58476399 46.2578855 46.42967093 43.70760779 50.32568359 41.19482422 C51.15447021 40.60338623 51.15447021 40.60338623 52 40 C52 39.67 52 39.34 52 39 C45.59194791 38.84049653 39.31425368 39.46087383 32.94140625 40.09375 Z M-19.66796875 45.734375 C-20.55057373 45.89365479 -21.43317871 46.05293457 -22.3425293 46.21704102 C-26.30408343 46.95917374 -30.26516945 47.70272979 -34.22265625 48.46630859 C-35.88795974 48.78631153 -37.55432671 49.10095273 -39.22265625 49.40478516 C-54.36327358 52.17142927 -68.94297879 57.22998805 -83.56471252 61.93867493 C-87.19511368 63.10698988 -90.82880575 64.26222202 -94.47167969 65.39111328 C-95.55562515 65.72708275 -95.55562515 65.72708275 -96.66146851 66.06983948 C-98.02567667 66.49152084 -99.39040875 66.91151269 -100.75576782 67.32945251 C-104.24077824 68.40670022 -107.63501707 69.59103873 -111 71 C-111 71.99 -111 72.98 -111 74 C-110.030625 74.268125 -109.06125 74.53625 -108.0625 74.8125 C-92.21001797 79.37116186 -78.44925069 86.09951649 -66 97 C-65.48453613 97.44827148 -64.96907227 97.89654297 -64.43798828 98.35839844 C-52.97925897 108.5287833 -45.42242283 121.19179092 -39 135 C-38.3370191 136.33516986 -37.67145849 137.66907336 -37 139 C-34.91358554 135.87037831 -33.98030784 133.22554583 -32.8359375 129.65234375 C-32.43632813 128.40775391 -32.03671875 127.16316406 -31.625 125.88085938 C-31.42003906 125.2339917 -31.21507813 124.58712402 -31.00390625 123.9206543 C-30.3755838 121.93934093 -29.73915296 119.96076978 -29.1015625 117.98242188 C-26.9331166 112.10463638 -26.9331166 112.10463638 -26 106 C-30.62 103.69 -35.24 101.38 -40 99 C-40 97.68 -40 96.36 -40 95 C-37.63716995 93.26545428 -35.41968837 91.85042154 -32.875 90.4375 C-31.87726563 89.85838867 -31.87726563 89.85838867 -30.859375 89.26757812 C-27.81365299 87.51479497 -25.03724988 86.01312362 -21.70703125 84.83984375 C-17.43936454 81.93930837 -16.98620821 77.97489076 -15.8125 73.125 C-15.5654834 72.18277588 -15.3184668 71.24055176 -15.06396484 70.26977539 C-14.35039151 67.51886778 -13.67089826 64.76158046 -13 62 C-12.65271671 60.62099977 -12.30510815 59.24208138 -11.95703125 57.86328125 C-10.87981359 53.4279766 -10 49.57876232 -10 45 C-13.32867031 44.93081371 -16.39418091 45.13858817 -19.66796875 45.734375 Z M-21 86 C-23.84032202 87.61301141 -26.67093916 89.24233055 -29.5 90.875 C-30.31082031 91.33519531 -31.12164062 91.79539062 -31.95703125 92.26953125 C-32.72402344 92.71425781 -33.49101563 93.15898438 -34.28125 93.6171875 C-35.34956055 94.22989502 -35.34956055 94.22989502 -36.43945312 94.85498047 C-36.95443359 95.23283691 -37.46941406 95.61069336 -38 96 C-38 96.66 -38 97.32 -38 98 C-33.71 99.65 -29.42 101.3 -25 103 C-24.13670227 100.54453034 -23.28410564 98.08621957 -22.4375 95.625 C-22.0672168 94.57699219 -22.0672168 94.57699219 -21.68945312 93.5078125 C-21.06908951 91.69040925 -20.52893476 89.84608603 -20 88 C-20.33 87.34 -20.66 86.68 -21 86 Z" transform="translate(128,10)"></path>
+              <g class="guarantee-signature-tip" aria-hidden="true">
+                <circle class="guarantee-signature-tip-glow" r="4.8"></circle>
+                <circle class="guarantee-signature-tip-core" r="1.7"></circle>
+                <animateMotion class="guarantee-signature-tip-motion" dur="2.85s" begin="indefinite" rotate="auto" fill="freeze" keyTimes="0;0.16;0.58;0.82;1" keySplines=".25 .1 .25 1;.33 0 .14 1;.28 .1 .22 1;.2 .75 .28 1" calcMode="spline">
+                  <mpath href="#guarantee-signature-motion-path"></mpath>
+                </animateMotion>
+              </g>
+            </svg>
+          </div>
+          <div class="guarantee-signoff-meta">
+            <div class="guarantee-name">Kristina Glišović</div>
+            <div class="guarantee-role" data-i18n="guarantee.role"></div>
+            <div class="guarantee-signature-note" data-i18n="guarantee.signatureNote"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══ CONTACT ═══════════════════════════════════════════════════════ -->
+  <section class="contact section" id="contact" data-premium-section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="skill-category-content">
+          <div class="section-label reveal" data-i18n="contact.label"></div>
+          <h2 class="section-title reveal reveal-delay-1">
+            <span data-i18n="contact.title.line1"></span><br />
+            <span class="gradient-text" data-i18n="contact.title.line2"></span>
+          </h2>
+          <p class="section-subtitle reveal reveal-delay-2 scroll-line-reveal scroll-line-reveal-soft" data-i18n-lines="contact.subtitle"></p>
+          <a href="mailto:hello@kristinaglisovic.dev" class="contact-email-link reveal reveal-delay-3">
+            hello@kristinaglisovic.dev
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <div class="contact-socials reveal reveal-delay-4">
+            <a href="#" class="contact-social" aria-label="" data-i18n-aria-label="ui.social.github">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="#" class="contact-social" aria-label="" data-i18n-aria-label="ui.social.linkedin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="contact-social" aria-label="" data-i18n-aria-label="ui.social.twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="mailto:hello@kristinaglisovic.dev" class="contact-social" aria-label="" data-i18n-aria-label="ui.social.email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal reveal-delay-1" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name" data-i18n="contact.form.name.label"></label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="" data-i18n-placeholder="contact.form.name.placeholder" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email" data-i18n="contact.form.email.label"></label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="" data-i18n-placeholder="contact.form.email.placeholder" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject" data-i18n="contact.form.subject.label"></label>
+            <input class="form-input" type="text" id="subject" name="subject" placeholder="" data-i18n-placeholder="contact.form.subject.placeholder" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message" data-i18n="contact.form.message.label"></label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="" data-i18n-placeholder="contact.form.message.placeholder" required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="form-submit">
+            <span data-i18n="contact.form.submit.default"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">
+        &copy; 2026 <a href="#">Kristina Glišović</a><span data-i18n="footer.copy.suffix"></span>
+      </p>
+      <nav class="footer-links">
+        <a href="#home" data-i18n="footer.home"></a>
+        <a href="#about" data-i18n="nav.about"></a>
+        <a href="#projects" data-i18n="footer.work"></a>
+        <a href="#contact" data-i18n="nav.contact"></a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════════════════════════════════ -->
+  <script src="assets/main.js"></script>
+
+</body>
+</html>

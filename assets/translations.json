@@ -1,0 +1,1010 @@
+{
+  "en": {
+    "meta.title": "Kristina Glišović - Frontend & Shopify Developer",
+    "meta.description": "Premium frontend and Shopify developer crafting high-performance digital experiences with precision and elegance.",
+    "nav.about": "About",
+    "nav.skills": "Skills",
+    "nav.projects": "Projects",
+    "nav.services": "Services",
+    "nav.process": "Process",
+    "nav.contact": "Contact",
+    "nav.cta": "Let's Talk",
+
+    "hero.badge": "Available for new projects",
+    "hero.title": "<span class='hero-title-role'>Software Engineer</span><span class='hero-title-copy'>building <strong>high-performance</strong>,</span><span class='hero-title-copy hero-title-copy-secondary'>digital experiences.</span>",
+    "hero.desc": "I help brands and businesses build <strong>fast, scalable and visually refined</strong> digital platforms. Combining <strong>software development, Shopify expertise, SEO optimization and visual branding</strong>, I create websites and eCommerce experiences <strong>designed to perform</strong>. From <strong>custom Shopify storefronts</strong> to complex web applications - every detail is built with <strong>performance, clarity and long-term scalability</strong> in mind.",
+    "hero.desc.lines": [
+      "I help brands and businesses build",
+      "<strong>fast, scalable and visually refined</strong>",
+      "digital platforms and storefronts.",
+      "From <strong>Shopify expertise</strong> to <strong>technical SEO</strong>,",
+      "every detail is <strong>designed to perform</strong>."
+    ],
+    "hero.cta1": "View My Work",
+    "hero.cta2": "Get in Touch",
+    "hero.stat1.label": "Years of experience",
+    "hero.stat2.label": "Projects delivered",
+    "hero.stat3.label": "Client satisfaction",
+
+    "ui.scroll": "Scroll",
+    "ui.menu": "Open menu",
+    "ui.themeToggle": "Toggle theme",
+    "ui.social.github": "GitHub",
+    "ui.social.linkedin": "LinkedIn",
+    "ui.social.twitter": "Twitter",
+    "ui.social.email": "Email",
+
+    "about.badge.title": "Open to Opportunities",
+    "about.badge.subtitle": "Freelance & Full-time",
+    "about.label": "About Me",
+    "about.title.line1": "Building with craft",
+    "about.title.line2": "and conviction.",
+    "about.text1": "I'm a <strong>Software Engineer with 6+ years of experience</strong> building <strong>high-performance digital products</strong> - from <strong>custom Shopify storefronts</strong> and modern web platforms to enterprise applications built with ASP.NET, C# and Blazor. My work sits at the intersection of engineering, performance optimization and digital presence. I focus on building platforms that are not only technically solid, but also <strong>fast, SEO-optimized and visually refined</strong>.",
+    "about.text2": "Today I primarily help brands and businesses with <strong>Shopify development, web platforms, technical SEO and digital branding</strong>, creating products <strong>designed to perform and scale</strong>.",
+    "about.text1.lines": [
+      "I'm a <strong>Software Engineer with 6+ years</strong>",
+      "of experience building <strong>high-performance</strong>",
+      "<strong>digital products</strong>, from Shopify storefronts",
+      "and modern web platforms to enterprise",
+      "applications in ASP.NET, C# and Blazor."
+    ],
+    "about.text2.lines": [
+      "Today I help brands through <strong>Shopify development</strong>,",
+      "<strong>web platforms, technical SEO and branding</strong>,",
+      "creating products <strong>designed to perform and scale</strong>."
+    ],
+    "about.highlight1.title": "Performance obsessed",
+    "about.highlight1.desc": "Every product is built for speed, efficiency and smooth UX, with Core Web Vitals and fast load times in focus.",
+    "about.highlight2.title": "Design intuition",
+    "about.highlight2.desc": "Strong eye for UI structure, visual balance and refined interaction details that make products feel premium.",
+    "about.highlight3.title": "End-to-end ownership",
+    "about.highlight3.desc": "From concept and architecture to launch and optimization, I take ownership across the full product lifecycle.",
+    "about.highlight4.title": "Shopify specialization",
+    "about.highlight4.desc": "Building high-performing Shopify storefronts, custom themes and scalable eCommerce experiences for modern brands.",
+
+    "skills.label": "Tech Stack",
+    "skills.title": "The technology stack behind high-performance products",
+    "skills.subtitle": "A carefully refined stack used to build <strong>fast, scalable and high-performing digital products</strong>.",
+    "skills.subtitle.lines": [
+      "A carefully refined stack used to build <strong>fast, scalable</strong>",
+      "and <strong>high-performing digital products</strong>."
+    ],
+    "skills.cat1.name": "Frontend Development",
+    "skills.cat1.desc": "Modern interfaces built for performance, responsiveness and exceptional user experience.",
+    "skills.cat1.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>HTML5</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>CSS3 / Sass / SCSS</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>JavaScript (ES6+)</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Responsive Web Design</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Bootstrap</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Tailwind CSS</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>CSS Grid & Flexbox</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Accessibility (WCAG)</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Blazor (Component UI)</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Web Performance Optimization</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>CSS animations</span>",
+    "skills.cat2.name": "Shopify Development",
+    "skills.cat2.desc": "Custom Shopify storefronts, full store setup, integrations and performance-optimized eCommerce experiences.",
+    "skills.cat2.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Shopify Liquid</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Theme Development</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Theme Customization</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Full Shopify Store Setup</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Metafields & Data Modeling</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Shopify CLI</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>App Integrations</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Payment Gateway Integrations</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Shopify SEO Optimization</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Storefront Performance Optimization</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Conversion Optimization</span>",
+    "skills.cat3.name": "Backend Engineering (.NET)",
+    "skills.cat3.desc": "Designing scalable server-side systems, REST APIs and data-driven applications using the .NET ecosystem.",
+    "skills.cat3.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>C#</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>ASP.NET Core</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>REST API Development</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>Entity Framework</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>SQL</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>PostgreSQL</span>",
+    "skills.cat4.name": "Tools & Platforms",
+    "skills.cat4.desc": "Tools and platforms I use daily for development, SEO optimization, collaboration and digital production.",
+    "skills.cat4.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Git</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>GitHub</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>GitLab</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>VS Code</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Visual Studio</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Shopify CLI</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Shopify Admin</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Shopify Partner Dashboard</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Postman</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Swagger</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>PageSpeed Insights</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Google Search Console</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Screaming Frog</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Figma</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Accessibility (WCAG)</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Canva</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Adobe Photoshop</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>CapCut</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Slack</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Notion</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Asana</span>",
+    "skills.cat5.name": "SEO & Technical Optimization",
+    "skills.cat5.desc": "Technical search optimization focused on performance, structured data and on-page improvements.",
+    "skills.cat5.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Technical SEO</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>On-Page SEO</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Schema Markup</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Meta Tags Optimization</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Core Web Vitals Optimization</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Google Analytics Integration</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Google Search Console</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Shopify SEO Optimization</span>",
+    "skills.cat6.name": "Social Media Setup & Platform Integration",
+    "skills.cat6.desc": "Setup, configuration and integration of social media platforms, Meta tools and Shopify-connected channels.",
+    "skills.cat6.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Social Media Account Setup</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Instagram Account Setup</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Facebook Page Setup</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Meta Pixel Installation</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Shopify Social Integration</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Content Publishing</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Facebook & Instagram Integration</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Profile Branding Setup</span>",
+    "skills.cat7.name": "Content Creation & Visual Design",
+    "skills.cat7.desc": "Visual content creation, video editing and branded design assets for digital platforms, social media and eCommerce.",
+    "skills.cat7.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Video Editing</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Short-Form Video Optimization</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Platform Format Adaptation</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Social Media Banners</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Logo Creation</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Product Image Optimization</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Image Editing</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Website Banners</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Visual Identity Setup</span>",
+    "skills.cat8.name": "Hosting & Domain Configuration",
+    "skills.cat8.desc": "Domain configuration, hosting setup and production deployment for websites and eCommerce platforms.",
+    "skills.cat8.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>cPanel</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>DNS Configuration</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>Domain Registration</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>SSL Certificate Setup</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>Email Hosting Setup</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>FTP / SFTP</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>Cloudflare CDN</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>Website Migration</span>",
+
+    "jobs.label": "Career Path",
+    "jobs.title.line1": "Professional experience",
+    "jobs.title.line2": "presented with polish.",
+    "jobs.title": "Professional experience<br /><span class='gradient-text'>presented with polish.</span>",
+    "jobs.subtitle": "A refined LinkedIn-style section built from publicly visible professional profile details, with <strong>clean hierarchy</strong> for company, role and active period.",
+    "jobs.subtitle.lines": [
+      "A refined career overview with <strong>clean hierarchy</strong>",
+      "for company, role and active period,",
+      "designed to feel <strong>credible at a glance</strong>."
+    ],
+    "jobs.logoPlaceholder": "Company logo placeholder",
+    "jobs.panelLabel": "Designed for a premium first impression",
+    "jobs.panelItem1": "Logo-first company cards that match the visual language of the portfolio.",
+    "jobs.panelItem1.lines": [
+      "Logo-first company cards that match",
+      "the portfolio's visual language."
+    ],
+    "jobs.panelItem2": "Clean hierarchy for company name, role title and employment period.",
+    "jobs.panelItem2.lines": [
+      "Clean hierarchy for company name,",
+      "role title and employment period."
+    ],
+    "jobs.panelItem3": "Short professional summaries for the same polished feel as a strong LinkedIn profile.",
+    "jobs.panelItem3.lines": [
+      "Short professional summaries for the same",
+      "polished feel as a strong LinkedIn profile."
+    ],
+    "jobs.current": "Current",
+    "jobs.card1.company": "Codersy",
+    "jobs.card1.role": "Front-end Developer",
+    "jobs.card1.period": "Present",
+    "jobs.card1.summary": "Contributing to a Shopify-focused development agency building fast, scalable storefronts optimized for speed, responsiveness and conversion.",
+    "jobs.card1.summary.lines": [
+      "Contributing to a Shopify-focused agency,",
+      "building fast and scalable storefronts",
+      "optimized for speed, responsiveness and conversion."
+    ],
+    "jobs.card1.meta1": "Shopify",
+    "jobs.card1.meta2": "Performance",
+    "jobs.card1.meta3": "Conversion Focus",
+    "jobs.card2.company": "Nelt",
+    "jobs.card2.role": "Software Engineer",
+    "jobs.card2.period": "Earlier Experience",
+    "jobs.card2.summary": "Worked within a large-scale corporate environment shaped by logistics and distribution operations, contributing to internal software and digital processes with a focus on structure, reliability and day-to-day business support.",
+    "jobs.card2.summary.lines": [
+      "Worked in a large-scale corporate environment,",
+      "supporting internal software and digital processes",
+      "with focus on structure, reliability and business support."
+    ],
+    "jobs.card2.meta1": "Logistics",
+    "jobs.card2.meta2": "Distribution Systems",
+    "jobs.card2.meta3": "Business Processes",
+    "jobs.card3.company": "JKP Beogradski vodovod i kanalizacija",
+    "jobs.card3.role": "Software Engineer",
+    "jobs.card3.period": "Earlier Experience",
+    "jobs.card3.summary": "Worked on enterprise-oriented software and internal digital workflows, building strong foundations in .NET, structured application logic and practical business systems.",
+    "jobs.card3.summary.lines": [
+      "Worked on enterprise-oriented software",
+      "and internal digital workflows, building strong foundations",
+      "in .NET, structured application logic and business systems."
+    ],
+    "jobs.card3.meta1": ".NET",
+    "jobs.card3.meta2": "Enterprise Systems",
+    "jobs.card3.meta3": "Internal Platforms",
+
+    "education.label": "Education",
+    "education.title.line1": "Academic foundation",
+    "education.title.line2": "and focused growth.",
+    "education.subtitle": "Education built on ICT fundamentals and elevated through Information Technologies master studies at ITS, with publicly recognized academic distinction.",
+    "education.subtitle.lines": [
+      "Education built on ICT fundamentals",
+      "and elevated through master studies at ITS,",
+      "with publicly recognized academic distinction."
+    ],
+    "education.panelLabel": "Verified Achievements",
+    "education.panelItem1": "For 2023/24, ITS officially recognized me as the best student of the school and the overall Student of the Generation.",
+    "education.panelItem1.lines": [
+      "For 2023/24, ITS officially recognized me",
+      "as the best student of the school",
+      "and the overall Student of the Generation."
+    ],
+    "education.panelItem2": "At the diploma ceremony, ITS listed me as the top student on the Master Information Technologies study program, with a GPA of 9.87.",
+    "education.panelItem2.lines": [
+      "At the diploma ceremony, ITS listed me",
+      "as the top student on the Master IT program,",
+      "with a GPA of 9.87."
+    ],
+    "education.panelItem3": "ITS also awarded me a gold medal for academic performance above 9.50, with my published GPA listed as 9.87.",
+    "education.panelItem3.lines": [
+      "ITS also awarded me a gold medal",
+      "for academic performance above 9.50,",
+      "with a published GPA of 9.87."
+    ],
+    "education.panelItem4": "In the official 2024/25 announcement, ITS recognized me again as Student of the Generation on the Master Information Technologies study program, with a GPA of 9.86.",
+    "education.panelItem4.lines": [
+      "In the official 2024/25 announcement,",
+      "ITS recognized me again as Student of the Generation",
+      "on the Master IT program, with a GPA of 9.86."
+    ],
+    "education.card1.eyebrow": "ITS Master Studies",
+    "education.card1.title": "ITS College of Vocational Studies for Information Technologies, Belgrade",
+    "education.card1.desc": "Master studies in Information Technologies further strengthened my software engineering perspective, work with more advanced systems and performance-focused thinking. During 2023/24, official ITS announcements recognized me as the best student of the school and the overall Student of the Generation, listed me as the top student on the Master Information Technologies program with a GPA of 9.87, and included me among the gold medal recipients for academic performance above 9.50. In the official 2024/25 ITS announcement, I was recognized again as Student of the Generation on the Master Information Technologies study program, with a GPA of 9.86.",
+    "education.card1.desc.lines": [
+      "Master studies in Information Technologies strengthened",
+      "my software engineering perspective, advanced systems work",
+      "and performance-focused thinking.",
+      "During 2023/24, ITS recognized me as the best student",
+      "of the school, Student of the Generation and a gold medal recipient.",
+      "In the 2024/25 announcement, I was recognized again",
+      "on the Master IT study program, with a GPA of 9.86."
+    ],
+    "education.card1.meta1": "Best Student of ITS 2023/24",
+    "education.card1.meta2": "Master IT 2023/24 • GPA 9.87",
+    "education.card1.meta3": "2024/25 Program Recognition • GPA 9.86",
+    "education.card1.award1": "Best Student of ITS 2023/24",
+    "education.card1.award2": "Student of the Generation 2023/24",
+    "education.card1.award3": "Gold Medal 9.87",
+    "education.card2.eyebrow": "ICT Foundation",
+    "education.card2.title": "ICT College of Vocational Studies, Belgrade",
+    "education.card2.desc": "A strong academic foundation focused on web development, internet technologies and the practical side of building structured digital products. This stage shaped the technical base behind my frontend and development work.",
+    "education.card2.desc.lines": [
+      "A strong academic foundation focused on web development,",
+      "internet technologies and the practical side",
+      "of building structured digital products."
+    ],
+    "education.card2.meta1": "ICT College",
+    "education.card2.meta2": "Web & Internet Technologies",
+    "education.card2.meta3": "Practical Engineering Base",
+
+    "certs.label": "Certificates",
+    "certs.title.line1": "Certificates and",
+    "certs.title.line2": "verified learning.",
+    "certs.subtitle": "A premium space for the certificates you already hold, with room for preview visuals, issuing organizations and credibility-building details.",
+    "certs.subtitle.lines": [
+      "A premium space for the certificates you already hold,",
+      "with room for preview visuals and credibility-building details."
+    ],
+    "certs.card1.preview": "Upload-ready frame",
+    "certs.card1.badge": "Frontend & Development",
+    "certs.card1.title": "Technical certificates",
+    "certs.card1.desc": "Use this slot for certificates tied to frontend development, JavaScript, accessibility or broader engineering foundations.",
+    "certs.card1.desc.lines": [
+      "Use this slot for certificates tied to frontend development,",
+      "JavaScript, accessibility or broader engineering foundations."
+    ],
+    "certs.card1.meta1": "Issuer",
+    "certs.card1.meta2": "Year",
+    "certs.card1.meta3": "Verification",
+    "certs.card2.preview": "Credential showcase",
+    "certs.card2.badge": "Shopify & E-Commerce",
+    "certs.card2.title": "Platform and commerce credentials",
+    "certs.card2.desc": "A dedicated slot for Shopify, eCommerce or platform-specific certifications that reinforce hands-on storefront and growth expertise.",
+    "certs.card2.desc.lines": [
+      "A dedicated slot for Shopify, eCommerce",
+      "or platform-specific certifications tied to storefront growth."
+    ],
+    "certs.card2.meta1": "Platform",
+    "certs.card2.meta2": "Credential",
+    "certs.card2.meta3": "Link",
+    "certs.card3.preview": "Premium certificate wall",
+    "certs.card3.badge": "SEO & Performance",
+    "certs.card3.title": "Optimization and strategy credentials",
+    "certs.card3.desc": "Use this area for SEO, analytics, performance or digital strategy certificates that support the technical and business side of your work.",
+    "certs.card3.desc.lines": [
+      "Use this area for SEO, analytics, performance",
+      "or digital strategy certificates that support your work."
+    ],
+    "certs.card3.meta1": "Specialization",
+    "certs.card3.meta2": "Provider",
+    "certs.card3.meta3": "Reference",
+
+    "projects.label": "Featured Project",
+    "projects.title": "MyStar",
+    "projects.subtitle": "An <strong>SEO-focused Shopify eyewear store</strong> I designed and developed end-to-end, built to strengthen <strong>organic visibility, product discovery and conversion</strong> across the full customer journey.",
+    "projects.subtitle.lines": [
+      "An <strong>SEO-focused Shopify eyewear store</strong>",
+      "designed and developed <strong>end-to-end</strong>",
+      "to strengthen <strong>visibility, discovery and conversion</strong>."
+    ],
+    "projects.p1.type": "Shopify / Eyewear E-Commerce",
+    "projects.p1.name": "MyStar",
+    "projects.p1.visualDesktopKicker": "MyStar Showcase",
+    "projects.p1.visualDesktop": "Desktop Storefront",
+    "projects.p1.visualMobileKicker": "iPhone Preview",
+    "projects.p1.visualMobile": "Mobile Shopping Flow",
+    "projects.p1.desc": "I built MyStar as a <strong>premium Shopify storefront</strong> for an eyewear brand, covering the full experience from store structure and category flow to product page UX, localization and technical SEO. The goal was to make browsing feel <strong>simple, trustworthy and conversion-focused</strong>, while also improving <strong>organic visibility</strong> for high-intent searches around sunglasses, prescription glasses and related product categories. Alongside the visual polish, I shaped the storefront around <strong>clearer product discovery, stronger information hierarchy and a smoother buying journey</strong> across both desktop and mobile.",
+    "projects.p1.desc.lines": [
+      "I built MyStar as a <strong>premium Shopify storefront</strong>",
+      "for an eyewear brand, covering store structure,",
+      "product page UX, localization and technical SEO.",
+      "The storefront was shaped around <strong>visibility and trust</strong>",
+      "and a <strong>smoother buying journey</strong> across desktop and mobile."
+    ],
+    "projects.p1.tech": "<span class='project-tech-tag'>Shopify</span><span class='project-tech-tag'>Liquid</span><span class='project-tech-tag'>End-to-End Build</span><span class='project-tech-tag'>Technical SEO</span><span class='project-tech-tag'>Store Architecture</span><span class='project-tech-tag'>Conversion UX</span>",
+
+    "services.label": "Services",
+    "services.subtitle": "A focused set of services for brands that need polished execution, performance clarity and a partner who can move from idea to launch without the usual friction.",
+    "services.card1.eyebrow": "01 / Shopify",
+    "services.card1.title": "Shopify storefronts that feel premium and convert.",
+    "services.card1.desc": "Custom storefront work for brands that need more than a theme setup, with strong structure, sharper UX and details that improve trust at every step of the buying flow.",
+    "services.card1.point1": "Custom sections, templates and product page UX",
+    "services.card1.point2": "Theme refinement, content hierarchy and conversion polish",
+    "services.card1.point3": "Localization, merchandising and launch-ready storefront QA",
+    "services.card2.eyebrow": "02 / Web",
+    "services.card2.title": "High-performance websites with clean frontend execution.",
+    "services.card2.desc": "Marketing sites, landing pages and business websites designed to load fast, read clearly and feel carefully crafted across desktop and mobile.",
+    "services.card2.point1": "Responsive layouts with refined interaction details",
+    "services.card2.point2": "Performance-minded frontend architecture",
+    "services.card2.point3": "Premium UI polish aligned with brand direction",
+    "services.card3.eyebrow": "03 / SEO",
+    "services.card3.title": "Technical SEO that supports visibility from the foundation.",
+    "services.card3.desc": "Optimization work built into the product itself, so better indexing, cleaner structure and stronger search readiness are part of the build, not an afterthought.",
+    "services.card3.point1": "Core Web Vitals, metadata and structured content improvements",
+    "services.card3.point2": "On-page technical checks and cleaner information architecture",
+    "services.card3.point3": "SEO-aware implementation for Shopify and custom websites",
+    "services.card4.eyebrow": "04 / Support",
+    "services.card4.title": "Ongoing refinement after launch, not just handoff.",
+    "services.card4.desc": "When the first version is live, I can continue improving the product through iteration, fixes and focused enhancements that keep the experience sharp as the business grows.",
+    "services.card4.point1": "Post-launch polish, fixes and feature extensions",
+    "services.card4.point2": "Content, storefront and UX updates without visual drift",
+    "services.card4.point3": "Reliable collaboration for long-term product improvement",
+    "services.proof1.value": "End-to-end",
+    "services.proof1.label": "From concept and planning to final polish",
+    "services.proof2.value": "Performance-first",
+    "services.proof2.label": "Decisions shaped by speed, clarity and usability",
+    "services.proof3.value": "Launch-ready",
+    "services.proof3.label": "Built to feel finished, not half-delivered",
+
+    "common.viewProject": "View Project",
+    "common.visitWebsite": "Visit Website",
+    "common.viewDocs": "View Docs",
+    "common.github": "GitHub",
+    "common.caseStudy": "Case Study",
+
+    "process.label": "How I Work",
+    "process.title.line1": "A process built",
+    "process.title.line2": "for quality.",
+    "process.text1": "As a frontend and Shopify developer, I approach every project as a <strong>performance-first digital product</strong>. From <strong>technical SEO and responsive design</strong> to clean architecture and polished UI, every decision is made to create websites and eCommerce experiences that are <strong>fast, discoverable, scalable</strong>, and built to support <strong>real business growth</strong>.",
+    "process.text2": "Whether I am building a custom Shopify storefront, optimizing a conversion-focused landing page, or developing a larger web application, the process stays the same: <strong>clear communication, thoughtful planning, accessibility, Core Web Vitals, and maintainable code</strong> that <strong>performs long after launch</strong>.",
+    "process.text1.lines": [
+      "I approach every project as a <strong>performance-first</strong>",
+      "<strong>digital product</strong>, shaped by structure and speed",
+      "and polished interface decisions.",
+      "From <strong>responsive design</strong> to <strong>technical SEO</strong>,",
+      "each choice supports <strong>measurable growth</strong>."
+    ],
+    "process.text2.lines": [
+      "Whether it's a <strong>custom Shopify storefront</strong>,",
+      "a conversion-focused landing page",
+      "or a larger web application, the process stays",
+      "<strong>clear, thoughtful and built to last</strong>."
+    ],
+    "process.badge1": "Core Web Vitals",
+    "process.badge2": "Technical SEO",
+    "process.badge3": "Shopify Storefronts",
+    "process.badge4": "Accessible UI",
+    "process.badge5": "Conversion Focus",
+    "process.badge6": "Scalable Frontends",
+    "process.step1.title": "Understand the Brand & Goal",
+    "process.step1.desc": "I start by understanding the <strong>business, brand positioning, audience, and exact goal</strong> of the project. Whether it is a Shopify store, landing page, or custom platform, <strong>clarity at this stage shapes everything that follows</strong>.",
+    "process.step1.desc.lines": [
+      "I start by understanding the <strong>business</strong>,",
+      "<strong>brand positioning, audience and project goal</strong>.",
+      "That <strong>clarity</strong> shapes everything that follows."
+    ],
+    "process.step2.title": "Plan for Structure & Scalability",
+    "process.step2.desc": "Before development begins, I define the <strong>right structure</strong> for the project: layout logic, content hierarchy, responsive behavior, Shopify setup, and <strong>technical foundations that support performance, SEO, and long-term scalability</strong>.",
+    "process.step2.desc.lines": [
+      "Before development begins, I define <strong>layout logic</strong>,",
+      "content hierarchy and responsive behavior,",
+      "with foundations that support <strong>performance, SEO and scale</strong>."
+    ],
+    "process.step3.title": "Build with Precision",
+    "process.step3.desc": "I develop <strong>clean, maintainable interfaces</strong> with close attention to detail. Every section is built to <strong>feel refined, load fast, work across devices</strong>, and support a smooth user experience from the first interaction to the final conversion point.",
+    "process.step3.desc.lines": [
+      "I build <strong>clean, maintainable interfaces</strong>",
+      "that <strong>feel refined, load fast and work across devices</strong>,",
+      "from first interaction to <strong>final conversion</strong>."
+    ],
+    "process.step4.title": "Optimize for Performance & SEO",
+    "process.step4.desc": "Optimization is <strong>part of the build, not an afterthought</strong>. I refine <strong>Core Web Vitals, technical SEO, accessibility, responsiveness, and overall usability</strong> so the final product is not only visually strong, but also <strong>discoverable and efficient</strong>.",
+    "process.step4.desc.lines": [
+      "<strong>Optimization is part of the build</strong>, not an afterthought.",
+      "I refine <strong>performance, SEO, accessibility and responsiveness</strong>",
+      "so the final product is <strong>discoverable and efficient</strong>."
+    ],
+    "process.step5.title": "Launch, Refine & Support",
+    "process.step5.desc": "After launch, I make sure everything is <strong>stable, polished, and ready for real use</strong>. From final testing and adjustments to handoff and <strong>post-launch support</strong>, the goal is a product that <strong>performs well today and stays easy to grow tomorrow</strong>.",
+    "process.step5.desc.lines": [
+      "After launch, I make sure everything is <strong>stable</strong>,",
+      "<strong>polished and ready for real use</strong>,",
+      "with support that keeps <strong>future growth easy</strong>."
+    ],
+
+    "testimonials.label": "Testimonials",
+    "testimonials.title.line1": "Kind words from",
+    "testimonials.title.line2": "people I worked with.",
+    "testimonials.subtitle": "A premium client review slider designed for <strong>real testimonials</strong>, with space for comment, role and company details for each person.",
+    "testimonials.subtitle.lines": [
+      "A premium client review slider designed for <strong>real testimonials</strong>,",
+      "with room for <strong>role and company context</strong> for each person."
+    ],
+    "testimonials.slider.label": "Client Reviews",
+    "testimonials.slider.prev": "Previous testimonial",
+    "testimonials.slider.next": "Next testimonial",
+    "testimonials.slider.pagination": "Testimonial pagination",
+    "testimonials.slider.go1": "Go to testimonial 1",
+    "testimonials.slider.go2": "Go to testimonial 2",
+    "testimonials.slider.go3": "Go to testimonial 3",
+    "testimonials.card1.badge": "Client 01",
+    "testimonials.card1.quote": "This is where the first client review will go. Replace this with the exact sentence or short paragraph once you receive the testimonial.",
+    "testimonials.card1.quote.lines": [
+      "This is where the first client review will go.",
+      "Replace it with the exact sentence or short paragraph",
+      "once you receive the testimonial."
+    ],
+    "testimonials.card1.name": "Client Name",
+    "testimonials.card1.role": "Founder / Director / Marketing Lead",
+    "testimonials.card1.company": "Company Name",
+    "testimonials.card1.note": "Short supporting context about who the client is and what kind of collaboration or project this was.",
+    "testimonials.card1.note.lines": [
+      "Short supporting context about who the client is",
+      "and what kind of collaboration this was."
+    ],
+    "testimonials.card2.badge": "Client 02",
+    "testimonials.card2.quote": "Use the second slide for another real testimonial, ideally one that highlights communication, delivery quality or the impact of the final result.",
+    "testimonials.card2.quote.lines": [
+      "Use the second slide for another real testimonial,",
+      "ideally one that highlights communication, delivery quality",
+      "or the impact of the final result."
+    ],
+    "testimonials.card2.name": "Client Name",
+    "testimonials.card2.role": "E-commerce Manager / Brand Owner",
+    "testimonials.card2.company": "Company Name",
+    "testimonials.card2.note": "A concise line about the project relationship, so visitors immediately understand the context behind the review.",
+    "testimonials.card2.note.lines": [
+      "A concise line about the project relationship,",
+      "so visitors immediately understand the review context."
+    ],
+    "testimonials.card3.badge": "Client 03",
+    "testimonials.card3.quote": "The third slide can hold a testimonial that speaks about trust, technical confidence, design quality or long-term collaboration.",
+    "testimonials.card3.quote.lines": [
+      "The third slide can hold a testimonial",
+      "about trust, technical confidence, design quality",
+      "or long-term collaboration."
+    ],
+    "testimonials.card3.name": "Client Name",
+    "testimonials.card3.role": "Product Lead / Business Owner",
+    "testimonials.card3.company": "Company Name",
+    "testimonials.card3.note": "Add one short sentence here to describe the client, the business or the type of work delivered together.",
+    "testimonials.card3.note.lines": [
+      "Add one short sentence here to describe the client,",
+      "the business or the type of work delivered together."
+    ],
+
+    "guarantee.label": "Quality Guarantee",
+    "guarantee.badge": "Committed to getting it right",
+    "guarantee.title.line1": "Everything I promise,",
+    "guarantee.title.line2": "I stand behind.",
+    "guarantee.text1": "Every project I take on is built to the same standard presented throughout this portfolio: clear structure, refined design, strong performance and thoughtful execution. I do not treat delivery as finished until the work feels polished, dependable and aligned with the goal we agreed on.",
+    "guarantee.text1.lines": [
+      "Every project I take on is built to the same standard",
+      "presented throughout this portfolio:",
+      "clear structure, refined design, strong performance and thoughtful execution."
+    ],
+    "guarantee.text2": "If something needs refinement, I refine it. My commitment is simple: you receive a final result you can launch with confidence and feel 100% satisfied with, not something rushed, unfinished or only halfway resolved.",
+    "guarantee.text2.lines": [
+      "If something needs refinement, I refine it.",
+      "My commitment is simple: you receive a final result",
+      "you can launch with confidence, not something rushed",
+      "or left only halfway resolved."
+    ],
+    "guarantee.text3": "That also means clear communication, careful QA and a willingness to keep polishing the details until the work feels complete, credible and ready to represent your brand at its best.",
+    "guarantee.text3.lines": [
+      "That also means clear communication, careful QA",
+      "and refining the details until the work feels complete, credible and ready to represent your brand at its best."
+    ],
+    "guarantee.role": "Frontend & Shopify Developer",
+    "guarantee.signatureNote": "Personally signed commitment to quality, polish and follow-through.",
+
+    "contact.label": "Get in Touch",
+    "contact.title.line1": "Let's build something",
+    "contact.title.line2": "exceptional.",
+    "contact.subtitle": "If you are building a Shopify store, refining an existing website, or need a <strong>fast, SEO-focused digital experience</strong>, I would love to hear about it. I am available for <strong>select freelance projects, long-term collaborations</strong>, and frontend-focused roles.",
+    "contact.subtitle.lines": [
+      "If you are building a Shopify store, refining an existing website,",
+      "or need a <strong>fast and SEO-focused digital experience</strong>,",
+      "I would love to hear about it.",
+      "I am available for <strong>select freelance projects and long-term collaborations</strong>."
+    ],
+    "contact.form.name.label": "Name",
+    "contact.form.name.placeholder": "Your name",
+    "contact.form.email.label": "Email",
+    "contact.form.email.placeholder": "you@example.com",
+    "contact.form.subject.label": "Subject",
+    "contact.form.subject.placeholder": "Project inquiry",
+    "contact.form.message.label": "Message",
+    "contact.form.message.placeholder": "Tell me about your project, timeline and goals.",
+    "contact.form.submit.default": "Send Message",
+    "contact.form.submit.sending": "Sending...",
+    "contact.form.submit.sent": "Message Sent!",
+    "contact.form.submit.success": "Message Sent!",
+
+    "footer.copy.suffix": ". All rights reserved.",
+    "footer.home": "Home",
+    "footer.services": "Services",
+    "footer.work": "Work"
+  },
+  "sr": {
+    "meta.title": "Kristina Glišović | Frontend i Shopify developerka",
+    "meta.description": "Frontend i Shopify developerka za brze, SEO optimizovane sajtove, Shopify prodavnice i eCommerce rešenja koja unapređuju vidljivost i konverzije.",
+    "nav.about": "O meni",
+    "nav.skills": "Ekspertiza",
+    "nav.projects": "Projekti",
+    "nav.services": "Usluge",
+    "nav.process": "Proces",
+    "nav.contact": "Kontakt",
+    "nav.cta": "Započnimo razgovor",
+
+    "hero.badge": "Dostupna za nove projekte",
+    "hero.title": "<span class='hero-title-role'>Softverska inženjerka</span><span class='hero-title-copy'>razvijam <strong>brze, skalabilne i SEO optimizovane</strong></span><span class='hero-title-copy hero-title-copy-secondary'>digitalne proizvode.</span>",
+    "hero.desc": "Pomažem brendovima i kompanijama da razviju <strong>brze, pouzdane i vizuelno doterane</strong> sajtove, Shopify prodavnice i eCommerce platforme. Spajam <strong>frontend development, Shopify development i tehnički SEO</strong> kako bih isporučila digitalna rešenja koja donose <strong>bolju online vidljivost, efikasniju prodaju i dugoročnu stabilnost</strong>. Od prilagođenih Shopify storefront-a do kompleksnih web aplikacija, svaki projekat gradim <strong>precizno, strateški i sa fokusom na performanse</strong>.",
+    "hero.desc.lines": [
+      "Pomažem brendovima i kompanijama da grade",
+      "<strong>brze, pouzdane i vizuelno doterane</strong>",
+      "sajtove, Shopify prodavnice",
+      "i <strong>eCommerce platforme visokih performansi</strong>.",
+      "Svaki detalj gradim sa <strong>fokusom na rezultat</strong>."
+    ],
+    "hero.cta1": "Pogledaj moj rad",
+    "hero.cta2": "Javi mi se",
+    "hero.stat1.label": "Godina iskustva",
+    "hero.stat2.label": "Isporučenih projekata",
+    "hero.stat3.label": "Zadovoljstvo klijenata",
+
+    "ui.scroll": "Skroluj",
+    "ui.menu": "Otvori meni",
+    "ui.themeToggle": "Promeni temu",
+    "ui.social.github": "GitHub",
+    "ui.social.linkedin": "LinkedIn",
+    "ui.social.twitter": "Twitter",
+    "ui.social.email": "Email",
+
+    "about.badge.title": "Otvorena za prilike",
+    "about.badge.subtitle": "Freelance i stalni angažman",
+    "about.label": "O meni",
+    "about.title.line1": "Gradim promišljeno,",
+    "about.title.line2": "sa visokim standardom kvaliteta.",
+    "about.text1": "Softverska sam inženjerka sa <strong>više od 6 godina iskustva</strong> u razvoju <strong>brzih i skalabilnih digitalnih proizvoda</strong>, od prilagođenih Shopify storefront-a i savremenih web platformi do enterprise aplikacija razvijenih u ASP.NET-u, C#-u i Blazor-u. Moj rad povezuje <strong>inženjersku preciznost, optimizaciju performansi i strateški pristup</strong> digitalnom prisustvu. Fokus mi je na rešenjima koja nisu samo tehnički stabilna, već i <strong>brza, SEO optimizovana i vizuelno uverljiva</strong>.",
+    "about.text2": "Danas najčešće sarađujem sa brendovima i kompanijama kojima su potrebni <strong>Shopify development, razvoj web platformi, tehnički SEO i digitalni brending</strong>, sa ciljem da izgrade proizvode koji se <strong>lako pronalaze, dobro konvertuju i mogu pouzdano da rastu</strong>.",
+    "about.text1.lines": [
+      "Softverska sam inženjerka sa <strong>više od 6 godina</strong>",
+      "iskustva u razvoju <strong>brzih i skalabilnih</strong>",
+      "<strong>digitalnih proizvoda</strong>, od Shopify storefront-a",
+      "i savremenih web platformi do enterprise",
+      "aplikacija u ASP.NET-u, C#-u i Blazor-u."
+    ],
+    "about.text2.lines": [
+      "Danas sarađujem sa brendovima kroz <strong>Shopify razvoj</strong>,",
+      "<strong>web platforme, tehnički SEO i digitalni brending</strong>,",
+      "gradeći proizvode koji <strong>pouzdano rastu</strong>."
+    ],
+    "about.highlight1.title": "Fokus na performanse",
+    "about.highlight1.desc": "Svaki proizvod razvijam sa fokusom na brzinu, efikasnost i kvalitetno korisničko iskustvo, uz Core Web Vitals metrike i optimizaciju učitavanja kao standard, a ne dodatak.",
+    "about.highlight2.title": "Dizajnerska intuicija",
+    "about.highlight2.desc": "Izražen osećaj za UI strukturu, vizuelni balans i detalje interakcije koji proizvodu daju profesionalan, savremen i premium karakter.",
+    "about.highlight3.title": "Od strategije do realizacije",
+    "about.highlight3.desc": "Od inicijalne ideje i arhitekture do razvoja, lansiranja i daljih unapređenja, preuzimam odgovornost za ceo životni ciklus digitalnog proizvoda.",
+    "about.highlight4.title": "Shopify specijalizacija",
+    "about.highlight4.desc": "Razvijam Shopify storefront-e visokih performansi, prilagođene teme i skalabilna eCommerce rešenja za moderne brendove.",
+
+    "skills.label": "Tehnologije i usluge",
+    "skills.title": "Tehnološki stack za brze, skalabilne i pouzdane digitalne proizvode",
+    "skills.subtitle": "Pažljivo odabran stack koji koristim za razvoj <strong>brzih sajtova, Shopify prodavnica i digitalnih proizvoda visokih performansi</strong>.",
+    "skills.subtitle.lines": [
+      "Pažljivo odabran stack koji koristim za razvoj <strong>brzih sajtova</strong>,",
+      "<strong>Shopify prodavnica i digitalnih proizvoda visokih performansi</strong>."
+    ],
+    "skills.cat1.name": "Frontend razvoj",
+    "skills.cat1.desc": "Moderni interfejsi razvijeni za performanse, responzivnost i kvalitetno korisničko iskustvo.",
+    "skills.cat1.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>HTML5</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>CSS3 / Sass / SCSS</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>JavaScript (ES6+)</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Responzivni web dizajn</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Bootstrap</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Tailwind CSS</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>CSS Grid i Flexbox</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Pristupačnost (WCAG)</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Blazor (Component UI)</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>Optimizacija web performansi</span><span class='skill-chip'><span class='skill-chip-dot dot-violet'></span>CSS animacije</span>",
+    "skills.cat2.name": "Shopify razvoj",
+    "skills.cat2.desc": "Prilagođeni Shopify storefront-i, kompletno postavljanje prodavnice, integracije i eCommerce iskustva optimizovana za performanse.",
+    "skills.cat2.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Shopify Liquid</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Razvoj Shopify tema</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Prilagođavanje tema</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Kompletno postavljanje Shopify prodavnice</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Metafields i modelovanje podataka</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Shopify CLI</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Integracije aplikacija</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Integracije sistema za online plaćanje</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Shopify SEO optimizacija</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Optimizacija performansi storefront-a</span><span class='skill-chip'><span class='skill-chip-dot dot-cyan'></span>Optimizacija konverzija</span>",
+    "skills.cat3.name": "Backend inženjering (.NET)",
+    "skills.cat3.desc": "Projektovanje i razvoj skalabilnih serverskih sistema, REST API-ja i aplikacija zasnovanih na podacima u okviru .NET ekosistema.",
+    "skills.cat3.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>C#</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>ASP.NET Core</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>Razvoj REST API-ja</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>Entity Framework</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>SQL</span><span class='skill-chip'><span class='skill-chip-dot dot-purple'></span>PostgreSQL</span>",
+    "skills.cat4.name": "Alati i platforme",
+    "skills.cat4.desc": "Alati i platforme koje svakodnevno koristim za razvoj, SEO optimizaciju, timsku saradnju i digitalnu produkciju.",
+    "skills.cat4.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Git</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>GitHub</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>GitLab</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>VS Code</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Visual Studio</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Shopify CLI</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Shopify Admin</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Shopify Partner Dashboard</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Postman</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Swagger</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>PageSpeed Insights</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Google Search Console</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Screaming Frog</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Figma</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Pristupačnost (WCAG)</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Canva</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Adobe Photoshop</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>CapCut</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Slack</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Notion</span><span class='skill-chip'><span class='skill-chip-dot dot-pink'></span>Asana</span>",
+    "skills.cat5.name": "SEO i tehnička optimizacija",
+    "skills.cat5.desc": "Tehnička SEO optimizacija usmerena na performanse, strukturirane podatke i on-page unapređenja koja podržavaju bolju vidljivost.",
+    "skills.cat5.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Tehnički SEO</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>On-Page SEO</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Schema Markup</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Optimizacija meta tagova</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Optimizacija Core Web Vitals metrika</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Integracija Google Analytics-a</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Google Search Console</span><span class='skill-chip'><span class='skill-chip-dot dot-orange'></span>Shopify SEO optimizacija</span>",
+    "skills.cat6.name": "Podešavanje društvenih mreža i integracije",
+    "skills.cat6.desc": "Podešavanje, konfiguracija i integracija društvenih mreža, Meta alata i prodajnih kanala povezanih sa Shopify platformom.",
+    "skills.cat6.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Podešavanje naloga na društvenim mrežama</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Podešavanje Instagram naloga</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Podešavanje Facebook stranice</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Instalacija Meta Pixel-a</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Integracije društvenih mreža sa Shopify platformom</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Objava sadržaja</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Facebook i Instagram integracija</span><span class='skill-chip'><span class='skill-chip-dot dot-green'></span>Brending profila</span>",
+    "skills.cat7.name": "Kreiranje sadržaja i vizuelni dizajn",
+    "skills.cat7.desc": "Vizuelni sadržaj, video obrada i brendirani dizajn elementi za digitalne platforme, društvene mreže i eCommerce.",
+    "skills.cat7.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Video obrada</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Optimizacija kratkih video formata</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Prilagođavanje formata za platforme</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Baneri za društvene mreže</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Izrada logotipa</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Optimizacija fotografija proizvoda</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Obrada slika</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Baneri za sajt</span><span class='skill-chip'><span class='skill-chip-dot dot-amber'></span>Postavljanje vizuelnog identiteta</span>",
+    "skills.cat8.name": "Hosting i konfiguracija domena",
+    "skills.cat8.desc": "Konfiguracija domena, podešavanje hostinga i produkcijsko postavljanje sajtova i eCommerce platformi.",
+    "skills.cat8.chips": "<span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>cPanel</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>DNS konfiguracija</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>Registracija domena</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>Podešavanje SSL sertifikata</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>Podešavanje email hostinga</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>FTP / SFTP</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>Cloudflare CDN</span><span class='skill-chip'><span class='skill-chip-dot dot-indigo'></span>Migracija sajta</span>",
+
+    "jobs.label": "Profesionalni put",
+    "jobs.title.line1": "Profesionalno iskustvo",
+    "jobs.title.line2": "jasno i pregledno predstavljeno.",
+    "jobs.title": "Profesionalno iskustvo<br /><span class='gradient-text'>jasno i pregledno predstavljeno.</span>",
+    "jobs.subtitle": "Pregled profesionalnog iskustva sa jasnom hijerarhijom za kompaniju, poziciju i period angažovanja, oblikovan tako da odmah prenese <strong>kredibilitet, stručnost i kontinuitet rada</strong>.",
+    "jobs.subtitle.lines": [
+      "Pregled profesionalnog iskustva sa <strong>jasnom hijerarhijom</strong>",
+      "za kompaniju, poziciju i period angažovanja,",
+      "oblikovan da odmah prenese <strong>kredibilitet i kontinuitet rada</strong>."
+    ],
+    "jobs.logoPlaceholder": "Mesto za logo kompanije",
+    "jobs.panelLabel": "Struktura koja gradi poverenje na prvi pogled",
+    "jobs.panelItem1": "Kartice sa fokusom na logo i identitet kompanije, uklopljene u vizuelni jezik celog portfolija.",
+    "jobs.panelItem1.lines": [
+      "Kartice sa fokusom na logo i identitet kompanije,",
+      "uklopljene u vizuelni jezik celog portfolija."
+    ],
+    "jobs.panelItem2": "Jasna hijerarhija za naziv kompanije, poziciju i period angažovanja.",
+    "jobs.panelItem2.lines": [
+      "Jasna hijerarhija za naziv kompanije,",
+      "poziciju i period angažovanja."
+    ],
+    "jobs.panelItem3": "Kratki profesionalni opisi koji brzo objašnjavaju doprinos, odgovornosti i oblast ekspertize.",
+    "jobs.panelItem3.lines": [
+      "Kratki profesionalni opisi koji brzo objašnjavaju",
+      "doprinos, odgovornosti i oblast ekspertize."
+    ],
+    "jobs.current": "Trenutno",
+    "jobs.card1.company": "Codersy",
+    "jobs.card1.role": "Front-end developerka",
+    "jobs.card1.period": "Trenutno",
+    "jobs.card1.summary": "U okviru agencije specijalizovane za Shopify development radim na izradi brzih i skalabilnih storefront-a optimizovanih za performanse, responzivnost i rast konverzija.",
+    "jobs.card1.summary.lines": [
+      "U okviru agencije specijalizovane za Shopify development",
+      "radim na izradi brzih i skalabilnih storefront-a,",
+      "optimizovanih za performanse, responzivnost i rast konverzija."
+    ],
+    "jobs.card1.meta1": "Shopify",
+    "jobs.card1.meta2": "Performanse",
+    "jobs.card1.meta3": "Fokus na konverzije",
+    "jobs.card2.company": "Nelt",
+    "jobs.card2.role": "Softverska inženjerka",
+    "jobs.card2.period": "Ranije iskustvo",
+    "jobs.card2.summary": "Rad u velikom korporativnom okruženju usmerenom na logistiku i distribuciju dodatno mi je približio interne softverske procese, pouzdanu isporuku i podršku svakodnevnim poslovnim tokovima.",
+    "jobs.card2.summary.lines": [
+      "Rad u velikom korporativnom okruženju",
+      "dodatno mi je približio interne softverske procese,",
+      "pouzdanu isporuku i podršku poslovnim tokovima."
+    ],
+    "jobs.card2.meta1": "Logistika",
+    "jobs.card2.meta2": "Distribucioni sistemi",
+    "jobs.card2.meta3": "Poslovni procesi",
+    "jobs.card3.company": "JKP Beogradski vodovod i kanalizacija",
+    "jobs.card3.role": "Softverska inženjerka",
+    "jobs.card3.period": "Ranije iskustvo",
+    "jobs.card3.summary": "Rad na enterprise softveru i internim digitalnim procesima postavio je snažne temelje u .NET okruženju, strukturiranoj logici aplikacija i razvoju poslovnih sistema.",
+    "jobs.card3.summary.lines": [
+      "Rad na enterprise softveru i internim digitalnim procesima",
+      "postavio je snažne temelje u .NET okruženju,",
+      "strukturiranoj logici aplikacija i poslovnim sistemima."
+    ],
+    "jobs.card3.meta1": ".NET",
+    "jobs.card3.meta2": "Enterprise sistemi",
+    "jobs.card3.meta3": "Interne platforme",
+
+    "education.label": "Edukacija",
+    "education.title.line1": "Akademska osnova",
+    "education.title.line2": "i kontinuirani razvoj.",
+    "education.subtitle": "Obrazovanje izgrađeno na jakoj ICT osnovi i dodatno podignuto kroz master studije Informacionih tehnologija na ITS-u, uz javno potvrđen akademski uspeh.",
+    "education.subtitle.lines": [
+      "Obrazovanje izgrađeno na jakoj ICT osnovi,",
+      "dodatno podignuto kroz master studije na ITS-u,",
+      "uz javno potvrđen akademski uspeh."
+    ],
+    "education.panelLabel": "Zvanično potvrđena priznanja",
+    "education.panelItem1": "ITS me je za 2023/24 zvanično proglasio za najboljeg studenta škole i studenta generacije cele škole.",
+    "education.panelItem1.lines": [
+      "ITS me je za 2023/24 zvanično proglasio",
+      "za najboljeg studenta škole",
+      "i studenta generacije cele škole."
+    ],
+    "education.panelItem2": "Na svečanoj dodeli diploma ITS me je naveo kao najbolju na master studijama Informacionih tehnologija, sa prosekom 9,87.",
+    "education.panelItem2.lines": [
+      "Na svečanoj dodeli diploma ITS me je naveo",
+      "kao najbolju na master studijama",
+      "Informacionih tehnologija, sa prosekom 9,87."
+    ],
+    "education.panelItem3": "ITS mi je dodelio i zlatnu medalju za akademski uspeh iznad 9,50, uz javno objavljen prosek 9,87.",
+    "education.panelItem3.lines": [
+      "ITS mi je dodelio i zlatnu medalju",
+      "za akademski uspeh iznad 9,50,",
+      "uz javno objavljen prosek 9,87."
+    ],
+    "education.panelItem4": "U zvaničnoj objavi za 2024/25 ITS me je ponovo naveo kao studenta generacije na studijskom programu Master Informacione tehnologije, sa prosekom 9,86.",
+    "education.panelItem4.lines": [
+      "U zvaničnoj objavi za 2024/25 ITS me je ponovo naveo",
+      "kao studenta generacije na programu",
+      "Master Informacione tehnologije, sa prosekom 9,86."
+    ],
+    "education.card1.eyebrow": "ITS master",
+    "education.card1.title": "ITS visoka škola strukovnih studija za informacione tehnologije, Beograd",
+    "education.card1.desc": "Master strukovne studije Informacionih tehnologija dodatno su ojačale moj softversko-inženjerski pristup, rad sa složenijim sistemima i način razmišljanja usmeren na performanse i kvalitet. Tokom 2023/24, prema zvaničnim ITS objavama, proglašena sam za najboljeg studenta škole i studenta generacije, navedena kao najbolja na master studijama Informacionih tehnologija sa prosekom 9,87 i uvrštena među dobitnike zlatne medalje za uspeh iznad 9,50. U zvaničnoj ITS objavi za 2024/25 ponovo sam navedena kao student generacije na studijskom programu Master Informacione tehnologije, sa prosekom 9,86.",
+    "education.card1.desc.lines": [
+      "Master studije Informacionih tehnologija dodatno su ojačale",
+      "moj softversko-inženjerski pristup, rad sa složenijim sistemima",
+      "i razmišljanje usmereno na performanse i kvalitet.",
+      "Tokom 2023/24 proglašena sam za najboljeg studenta škole,",
+      "studenta generacije i dobitnicu zlatne medalje.",
+      "U objavi za 2024/25 ponovo sam navedena",
+      "kao student generacije, sa prosekom 9,86."
+    ],
+    "education.card1.meta1": "Najbolji student ITS-a 2023/24",
+    "education.card1.meta2": "Master IT 2023/24 • prosek 9,87",
+    "education.card1.meta3": "2024/25 priznanje programa • 9,86",
+    "education.card1.award1": "Najbolji student ITS-a 2023/24",
+    "education.card1.award2": "Student generacije 2023/24",
+    "education.card1.award3": "Zlatna medalja 9,87",
+    "education.card2.eyebrow": "ICT osnova",
+    "education.card2.title": "Visoka ICT škola strukovnih studija, Beograd",
+    "education.card2.desc": "Snažna obrazovna osnova usmerena na web razvoj, internet tehnologije i praktičnu izradu strukturiranih digitalnih proizvoda. Taj period je postavio tehnički temelj na kome danas gradim frontend i development rad.",
+    "education.card2.desc.lines": [
+      "Snažna obrazovna osnova usmerena na web razvoj,",
+      "internet tehnologije i praktičnu izradu",
+      "strukturiranih digitalnih proizvoda."
+    ],
+    "education.card2.meta1": "ICT",
+    "education.card2.meta2": "Web i internet tehnologije",
+    "education.card2.meta3": "Praktična razvojna osnova",
+
+    "certs.label": "Sertifikati",
+    "certs.title.line1": "Sertifikati i",
+    "certs.title.line2": "verifikovano učenje.",
+    "certs.subtitle": "Premium prostor za sertifikate koje posedujem, sa mestom za prikaz, izdavača i detalje koji dodatno jačaju kredibilitet.",
+    "certs.subtitle.lines": [
+      "Premium prostor za sertifikate koje posedujem,",
+      "sa mestom za prikaz i detalje koji dodatno jačaju kredibilitet."
+    ],
+    "certs.card1.preview": "Slot spreman za prikaz",
+    "certs.card1.badge": "Frontend i development",
+    "certs.card1.title": "Tehnički sertifikati",
+    "certs.card1.desc": "Ovaj slot je namenjen sertifikatima vezanim za frontend development, JavaScript, pristupačnost ili šire inženjerske osnove.",
+    "certs.card1.desc.lines": [
+      "Ovaj slot je namenjen sertifikatima vezanim za frontend development,",
+      "JavaScript, pristupačnost ili šire inženjerske osnove."
+    ],
+    "certs.card1.meta1": "Izdavač",
+    "certs.card1.meta2": "Godina",
+    "certs.card1.meta3": "Verifikacija",
+    "certs.card2.preview": "Prikaz sertifikata",
+    "certs.card2.badge": "Shopify i eCommerce",
+    "certs.card2.title": "Platformski i komercijalni sertifikati",
+    "certs.card2.desc": "Predviđeno mesto za Shopify, eCommerce ili druge platformske sertifikate koji potvrđuju praktičnu ekspertizu u radu na storefront-ima i rastu prodaje.",
+    "certs.card2.desc.lines": [
+      "Predviđeno mesto za Shopify, eCommerce",
+      "ili druge platformske sertifikate vezane za storefront rad."
+    ],
+    "certs.card2.meta1": "Platforma",
+    "certs.card2.meta2": "Sertifikat",
+    "certs.card2.meta3": "Link",
+    "certs.card3.preview": "Premium zid sertifikata",
+    "certs.card3.badge": "SEO i performanse",
+    "certs.card3.title": "Sertifikati za optimizaciju i strategiju",
+    "certs.card3.desc": "Ovaj prostor je za SEO, analitiku, performanse ili digitalnu strategiju, odnosno sertifikate koji podržavaju i tehnički i poslovni aspekt mog rada.",
+    "certs.card3.desc.lines": [
+      "Ovaj prostor je za SEO, analitiku, performanse",
+      "ili digitalnu strategiju koja podržava moj rad."
+    ],
+    "certs.card3.meta1": "Specijalizacija",
+    "certs.card3.meta2": "Izdavač",
+    "certs.card3.meta3": "Referenca",
+
+    "projects.label": "Istaknuti projekat",
+    "projects.title": "MyStar",
+    "projects.subtitle": "<strong>SEO-orijentisana Shopify prodavnica</strong> za optiku koju sam osmislila i razvila od početka do kraja, sa fokusom na <strong>organsku vidljivost, lakše pronalaženje proizvoda i jače konverzije</strong> kroz ceo korisnički put.",
+    "projects.subtitle.lines": [
+      "<strong>SEO-orijentisana Shopify prodavnica</strong> za optiku,",
+      "osmišljena i razvijena <strong>od početka do kraja</strong>,",
+      "sa fokusom na <strong>vidljivost, pronalaženje proizvoda i konverzije</strong>."
+    ],
+    "projects.p1.type": "Shopify / Eyewear eCommerce",
+    "projects.p1.name": "MyStar",
+    "projects.p1.visualDesktopKicker": "MyStar showcase",
+    "projects.p1.visualDesktop": "Desktop storefront",
+    "projects.p1.visualMobileKicker": "iPhone preview",
+    "projects.p1.visualMobile": "Mobile shopping flow",
+    "projects.p1.desc": "MyStar sam razvila kao <strong>premium Shopify storefront</strong> za eyewear brend, obuhvatajući ceo korisnički tok od strukture prodavnice i organizacije kategorija do UX-a produkt stranica, lokalizacije i tehničkog SEO-a. Cilj je bio da iskustvo kupovine deluje <strong>jasno, pouzdano i usmereno na konverziju</strong>, uz <strong>bolju organsku vidljivost</strong> za pretrage sa jakom namerom kupovine vezane za naočare za sunce, dioptrijske modele i srodne kategorije proizvoda. Pored vizuelne doteranosti, storefront sam oblikovala tako da omogući <strong>lakše pronalaženje proizvoda, bolju hijerarhiju informacija i ujednačeniji put kupca</strong> na desktopu i mobilnim uređajima.",
+    "projects.p1.desc.lines": [
+      "MyStar sam razvila kao <strong>premium Shopify storefront</strong>",
+      "za eyewear brend, od strukture prodavnice",
+      "i kategorija do UX-a produkt stranica,",
+      "lokalizacije i tehničkog SEO-a.",
+      "Fokus je bio na <strong>vidljivosti, poverenju i boljem putu kupca</strong>."
+    ],
+    "projects.p1.tech": "<span class='project-tech-tag'>Shopify</span><span class='project-tech-tag'>Liquid</span><span class='project-tech-tag'>End-to-End izrada</span><span class='project-tech-tag'>Tehnički SEO</span><span class='project-tech-tag'>Arhitektura prodavnice</span><span class='project-tech-tag'>Konverzioni UX</span>",
+
+    "services.label": "Usluge",
+    "services.subtitle": "Jasno definisane usluge za brendove kojima su potrebni doteran rezultat, visoke performanse i saradnja bez nepotrebnog komplikovanja od ideje do lansiranja.",
+    "services.card1.eyebrow": "01 / Shopify",
+    "services.card1.title": "Shopify storefront-i koji deluju premium i bolje konvertuju.",
+    "services.card1.desc": "Prilagođen Shopify rad za brendove kojima nije dovoljan samo osnovni theme setup, već su im potrebni jasna struktura, kvalitetniji UX i detalji koji grade poverenje kroz ceo kupovni tok.",
+    "services.card1.point1": "Prilagođene sekcije, template-i i UX produkt stranica",
+    "services.card1.point2": "Dorade teme, hijerarhija sadržaja i konverzioni polish",
+    "services.card1.point3": "Lokalizacija, merchandising i storefront QA spreman za lansiranje",
+    "services.card2.eyebrow": "02 / Web",
+    "services.card2.title": "Brzi sajtovi sa čistom i preciznom frontend realizacijom.",
+    "services.card2.desc": "Prezentacioni sajtovi, landing stranice i poslovni web sajtovi koji se brzo učitavaju, jasno komuniciraju vrednost i ostavljaju utisak promišljeno izrađenog proizvoda na svim uređajima.",
+    "services.card2.point1": "Responzivni layout-i sa pažljivo urađenim interakcijama",
+    "services.card2.point2": "Frontend arhitektura sa fokusom na performanse",
+    "services.card2.point3": "Premium UI polish usklađen sa smerom brenda",
+    "services.card3.eyebrow": "03 / SEO",
+    "services.card3.title": "Tehnički SEO koji podržava vidljivost od samog temelja.",
+    "services.card3.desc": "Optimizacija koja je ugrađena u sam proizvod, tako da bolja indeksacija, čistija struktura i spremnost za pretragu budu deo izrade, a ne nešto što se rešava naknadno.",
+    "services.card3.point1": "Core Web Vitals, meta podaci i unapređenja strukture sadržaja",
+    "services.card3.point2": "On-page tehničke provere i čistija informacijska arhitektura",
+    "services.card3.point3": "SEO-promišljena implementacija za Shopify i custom sajtove",
+    "services.card4.eyebrow": "04 / Support",
+    "services.card4.title": "Dorade i unapređenja i nakon lansiranja, ne samo handoff.",
+    "services.card4.desc": "Kada prva verzija ode uživo, saradnja može da se nastavi kroz iteracije, ispravke i ciljane nadogradnje koje održavaju proizvod doteranim dok biznis raste.",
+    "services.card4.point1": "Post-launch dorade, ispravke i proširenje funkcionalnosti",
+    "services.card4.point2": "Ažuriranja sadržaja, storefront-a i UX-a bez vizuelnog raspada",
+    "services.card4.point3": "Pouzdana saradnja za dugoročno unapređenje proizvoda",
+    "services.proof1.value": "Od početka do kraja",
+    "services.proof1.label": "Od ideje i planiranja do finalnog polisha",
+    "services.proof2.value": "Performanse prvo",
+    "services.proof2.label": "Odluke vođene brzinom, jasnoćom i upotrebljivošću",
+    "services.proof3.value": "Spremno za lansiranje",
+    "services.proof3.label": "Rezultat koji deluje završen, ne polovično isporučen",
+
+    "common.viewProject": "Pogledaj projekat",
+    "common.visitWebsite": "Poseti sajt",
+    "common.viewDocs": "Pogledaj detalje",
+    "common.github": "GitHub",
+    "common.caseStudy": "Studija slučaja",
+
+    "process.label": "Kako radim",
+    "process.title.line1": "Proces izgrađen",
+    "process.title.line2": "za kvalitet.",
+    "process.text1": "Kao frontend i Shopify developerka, svakom projektu pristupam kao <strong>digitalnom proizvodu u kome performanse imaju prioritet</strong>. Od <strong>tehničkog SEO-a i responzivnog dizajna</strong> do čiste arhitekture i doteranog UI-ja, svaka odluka usmerena je ka tome da sajtovi i eCommerce iskustva budu <strong>brzi, lako pronalažljivi, skalabilni</strong> i spremni da podrže <strong>konkretne poslovne ciljeve</strong>.",
+    "process.text2": "Bilo da razvijam prilagođeni Shopify storefront, optimizujem landing stranicu usmerenu na konverzije ili gradim veću web aplikaciju, moj proces ostaje isti: <strong>jasna komunikacija, promišljeno planiranje, pristupačnost, Core Web Vitals i održiv kod</strong> koji <strong>pouzdano radi i nakon lansiranja</strong>.",
+    "process.text1.lines": [
+      "Svakom projektu pristupam kao <strong>digitalnom</strong>",
+      "<strong>proizvodu u kome performanse imaju prioritet</strong>,",
+      "uz jasnu strukturu i doteran interfejs.",
+      "Od <strong>tehničkog SEO-a</strong> do <strong>responzivnog dizajna</strong>,",
+      "svaka odluka podržava <strong>konkretan rast</strong>."
+    ],
+    "process.text2.lines": [
+      "Bilo da razvijam <strong>Shopify storefront</strong>,",
+      "optimizujem landing stranicu",
+      "ili gradim veću web aplikaciju, proces ostaje",
+      "<strong>jasan, promišljen i dugoročno održiv</strong>."
+    ],
+    "process.badge1": "Core Web Vitals",
+    "process.badge2": "Tehnički SEO",
+    "process.badge3": "Shopify storefront-i",
+    "process.badge4": "Pristupačan UI",
+    "process.badge5": "Fokus na konverzije",
+    "process.badge6": "Skalabilni frontendi",
+    "process.step1.title": "Razumevanje brenda i cilja",
+    "process.step1.desc": "Počinjem razumevanjem <strong>biznisa, pozicioniranja brenda, publike i konkretnog cilja projekta</strong>. Bilo da je u pitanju Shopify prodavnica, landing stranica ili prilagođena platforma, <strong>jasno definisana osnova</strong> u ovoj fazi određuje kvalitet svega što sledi.",
+    "process.step1.desc.lines": [
+      "Počinjem razumevanjem <strong>biznisa</strong>,",
+      "<strong>pozicioniranja brenda, publike i konkretnog cilja</strong>,",
+      "jer ta <strong>osnova određuje kvalitet</strong> svega što sledi."
+    ],
+    "process.step2.title": "Planiranje strukture i skalabilnosti",
+    "process.step2.desc": "Pre početka razvoja definišem <strong>pravu strukturu projekta</strong>: logiku rasporeda, hijerarhiju sadržaja, responzivno ponašanje, Shopify setup i <strong>tehničke osnove koje podržavaju performanse, SEO i dugoročnu skalabilnost</strong>.",
+    "process.step2.desc.lines": [
+      "Pre početka razvoja definišem <strong>logiku rasporeda</strong>,",
+      "hijerarhiju sadržaja i responzivno ponašanje,",
+      "uz tehničke osnove koje podržavaju <strong>performanse i SEO</strong>."
+    ],
+    "process.step3.title": "Precizna izrada",
+    "process.step3.desc": "Razvijam <strong>čist i održiv interfejs</strong> sa velikom pažnjom prema detaljima. Svaka sekcija osmišljena je tako da <strong>izgleda profesionalno, učitava se brzo, radi pouzdano na svim uređajima</strong> i vodi korisnika od prvog kontakta do konverzije.",
+    "process.step3.desc.lines": [
+      "Razvijam <strong>čist i održiv interfejs</strong>",
+      "koji <strong>izgleda profesionalno, učitava se brzo</strong>",
+      "i vodi korisnika od prvog kontakta do <strong>konverzije</strong>."
+    ],
+    "process.step4.title": "Optimizacija za performanse i SEO",
+    "process.step4.desc": "Optimizacija je <strong>deo razvoja, a ne korak koji dolazi na kraju</strong>. Unapređujem <strong>Core Web Vitals, tehnički SEO, pristupačnost, responzivnost i ukupnu upotrebljivost</strong> kako bi finalni proizvod bio <strong>vizuelno ubedljiv, lako pronalažljiv i operativno efikasan</strong>.",
+    "process.step4.desc.lines": [
+      "<strong>Optimizacija je deo razvoja</strong>, a ne završna dorada.",
+      "Unapređujem <strong>performanse, SEO, pristupačnost i responzivnost</strong>,",
+      "kako bi proizvod bio <strong>lako pronalažljiv i efikasan</strong>."
+    ],
+    "process.step5.title": "Lansiranje, dorada i podrška",
+    "process.step5.desc": "Nakon lansiranja proveravam da je sve <strong>stabilno, doterano i spremno za realnu upotrebu</strong>. Od završnog testiranja i dorada do handoff-a i <strong>post-launch podrške</strong>, cilj je proizvod koji <strong>danas radi pouzdano i ostaje spreman za dalje širenje</strong>.",
+    "process.step5.desc.lines": [
+      "Nakon lansiranja proveravam da je sve <strong>stabilno</strong>,",
+      "<strong>doterano i spremno za realnu upotrebu</strong>,",
+      "uz podršku koja olakšava <strong>dalje širenje</strong>."
+    ],
+
+    "testimonials.label": "Preporuke",
+    "testimonials.title.line1": "Reči ljudi sa kojima sam",
+    "testimonials.title.line2": "sarađivala.",
+    "testimonials.subtitle": "Prostor za <strong>autentične preporuke klijenata</strong>, uz jasan kontekst o osobi, ulozi i kompaniji.",
+    "testimonials.subtitle.lines": [
+      "Prostor za <strong>autentične preporuke klijenata</strong>,",
+      "uz <strong>jasan kontekst</strong> o osobi, ulozi i kompaniji."
+    ],
+    "testimonials.slider.label": "Recenzije klijenata",
+    "testimonials.slider.prev": "Prethodna recenzija",
+    "testimonials.slider.next": "Sledeća recenzija",
+    "testimonials.slider.pagination": "Paginacija recenzija",
+    "testimonials.slider.go1": "Idi na recenziju 1",
+    "testimonials.slider.go2": "Idi na recenziju 2",
+    "testimonials.slider.go3": "Idi na recenziju 3",
+    "testimonials.card1.badge": "Klijent 01",
+    "testimonials.card1.quote": "Ovde će biti prikazana prva preporuka klijenta. Kada bude dostupna konkretna izjava, ovaj tekst treba zameniti originalnim testimonialom.",
+    "testimonials.card1.quote.lines": [
+      "Ovde će biti prikazana prva preporuka klijenta.",
+      "Kada bude dostupna konkretna izjava,",
+      "ovaj tekst treba zameniti originalnim testimonialom."
+    ],
+    "testimonials.card1.name": "Ime klijenta",
+    "testimonials.card1.role": "Osnivač / direktor / marketing lead",
+    "testimonials.card1.company": "Naziv kompanije",
+    "testimonials.card1.note": "Kratak kontekst o tome ko je klijent i na kakvom projektu smo sarađivali.",
+    "testimonials.card1.note.lines": [
+      "Kratak kontekst o tome ko je klijent",
+      "i na kakvom projektu smo sarađivali."
+    ],
+    "testimonials.card2.badge": "Klijent 02",
+    "testimonials.card2.quote": "Drugi slajd predviđen je za preporuku koja ističe komunikaciju, kvalitet isporuke ili konkretan uticaj finalnog rešenja.",
+    "testimonials.card2.quote.lines": [
+      "Drugi slajd predviđen je za preporuku",
+      "koja ističe komunikaciju, kvalitet isporuke",
+      "ili konkretan uticaj finalnog rešenja."
+    ],
+    "testimonials.card2.name": "Ime klijenta",
+    "testimonials.card2.role": "E-commerce manager / vlasnik brenda",
+    "testimonials.card2.company": "Naziv kompanije",
+    "testimonials.card2.note": "Jedna kratka rečenica o saradnji, kako bi posetioci odmah razumeli kontekst preporuke.",
+    "testimonials.card2.note.lines": [
+      "Jedna kratka rečenica o saradnji,",
+      "kako bi posetioci odmah razumeli kontekst preporuke."
+    ],
+    "testimonials.card3.badge": "Klijent 03",
+    "testimonials.card3.quote": "Treći slajd može da sadrži preporuku koja govori o poverenju, tehničkoj sigurnosti, kvalitetu dizajna ili dugoročnoj saradnji.",
+    "testimonials.card3.quote.lines": [
+      "Treći slajd može da sadrži preporuku",
+      "koja govori o poverenju, tehničkoj sigurnosti,",
+      "kvalitetu dizajna ili dugoročnoj saradnji."
+    ],
+    "testimonials.card3.name": "Ime klijenta",
+    "testimonials.card3.role": "Product lead / vlasnik biznisa",
+    "testimonials.card3.company": "Naziv kompanije",
+    "testimonials.card3.note": "Jedna kratka rečenica koja opisuje klijenta, biznis ili vrstu rada koja je realizovana u saradnji.",
+    "testimonials.card3.note.lines": [
+      "Jedna kratka rečenica koja opisuje klijenta,",
+      "biznis ili vrstu rada realizovanu u saradnji."
+    ],
+
+    "guarantee.label": "Garancija kvaliteta",
+    "guarantee.badge": "Posvećena da sve bude kako treba",
+    "guarantee.title.line1": "Za sve što obećam,",
+    "guarantee.title.line2": "ličnim imenom stojim iza toga.",
+    "guarantee.text1": "Svaki projekat koji preuzmem gradim po istom standardu koji predstavljam kroz ovaj portfolio: jasna struktura, promišljen dizajn, visoke performanse i pažljivo izvedeni detalji. Ne smatram isporuku završenom dok rezultat nije doteran, pouzdan i potpuno usklađen sa ciljem koji smo dogovorili.",
+    "guarantee.text1.lines": [
+      "Svaki projekat koji preuzmem gradim po istom standardu",
+      "koji predstavljam kroz ovaj portfolio:",
+      "jasna struktura, promišljen dizajn, visoke performanse",
+      "i pažljivo izvedeni detalji."
+    ],
+    "guarantee.text2": "Ako nešto zahteva doradu, dorađujem ga. Moja obaveza je jednostavna: da dobijete finalni rezultat koji možete da pustite u rad sa punim poverenjem i sa kojim ćete biti 100% zadovoljni, a ne nešto što je urađeno na brzinu ili ostavljeno na pola puta.",
+    "guarantee.text2.lines": [
+      "Ako nešto zahteva doradu, dorađujem ga.",
+      "Moja obaveza je jednostavna: da dobijete finalni rezultat",
+      "koji možete da pustite u rad sa punim poverenjem,",
+      "a ne nešto urađeno na brzinu ili ostavljeno na pola puta."
+    ],
+    "guarantee.text3": "To podrazumeva i jasnu komunikaciju, pažljiv QA i spremnost da doterujem detalje dok rezultat ne deluje zaokruženo, kredibilno i potpuno spremno da na najbolji način predstavi vaš brend.",
+    "guarantee.text3.lines": [
+      "To podrazumeva i jasnu komunikaciju, pažljiv QA",
+      "i doterivanje detalja dok rezultat ne deluje",
+      "zaokruženo, kredibilno i potpuno spremno za vaš brend."
+    ],
+    "guarantee.role": "Frontend i Shopify developerka",
+    "guarantee.signatureNote": "Lični potpis na kvalitet, doteranost i odgovornost u isporuci.",
+
+    "contact.label": "Kontakt",
+    "contact.title.line1": "Hajde da zajedno razvijemo nešto",
+    "contact.title.line2": "izuzetno.",
+    "contact.subtitle": "Ako razvijate Shopify prodavnicu, unapređujete postojeći sajt ili vam je potrebno <strong>brzo i SEO optimizovano digitalno rešenje</strong>, biće mi drago da čujem više o vašem projektu. Dostupna sam za <strong>pažljivo odabrane freelance projekte, dugoročnu saradnju</strong> i frontend pozicije.",
+    "contact.subtitle.lines": [
+      "Ako razvijate Shopify prodavnicu, unapređujete postojeći sajt",
+      "ili vam je potrebno <strong>brzo i SEO optimizovano digitalno rešenje</strong>,",
+      "biće mi drago da čujem više o vašem projektu.",
+      "Dostupna sam za <strong>pažljivo odabrane freelance projekte i dugoročnu saradnju</strong>."
+    ],
+    "contact.form.name.label": "Ime",
+    "contact.form.name.placeholder": "Vaše ime",
+    "contact.form.email.label": "Email",
+    "contact.form.email.placeholder": "vi@primer.com",
+    "contact.form.subject.label": "Naslov",
+    "contact.form.subject.placeholder": "Upit za projekat",
+    "contact.form.message.label": "Poruka",
+    "contact.form.message.placeholder": "Pišite mi o projektu, rokovima i ciljevima.",
+    "contact.form.submit.default": "Pošalji poruku",
+    "contact.form.submit.sending": "Šaljem...",
+    "contact.form.submit.sent": "Poruka je poslata!",
+    "contact.form.submit.success": "Poruka je poslata!",
+
+    "footer.copy.suffix": ". Sva prava zadržana.",
+    "footer.home": "Početna",
+    "footer.services": "Usluge",
+    "footer.work": "Radovi"
+  }
+}
