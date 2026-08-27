@@ -5562,8 +5562,10 @@ body::after {
 @media (max-width: 640px) {
     .section { padding-block: var(--space-10); }
     .container { padding-inline: var(--space-4); }
-    .hero-stats { gap: var(--space-5); }
-    .hero-stat-value { font-size: 1.5rem; }
+    .hero > .container { width: 100%; min-width: 0; }
+    .hero-stats { gap: var(--space-2); }
+    .hero-stat { flex: 1 1 0; min-width: 0; text-align: center; }
+    .hero-stat-value { font-size: 1rem; overflow-wrap: anywhere; }
     .hero-ctas .btn { width: 100%; justify-content: center; }
     .hero-ctas { flex-direction: column; }
     .section-title { font-size: 1.875rem; }
@@ -8909,7 +8911,7 @@ html[data-theme="light"] .contact-grid > .skill-category-content {
 }
 
 .hero-title-copy-secondary {
-    max-width: 15ch;
+    max-width: 20ch;
     color: color-mix(in srgb, var(--t0) 88%, var(--t1) 12%);
 }
 
@@ -8962,6 +8964,10 @@ html[data-theme="light"] .hero-title-copy-secondary {
 }
 
 @media (min-width: 961px) {
+    .hero > .container {
+        width: min(100%, 840px);
+    }
+
     .hero-content {
         max-width: 1280px;
     }
@@ -8997,13 +9003,13 @@ html[data-theme="light"] .hero-title-copy-secondary {
     }
 
     .hero-title-copy {
-        max-width: 13ch;
+        max-width: 100%;
         font-size: clamp(1.45rem, 6vw, 2rem);
         line-height: 1.06;
     }
 
     .hero-title-copy-secondary {
-        max-width: 11ch;
+        max-width: 100%;
     }
 }
 
