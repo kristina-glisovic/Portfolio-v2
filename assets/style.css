@@ -8797,16 +8797,21 @@ body {
 }
 
 /* ── Services Section ───────────────────────────────────────────── */
+.services.section {
+    padding-block: clamp(3.75rem, 5.5vw, 4.15rem);
+    scroll-margin-top: 6.5rem;
+}
+
 .services-shell {
     position: relative;
     display: grid;
-    gap: 1.5rem;
-    padding: clamp(1.2rem, 2.2vw, 1.75rem);
+    gap: 1rem;
+    padding: clamp(1.2rem, 2vw, 1.5rem);
     border: 1px solid var(--apple-stroke);
     border-radius: 2rem;
     background:
-        radial-gradient(circle at top right, rgba(99,102,241,0.12), transparent 26%),
-        radial-gradient(circle at bottom left, rgba(34,211,238,0.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(99,102,241,0.1), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(34,211,238,0.06), transparent 30%),
         var(--apple-surface-1);
     box-shadow: var(--apple-shadow-lg), var(--apple-highlight);
     overflow: hidden;
@@ -8824,26 +8829,53 @@ body {
     opacity: .75;
 }
 
-.services-intro {
+.services-header,
+.services-grid,
+.services-footer {
     position: relative;
     z-index: 1;
-    max-width: 58rem;
+}
+
+.services-header .section-label {
+    margin-bottom: .75rem;
+}
+
+.services-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(18rem, .92fr);
+    align-items: end;
+    gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.services-intro-grid .section-title {
+    max-width: 17ch;
+    margin-bottom: 0;
+    font-size: clamp(2.1rem, 3.1vw, 2.65rem);
+    line-height: 1.08;
+}
+
+.services-intro {
+    max-width: 39rem;
+    color: color-mix(in srgb, var(--t1) 82%, var(--t2));
+    font-size: .96rem;
+    line-height: 1.58;
+    text-wrap: pretty;
 }
 
 .services-grid {
-    position: relative;
-    z-index: 1;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1.12fr) repeat(2, minmax(0, 1fr));
+    align-items: stretch;
     gap: 1rem;
 }
 
 .service-card {
     position: relative;
-    display: grid;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
     min-height: 100%;
-    padding: 1.35rem;
+    padding: 1.1rem;
     border: 1px solid var(--apple-stroke);
     border-radius: 1.7rem;
     background:
@@ -8859,6 +8891,28 @@ body {
         box-shadow .28s var(--ease),
         background .28s var(--ease);
     overflow: hidden;
+}
+
+.service-card--featured {
+    border-color: rgba(129,140,248,0.3);
+    background:
+        radial-gradient(circle at 88% 12%, rgba(34,211,238,0.08), transparent 30%),
+        linear-gradient(180deg, rgba(129,140,248,0.08), rgba(255,255,255,0.014)),
+        rgba(8,11,22,0.7);
+    box-shadow:
+        0 20px 46px rgba(2,6,23,0.17),
+        0 0 36px rgba(99,102,241,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.07);
+}
+
+.service-card--featured::after {
+    content: "";
+    position: absolute;
+    inset: 0 1.1rem auto;
+    height: 2px;
+    border-radius: 0 0 999px 999px;
+    background: linear-gradient(90deg, var(--a1), var(--a3));
+    box-shadow: 0 0 18px rgba(99,102,241,0.35);
 }
 
 .service-card::before {
@@ -8899,8 +8953,8 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 1.1rem;
     border: 1px solid rgba(255,255,255,0.08);
     background:
@@ -8911,6 +8965,16 @@ body {
         0 14px 28px rgba(2,6,23,0.12);
     color: var(--a1);
     flex-shrink: 0;
+}
+
+.service-card--featured .service-card-icon {
+    border-color: rgba(129,140,248,0.25);
+    background:
+        linear-gradient(145deg, rgba(129,140,248,0.2), rgba(34,211,238,0.08)),
+        rgba(255,255,255,0.025);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.16),
+        0 14px 30px rgba(99,102,241,0.16);
 }
 
 .service-card-icon svg {
@@ -8932,53 +8996,52 @@ body {
 }
 
 .service-card-title {
-    max-width: 18ch;
+    max-width: 20ch;
     font-family: var(--ff-d);
-    font-size: 1.35rem;
-    line-height: 1.16;
+    font-size: 1.25rem;
+    line-height: 1.14;
     letter-spacing: -.03em;
     font-weight: 620;
 }
 
 .service-card-desc {
     color: color-mix(in srgb, var(--t1) 76%, var(--t2));
-    font-size: var(--fs-body-sm);
-    line-height: 1.72;
+    font-size: .84rem;
+    line-height: 1.55;
 }
 
 .service-card-points {
     display: grid;
-    gap: .72rem;
+    gap: .48rem;
     margin-top: auto;
-    padding-top: .2rem;
+    padding-top: .15rem;
 }
 
 .service-card-point {
     display: flex;
     align-items: flex-start;
-    gap: .72rem;
+    gap: .62rem;
     color: color-mix(in srgb, var(--t1) 84%, var(--t2));
-    font-size: .92rem;
-    line-height: 1.58;
+    font-size: .82rem;
+    line-height: 1.42;
 }
 
 .service-card-point-dot {
     width: .46rem;
     height: .46rem;
-    margin-top: .45rem;
+    margin-top: .38rem;
     border-radius: 999px;
     background: linear-gradient(135deg, var(--a1), var(--a2));
     box-shadow: 0 0 0 4px rgba(99,102,241,0.1);
     flex-shrink: 0;
 }
 
-.services-proof {
-    position: relative;
-    z-index: 1;
+.services-footer {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: .9rem;
-    padding: .95rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .85rem 1rem;
     border: 1px solid var(--apple-stroke);
     border-radius: 1.5rem;
     background:
@@ -8989,26 +9052,56 @@ body {
         0 12px 28px rgba(2,6,23,0.08);
 }
 
-.services-proof-item {
-    padding: .6rem .7rem;
-    border-radius: 1.15rem;
-    background: rgba(255,255,255,0.018);
-    border: 1px solid rgba(255,255,255,0.04);
+.services-expertise {
+    display: grid;
+    grid-template-columns: minmax(10rem, .72fr) minmax(0, 1.8fr);
+    align-items: center;
+    gap: 1rem;
 }
 
-.services-proof-value {
+.services-expertise-label {
     font-family: var(--ff-d);
-    font-size: 1rem;
-    font-weight: 620;
-    line-height: 1.2;
-    letter-spacing: -.02em;
+    color: var(--t1);
+    font-size: .84rem;
+    font-weight: 600;
+    line-height: 1.42;
+    text-wrap: balance;
 }
 
-.services-proof-label {
-    margin-top: .32rem;
-    color: color-mix(in srgb, var(--t1) 72%, var(--t2));
-    font-size: .84rem;
-    line-height: 1.52;
+.services-capabilities {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .45rem 1rem;
+}
+
+.services-capability {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    min-width: 0;
+    color: color-mix(in srgb, var(--t1) 82%, var(--t2));
+    font-size: .78rem;
+    line-height: 1.35;
+}
+
+.services-capability::before {
+    content: "";
+    width: .35rem;
+    height: .35rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--a1), var(--a3));
+    box-shadow: 0 0 8px rgba(99,102,241,0.28);
+    flex: 0 0 auto;
+}
+
+.services-cta {
+    min-height: 44px;
+    justify-content: center;
+}
+
+.services-cta:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--a3) 72%, white 28%);
+    outline-offset: 4px;
 }
 
 html[data-theme="light"] .services-shell {
@@ -9028,55 +9121,138 @@ html[data-theme="light"] .service-card {
         inset 0 1px 0 rgba(255,255,255,0.72);
 }
 
-html[data-theme="light"] .services-proof {
+html[data-theme="light"] .service-card--featured {
+    border-color: rgba(79,70,229,0.22);
+    background:
+        radial-gradient(circle at 88% 12%, rgba(8,145,178,0.06), transparent 30%),
+        linear-gradient(180deg, rgba(238,242,255,0.94), rgba(255,255,255,0.84));
+    box-shadow:
+        0 18px 38px rgba(79,70,229,0.08),
+        0 0 32px rgba(99,102,241,0.05),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+html[data-theme="light"] .services-footer {
     background:
         linear-gradient(180deg, rgba(248,250,252,0.92), rgba(239,244,249,0.86)),
         rgba(255,255,255,0.78);
     border-color: rgba(15,23,42,0.08);
 }
 
-html[data-theme="light"] .services-proof-item {
-    background: rgba(255,255,255,0.58);
-    border-color: rgba(15,23,42,0.06);
-}
-
-@media (max-width: 900px) {
-    .services-grid,
-    .services-proof {
+@media (max-width: 980px) {
+    .services-intro-grid {
         grid-template-columns: 1fr;
+        gap: .85rem;
+    }
+
+    .services-intro-grid .section-title {
+        max-width: 21ch;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-footer,
+    .services-expertise {
+        grid-template-columns: 1fr;
+    }
+
+    .services-cta {
+        width: 100%;
     }
 }
 
 @media (max-width: 640px) {
+    .services.section {
+        padding-block: 2.25rem;
+    }
+
+    .services .container {
+        padding-inline: 1rem;
+    }
+
     .services-shell {
-        padding: 1rem;
-        gap: 1rem;
+        padding: .8rem;
+        gap: .6rem;
         border-radius: 1.6rem;
     }
 
+    .services-header .section-label {
+        margin-bottom: .5rem;
+    }
+
+    .services-intro-grid {
+        gap: .4rem;
+    }
+
+    .services-intro-grid .section-title {
+        font-size: clamp(1.65rem, 7.7vw, 2rem);
+        line-height: 1.1;
+    }
+
+    .services-intro {
+        font-size: .86rem;
+        line-height: 1.5;
+    }
+
     .service-card {
-        padding: 1.1rem;
+        padding: .75rem;
+        gap: .45rem;
         border-radius: 1.35rem;
     }
 
     .service-card-top {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: .75rem;
+        align-items: center;
+    }
+
+    .service-card-icon {
+        width: 2.75rem;
+        height: 2.75rem;
     }
 
     .service-card-title {
         max-width: none;
-        font-size: 1.18rem;
+        font-size: 1.08rem;
+    }
+
+    .service-card-desc {
+        font-size: .81rem;
+        line-height: 1.48;
+    }
+
+    .service-card-points {
+        gap: .3rem;
+        padding-top: 0;
     }
 
     .service-card-point {
-        font-size: .89rem;
+        gap: .52rem;
+        font-size: .79rem;
+        line-height: 1.38;
     }
 
-    .services-proof {
-        padding: .8rem;
+    .services-footer {
+        gap: .65rem;
+        padding: .7rem;
         border-radius: 1.2rem;
+    }
+
+    .services-expertise {
+        gap: .5rem;
+    }
+
+    .services-capabilities {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .35rem .7rem;
+    }
+
+    .services-grid {
+        gap: .75rem;
+    }
+
+    .services-capability {
+        font-size: .72rem;
     }
 }
 
