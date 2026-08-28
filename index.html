@@ -124,77 +124,81 @@
   <div class="divider" aria-hidden="true"></div>
 
   <!-- ═══ ABOUT ═════════════════════════════════════════════════════════ -->
-  <section class="about section" id="about" data-premium-section>
+  <section class="about section" id="about" aria-labelledby="about-title" data-premium-section>
     <div class="container">
-      <div class="about-grid">
-
-        <div class="about-image-wrap reveal">
-          <div class="about-avatar">
-            <div class="about-avatar-inner">
-              <div class="about-avatar-aura" aria-hidden="true"></div>
-              <img
-                src="assets/face.webp"
-                alt="Portrait of Kristina Glisovic"
-                class="about-avatar-photo"
-                loading="lazy"
-                decoding="async"
-                width="1400"
-                height="1600"
-              />
-            </div>
-          </div>
-          <div class="about-avatar-decoration"></div>
-          <div class="about-avatar-decoration-2"></div>
-          <div class="about-floating-badge">
-            <div class="about-floating-badge-icon">✦</div>
-            <div class="about-floating-badge-text">
-              <strong data-i18n="about.badge.title"></strong>
-              <span data-i18n="about.badge.subtitle"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-text">
+      <div class="about-editorial">
+        <header class="about-header">
           <div class="section-label reveal" data-i18n="about.label"></div>
-          <h2 class="section-title reveal reveal-delay-1">
-            <span data-i18n="about.title.line1"></span><br />
-            <span class="gradient-text" data-i18n="about.title.line2"></span>
-          </h2>
-          <p class="about-text-block reveal reveal-delay-2 scroll-line-reveal" data-i18n-lines="about.text1" data-i18n-fixed-lines="true"></p>
-          <p class="about-text-block reveal reveal-delay-3 scroll-line-reveal" data-i18n-lines="about.text2" data-i18n-fixed-lines="true"></p>
+          <h2 class="section-title reveal reveal-delay-1" id="about-title" data-i18n="about.title"></h2>
+          <p class="about-intro reveal reveal-delay-2" data-i18n="about.intro"></p>
+        </header>
 
-          <div class="about-highlights">
-            <div class="about-highlight reveal reveal-delay-2">
-              <span class="about-highlight-icon">⚡</span>
-              <div class="skill-category-content">
-                <strong data-i18n="about.highlight1.title"></strong>
-                <span data-i18n="about.highlight1.desc"></span>
-              </div>
-            </div>
-            <div class="about-highlight reveal reveal-delay-3">
-              <span class="about-highlight-icon">🎨</span>
-              <div class="skill-category-content">
-                <strong data-i18n="about.highlight2.title"></strong>
-                <span data-i18n="about.highlight2.desc"></span>
-              </div>
-            </div>
-            <div class="about-highlight reveal reveal-delay-4">
-              <span class="about-highlight-icon">🛠</span>
-              <div class="skill-category-content">
-                <strong data-i18n="about.highlight3.title"></strong>
-                <span data-i18n="about.highlight3.desc"></span>
-              </div>
-            </div>
-            <div class="about-highlight reveal reveal-delay-5">
-              <span class="about-highlight-icon">🌐</span>
-              <div class="skill-category-content">
-                <strong data-i18n="about.highlight4.title"></strong>
-                <span data-i18n="about.highlight4.desc"></span>
+        <div class="about-body">
+          <div class="about-portrait reveal reveal-delay-2">
+            <div class="about-avatar">
+              <div class="about-avatar-inner">
+                <div class="about-avatar-aura" aria-hidden="true"></div>
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcset="assets/face-560.avif 560w, assets/face-900.avif 900w"
+                    sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 38vw, 420px"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="assets/face-560.webp 560w, assets/face-900.webp 900w"
+                    sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 38vw, 420px"
+                  />
+                  <img
+                    src="assets/face-900.webp"
+                    alt="Portrait of Kristina Glišović"
+                    data-i18n-alt="about.portraitAlt"
+                    class="about-avatar-photo"
+                    loading="lazy"
+                    decoding="async"
+                    width="900"
+                    height="1029"
+                  />
+                </picture>
               </div>
             </div>
           </div>
-        </div>
 
+          <div class="about-values">
+            <ol class="about-differentiators">
+              <li class="about-differentiator reveal reveal-delay-2">
+                <span class="about-differentiator-number" aria-hidden="true">01</span>
+                <div class="about-differentiator-content">
+                  <h3 data-i18n="about.diff1.title"></h3>
+                  <p data-i18n="about.diff1.desc"></p>
+                </div>
+              </li>
+              <li class="about-differentiator reveal reveal-delay-3">
+                <span class="about-differentiator-number" aria-hidden="true">02</span>
+                <div class="about-differentiator-content">
+                  <h3 data-i18n="about.diff2.title"></h3>
+                  <p data-i18n="about.diff2.desc"></p>
+                </div>
+              </li>
+              <li class="about-differentiator reveal reveal-delay-4">
+                <span class="about-differentiator-number" aria-hidden="true">03</span>
+                <div class="about-differentiator-content">
+                  <h3 data-i18n="about.diff3.title"></h3>
+                  <p data-i18n="about.diff3.desc"></p>
+                </div>
+              </li>
+              <li class="about-differentiator reveal reveal-delay-5">
+                <span class="about-differentiator-number" aria-hidden="true">04</span>
+                <div class="about-differentiator-content">
+                  <h3 data-i18n="about.diff4.title"></h3>
+                  <p data-i18n="about.diff4.desc"></p>
+                </div>
+              </li>
+            </ol>
+
+            <p class="about-credibility reveal reveal-delay-5" data-i18n="about.credibility"></p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
