@@ -970,9 +970,6 @@
     s.textContent = '@keyframes dashAnim{0%{stroke-dashoffset:56}50%{stroke-dashoffset:0}100%{stroke-dashoffset:-56}}';
     document.head.appendChild(s);
 
-    /* ── Theme Switcher ─────────────────────────────────────────────── */
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
     const skillChipLogos = {
       html: `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="#E44D26" d="M4 3h16l-1.45 16.38L12 21l-6.55-1.62L4 3Z"/><path fill="#F16529" d="M12 4.35v15.27l5.3-1.3 1.2-13.97H12Z"/><path fill="#EBEBEB" d="m12 10.42-2.66-.01-.18-2.1H12V6.27H6.93l.05.55.48 5.65H12v-2.05Zm0 5.32-.01.01-2.24-.54-.14-1.66H7.59l.28 3.3 4.12 1.02h.01v-2.13Z"/><path fill="#fff" d="M11.99 10.42v2.05h2.47l-.23 2.74-2.24.54v2.13l4.13-1.02.03-.35.47-5.55.05-.54h-4.91Zm0-4.15v2.04h4.69l.04-.46.09-1.03.05-.55h-4.87Z"/></svg>`,
       css: `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="#1572B6" d="M4 3h16l-1.45 16.38L12 21l-6.55-1.62L4 3Z"/><path fill="#33A9DC" d="M12 4.35v15.27l5.3-1.3 1.2-13.97H12Z"/><path fill="#EBEBEB" d="M12 10.3H9.34l-.18-2H12V6.27H6.93l.05.55.48 5.53H12V10.3Zm0 5.36-.01.01-2.24-.54-.14-1.71H7.59l.27 3.32 4.13 1.02v-2.1Z"/><path fill="#fff" d="M16.64 8.3 16.8 6.27H11.99V8.3h4.65Zm-.35 4.05.02-.22.16-1.83h-4.48v2.05h2.45l-.23 2.78-2.22.54v2.1l4.12-1.02.03-.36.32-4.04Z"/></svg>`,
@@ -1087,19 +1084,6 @@
         });
       });
     }
-
-    // Check for saved theme preference or default to 'light'
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    rootEl.setAttribute('data-theme', currentTheme);
-
-    function toggleTheme() {
-      const newTheme = rootEl.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      rootEl.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    }
-
-    themeToggle.addEventListener('click', toggleTheme);
-    themeToggleMobile.addEventListener('click', toggleTheme);
 
     /* ── Language Switcher ──────────────────────────────────────────── */
     // Load translations from JSON file
