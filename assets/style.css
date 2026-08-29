@@ -9914,3 +9914,31 @@ body {
         transition: none !important;
     }
 }
+
+/* ── Responsive production containment ─────────────────────────── */
+[data-premium-section] {
+    overflow-x: clip;
+}
+
+.about-body {
+    overflow: clip;
+    overflow-clip-margin: 1rem;
+}
+
+@media (max-width: 350px) {
+    .nav-inner > .nav-right .nav-controls {
+        display: none;
+    }
+
+    .nav-logo-text {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+    }
+}
