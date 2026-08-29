@@ -25,11 +25,6 @@
     "hero.stat3.label": "Based in Serbia",
 
     "ui.menu": "Open menu",
-    "ui.social.github": "GitHub",
-    "ui.social.linkedin": "LinkedIn",
-    "ui.social.twitter": "Twitter",
-    "ui.social.email": "Email",
-
     "about.label": "Why Work With Me",
     "about.title": "Thoughtful decisions, precise execution and clear ownership.",
     "about.intro": "I stay close to both the business goal and the implementation—asking the right questions early, identifying UX and technical risks, and carrying each decision through to a launch-ready result.",
@@ -468,56 +463,22 @@
       "the business or the type of work delivered together."
     ],
 
-    "guarantee.label": "Quality Guarantee",
-    "guarantee.badge": "Committed to getting it right",
-    "guarantee.title.line1": "Everything I promise,",
-    "guarantee.title.line2": "I stand behind.",
-    "guarantee.text1": "Every project I take on is built to the same standard presented throughout this portfolio: clear structure, refined design, strong performance and thoughtful execution. I do not treat delivery as finished until the work feels polished, dependable and aligned with the goal we agreed on.",
-    "guarantee.text1.lines": [
-      "Every project I take on is built to the same standard",
-      "presented throughout this portfolio:",
-      "clear structure, refined design, strong performance and thoughtful execution."
-    ],
-    "guarantee.text2": "If something needs refinement, I refine it. My commitment is simple: you receive a final result you can launch with confidence and feel 100% satisfied with, not something rushed, unfinished or only halfway resolved.",
-    "guarantee.text2.lines": [
-      "If something needs refinement, I refine it.",
-      "My commitment is simple: you receive a final result",
-      "you can launch with confidence, not something rushed",
-      "or left only halfway resolved."
-    ],
-    "guarantee.text3": "That also means clear communication, careful QA and a willingness to keep polishing the details until the work feels complete, credible and ready to represent your brand at its best.",
-    "guarantee.text3.lines": [
-      "That also means clear communication, careful QA",
-      "and refining the details until the work feels complete, credible and ready to represent your brand at its best."
-    ],
-    "guarantee.role": "Frontend & Shopify Developer",
-    "guarantee.signatureNote": "Personally signed commitment to quality, polish and follow-through.",
+    "guarantee.label": "A Personal Standard",
+    "guarantee.title": "Everything I promise, I stand behind.",
+    "guarantee.primary": "I take personal responsibility for the quality of every project I deliver—from the decisions made along the way to the details that shape the finished result. The work should feel considered, dependable and ready for real use.",
+    "guarantee.followup": "If something needs refinement, I refine it.",
+    "guarantee.role": "Shopify & Web Solutions Developer",
+    "guarantee.signatureNote": "My personal commitment to quality, clear communication and follow-through.",
 
-    "contact.label": "Get in Touch",
-    "contact.title.line1": "Let's build something",
-    "contact.title.line2": "exceptional.",
-    "contact.subtitle": "If you are building a Shopify store, refining an existing website, or need a <strong>fast, SEO-focused digital experience</strong>, I would love to hear about it. I am available for <strong>select freelance projects, long-term collaborations</strong>, and frontend-focused roles.",
-    "contact.subtitle.lines": [
-      "If you are building a Shopify store, refining an existing website,",
-      "or need a <strong>fast and SEO-focused digital experience</strong>,",
-      "I would love to hear about it.",
-      "I am available for <strong>select freelance projects and long-term collaborations</strong>."
-    ],
-    "contact.form.name.label": "Name",
-    "contact.form.name.placeholder": "Your name",
-    "contact.form.email.label": "Email",
-    "contact.form.email.placeholder": "you@example.com",
-    "contact.form.subject.label": "Subject",
-    "contact.form.subject.placeholder": "Project inquiry",
-    "contact.form.message.label": "Message",
-    "contact.form.message.placeholder": "Tell me about your project, timeline and goals.",
-    "contact.form.submit.default": "Send Message",
-    "contact.form.submit.sending": "Sending...",
-    "contact.form.submit.sent": "Message Sent!",
-    "contact.form.submit.success": "Message Sent!",
+    "contact.label": "Start a Conversation",
+    "contact.title": "Have a project in mind? Let’s talk.",
+    "contact.intro": "Tell me what you’re building, improving or trying to solve. I’ll respond personally and let you know how I can help.",
+    "contact.emailLabel": "Email me directly",
+    "contact.emailAria": "Email Kristina at hello@kristinaglisovic.dev",
+    "contact.support": "A short project overview, approximate timeline and any useful links are enough to get started.",
 
     "footer.copy.suffix": ". All rights reserved.",
-    "footer.home": "Home",
+    "footer.navAria": "Footer navigation",
     "footer.services": "Services",
     "footer.work": "Work"
   },
@@ -547,11 +508,6 @@
     "hero.stat3.label": "Iz Srbije za klijente širom sveta",
 
     "ui.menu": "Otvori meni",
-    "ui.social.github": "GitHub",
-    "ui.social.linkedin": "LinkedIn",
-    "ui.social.twitter": "Twitter",
-    "ui.social.email": "Email",
-
     "about.label": "Zašto sarađivati sa mnom",
     "about.title": "Promišljene odluke, precizna realizacija i jasna odgovornost.",
     "about.intro": "Podjednako sam uključena u razumevanje poslovnog cilja i samu realizaciju—na početku postavljam prava pitanja, prepoznajem UX i tehničke rizike i svaku odluku sprovodim do rešenja spremnog za lansiranje.",
@@ -990,58 +946,22 @@
       "biznis ili vrstu rada realizovanu u saradnji."
     ],
 
-    "guarantee.label": "Garancija kvaliteta",
-    "guarantee.badge": "Posvećena da sve bude kako treba",
-    "guarantee.title.line1": "Za sve što obećam,",
-    "guarantee.title.line2": "ličnim imenom stojim iza toga.",
-    "guarantee.text1": "Svaki projekat koji preuzmem gradim po istom standardu koji predstavljam kroz ovaj portfolio: jasna struktura, promišljen dizajn, visoke performanse i pažljivo izvedeni detalji. Ne smatram isporuku završenom dok rezultat nije doteran, pouzdan i potpuno usklađen sa ciljem koji smo dogovorili.",
-    "guarantee.text1.lines": [
-      "Svaki projekat koji preuzmem gradim po istom standardu",
-      "koji predstavljam kroz ovaj portfolio:",
-      "jasna struktura, promišljen dizajn, visoke performanse",
-      "i pažljivo izvedeni detalji."
-    ],
-    "guarantee.text2": "Ako nešto zahteva doradu, dorađujem ga. Moja obaveza je jednostavna: da dobijete finalni rezultat koji možete da pustite u rad sa punim poverenjem i sa kojim ćete biti 100% zadovoljni, a ne nešto što je urađeno na brzinu ili ostavljeno na pola puta.",
-    "guarantee.text2.lines": [
-      "Ako nešto zahteva doradu, dorađujem ga.",
-      "Moja obaveza je jednostavna: da dobijete finalni rezultat",
-      "koji možete da pustite u rad sa punim poverenjem,",
-      "a ne nešto urađeno na brzinu ili ostavljeno na pola puta."
-    ],
-    "guarantee.text3": "To podrazumeva i jasnu komunikaciju, pažljiv QA i spremnost da doterujem detalje dok rezultat ne deluje zaokruženo, kredibilno i potpuno spremno da na najbolji način predstavi vaš brend.",
-    "guarantee.text3.lines": [
-      "To podrazumeva i jasnu komunikaciju, pažljiv QA",
-      "i doterivanje detalja dok rezultat ne deluje",
-      "zaokruženo, kredibilno i potpuno spremno za vaš brend."
-    ],
-    "guarantee.role": "Frontend i Shopify developerka",
-    "guarantee.signatureNote": "Lični potpis na kvalitet, doteranost i odgovornost u isporuci.",
+    "guarantee.label": "Lični standard",
+    "guarantee.title": "Za sve što obećam, ličnim imenom stojim iza toga.",
+    "guarantee.primary": "Lično preuzimam odgovornost za kvalitet svakog projekta koji isporučim—od odluka koje donosimo tokom saradnje do detalja koji oblikuju završni rezultat. Rešenje treba da bude promišljeno, pouzdano i spremno za stvarnu upotrebu.",
+    "guarantee.followup": "Ako nešto zahteva doradu, dorađujem ga.",
+    "guarantee.role": "Shopify & Web Solutions Developer",
+    "guarantee.signatureNote": "Moj lični potpis na kvalitet, jasnu komunikaciju i odgovornu isporuku.",
 
-    "contact.label": "Kontakt",
-    "contact.title.line1": "Hajde da zajedno razvijemo nešto",
-    "contact.title.line2": "izuzetno.",
-    "contact.subtitle": "Ako razvijate Shopify prodavnicu, unapređujete postojeći sajt ili vam je potrebno <strong>brzo i SEO optimizovano digitalno rešenje</strong>, biće mi drago da čujem više o vašem projektu. Dostupna sam za <strong>pažljivo odabrane freelance projekte, dugoročnu saradnju</strong> i frontend pozicije.",
-    "contact.subtitle.lines": [
-      "Ako razvijate Shopify prodavnicu, unapređujete postojeći sajt",
-      "ili vam je potrebno <strong>brzo i SEO optimizovano digitalno rešenje</strong>,",
-      "biće mi drago da čujem više o vašem projektu.",
-      "Dostupna sam za <strong>pažljivo odabrane freelance projekte i dugoročnu saradnju</strong>."
-    ],
-    "contact.form.name.label": "Ime",
-    "contact.form.name.placeholder": "Vaše ime",
-    "contact.form.email.label": "Email",
-    "contact.form.email.placeholder": "vi@primer.com",
-    "contact.form.subject.label": "Naslov",
-    "contact.form.subject.placeholder": "Upit za projekat",
-    "contact.form.message.label": "Poruka",
-    "contact.form.message.placeholder": "Pišite mi o projektu, rokovima i ciljevima.",
-    "contact.form.submit.default": "Pošalji poruku",
-    "contact.form.submit.sending": "Šaljem...",
-    "contact.form.submit.sent": "Poruka je poslata!",
-    "contact.form.submit.success": "Poruka je poslata!",
+    "contact.label": "Započnimo razgovor",
+    "contact.title": "Imate projekat na umu? Razgovarajmo.",
+    "contact.intro": "Pišite mi šta razvijate, unapređujete ili pokušavate da rešite. Odgovoriću vam lično i jasno reći kako mogu da pomognem.",
+    "contact.emailLabel": "Pišite mi direktno",
+    "contact.emailAria": "Pošaljite email Kristini na hello@kristinaglisovic.dev",
+    "contact.support": "Za početak su dovoljni kratak opis projekta, okvirni rok i relevantni linkovi.",
 
     "footer.copy.suffix": ". Sva prava zadržana.",
-    "footer.home": "Početna",
+    "footer.navAria": "Navigacija u podnožju",
     "footer.services": "Usluge",
     "footer.work": "Radovi"
   }

@@ -245,64 +245,6 @@
     }
 
     /* ── Signature Draw Reveal ─────────────────────────────────────── */
-    const signatureFrame = document.querySelector('.guarantee-signature-frame');
-    const signatureDrawPath = signatureFrame?.querySelector('[data-signature-path]');
-    const signatureRevealTarget = document.querySelector('.guarantee-signoff');
-    const signatureTipMotion = signatureFrame?.querySelector('.guarantee-signature-tip-motion');
-
-    if (signatureFrame && signatureDrawPath) {
-      const signatureLength = Math.ceil(signatureDrawPath.getTotalLength());
-
-      signatureDrawPath.id = 'guarantee-signature-motion-path';
-      signatureFrame.style.setProperty('--signature-length', String(signatureLength));
-      signatureDrawPath.style.strokeDasharray = String(signatureLength);
-      signatureDrawPath.style.strokeDashoffset = String(signatureLength);
-      signatureFrame.classList.add('is-ready');
-
-      const completeSignature = () => {
-        signatureFrame.classList.remove('is-signing');
-        signatureFrame.classList.add('is-signed');
-        signatureDrawPath.style.strokeDashoffset = '0';
-      };
-
-      if (isPerformanceMode()) {
-        completeSignature();
-      } else {
-        const startSignatureDraw = () => {
-          if (signatureFrame.classList.contains('is-signing') || signatureFrame.classList.contains('is-signed')) return;
-
-          signatureFrame.classList.add('is-signing');
-          signatureTipMotion?.beginElement?.();
-
-          const handleSignatureEnd = (event) => {
-            if (event.target !== signatureDrawPath || event.animationName !== 'signatureStrokeDraw') return;
-
-            signatureDrawPath.removeEventListener('animationend', handleSignatureEnd);
-            completeSignature();
-          };
-
-          signatureDrawPath.addEventListener('animationend', handleSignatureEnd);
-        };
-
-        const signatureObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-
-            startSignatureDraw();
-            signatureObserver.disconnect();
-          });
-        }, { threshold: 0.28, rootMargin: '0px 0px -8% 0px' });
-
-        signatureObserver.observe(signatureRevealTarget || signatureFrame);
-
-        bindMediaChange(prefersReducedMotion, () => {
-          if (prefersReducedMotion.matches) {
-            completeSignature();
-          }
-        });
-      }
-    }
-
     /* ── Scroll Line Reveal ─────────────────────────────────────────── */
     let scrollRevealLines = [];
 
@@ -410,7 +352,7 @@
     });
 
     /* ── Premium surface depth ──────────────────────────────────────── */
-    const depthSurfaceSelector = '.education-card, .certificate-card, .job-card, .project-card, .testimonials-slider, .guarantee-card, .contact-form';
+    const depthSurfaceSelector = '.education-card, .certificate-card, .job-card, .project-card, .testimonials-slider';
 
     const resetDepthSurface = (surface) => {
       surface.style.setProperty('--surface-tilt-x', '0deg');
@@ -431,8 +373,8 @@
 
     if (enablePointerReactiveEffects && finePointerQuery.matches && !isPerformanceMode()) {
       document.querySelectorAll(depthSurfaceSelector).forEach(surface => {
-        const maxTilt = surface.matches('.guarantee-card, .contact-form, .testimonials-slider') ? 1.35 : 2.2;
-        const maxShift = surface.matches('.guarantee-card, .contact-form') ? 1.05 : 1.8;
+        const maxTilt = surface.matches('.testimonials-slider') ? 1.35 : 2.2;
+        const maxShift = 1.8;
 
         const updateDepthSurface = (clientX, clientY) => {
           const rect = surface.getBoundingClientRect();
@@ -942,34 +884,7 @@
       translatedLineRenderFrame = requestAnimationFrame(rerenderTranslatedLineBlocks);
     };
 
-    window.handleFormSubmit = function(e) {
-      e.preventDefault();
-      const btn  = document.getElementById('form-submit');
-      const span = btn.querySelector('span');
-      const svg  = btn.querySelector('svg');
-      const currentLang = rootEl.getAttribute('lang') || localStorage.getItem('language') || 'en';
-      btn.disabled = true;
-      span.textContent = translateKey(currentLang, 'contact.form.submit.sending') || 'Sending…';
-      svg.innerHTML = '<circle cx="12" cy="12" r="9" stroke-dasharray="56" stroke-dashoffset="56" style="animation:dashAnim 1.2s ease-in-out infinite;transform-origin:center"/>';
-      setTimeout(() => {
-        span.textContent = translateKey(currentLang, 'contact.form.submit.sent') || 'Message Sent!';
-        svg.innerHTML = '<polyline points="20 6 9 17 4 12"/>';
-        btn.style.background = 'linear-gradient(135deg,#10b981,#059669)';
-        setTimeout(() => {
-          btn.disabled = false;
-          span.textContent = translateKey(currentLang, 'contact.form.submit.default') || 'Send Message';
-          svg.innerHTML = '<line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>';
-          btn.style.background = '';
-          e.target.reset();
-        }, 3000);
-      }, 1800);
-    };
-
     /* ── Keyframes ───────────────────────────────────────────────────── */
-    const s = document.createElement('style');
-    s.textContent = '@keyframes dashAnim{0%{stroke-dashoffset:56}50%{stroke-dashoffset:0}100%{stroke-dashoffset:-56}}';
-    document.head.appendChild(s);
-
     const skillChipLogos = {
       html: `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="#E44D26" d="M4 3h16l-1.45 16.38L12 21l-6.55-1.62L4 3Z"/><path fill="#F16529" d="M12 4.35v15.27l5.3-1.3 1.2-13.97H12Z"/><path fill="#EBEBEB" d="m12 10.42-2.66-.01-.18-2.1H12V6.27H6.93l.05.55.48 5.65H12v-2.05Zm0 5.32-.01.01-2.24-.54-.14-1.66H7.59l.28 3.3 4.12 1.02h.01v-2.13Z"/><path fill="#fff" d="M11.99 10.42v2.05h2.47l-.23 2.74-2.24.54v2.13l4.13-1.02.03-.35.47-5.55.05-.54h-4.91Zm0-4.15v2.04h4.69l.04-.46.09-1.03.05-.55h-4.87Z"/></svg>`,
       css: `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="#1572B6" d="M4 3h16l-1.45 16.38L12 21l-6.55-1.62L4 3Z"/><path fill="#33A9DC" d="M12 4.35v15.27l5.3-1.3 1.2-13.97H12Z"/><path fill="#EBEBEB" d="M12 10.3H9.34l-.18-2H12V6.27H6.93l.05.55.48 5.53H12V10.3Zm0 5.36-.01.01-2.24-.54-.14-1.71H7.59l.27 3.32 4.13 1.02v-2.1Z"/><path fill="#fff" d="M16.64 8.3 16.8 6.27H11.99V8.3h4.65Zm-.35 4.05.02-.22.16-1.83h-4.48v2.05h2.45l-.23 2.78-2.22.54v2.1l4.12-1.02.03-.36.32-4.04Z"/></svg>`,
@@ -1087,7 +1002,7 @@
 
     /* ── Language Switcher ──────────────────────────────────────────── */
     // Load translations from JSON file
-    fetch('assets/translations.json')
+    fetch('assets/translations.json?v=20260829-contact')
       .then(response => response.json())
       .then(data => {
         translations = data;
