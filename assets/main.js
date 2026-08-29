@@ -3,7 +3,6 @@
 
     const rootEl = document.documentElement;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const finePointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
     const compactMotionQuery = window.matchMedia('(max-width: 980px)');
     const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection || null;
     const lowPowerConnection = Boolean(connection?.saveData)
@@ -11,7 +10,6 @@
     const lowSpecDevice = (typeof navigator.deviceMemory === 'number' && navigator.deviceMemory <= 4)
       || (typeof navigator.hardwareConcurrency === 'number' && navigator.hardwareConcurrency <= 6);
     const runtimePerformanceMode = false;
-    const enablePointerReactiveEffects = true;
 
     const bindMediaChange = (target, handler) => {
       if (!target || typeof handler !== 'function') return;
@@ -312,7 +310,6 @@
       requestDividerMotionFrame();
     }
 
-    /* ── Signature Draw Reveal ─────────────────────────────────────── */
     /* ── Scroll Line Reveal ─────────────────────────────────────────── */
     let scrollRevealLines = [];
 
@@ -412,83 +409,6 @@
     window.addEventListener('scroll', requestActiveNavLinkUpdate, { passive: true });
     window.addEventListener('resize', requestActiveNavLinkUpdate);
     requestActiveNavLinkUpdate();
-
-    /* ── Project card glow tracking ─────────────────────────────────── */
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.style.removeProperty('--glow-x');
-      card.style.removeProperty('--glow-y');
-    });
-
-    /* ── Premium surface depth ──────────────────────────────────────── */
-    const depthSurfaceSelector = '.education-card, .job-card, .project-card';
-
-    const resetDepthSurface = (surface) => {
-      surface.style.setProperty('--surface-tilt-x', '0deg');
-      surface.style.setProperty('--surface-tilt-y', '0deg');
-      surface.style.setProperty('--surface-scale', '1');
-      surface.style.setProperty('--surface-shadow-x', '0px');
-      surface.style.setProperty('--surface-shadow-y', '0px');
-      surface.style.setProperty('--surface-shadow-blur', '34px');
-      surface.style.setProperty('--surface-shadow-alpha', '.16');
-      surface.style.setProperty('--surface-glow-blur', '16px');
-      surface.style.setProperty('--surface-glow-alpha', '.04');
-      surface.style.setProperty('--surface-content-shift-x', '0px');
-      surface.style.setProperty('--surface-content-shift-y', '0px');
-    };
-
-    if (enablePointerReactiveEffects && finePointerQuery.matches && !isPerformanceMode()) {
-      document.querySelectorAll(depthSurfaceSelector).forEach(surface => {
-        const maxTilt = 2.2;
-        const maxShift = 1.8;
-
-        const updateDepthSurface = (clientX, clientY) => {
-          const rect = surface.getBoundingClientRect();
-          const relX = Math.min(Math.max((clientX - rect.left) / rect.width, 0), 1);
-          const relY = Math.min(Math.max((clientY - rect.top) / rect.height, 0), 1);
-          const dx = relX - 0.5;
-          const dy = relY - 0.5;
-          const distance = Math.min(Math.sqrt((dx * dx) + (dy * dy)) / 0.7071, 1);
-          const intensity = 1 - distance;
-          const tiltY = ((relX - 0.5) * maxTilt * 2).toFixed(2);
-          const tiltX = ((0.5 - relY) * maxTilt * 2).toFixed(2);
-          const shiftX = (dx * -maxShift).toFixed(2);
-          const shiftY = (dy * -maxShift).toFixed(2);
-          const shadowX = (dx * -8).toFixed(2);
-          const shadowY = (5 + (intensity * 8)).toFixed(2);
-          const shadowBlur = (30 + (intensity * 8)).toFixed(2);
-          const shadowAlpha = (0.13 + (intensity * 0.07)).toFixed(3);
-          const glowBlur = (10 + (intensity * 8)).toFixed(2);
-          const glowAlpha = (0.025 + (intensity * 0.05)).toFixed(3);
-          const scale = (1 + (intensity * 0.004)).toFixed(4);
-
-          surface.style.setProperty('--surface-tilt-x', `${tiltX}deg`);
-          surface.style.setProperty('--surface-tilt-y', `${tiltY}deg`);
-          surface.style.setProperty('--surface-scale', scale);
-          surface.style.setProperty('--surface-shadow-x', `${shadowX}px`);
-          surface.style.setProperty('--surface-shadow-y', `${shadowY}px`);
-          surface.style.setProperty('--surface-shadow-blur', `${shadowBlur}px`);
-          surface.style.setProperty('--surface-shadow-alpha', shadowAlpha);
-          surface.style.setProperty('--surface-glow-blur', `${glowBlur}px`);
-          surface.style.setProperty('--surface-glow-alpha', glowAlpha);
-          surface.style.setProperty('--surface-content-shift-x', `${shiftX}px`);
-          surface.style.setProperty('--surface-content-shift-y', `${shiftY}px`);
-        };
-
-        surface.addEventListener('mouseenter', (event) => {
-          updateDepthSurface(event.clientX, event.clientY);
-        });
-
-        surface.addEventListener('mousemove', (event) => {
-          updateDepthSurface(event.clientX, event.clientY);
-        });
-
-        surface.addEventListener('mouseleave', () => {
-          resetDepthSurface(surface);
-        });
-      });
-    } else {
-      document.querySelectorAll(depthSurfaceSelector).forEach(resetDepthSurface);
-    }
 
     /* ── Progressive line reveal enhancement ────────────────────────── */
     function normalizeLineText(value) {
