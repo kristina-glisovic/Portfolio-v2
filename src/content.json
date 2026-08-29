@@ -1,0 +1,1126 @@
+{
+  "shared": {
+    "name": "Kristina Glišović",
+    "email": "hello@kristinaglisovic.dev",
+    "heroProofValues": [
+      "6+",
+      "Shopify",
+      "Worldwide"
+    ],
+    "gpa": {
+      "score": "9.87",
+      "scale": "/ 10"
+    },
+    "urls": {
+      "mystar": "https://mystaroptic.com",
+      "recognition2023": "https://www.its.edu.rs/2025/03/18/its-obelezio-svecanu-dodelu-diploma-160-novih-its-diplomaca/",
+      "recognition2024": "https://www.its.edu.rs/2026/01/15/its-izabrao-studenta-generacije-i-studente-generacije-na-studijskim-programima-za-2024-25-godinu/"
+    }
+  },
+  "locales": {
+    "en": {
+      "lang": "en",
+      "meta": {
+        "title": "Kristina Glišović — Shopify & Web Solutions Developer",
+        "description": "Shopify & Web Solutions Developer crafting high-performance digital experiences with precision and elegance."
+      },
+      "a11y": {
+        "skip": "Skip to content"
+      },
+      "ui": {
+        "menuOpen": "Open menu",
+        "menuClose": "Close menu",
+        "languageEnglish": "Switch to English",
+        "languageSerbian": "Switch to Serbian"
+      },
+      "nav": {
+        "primaryAria": "Primary navigation",
+        "mobileAria": "Mobile navigation",
+        "cta": "Let's Talk",
+        "items": [
+          {
+            "id": "projects",
+            "label": "Work"
+          },
+          {
+            "id": "services",
+            "label": "Services"
+          },
+          {
+            "id": "about",
+            "label": "About"
+          },
+          {
+            "id": "experience-education",
+            "label": "Experience & Education"
+          },
+          {
+            "id": "process",
+            "label": "Process"
+          },
+          {
+            "id": "contact",
+            "label": "Contact"
+          }
+        ]
+      },
+      "hero": {
+        "badge": "Available for new projects",
+        "title": {
+          "role": "Shopify & Web Solutions Developer",
+          "line1Prefix": "Building ",
+          "line1Strong": "high-performing Shopify stores",
+          "line2": "and custom web solutions where every detail matters."
+        },
+        "description": {
+          "prefix": "I design and develop ",
+          "emphasis1": "Shopify stores, custom websites and web applications",
+          "middle": " with a strong focus on ",
+          "emphasis2": "UX, performance, technical SEO and pixel-perfect execution",
+          "suffix": "."
+        },
+        "ctas": [
+          {
+            "id": "projects",
+            "label": "View Selected Work"
+          },
+          {
+            "id": "contact",
+            "label": "Discuss a Project"
+          }
+        ],
+        "proof": [
+          {
+            "id": "proof-1",
+            "value": "6+",
+            "label": "Years of Experience"
+          },
+          {
+            "id": "proof-2",
+            "value": "Shopify",
+            "label": "Core Specialization"
+          },
+          {
+            "id": "proof-3",
+            "value": "Worldwide",
+            "label": "Based in Serbia"
+          }
+        ]
+      },
+      "projects": {
+        "label": "Selected Work",
+        "title": "MyStar — Taking Staroptic from physical retail to e-commerce",
+        "intro": "I built MyStar from the ground up as Staroptic’s dedicated Shopify storefront, creating a structured bilingual sales channel for eyewear and prescription ordering.",
+        "metaAria": "Project metadata",
+        "meta": [
+          {
+            "id": "storefront",
+            "label": "Shopify Storefront"
+          },
+          {
+            "id": "role",
+            "label": "Sole Developer"
+          },
+          {
+            "id": "languages",
+            "label": "Serbian & English"
+          },
+          {
+            "id": "status",
+            "label": "Live / Ongoing"
+          }
+        ],
+        "ownership": "Sole Developer · Built from the Ground Up",
+        "overview": [
+          {
+            "id": "context",
+            "title": "Business Context",
+            "copy": "Staroptic is an established optical retailer that launched MyStar as its dedicated online brand and sales channel."
+          },
+          {
+            "id": "challenge",
+            "title": "Challenge",
+            "copy": "The storefront needed to organize a complex eyewear catalogue and translate key parts of the in-store optical sales process into a clear online journey."
+          },
+          {
+            "id": "role",
+            "title": "My Role",
+            "copy": "I led the storefront architecture, Shopify and frontend development, UX/UI decisions, localization, technical SEO, app integration, QA and ongoing improvements."
+          }
+        ],
+        "highlightsAria": "Key implementation highlights",
+        "highlights": [
+          {
+            "id": "highlight-1",
+            "title": "Store Architecture",
+            "copy": "A clear structure connects sunglasses, prescription glasses, women’s and men’s collections across the storefront."
+          },
+          {
+            "id": "highlight-2",
+            "title": "Product Discovery",
+            "copy": "Collections and filters help customers narrow the catalogue by relevant eyewear characteristics."
+          },
+          {
+            "id": "highlight-3",
+            "title": "Product Page UX",
+            "copy": "Pricing, frame specifications, sizing and purchase options are organized to reduce uncertainty."
+          }
+        ],
+        "prescription": {
+          "label": "Standout Feature",
+          "title": "Prescription ordering adapted to the real optical sales process",
+          "copy": "The functionality is powered by a third-party application that I integrated, configured and adapted to Staroptic’s requirements. The UX flow was developed in consultation with Staroptic employees so the online process reflects the information customers need when ordering prescription glasses.",
+          "contributionsAria": "Prescription ordering contributions",
+          "contributions": [
+            {
+              "id": "contribution-1",
+              "label": "App Integration"
+            },
+            {
+              "id": "contribution-2",
+              "label": "Configuration & Adaptation"
+            },
+            {
+              "id": "contribution-3",
+              "label": "UX Flow"
+            },
+            {
+              "id": "contribution-4",
+              "label": "Optical Team Collaboration"
+            }
+          ]
+        },
+        "proof": {
+          "label": "Visual Proof"
+        },
+        "visuals": {
+          "home": {
+            "alt": "MyStar Serbian storefront homepage displayed in a desktop browser layout",
+            "caption": "Dedicated online storefront for Staroptic"
+          },
+          "mobile": {
+            "alt": "Responsive MyStar storefront homepage on mobile"
+          },
+          "prescription": {
+            "alt": "MyStar prescription ordering interface for selecting the required type of vision correction",
+            "caption": "Prescription ordering flow"
+          },
+          "collection": {
+            "alt": "MyStar women’s prescription glasses collection with color, shape and material filters",
+            "caption": "Collection architecture and product discovery"
+          },
+          "product": {
+            "alt": "MyStar prescription glasses product page with product imagery, pricing and ordering information",
+            "caption": "Product information structured to reduce uncertainty"
+          }
+        },
+        "outcomes": {
+          "label": "Delivered & Ongoing",
+          "title": "Built, launched and still evolving.",
+          "items": [
+            {
+              "id": "outcome-1",
+              "label": "Live Shopify Sales Channel"
+            },
+            {
+              "id": "outcome-2",
+              "label": "Serbian & English Storefront"
+            },
+            {
+              "id": "outcome-3",
+              "label": "Online Prescription Ordering"
+            },
+            {
+              "id": "outcome-4",
+              "label": "Responsive Desktop & Mobile Experience"
+            }
+          ]
+        },
+        "capabilitiesAria": "Project capabilities",
+        "capabilities": [
+          {
+            "id": "capability-1",
+            "label": "Shopify Development"
+          },
+          {
+            "id": "capability-2",
+            "label": "Frontend Development"
+          },
+          {
+            "id": "capability-3",
+            "label": "Store Architecture"
+          },
+          {
+            "id": "capability-4",
+            "label": "UX/UI"
+          },
+          {
+            "id": "capability-5",
+            "label": "App Integration"
+          },
+          {
+            "id": "capability-6",
+            "label": "Localization"
+          },
+          {
+            "id": "capability-7",
+            "label": "Technical SEO"
+          }
+        ],
+        "cta": "Visit MyStar"
+      },
+      "services": {
+        "label": "Services",
+        "title": "Shopify at the core. Web solutions beyond e-commerce.",
+        "intro": "I build Shopify stores, custom websites and web applications with close attention to structure, usability and technical quality—from the initial build and launch to ongoing development.",
+        "items": [
+          {
+            "id": "service-1",
+            "eyebrow": "01 / Core Specialization",
+            "title": "Shopify & E-commerce Development",
+            "description": "Complete Shopify builds and strategic redesigns shaped around the brand’s products, customers and operational needs.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Complete store builds, redesigns and migrations"
+              },
+              {
+                "id": "point-2",
+                "label": "Custom themes, sections and product and collection architecture"
+              },
+              {
+                "id": "point-3",
+                "label": "App and payment integrations, localization and purchase-flow UX"
+              }
+            ]
+          },
+          {
+            "id": "service-2",
+            "eyebrow": "02 / Websites",
+            "title": "Custom Websites",
+            "description": "Business websites, marketing sites and landing pages developed around clear communication, responsive behavior and precise frontend implementation.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Business and marketing websites with clear content hierarchy"
+              },
+              {
+                "id": "point-2",
+                "label": "Landing pages and custom frontend builds"
+              },
+              {
+                "id": "point-3",
+                "label": "Responsive implementation, technical SEO and launch QA"
+              }
+            ]
+          },
+          {
+            "id": "service-3",
+            "eyebrow": "03 / Web Products",
+            "title": "Web Applications & Custom Platforms",
+            "description": "Custom web applications and frontend-heavy platforms for businesses that need tailored workflows, interfaces or digital products beyond a conventional website or online store.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Internal and external platforms built around real workflows"
+              },
+              {
+                "id": "point-2",
+                "label": "Frontend-heavy applications and interactive digital products"
+              },
+              {
+                "id": "point-3",
+                "label": "Custom integrations, maintainable interface architecture and ongoing development"
+              }
+            ]
+          }
+        ],
+        "expertise": {
+          "label": "Expertise applied across every service",
+          "ariaLabel": "Supporting expertise",
+          "items": [
+            {
+              "id": "ux",
+              "label": "UX/UI Implementation"
+            },
+            {
+              "id": "seo",
+              "label": "Technical SEO"
+            },
+            {
+              "id": "performance",
+              "label": "Performance Optimization"
+            },
+            {
+              "id": "integrations",
+              "label": "Integrations"
+            },
+            {
+              "id": "localization",
+              "label": "Localization"
+            },
+            {
+              "id": "qa",
+              "label": "QA & Launch"
+            }
+          ]
+        },
+        "cta": "Discuss a Project"
+      },
+      "about": {
+        "label": "Why Work With Me",
+        "title": "Thoughtful decisions, precise execution and clear ownership.",
+        "intro": "I stay close to both the business goal and the implementation—asking the right questions early, identifying UX and technical risks, and carrying each decision through to a launch-ready result.",
+        "portraitAlt": "Portrait of Kristina Glišović",
+        "differentiators": [
+          {
+            "id": "differentiator-1",
+            "title": "Precision beyond the visual",
+            "description": "Visual accuracy is only one part of a refined result. I pay equal attention to content hierarchy, interaction states, responsive behavior and the small inconsistencies that shape how a product feels to use."
+          },
+          {
+            "id": "differentiator-2",
+            "title": "Technical depth beyond the interface",
+            "description": "I work beyond basic theme configuration and visual implementation, considering structure, data, integrations and maintainability so the finished product remains practical to manage and extend."
+          },
+          {
+            "id": "differentiator-3",
+            "title": "One clear point of ownership",
+            "description": "From understanding requirements and planning the approach to development, QA and launch, I remain directly involved. Communication stays clear, decisions keep their context and fewer details are lost between handoffs."
+          },
+          {
+            "id": "differentiator-4",
+            "title": "Quality built into development",
+            "description": "Performance, technical SEO and accessibility are considered while the product is being built—not added as a final checklist once the main work is complete."
+          }
+        ],
+        "credibility": {
+          "emphasis": "6+ years",
+          "remainder": " across Shopify agency work and structured software-engineering environments shaped the way I combine commercial awareness with disciplined delivery."
+        }
+      },
+      "credibility": {
+        "label": "Experience & Education",
+        "title": "Shopify specialization backed by engineering depth and academic distinction.",
+        "intro": "My professional path combines current Shopify agency work with lead responsibility in enterprise software development, supported by an academic progression marked by exceptional performance and repeated official recognition.",
+        "current": "Current",
+        "present": "Present",
+        "experienceTitle": "Professional Experience",
+        "roles": [
+          {
+            "id": "codersy",
+            "company": "Codersy",
+            "context": "Shopify Plus Partner Agency",
+            "role": "Shopify Developer · Freelance",
+            "start": "December 2024",
+            "description": "Working within a Shopify Plus Partner agency on client storefront delivery, e-commerce development and frontend implementation. This experience keeps my Shopify specialization grounded in real agency workflows and client projects."
+          },
+          {
+            "id": "bvk",
+            "company": "PUC Belgrade Waterworks & Sewerage",
+            "context": "Enterprise software engineering",
+            "progression": [
+              {
+                "id": "current",
+                "role": "Lead Software Developer",
+                "start": "October 2025"
+              },
+              {
+                "id": "previous",
+                "role": "Software Developer",
+                "start": "October 2023",
+                "end": "October 2025"
+              }
+            ],
+            "description": "Progressed from Software Developer to Lead Software Developer in a structured engineering environment focused on enterprise and business-critical internal systems. The experience reflects long-term application development, technical ownership and disciplined delivery."
+          },
+          {
+            "id": "nelt",
+            "label": "Earlier professional foundation",
+            "company": "Nelt Group",
+            "role": "Software Developer · Internship",
+            "start": "February 2023",
+            "end": "July 2023",
+            "description": "An early-career software development role within a large corporate environment, providing practical experience with business systems, structured team processes and professional software delivery."
+          }
+        ],
+        "education": {
+          "title": "Education & Academic Distinction",
+          "intro": "A continuous progression from applied Information Technology foundations to a master’s degree, supported by exceptional academic performance and official recognition across two academic cycles.",
+          "its": {
+            "stage": "Master studies",
+            "institution": "ITS — College of Vocational Studies for Information Technologies",
+            "degree": "Master’s Degree in Information Technology",
+            "start": "October 2022",
+            "end": "September 2024",
+            "gpaLabel": "Degree GPA"
+          },
+          "recognitions": [
+            {
+              "id": "2023",
+              "label": "Overall ITS Recognition",
+              "items": [
+                {
+                  "id": "item-1",
+                  "label": "Student of the Generation — ITS"
+                },
+                {
+                  "id": "item-2",
+                  "label": "Top student on the Master Information Technologies programme"
+                },
+                {
+                  "id": "item-3",
+                  "label": "Gold Medal for Academic Achievement"
+                }
+              ],
+              "verify": "Verify recognition ↗",
+              "verifyAria": "Verify the 2023/24 recognition on the official ITS website (opens in a new tab)"
+            },
+            {
+              "id": "2024",
+              "label": "Programme-level Recognition",
+              "items": [
+                {
+                  "id": "item-1",
+                  "label": "Student of the Generation — Master Information Technologies programme"
+                },
+                {
+                  "id": "item-2",
+                  "label": "Published GPA 9.86"
+                }
+              ],
+              "verify": "Verify recognition ↗",
+              "verifyAria": "Verify the 2024/25 recognition on the official ITS website (opens in a new tab)"
+            }
+          ],
+          "ict": {
+            "stage": "Academic foundation",
+            "institution": "ICT College of Vocational Studies",
+            "degree": "Engineer of Electrical and Computer Engineering — Bachelor (Applied), Information Technology",
+            "start": "October 2019",
+            "end": "September 2022",
+            "description": "The applied bachelor programme established my foundation in Information Technology, web and internet technologies, and practical software development before progression to master studies at ITS."
+          }
+        }
+      },
+      "process": {
+        "label": "How We Work Together",
+        "title": "A clear path from first conversation to launch.",
+        "intro": "You always know what is being decided, what comes next and what I need from you. I keep the process focused and involve you at the points where your input matters.",
+        "steps": [
+          {
+            "id": "step-1",
+            "title": "Discovery & Alignment",
+            "description": "We begin with a focused conversation about your business, audience, requirements and what the project needs to accomplish. I identify priorities, dependencies and important constraints early so we start from a shared understanding."
+          },
+          {
+            "id": "step-2",
+            "title": "Scope & Technical Direction",
+            "description": "Together, we confirm deliverables, responsibilities, milestones and project boundaries. I define the technical direction and clarify the content, assets and access needed before development begins."
+          },
+          {
+            "id": "step-3",
+            "title": "Design, Development & Reviews",
+            "description": "I turn the agreed direction into working interfaces and functionality, making UX/UI and implementation decisions in context. You review progress at planned checkpoints—often through a preview or staging environment—so feedback stays timely and revisions remain focused."
+          },
+          {
+            "id": "step-4",
+            "title": "QA, Launch & Handoff",
+            "description": "Before launch, I test responsive behavior, functionality and the final technical setup across relevant devices and scenarios. I then handle or support deployment and provide the agreed handoff, documentation or training needed to manage the finished product."
+          }
+        ],
+        "support": "Optional ongoing support and improvements are available after launch."
+      },
+      "guarantee": {
+        "label": "A Personal Standard",
+        "title": "Everything I promise, I stand behind.",
+        "primary": "I take personal responsibility for the quality of every project I deliver—from the decisions made along the way to the details that shape the finished result. The work should feel considered, dependable and ready for real use.",
+        "followup": "If something needs refinement, I refine it.",
+        "role": "Shopify & Web Solutions Developer",
+        "signatureNote": "My personal commitment to quality, clear communication and follow-through."
+      },
+      "contact": {
+        "label": "Start a Conversation",
+        "title": "Have a project in mind? Let’s talk.",
+        "intro": "Tell me what you’re building, improving or trying to solve. I’ll respond personally and let you know how I can help.",
+        "emailLabel": "Email me directly",
+        "emailAria": "Email Kristina at hello@kristinaglisovic.dev",
+        "support": "A short project overview, approximate timeline and any useful links are enough to get started."
+      },
+      "footer": {
+        "copySuffix": ". All rights reserved.",
+        "navAria": "Footer navigation",
+        "items": [
+          {
+            "id": "projects",
+            "label": "Work"
+          },
+          {
+            "id": "services",
+            "label": "Services"
+          },
+          {
+            "id": "about",
+            "label": "About"
+          },
+          {
+            "id": "contact",
+            "label": "Contact"
+          }
+        ]
+      }
+    },
+    "sr": {
+      "lang": "sr-Latn",
+      "meta": {
+        "title": "Kristina Glišović — Shopify & Web Solutions Developer",
+        "description": "Shopify & Web Solutions Developer za brze, SEO optimizovane sajtove, Shopify prodavnice i eCommerce rešenja koja unapređuju vidljivost i konverzije."
+      },
+      "a11y": {
+        "skip": "Pređi na sadržaj"
+      },
+      "ui": {
+        "menuOpen": "Otvori meni",
+        "menuClose": "Zatvori meni",
+        "languageEnglish": "Prebaci na engleski",
+        "languageSerbian": "Prebaci na srpski"
+      },
+      "nav": {
+        "primaryAria": "Glavna navigacija",
+        "mobileAria": "Mobilna navigacija",
+        "cta": "Započnimo razgovor",
+        "items": [
+          {
+            "id": "projects",
+            "label": "Radovi"
+          },
+          {
+            "id": "services",
+            "label": "Usluge"
+          },
+          {
+            "id": "about",
+            "label": "O meni"
+          },
+          {
+            "id": "experience-education",
+            "label": "Iskustvo i obrazovanje"
+          },
+          {
+            "id": "process",
+            "label": "Proces"
+          },
+          {
+            "id": "contact",
+            "label": "Kontakt"
+          }
+        ]
+      },
+      "hero": {
+        "badge": "Dostupna za nove projekte",
+        "title": {
+          "role": "Shopify & Web Solutions Developer",
+          "line1Prefix": "Razvijam ",
+          "line1Strong": "Shopify prodavnice visokih performansi",
+          "line2": "i custom web rešenja gde je svaki detalj važan."
+        },
+        "description": {
+          "prefix": "Kreiram i razvijam ",
+          "emphasis1": "Shopify prodavnice, custom sajtove i web aplikacije",
+          "middle": " sa fokusom na ",
+          "emphasis2": "UX, performanse, tehnički SEO i preciznu, pixel-perfect realizaciju",
+          "suffix": "."
+        },
+        "ctas": [
+          {
+            "id": "projects",
+            "label": "Pogledaj odabrane projekte"
+          },
+          {
+            "id": "contact",
+            "label": "Razgovarajmo o projektu"
+          }
+        ],
+        "proof": [
+          {
+            "id": "proof-1",
+            "value": "6+",
+            "label": "Godina iskustva"
+          },
+          {
+            "id": "proof-2",
+            "value": "Shopify",
+            "label": "Glavna specijalizacija"
+          },
+          {
+            "id": "proof-3",
+            "value": "Worldwide",
+            "label": "Iz Srbije za klijente širom sveta"
+          }
+        ]
+      },
+      "projects": {
+        "label": "Odabrani projekat",
+        "title": "MyStar — Novi e-commerce kanal za Staroptic",
+        "intro": "MyStar sam razvila od početka kao zaseban Shopify storefront kojim je Staroptic svoje maloprodajno poslovanje proširio na online prodaju.",
+        "metaAria": "Podaci o projektu",
+        "meta": [
+          {
+            "id": "storefront",
+            "label": "Shopify Storefront"
+          },
+          {
+            "id": "role",
+            "label": "Samostalni razvoj"
+          },
+          {
+            "id": "languages",
+            "label": "Srpski i engleski"
+          },
+          {
+            "id": "status",
+            "label": "Aktivan / Kontinuiran rad"
+          }
+        ],
+        "ownership": "Samostalni razvoj · Izgrađeno od početka",
+        "overview": [
+          {
+            "id": "context",
+            "title": "Poslovni kontekst",
+            "copy": "Staroptic je etablirana optika koja je kroz MyStar pokrenula zaseban online brend i prodajni kanal."
+          },
+          {
+            "id": "challenge",
+            "title": "Izazov",
+            "copy": "Bilo je potrebno jasno organizovati složen katalog i deo stručnog procesa prodaje naočara prilagoditi samostalnoj online kupovini."
+          },
+          {
+            "id": "role",
+            "title": "Moja uloga",
+            "copy": "Bila sam odgovorna za arhitekturu storefronta, Shopify i frontend razvoj, UX/UI odluke, lokalizaciju, tehnički SEO, integraciju aplikacija, QA i dalja unapređenja."
+          }
+        ],
+        "highlightsAria": "Ključni delovi implementacije",
+        "highlights": [
+          {
+            "id": "highlight-1",
+            "title": "Arhitektura prodavnice",
+            "copy": "Jasna podela povezuje sunčane i dioptrijske modele sa ženskim i muškim kolekcijama."
+          },
+          {
+            "id": "highlight-2",
+            "title": "Pronalaženje proizvoda",
+            "copy": "Kolekcije i filteri pomažu kupcima da suze izbor prema relevantnim karakteristikama naočara."
+          },
+          {
+            "id": "highlight-3",
+            "title": "UX produkt stranice",
+            "copy": "Cena, specifikacije rama, dimenzije i opcije kupovine organizovane su tako da smanje nedoumice."
+          }
+        ],
+        "prescription": {
+          "label": "Ključna funkcionalnost",
+          "title": "Poručivanje dioptrijskih naočara prilagođeno stvarnom procesu optike",
+          "copy": "Funkcionalnost koristi aplikaciju treće strane koju sam integrisala, konfigurisala i prilagodila zahtevima Staroptica. UX tok je definisan u konsultaciji sa zaposlenima kako bi online proces obuhvatio informacije potrebne za poručivanje dioptrijskih naočara.",
+          "contributionsAria": "Doprinos procesu poručivanja",
+          "contributions": [
+            {
+              "id": "contribution-1",
+              "label": "Integracija aplikacije"
+            },
+            {
+              "id": "contribution-2",
+              "label": "Konfiguracija i prilagođavanje"
+            },
+            {
+              "id": "contribution-3",
+              "label": "UX tok"
+            },
+            {
+              "id": "contribution-4",
+              "label": "Saradnja sa timom optike"
+            }
+          ]
+        },
+        "proof": {
+          "label": "Vizuelni prikaz"
+        },
+        "visuals": {
+          "home": {
+            "alt": "Početna stranica MyStar prodavnice na srpskom jeziku u desktop prikazu",
+            "caption": "Zaseban online storefront za Staroptic"
+          },
+          "mobile": {
+            "alt": "Responsive prikaz početne stranice MyStar prodavnice na mobilnom uređaju"
+          },
+          "prescription": {
+            "alt": "MyStar interfejs za poručivanje dioptrijskih naočara i izbor tipa dioptrije",
+            "caption": "Tok poručivanja dioptrijskih naočara"
+          },
+          "collection": {
+            "alt": "MyStar kolekcija ženskih dioptrijskih naočara sa filterima za boju, oblik i materijal",
+            "caption": "Arhitektura kolekcija i pronalaženje proizvoda"
+          },
+          "product": {
+            "alt": "MyStar produkt stranica sa fotografijama, cenom i informacijama za poručivanje dioptrijskih naočara",
+            "caption": "Informacije organizovane tako da smanje nedoumice pri kupovini"
+          }
+        },
+        "outcomes": {
+          "label": "Isporučeno i aktivno",
+          "title": "Izgrađena, lansirana i nastavlja da se razvija.",
+          "items": [
+            {
+              "id": "outcome-1",
+              "label": "Aktivan Shopify prodajni kanal"
+            },
+            {
+              "id": "outcome-2",
+              "label": "Storefront na srpskom i engleskom"
+            },
+            {
+              "id": "outcome-3",
+              "label": "Online poručivanje dioptrijskih naočara"
+            },
+            {
+              "id": "outcome-4",
+              "label": "Responsive desktop i mobilno iskustvo"
+            }
+          ]
+        },
+        "capabilitiesAria": "Oblasti rada na projektu",
+        "capabilities": [
+          {
+            "id": "capability-1",
+            "label": "Shopify Development"
+          },
+          {
+            "id": "capability-2",
+            "label": "Frontend Development"
+          },
+          {
+            "id": "capability-3",
+            "label": "Arhitektura prodavnice"
+          },
+          {
+            "id": "capability-4",
+            "label": "UX/UI"
+          },
+          {
+            "id": "capability-5",
+            "label": "Integracija aplikacija"
+          },
+          {
+            "id": "capability-6",
+            "label": "Lokalizacija"
+          },
+          {
+            "id": "capability-7",
+            "label": "Tehnički SEO"
+          }
+        ],
+        "cta": "Poseti MyStar"
+      },
+      "services": {
+        "label": "Usluge",
+        "title": "Shopify u fokusu. Web rešenja i izvan online prodaje.",
+        "intro": "Razvijam Shopify prodavnice, sajtove po meri i web aplikacije, uz pažnju posvećenu strukturi, upotrebljivosti i tehničkom kvalitetu — od prve izrade i lansiranja do daljeg razvoja.",
+        "items": [
+          {
+            "id": "service-1",
+            "eyebrow": "01 / Glavna specijalizacija",
+            "title": "Razvoj Shopify prodavnica i e-commerce rešenja",
+            "description": "Izrada novih Shopify prodavnica i strateški redizajn postojećih rešenja, prilagođeni ponudi, kupcima i načinu poslovanja brenda.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Kompletna izrada prodavnice, redizajn i migracija"
+              },
+              {
+                "id": "point-2",
+                "label": "Prilagođene teme, sekcije i struktura proizvoda i kolekcija"
+              },
+              {
+                "id": "point-3",
+                "label": "Integracije aplikacija i sistema za plaćanje, lokalizacija i UX kupovnog toka"
+              }
+            ]
+          },
+          {
+            "id": "service-2",
+            "eyebrow": "02 / Sajtovi",
+            "title": "Sajtovi po meri",
+            "description": "Poslovni i marketinški sajtovi, landing stranice i prilagođena frontend rešenja sa jasnom komunikacijom i pouzdanim radom na svim uređajima.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Poslovni i marketinški sajtovi sa jasnom hijerarhijom sadržaja"
+              },
+              {
+                "id": "point-2",
+                "label": "Landing stranice i frontend rešenja po meri"
+              },
+              {
+                "id": "point-3",
+                "label": "Responzivna realizacija, tehnički SEO i QA pre lansiranja"
+              }
+            ]
+          },
+          {
+            "id": "service-3",
+            "eyebrow": "03 / Web proizvodi",
+            "title": "Web aplikacije i platforme po meri",
+            "description": "Web aplikacije i frontend-orijentisane platforme za biznise kojima su potrebni prilagođeni tokovi rada, interfejsi ili digitalni proizvodi izvan klasičnog sajta ili online prodavnice.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Interne i eksterne platforme zasnovane na stvarnim poslovnim procesima"
+              },
+              {
+                "id": "point-2",
+                "label": "Frontend-orijentisane aplikacije i interaktivni digitalni proizvodi"
+              },
+              {
+                "id": "point-3",
+                "label": "Prilagođene integracije, održiva arhitektura interfejsa i dalji razvoj"
+              }
+            ]
+          }
+        ],
+        "expertise": {
+          "label": "Ekspertiza koja podržava svaku uslugu",
+          "ariaLabel": "Dodatna ekspertiza",
+          "items": [
+            {
+              "id": "ux",
+              "label": "UX/UI realizacija"
+            },
+            {
+              "id": "seo",
+              "label": "Tehnički SEO"
+            },
+            {
+              "id": "performance",
+              "label": "Optimizacija performansi"
+            },
+            {
+              "id": "integrations",
+              "label": "Integracije"
+            },
+            {
+              "id": "localization",
+              "label": "Lokalizacija"
+            },
+            {
+              "id": "qa",
+              "label": "QA i lansiranje"
+            }
+          ]
+        },
+        "cta": "Razgovarajmo o projektu"
+      },
+      "about": {
+        "label": "Zašto sarađivati sa mnom",
+        "title": "Promišljene odluke, precizna realizacija i jasna odgovornost.",
+        "intro": "Podjednako sam uključena u razumevanje poslovnog cilja i samu realizaciju—na početku postavljam prava pitanja, prepoznajem UX i tehničke rizike i svaku odluku sprovodim do rešenja spremnog za lansiranje.",
+        "portraitAlt": "Portret Kristine Glišović",
+        "differentiators": [
+          {
+            "id": "differentiator-1",
+            "title": "Preciznost koja ide dalje od vizuelnog",
+            "description": "Vizuelna preciznost je samo jedan deo kvalitetnog rezultata. Jednaku pažnju posvećujem hijerarhiji sadržaja, stanjima interakcije, responzivnom ponašanju i sitnim nedoslednostima koje oblikuju celokupno korisničko iskustvo."
+          },
+          {
+            "id": "differentiator-2",
+            "title": "Tehnička dubina iza interfejsa",
+            "description": "Ne zadržavam se na osnovnom podešavanju teme i vizuelnoj realizaciji. Razmišljam o strukturi, podacima, integracijama i održivosti kako bi završeno rešenje bilo praktično za upravljanje i dalji razvoj."
+          },
+          {
+            "id": "differentiator-3",
+            "title": "Jedna osoba, jasna odgovornost",
+            "description": "Od razumevanja zahteva i planiranja do razvoja, QA provere i lansiranja, ostajem direktno uključena. Komunikacija ostaje jasna, odluke zadržavaju kontekst, a važni detalji se ne gube između različitih izvođača."
+          },
+          {
+            "id": "differentiator-4",
+            "title": "Kvalitet ugrađen u razvoj",
+            "description": "Performanse, tehnički SEO i pristupačnost uzimam u obzir tokom razvoja, umesto da ih dodajem tek kao završnu kontrolu."
+          }
+        ],
+        "credibility": {
+          "emphasis": "Više od šest godina",
+          "remainder": " rada u Shopify agencijskom i strukturiranom softversko-inženjerskom okruženju oblikovalo je moj pristup preciznoj i pouzdanoj isporuci."
+        }
+      },
+      "credibility": {
+        "label": "Iskustvo i obrazovanje",
+        "title": "Shopify specijalizacija oslonjena na inženjersku dubinu i akademska dostignuća.",
+        "intro": "Moj profesionalni put povezuje aktuelni rad u Shopify agenciji sa vodećom ulogom u razvoju poslovno kritičnih softverskih sistema, uz akademski razvoj obeležen izuzetnim uspehom i ponovljenim zvaničnim priznanjima.",
+        "current": "Trenutno",
+        "present": "Danas",
+        "experienceTitle": "Profesionalno iskustvo",
+        "roles": [
+          {
+            "id": "codersy",
+            "company": "Codersy",
+            "context": "Shopify Plus partnerska agencija",
+            "role": "Shopify developerka · Freelance",
+            "start": "Decembar 2024",
+            "description": "U okviru Shopify Plus partnerske agencije radim na isporuci prodavnica za klijente, razvoju e-commerce rešenja i frontend realizaciji. Ovo iskustvo povezuje moju Shopify specijalizaciju sa stvarnim agencijskim procesima i projektima za klijente."
+          },
+          {
+            "id": "bvk",
+            "company": "JKP Beogradski vodovod i kanalizacija",
+            "context": "Enterprise softverski razvoj",
+            "progression": [
+              {
+                "id": "current",
+                "role": "Lead Software Developer",
+                "start": "Oktobar 2025"
+              },
+              {
+                "id": "previous",
+                "role": "Software Developer",
+                "start": "Oktobar 2023",
+                "end": "Oktobar 2025"
+              }
+            ],
+            "description": "Od pozicije Software Developer napredovala sam do vodeće uloge u strukturiranom inženjerskom okruženju usmerenom na poslovno kritične interne i enterprise sisteme. Ovo iskustvo predstavlja dugoročan razvoj aplikacija, tehničku odgovornost i disciplinovan način isporuke."
+          },
+          {
+            "id": "nelt",
+            "label": "Ranija profesionalna osnova",
+            "company": "Nelt Group",
+            "role": "Software Developer · Praksa",
+            "start": "Februar 2023",
+            "end": "Jul 2023",
+            "description": "Rano profesionalno iskustvo u velikom korporativnom okruženju pružilo mi je praktičan uvid u poslovne sisteme, strukturirane timske procese i profesionalnu isporuku softvera."
+          }
+        ],
+        "education": {
+          "title": "Obrazovanje i akademska dostignuća",
+          "intro": "Kontinuirani akademski razvoj od praktične osnove u informacionim tehnologijama do master studija, praćen izuzetnim uspehom i zvaničnim priznanjima u dva odvojena akademska ciklusa.",
+          "its": {
+            "stage": "Master studije",
+            "institution": "ITS — Visoka škola strukovnih studija za informacione tehnologije",
+            "degree": "Master strukovne studije — Informacione tehnologije",
+            "start": "Oktobar 2022",
+            "end": "Septembar 2024",
+            "gpaLabel": "Prosek na studijama"
+          },
+          "recognitions": [
+            {
+              "id": "2023",
+              "label": "Glavno priznanje na nivou ITS-a",
+              "items": [
+                {
+                  "id": "item-1",
+                  "label": "Student generacije — ITS"
+                },
+                {
+                  "id": "item-2",
+                  "label": "Najbolja studentkinja na programu Master informacione tehnologije"
+                },
+                {
+                  "id": "item-3",
+                  "label": "Zlatna medalja za akademski uspeh"
+                }
+              ],
+              "verify": "Potvrda priznanja ↗",
+              "verifyAria": "Potvrda priznanja za 2023/24 na zvaničnom ITS sajtu (otvara se u novom tabu)"
+            },
+            {
+              "id": "2024",
+              "label": "Priznanje na nivou studijskog programa",
+              "items": [
+                {
+                  "id": "item-1",
+                  "label": "Student generacije — program Master informacione tehnologije"
+                },
+                {
+                  "id": "item-2",
+                  "label": "Objavljeni prosek 9,86"
+                }
+              ],
+              "verify": "Potvrda priznanja ↗",
+              "verifyAria": "Potvrda priznanja za 2024/25 na zvaničnom ITS sajtu (otvara se u novom tabu)"
+            }
+          ],
+          "ict": {
+            "stage": "Akademska osnova",
+            "institution": "Visoka ICT škola strukovnih studija",
+            "degree": "Strukovni inženjer elektrotehnike i računarstva — Informacione tehnologije",
+            "start": "Oktobar 2019",
+            "end": "Septembar 2022",
+            "description": "Osnovne strukovne studije postavile su praktičan temelj u informacionim tehnologijama, web i internet tehnologijama i razvoju softvera, pre nastavka obrazovanja na master studijama ITS-a."
+          }
+        }
+      },
+      "process": {
+        "label": "Kako izgleda saradnja",
+        "title": "Jasan put od prvog razgovora do lansiranja.",
+        "intro": "U svakom trenutku znate koje odluke donosimo, šta sledi i šta mi je potrebno sa vaše strane. Proces držim fokusiranim i uključujem vas onda kada je vaš doprinos važan.",
+        "steps": [
+          {
+            "id": "step-1",
+            "title": "Razumevanje cilja i usaglašavanje",
+            "description": "Počinjemo fokusiranim razgovorom o poslovanju, publici, zahtevima i cilju koji projekat treba da ispuni. Prioritete, važne zavisnosti i ograničenja prepoznajem na početku kako bismo imali zajedničko razumevanje."
+          },
+          {
+            "id": "step-2",
+            "title": "Obim i tehnički pravac",
+            "description": "Zajedno potvrđujemo šta tačno isporučujem, ko je za šta odgovoran, ključne rokove i granice projekta. Definišem tehnički pravac i unapred preciziramo potreban sadržaj, materijale i pristupe sistemima."
+          },
+          {
+            "id": "step-3",
+            "title": "Dizajn, razvoj i zajednički pregledi",
+            "description": "Dogovoreni pravac pretvaram u funkcionalno digitalno rešenje, donoseći UX/UI i razvojne odluke u kontekstu projekta. Napredak pregledamo u dogovorenim tačkama, po potrebi kroz testno okruženje, kako bi povratne informacije stigle na vreme, a dorade ostale fokusirane."
+          },
+          {
+            "id": "step-4",
+            "title": "Provera kvaliteta, lansiranje i predaja",
+            "description": "Pre lansiranja proveravam responzivno ponašanje, funkcionalnosti i završnu tehničku postavku na relevantnim uređajima i kroz realne scenarije korišćenja. Zatim preuzimam lansiranje ili pružam podršku tokom objavljivanja i predajem dogovorenu dokumentaciju, smernice ili kratku obuku kada je potrebna."
+          }
+        ],
+        "support": "Po potrebi, saradnja može da se nastavi kroz dalju podršku i unapređenja nakon lansiranja."
+      },
+      "guarantee": {
+        "label": "Lični standard",
+        "title": "Za sve što obećam, ličnim imenom stojim iza toga.",
+        "primary": "Lično preuzimam odgovornost za kvalitet svakog projekta koji isporučim—od odluka koje donosimo tokom saradnje do detalja koji oblikuju završni rezultat. Rešenje treba da bude promišljeno, pouzdano i spremno za stvarnu upotrebu.",
+        "followup": "Ako nešto zahteva doradu, dorađujem ga.",
+        "role": "Shopify & Web Solutions Developer",
+        "signatureNote": "Moj lični potpis na kvalitet, jasnu komunikaciju i odgovornu isporuku."
+      },
+      "contact": {
+        "label": "Započnimo razgovor",
+        "title": "Imate projekat na umu? Razgovarajmo.",
+        "intro": "Pišite mi šta razvijate, unapređujete ili pokušavate da rešite. Odgovoriću vam lično i jasno reći kako mogu da pomognem.",
+        "emailLabel": "Pišite mi direktno",
+        "emailAria": "Pošaljite email Kristini na hello@kristinaglisovic.dev",
+        "support": "Za početak su dovoljni kratak opis projekta, okvirni rok i relevantni linkovi."
+      },
+      "footer": {
+        "copySuffix": ". Sva prava zadržana.",
+        "navAria": "Navigacija u podnožju",
+        "items": [
+          {
+            "id": "projects",
+            "label": "Radovi"
+          },
+          {
+            "id": "services",
+            "label": "Usluge"
+          },
+          {
+            "id": "about",
+            "label": "O meni"
+          },
+          {
+            "id": "contact",
+            "label": "Kontakt"
+          }
+        ]
+      }
+    }
+  }
+}

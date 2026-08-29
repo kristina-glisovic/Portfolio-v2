@@ -2,7 +2,6 @@
     'use strict';
 
     const rootEl = document.documentElement;
-    let translations = {};
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const finePointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
     const compactMotionQuery = window.matchMedia('(max-width: 980px)');
@@ -106,10 +105,10 @@
         .filter(element => !element.hasAttribute('inert'));
     }
 
-    function syncMobileMenuLabel(lang = rootEl.getAttribute('lang') || 'en') {
-      const key = ham.classList.contains('open') ? 'ui.menuClose' : 'ui.menuOpen';
-      const fallback = ham.classList.contains('open') ? 'Close menu' : 'Open menu';
-      ham.setAttribute('aria-label', translateKey(lang, key) || fallback);
+    function syncMobileMenuLabel() {
+      const isOpen = ham.classList.contains('open');
+      const label = isOpen ? ham.dataset.labelClose : ham.dataset.labelOpen;
+      ham.setAttribute('aria-label', label || (isOpen ? 'Close menu' : 'Open menu'));
     }
 
     function setBackgroundInert(isInert) {
@@ -491,28 +490,14 @@
       document.querySelectorAll(depthSurfaceSelector).forEach(resetDepthSurface);
     }
 
-    /* ── Form submit ─────────────────────────────────────────────────── */
-    function translateKey(lang, key) {
-      return translations[lang]?.[key] ?? translations.en?.[key] ?? '';
-    }
-
-    function normalizeTranslatedLineText(value) {
+    /* ── Progressive line reveal enhancement ────────────────────────── */
+    function normalizeLineText(value) {
       return typeof value === 'string'
         ? value.replace(/\s+/g, ' ').trim()
         : '';
     }
 
-    function normalizeTranslatedLineArray(lines) {
-      if (!Array.isArray(lines)) {
-        return [];
-      }
-
-      return lines
-        .map(normalizeTranslatedLineText)
-        .filter(Boolean);
-    }
-
-    function splitTranslatedTextIntoLines(element, text) {
+    function splitStaticTextIntoLines(element, text) {
       const width = Math.round(element.getBoundingClientRect().width);
 
       if (!text || width <= 0) {
@@ -593,31 +578,12 @@
       return lines.length ? lines : [text];
     }
 
-    function renderTranslatedLines(element, value) {
-      const usePlainText =
-        window.matchMedia('(max-width: 768px)').matches &&
-        Boolean(element.closest('#education'));
-      const fixedLines = element.hasAttribute('data-i18n-fixed-lines');
-      const normalizedArray = Array.isArray(value) ? normalizeTranslatedLineArray(value) : null;
-      const explicitLines = fixedLines && normalizedArray?.length ? normalizedArray : null;
-      const text = explicitLines
-        ? ''
-        : (normalizedArray?.join(' ') || normalizeTranslatedLineText(value));
-
-      element._i18nLinesSource = Array.isArray(value) ? [...value] : value;
-
-      if (usePlainText) {
-        element.innerHTML = explicitLines && explicitLines.length
-          ? explicitLines.join(' ')
-          : text;
-        return;
-      }
-
-      const lines = explicitLines && explicitLines.length
-        ? explicitLines
-        : splitTranslatedTextIntoLines(element, text);
+    function renderStaticLines(element, value) {
+      const text = normalizeLineText(value);
+      const lines = splitStaticTextIntoLines(element, text);
 
       element.replaceChildren();
+      element.classList.add('is-line-enhanced');
 
       lines.forEach(textLine => {
         const line = document.createElement('span');
@@ -637,131 +603,32 @@
       });
     }
 
-    let translatedLineRenderFrame = 0;
+    let staticLineRenderFrame = 0;
 
-    const rerenderTranslatedLineBlocks = () => {
-      document.querySelectorAll('[data-i18n-lines]').forEach(element => {
-        renderTranslatedLines(element, element._i18nLinesSource || '');
+    const rerenderStaticLineBlocks = () => {
+      document.querySelectorAll('[data-line-reveal-source]').forEach(element => {
+        renderStaticLines(element, element._lineRevealSourceHtml || '');
       });
 
       syncScrollRevealMotion();
-      translatedLineRenderFrame = 0;
+      staticLineRenderFrame = 0;
     };
 
-    const requestTranslatedLineRerender = () => {
-      if (translatedLineRenderFrame) return;
+    const requestStaticLineRerender = () => {
+      if (staticLineRenderFrame) return;
 
-      translatedLineRenderFrame = requestAnimationFrame(rerenderTranslatedLineBlocks);
+      staticLineRenderFrame = requestAnimationFrame(rerenderStaticLineBlocks);
     };
 
-    /* ── Language Switcher ──────────────────────────────────────────── */
-    // Load translations from JSON file
-    fetch('assets/translations.json?v=20260829-contact')
-      .then(response => response.json())
-      .then(data => {
-        translations = data;
-        // Initialize language after translations are loaded
-        const currentLang = localStorage.getItem('language') || 'en';
-        rootEl.setAttribute('lang', currentLang);
-        setLanguage(currentLang);
-      })
-      .catch(error => {
-        console.error('Error loading translations:', error);
-      });
+    document.querySelectorAll('[data-line-reveal-source]').forEach(element => {
+      element._lineRevealSourceHtml = element.innerHTML;
+    });
+    rerenderStaticLineBlocks();
 
-    function setLanguage(lang) {
-      if (!translations[lang] && !translations.en) return;
-      
-      rootEl.setAttribute('lang', lang);
-      rootEl.setAttribute('data-lang', lang);
-      localStorage.setItem('language', lang);
-
-      const pageTitle = translateKey(lang, 'meta.title');
-      if (pageTitle) {
-        document.title = pageTitle;
-      }
-      
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const value = translateKey(lang, key);
-        if (value) {
-          el.innerHTML = value;
-        }
-      });
-
-      document.querySelectorAll('[data-i18n-lines]').forEach(el => {
-        const key = el.getAttribute('data-i18n-lines');
-        const preferFluidText = el.classList.contains('hero-desc') || el.classList.contains('guarantee-text');
-        const value = preferFluidText
-          ? (translations[lang]?.[key] ?? translations.en?.[key])
-          : (translations[lang]?.[`${key}.lines`]
-            ?? translations.en?.[`${key}.lines`]
-            ?? translations[lang]?.[key]
-            ?? translations.en?.[key]);
-        renderTranslatedLines(el, value);
-      });
-
-      syncScrollRevealMotion();
-
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        const value = translateKey(lang, key);
-        if (value) {
-          el.setAttribute('placeholder', value);
-        }
-      });
-
-      document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
-        const key = el.getAttribute('data-i18n-aria-label');
-        const value = translateKey(lang, key);
-        if (value) {
-          el.setAttribute('aria-label', value);
-        }
-      });
-
-      document.querySelectorAll('[data-i18n-alt]').forEach(el => {
-        const key = el.getAttribute('data-i18n-alt');
-        const value = translateKey(lang, key);
-        if (value) {
-          el.setAttribute('alt', value);
-        }
-      });
-
-      document.querySelectorAll('[data-i18n-content]').forEach(el => {
-        const key = el.getAttribute('data-i18n-content');
-        const value = translateKey(lang, key);
-        if (value) {
-          el.setAttribute('content', value);
-        }
-      });
-
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        const isCurrentLanguage = btn.getAttribute('data-lang') === lang;
-        btn.classList.toggle('active', isCurrentLanguage);
-        btn.setAttribute('aria-pressed', String(isCurrentLanguage));
-      });
-
-      syncMobileMenuLabel(lang);
-
-      if (typeof window.refreshScrollLineReveal === 'function') {
-        window.refreshScrollLineReveal();
-      }
-
-      requestDesktopNavFit();
-    }
-
-    window.addEventListener('resize', requestTranslatedLineRerender);
+    window.addEventListener('resize', requestStaticLineRerender);
 
     if (document.fonts?.ready) {
-      document.fonts.ready.then(requestTranslatedLineRerender);
+      document.fonts.ready.then(requestStaticLineRerender);
     }
-
-    // Add event listeners to language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        setLanguage(lang);
-      });
-    });
 
   }());

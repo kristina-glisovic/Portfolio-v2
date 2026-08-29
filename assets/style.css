@@ -1054,11 +1054,14 @@ ul, ol { list-style: none; }
     text-wrap: pretty;
 }
 .scroll-line-reveal {
+    display: block;
+    width: 100%;
+    min-width: 0;
+}
+.scroll-line-reveal.is-line-enhanced {
     display: grid;
     gap: .22em;
     align-content: start;
-    width: 100%;
-    min-width: 0;
 }
 .scroll-line-reveal-soft {
     --line-reveal-muted: rgba(148,163,184,0.48);

@@ -1,64 +1,63 @@
 <!DOCTYPE html>
-<!-- Generated file. Do not edit directly. Edit src/template.html or src/content.json and run npm run build. -->
-<html lang="en" class="performance-mode" data-theme="dark">
+<html lang="{{attr:lang}}" class="performance-mode" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristina Glišović — Shopify &amp; Web Solutions Developer</title>
-  <meta name="description" content="Shopify &amp; Web Solutions Developer crafting high-performance digital experiences with precision and elegance." />
-  <link rel="stylesheet" href="assets/devices.min.css">
-  <link rel="stylesheet" href="assets/style.css?v=20260829-contact-15">
+  <title data-content="meta.title"></title>
+  <meta name="description" content="" data-content-content="meta.description" />
+  <link rel="stylesheet" href="{{assetPrefix}}devices.min.css">
+  <link rel="stylesheet" href="{{assetPrefix}}style.css?v=20260829-contact-15">
 </head>
 <body>
 
-  <a href="#main-content" class="skip-link">Skip to content</a>
+  <a href="#main-content" class="skip-link" data-content="a11y.skip"></a>
 
   <!-- ═══ NAV ══════════════════════════════════════════════════════════ -->
   <header class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#home" class="nav-logo">
         <div class="nav-logo-mark" aria-hidden="true">ER</div>
-        <span class="nav-logo-text">Kristina Glišović</span>
+        <span class="nav-logo-text">{{text:shared.name}}</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#projects">Work</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#experience-education">Experience &amp; Education</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav-links" aria-label="" data-content-aria-label="nav.primaryAria">
+        <a href="#projects" data-content="nav.items.0.label"></a>
+        <a href="#services" data-content="nav.items.1.label"></a>
+        <a href="#about" data-content="nav.items.2.label"></a>
+        <a href="#experience-education" data-content="nav.items.3.label"></a>
+        <a href="#process" data-content="nav.items.4.label"></a>
+        <a href="#contact" data-content="nav.items.5.label"></a>
       </nav>
       <div class="nav-right">
         <div class="nav-controls">
           <div class="lang-toggle" id="lang-toggle">
-            <a class="lang-btn active" href="./" lang="en" hreflang="en" aria-label="Switch to English" aria-current="page">EN</a>
-            <a class="lang-btn" href="sr/" lang="sr-Latn" hreflang="sr-Latn" aria-label="Switch to Serbian">SR</a>
+            <a class="lang-btn" data-locale-link="en">EN</a>
+            <a class="lang-btn" data-locale-link="sr">SR</a>
           </div>
         </div>
-        <a href="#contact" class="nav-cta">Let&#39;s Talk</a>
-        <button class="nav-hamburger" id="hamburger" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu" aria-controls="nav-mobile" aria-expanded="false">
+        <a href="#contact" class="nav-cta" data-content="nav.cta"></a>
+        <button class="nav-hamburger" id="hamburger" aria-label="{{attr:ui.menuOpen}}" data-label-open="{{attr:ui.menuOpen}}" data-label-close="{{attr:ui.menuClose}}" aria-controls="nav-mobile" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <nav class="nav-mobile" id="nav-mobile" aria-hidden="true" aria-label="Mobile navigation">
+  <nav class="nav-mobile" id="nav-mobile" aria-hidden="true" aria-label="" data-content-aria-label="nav.mobileAria">
     <div class="nav-mobile-panel">
       <div class="nav-mobile-links">
-        <a href="#projects" class="nav-mobile-link">Work</a>
-        <a href="#services" class="nav-mobile-link">Services</a>
-        <a href="#about" class="nav-mobile-link">About</a>
-        <a href="#experience-education" class="nav-mobile-link">Experience &amp; Education</a>
-        <a href="#process" class="nav-mobile-link">Process</a>
-        <a href="#contact" class="nav-mobile-link">Contact</a>
+        <a href="#projects" class="nav-mobile-link" data-content="nav.items.0.label"></a>
+        <a href="#services" class="nav-mobile-link" data-content="nav.items.1.label"></a>
+        <a href="#about" class="nav-mobile-link" data-content="nav.items.2.label"></a>
+        <a href="#experience-education" class="nav-mobile-link" data-content="nav.items.3.label"></a>
+        <a href="#process" class="nav-mobile-link" data-content="nav.items.4.label"></a>
+        <a href="#contact" class="nav-mobile-link" data-content="nav.items.5.label"></a>
       </div>
       <div class="nav-mobile-footer">
-        <a href="#contact" class="nav-mobile-cta">Let&#39;s Talk</a>
+        <a href="#contact" class="nav-mobile-cta" data-content="nav.cta"></a>
         <div class="nav-mobile-controls">
           <div class="lang-toggle-mobile">
-            <a class="lang-btn active" href="./" lang="en" hreflang="en" aria-label="Switch to English" aria-current="page">EN</a>
-            <a class="lang-btn" href="sr/" lang="sr-Latn" hreflang="sr-Latn" aria-label="Switch to Serbian">SR</a>
+            <a class="lang-btn" data-locale-link="en">EN</a>
+            <a class="lang-btn" data-locale-link="sr">SR</a>
           </div>
         </div>
       </div>
@@ -78,40 +77,40 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="hero-badge-dot"></span>
-          <span>Available for new projects</span>
+          <span data-content="hero.badge"></span>
         </div>
 
         <h1 class="hero-name" id="hero-heading">
-          <span class="gradient-text">Kristina Glišović</span>
+          <span class="gradient-text">{{text:shared.name}}</span>
         </h1>
-        <p class="hero-title"><span class="hero-title-role">Shopify &amp; Web Solutions Developer</span><span class="hero-title-copy">Building <strong>high-performing Shopify stores</strong></span><span class="hero-title-copy hero-title-copy-secondary">and custom web solutions where every detail matters.</span></p>
-        <p class="hero-desc scroll-line-reveal scroll-line-reveal-soft" data-line-reveal-source>I design and develop <strong>Shopify stores, custom websites and web applications</strong> with a strong focus on <strong>UX, performance, technical SEO and pixel-perfect execution</strong>.</p>
+        <p class="hero-title"><span class="hero-title-role">{{text:hero.title.role}}</span><span class="hero-title-copy">{{text:hero.title.line1Prefix}}<strong>{{text:hero.title.line1Strong}}</strong></span><span class="hero-title-copy hero-title-copy-secondary">{{text:hero.title.line2}}</span></p>
+        <p class="hero-desc scroll-line-reveal scroll-line-reveal-soft" data-line-reveal-source>{{text:hero.description.prefix}}<strong>{{text:hero.description.emphasis1}}</strong>{{text:hero.description.middle}}<strong>{{text:hero.description.emphasis2}}</strong>{{text:hero.description.suffix}}</p>
 
         <div class="hero-ctas">
           <a href="#projects" class="btn btn-primary">
-            <span>View Selected Work</span>
+            <span data-content="hero.ctas.0.label"></span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
           <a href="#contact" class="btn btn-ghost">
-            <span>Discuss a Project</span>
+            <span data-content="hero.ctas.1.label"></span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </a>
         </div>
 
         <div class="hero-stats">
           <div class="hero-stat">
-            <div class="hero-stat-value">6+</div>
-            <div class="hero-stat-label">Years of Experience</div>
+            <div class="hero-stat-value" data-content="shared.heroProofValues.0"></div>
+            <div class="hero-stat-label" data-content="hero.proof.0.label"></div>
           </div>
           <div class="hero-stat-divider"></div>
           <div class="hero-stat">
-            <div class="hero-stat-value">Shopify</div>
-            <div class="hero-stat-label">Core Specialization</div>
+            <div class="hero-stat-value" data-content="shared.heroProofValues.1"></div>
+            <div class="hero-stat-label" data-content="hero.proof.1.label"></div>
           </div>
           <div class="hero-stat-divider"></div>
           <div class="hero-stat">
-            <div class="hero-stat-value">Worldwide</div>
-            <div class="hero-stat-label">Based in Serbia</div>
+            <div class="hero-stat-value" data-content="shared.heroProofValues.2"></div>
+            <div class="hero-stat-label" data-content="hero.proof.2.label"></div>
           </div>
         </div>
       </div>
@@ -124,35 +123,35 @@
   <section class="projects section" id="projects" aria-labelledby="projects-title" data-premium-section>
     <div class="container">
       <header class="case-study-intro">
-        <div class="section-label reveal">Selected Work</div>
+        <div class="section-label reveal" data-content="projects.label"></div>
         <div class="case-study-intro-grid">
           <div>
-            <h2 class="section-title reveal reveal-delay-1" id="projects-title">MyStar — Taking Staroptic from physical retail to e-commerce</h2>
-            <p class="case-study-lead reveal reveal-delay-2">I built MyStar from the ground up as Staroptic’s dedicated Shopify storefront, creating a structured bilingual sales channel for eyewear and prescription ordering.</p>
+            <h2 class="section-title reveal reveal-delay-1" id="projects-title" data-content="projects.title"></h2>
+            <p class="case-study-lead reveal reveal-delay-2" data-content="projects.intro"></p>
           </div>
-          <ul class="case-study-meta reveal reveal-delay-2" aria-label="Project metadata">
-            <li>Shopify Storefront</li>
-            <li>Sole Developer</li>
-            <li>Serbian &amp; English</li>
-            <li>Live / Ongoing</li>
+          <ul class="case-study-meta reveal reveal-delay-2" data-content-aria-label="projects.metaAria">
+            <li data-content="projects.meta.0.label"></li>
+            <li data-content="projects.meta.1.label"></li>
+            <li data-content="projects.meta.2.label"></li>
+            <li data-content="projects.meta.3.label"></li>
           </ul>
         </div>
       </header>
 
       <article class="case-study-overview case-study-surface reveal">
         <div class="case-study-overview-copy">
-          <div class="case-study-ownership">Sole Developer · Built from the Ground Up</div>
+          <div class="case-study-ownership" data-content="projects.ownership"></div>
           <section class="case-study-summary">
-            <h3>Business Context</h3>
-            <p>Staroptic is an established optical retailer that launched MyStar as its dedicated online brand and sales channel.</p>
+            <h3 data-content="projects.overview.0.title"></h3>
+            <p data-content="projects.overview.0.copy"></p>
           </section>
           <section class="case-study-summary">
-            <h3>Challenge</h3>
-            <p>The storefront needed to organize a complex eyewear catalogue and translate key parts of the in-store optical sales process into a clear online journey.</p>
+            <h3 data-content="projects.overview.1.title"></h3>
+            <p data-content="projects.overview.1.copy"></p>
           </section>
           <section class="case-study-summary">
-            <h3>My Role</h3>
-            <p>I led the storefront architecture, Shopify and frontend development, UX/UI decisions, localization, technical SEO, app integration, QA and ongoing improvements.</p>
+            <h3 data-content="projects.overview.2.title"></h3>
+            <p data-content="projects.overview.2.copy"></p>
           </section>
         </div>
 
@@ -161,7 +160,7 @@
             <div class="case-study-laptop-shell">
               <div class="device device-macbook-pro device-spacegray case-study-laptop-device">
                 <div class="device-frame">
-                  <img class="device-screen" src="assets/mystar-home.avif" alt="MyStar Serbian storefront homepage displayed in a desktop browser layout" width="1440" height="820" decoding="async" />
+                  <img class="device-screen" src="{{assetPrefix}}mystar-home.avif" alt="" data-content-alt="projects.visuals.home.alt" width="1440" height="820" decoding="async" />
                 </div>
                 <div class="device-stripe" aria-hidden="true"></div>
                 <div class="device-header" aria-hidden="true"></div>
@@ -174,7 +173,7 @@
             <div class="case-study-phone-shell">
               <div class="device device-iphone-14-pro device-black case-study-phone-device">
                 <div class="device-frame">
-                  <img class="device-screen" src="assets/mystar-mobile.avif" alt="Responsive MyStar storefront homepage on mobile" width="390" height="760" loading="lazy" decoding="async" />
+                  <img class="device-screen" src="{{assetPrefix}}mystar-mobile.avif" alt="" data-content-alt="projects.visuals.mobile.alt" width="390" height="760" loading="lazy" decoding="async" />
                 </div>
                 <div class="device-stripe" aria-hidden="true"></div>
                 <div class="device-header" aria-hidden="true"></div>
@@ -185,85 +184,85 @@
               </div>
             </div>
           </div>
-          <figcaption>Dedicated online storefront for Staroptic</figcaption>
+          <figcaption data-content="projects.visuals.home.caption"></figcaption>
         </figure>
       </article>
 
-      <div class="case-study-highlights" role="list" aria-label="Key implementation highlights">
+      <div class="case-study-highlights" role="list" data-content-aria-label="projects.highlightsAria">
         <article class="case-study-highlight case-study-surface reveal" role="listitem">
           <span class="case-study-number">01</span>
-          <h3>Store Architecture</h3>
-          <p>A clear structure connects sunglasses, prescription glasses, women’s and men’s collections across the storefront.</p>
+          <h3 data-content="projects.highlights.0.title"></h3>
+          <p data-content="projects.highlights.0.copy"></p>
         </article>
         <article class="case-study-highlight case-study-surface reveal reveal-delay-1" role="listitem">
           <span class="case-study-number">02</span>
-          <h3>Product Discovery</h3>
-          <p>Collections and filters help customers narrow the catalogue by relevant eyewear characteristics.</p>
+          <h3 data-content="projects.highlights.1.title"></h3>
+          <p data-content="projects.highlights.1.copy"></p>
         </article>
         <article class="case-study-highlight case-study-surface reveal reveal-delay-2" role="listitem">
           <span class="case-study-number">03</span>
-          <h3>Product Page UX</h3>
-          <p>Pricing, frame specifications, sizing and purchase options are organized to reduce uncertainty.</p>
+          <h3 data-content="projects.highlights.2.title"></h3>
+          <p data-content="projects.highlights.2.copy"></p>
         </article>
       </div>
 
       <article class="case-study-prescription case-study-surface reveal">
         <div class="case-study-prescription-copy">
-          <div class="case-study-kicker">Standout Feature</div>
-          <h3>Prescription ordering adapted to the real optical sales process</h3>
-          <p>The functionality is powered by a third-party application that I integrated, configured and adapted to Staroptic’s requirements. The UX flow was developed in consultation with Staroptic employees so the online process reflects the information customers need when ordering prescription glasses.</p>
-          <ul class="case-study-contributions" aria-label="Prescription ordering contributions">
-            <li>App Integration</li>
-            <li>Configuration &amp; Adaptation</li>
-            <li>UX Flow</li>
-            <li>Optical Team Collaboration</li>
+          <div class="case-study-kicker" data-content="projects.prescription.label"></div>
+          <h3 data-content="projects.prescription.title"></h3>
+          <p data-content="projects.prescription.copy"></p>
+          <ul class="case-study-contributions" data-content-aria-label="projects.prescription.contributionsAria">
+            <li data-content="projects.prescription.contributions.0.label"></li>
+            <li data-content="projects.prescription.contributions.1.label"></li>
+            <li data-content="projects.prescription.contributions.2.label"></li>
+            <li data-content="projects.prescription.contributions.3.label"></li>
           </ul>
         </div>
         <figure class="case-study-prescription-visual">
-          <img src="assets/mystar-prescription.avif" alt="MyStar prescription ordering interface for selecting the required type of vision correction" width="1360" height="900" loading="lazy" decoding="async" />
-          <figcaption>Prescription ordering flow</figcaption>
+          <img src="{{assetPrefix}}mystar-prescription.avif" alt="" data-content-alt="projects.visuals.prescription.alt" width="1360" height="900" loading="lazy" decoding="async" />
+          <figcaption data-content="projects.visuals.prescription.caption"></figcaption>
         </figure>
       </article>
 
       <section class="case-study-proof" aria-labelledby="case-study-proof-title">
         <div class="case-study-proof-heading reveal">
-          <div class="case-study-kicker" id="case-study-proof-title">Visual Proof</div>
+          <div class="case-study-kicker" id="case-study-proof-title" data-content="projects.proof.label"></div>
         </div>
         <div class="case-study-proof-grid">
           <figure class="case-study-proof-card case-study-proof-card-collection case-study-surface reveal">
-            <img src="assets/mystar-collection.avif" alt="MyStar women’s prescription glasses collection with color, shape and material filters" width="1360" height="650" loading="lazy" decoding="async" />
-            <figcaption>Collection architecture and product discovery</figcaption>
+            <img src="{{assetPrefix}}mystar-collection.avif" alt="" data-content-alt="projects.visuals.collection.alt" width="1360" height="650" loading="lazy" decoding="async" />
+            <figcaption data-content="projects.visuals.collection.caption"></figcaption>
           </figure>
           <figure class="case-study-proof-card case-study-proof-card-product case-study-surface reveal reveal-delay-1">
-            <img src="assets/mystar-product.avif" alt="MyStar prescription glasses product page with product imagery, pricing and ordering information" width="1360" height="818" loading="lazy" decoding="async" />
-            <figcaption>Product information structured to reduce uncertainty</figcaption>
+            <img src="{{assetPrefix}}mystar-product.avif" alt="" data-content-alt="projects.visuals.product.alt" width="1360" height="818" loading="lazy" decoding="async" />
+            <figcaption data-content="projects.visuals.product.caption"></figcaption>
           </figure>
         </div>
       </section>
 
       <section class="case-study-outcomes case-study-surface reveal" aria-labelledby="case-study-outcomes-title">
         <div class="case-study-outcomes-heading">
-          <div class="case-study-kicker">Delivered &amp; Ongoing</div>
-          <h3 id="case-study-outcomes-title">Built, launched and still evolving.</h3>
+          <div class="case-study-kicker" data-content="projects.outcomes.label"></div>
+          <h3 id="case-study-outcomes-title" data-content="projects.outcomes.title"></h3>
         </div>
         <ul class="case-study-outcome-grid">
-          <li>Live Shopify Sales Channel</li>
-          <li>Serbian &amp; English Storefront</li>
-          <li>Online Prescription Ordering</li>
-          <li>Responsive Desktop &amp; Mobile Experience</li>
+          <li data-content="projects.outcomes.items.0.label"></li>
+          <li data-content="projects.outcomes.items.1.label"></li>
+          <li data-content="projects.outcomes.items.2.label"></li>
+          <li data-content="projects.outcomes.items.3.label"></li>
         </ul>
         <div class="case-study-outcomes-footer">
-          <ul class="case-study-capabilities" aria-label="Project capabilities">
-            <li>Shopify Development</li>
-            <li>Frontend Development</li>
-            <li>Store Architecture</li>
-            <li>UX/UI</li>
-            <li>App Integration</li>
-            <li>Localization</li>
-            <li>Technical SEO</li>
+          <ul class="case-study-capabilities" data-content-aria-label="projects.capabilitiesAria">
+            <li data-content="projects.capabilities.0.label"></li>
+            <li data-content="projects.capabilities.1.label"></li>
+            <li data-content="projects.capabilities.2.label"></li>
+            <li data-content="projects.capabilities.3.label"></li>
+            <li data-content="projects.capabilities.4.label"></li>
+            <li data-content="projects.capabilities.5.label"></li>
+            <li data-content="projects.capabilities.6.label"></li>
           </ul>
-          <a href="https://mystaroptic.com" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary case-study-cta">
-            <span>Visit MyStar</span>
+          <a href="{{attr:shared.urls.mystar}}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary case-study-cta">
+            <span data-content="projects.cta"></span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </div>
@@ -278,83 +277,83 @@
     <div class="container">
       <div class="services-shell">
         <header class="services-header">
-          <div class="section-label reveal">Services</div>
+          <div class="section-label reveal" data-content="services.label"></div>
           <div class="services-intro-grid">
-            <h2 class="section-title reveal reveal-delay-1" id="services-title">Shopify at the core. Web solutions beyond e-commerce.</h2>
-            <p class="services-intro reveal reveal-delay-2">I build Shopify stores, custom websites and web applications with close attention to structure, usability and technical quality—from the initial build and launch to ongoing development.</p>
+            <h2 class="section-title reveal reveal-delay-1" id="services-title" data-content="services.title"></h2>
+            <p class="services-intro reveal reveal-delay-2" data-content="services.intro"></p>
           </div>
         </header>
 
         <div class="services-grid">
           <article class="service-card service-card--featured reveal">
             <div class="service-card-top">
-              <div class="service-card-eyebrow">01 / Core Specialization</div>
+              <div class="service-card-eyebrow" data-content="services.items.0.eyebrow"></div>
               <span class="service-card-icon violet" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 8h12l1 12H5L6 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/><path d="M9 14h6"/>
                 </svg>
               </span>
             </div>
-            <h3 class="service-card-title">Shopify &amp; E-commerce Development</h3>
-            <p class="service-card-desc">Complete Shopify builds and strategic redesigns shaped around the brand’s products, customers and operational needs.</p>
+            <h3 class="service-card-title" data-content="services.items.0.title"></h3>
+            <p class="service-card-desc" data-content="services.items.0.description"></p>
             <ul class="service-card-points">
-              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span>Complete store builds, redesigns and migrations</span></li>
-              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span>Custom themes, sections and product and collection architecture</span></li>
-              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span>App and payment integrations, localization and purchase-flow UX</span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.0.points.0.label"></span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.0.points.1.label"></span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.0.points.2.label"></span></li>
             </ul>
           </article>
 
           <article class="service-card reveal reveal-delay-1">
             <div class="service-card-top">
-              <div class="service-card-eyebrow">02 / Websites</div>
+              <div class="service-card-eyebrow" data-content="services.items.1.eyebrow"></div>
               <span class="service-card-icon cyan" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 6.5h.01M10 6.5h.01"/><path d="m8 15 2-2 2 2 4-4"/>
                 </svg>
               </span>
             </div>
-            <h3 class="service-card-title">Custom Websites</h3>
-            <p class="service-card-desc">Business websites, marketing sites and landing pages developed around clear communication, responsive behavior and precise frontend implementation.</p>
+            <h3 class="service-card-title" data-content="services.items.1.title"></h3>
+            <p class="service-card-desc" data-content="services.items.1.description"></p>
             <ul class="service-card-points">
-              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span>Business and marketing websites with clear content hierarchy</span></li>
-              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span>Landing pages and custom frontend builds</span></li>
-              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span>Responsive implementation, technical SEO and launch QA</span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.1.points.0.label"></span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.1.points.1.label"></span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.1.points.2.label"></span></li>
             </ul>
           </article>
 
           <article class="service-card reveal reveal-delay-2">
             <div class="service-card-top">
-              <div class="service-card-eyebrow">03 / Web Products</div>
+              <div class="service-card-eyebrow" data-content="services.items.2.eyebrow"></div>
               <span class="service-card-icon purple" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/>
                 </svg>
               </span>
             </div>
-            <h3 class="service-card-title">Web Applications &amp; Custom Platforms</h3>
-            <p class="service-card-desc">Custom web applications and frontend-heavy platforms for businesses that need tailored workflows, interfaces or digital products beyond a conventional website or online store.</p>
+            <h3 class="service-card-title" data-content="services.items.2.title"></h3>
+            <p class="service-card-desc" data-content="services.items.2.description"></p>
             <ul class="service-card-points">
-              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span>Internal and external platforms built around real workflows</span></li>
-              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span>Frontend-heavy applications and interactive digital products</span></li>
-              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span>Custom integrations, maintainable interface architecture and ongoing development</span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.2.points.0.label"></span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.2.points.1.label"></span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.2.points.2.label"></span></li>
             </ul>
           </article>
         </div>
 
         <footer class="services-footer reveal">
           <div class="services-expertise">
-            <p class="services-expertise-label">Expertise applied across every service</p>
-            <ul class="services-capabilities" aria-label="Supporting expertise">
-              <li class="services-capability">UX/UI Implementation</li>
-              <li class="services-capability">Technical SEO</li>
-              <li class="services-capability">Performance Optimization</li>
-              <li class="services-capability">Integrations</li>
-              <li class="services-capability">Localization</li>
-              <li class="services-capability">QA &amp; Launch</li>
+            <p class="services-expertise-label" data-content="services.expertise.label"></p>
+            <ul class="services-capabilities" data-content-aria-label="services.expertise.ariaLabel">
+              <li class="services-capability" data-content="services.expertise.items.0.label"></li>
+              <li class="services-capability" data-content="services.expertise.items.1.label"></li>
+              <li class="services-capability" data-content="services.expertise.items.2.label"></li>
+              <li class="services-capability" data-content="services.expertise.items.3.label"></li>
+              <li class="services-capability" data-content="services.expertise.items.4.label"></li>
+              <li class="services-capability" data-content="services.expertise.items.5.label"></li>
             </ul>
           </div>
           <a href="#contact" class="btn btn-primary services-cta">
-            <span>Discuss a Project</span>
+            <span data-content="services.cta"></span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </footer>
@@ -369,9 +368,9 @@
     <div class="container">
       <div class="about-editorial">
         <header class="about-header">
-          <div class="section-label reveal">Why Work With Me</div>
-          <h2 class="section-title reveal reveal-delay-1" id="about-title">Thoughtful decisions, precise execution and clear ownership.</h2>
-          <p class="about-intro reveal reveal-delay-2">I stay close to both the business goal and the implementation—asking the right questions early, identifying UX and technical risks, and carrying each decision through to a launch-ready result.</p>
+          <div class="section-label reveal" data-content="about.label"></div>
+          <h2 class="section-title reveal reveal-delay-1" id="about-title" data-content="about.title"></h2>
+          <p class="about-intro reveal reveal-delay-2" data-content="about.intro"></p>
         </header>
 
         <div class="about-body">
@@ -382,18 +381,18 @@
                 <picture>
                   <source
                     type="image/avif"
-                    srcset="assets/face-560.avif 560w, assets/face-900.avif 900w"
+                    srcset="{{assetPrefix}}face-560.avif 560w, {{assetPrefix}}face-900.avif 900w"
                     sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 38vw, 420px"
                   />
                   <source
                     type="image/webp"
-                    srcset="assets/face-560.webp 560w, assets/face-900.webp 900w"
+                    srcset="{{assetPrefix}}face-560.webp 560w, {{assetPrefix}}face-900.webp 900w"
                     sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 1200px) 38vw, 420px"
                   />
                   <img
-                    src="assets/face-900.webp"
-                    alt="Portrait of Kristina Glišović"
-
+                    src="{{assetPrefix}}face-900.webp"
+                    alt="Portrait of {{text:shared.name}}"
+                    data-content-alt="about.portraitAlt"
                     class="about-avatar-photo"
                     loading="lazy"
                     decoding="async"
@@ -410,34 +409,34 @@
               <li class="about-differentiator reveal reveal-delay-2">
                 <span class="about-differentiator-number" aria-hidden="true">01</span>
                 <div class="about-differentiator-content">
-                  <h3>Precision beyond the visual</h3>
-                  <p>Visual accuracy is only one part of a refined result. I pay equal attention to content hierarchy, interaction states, responsive behavior and the small inconsistencies that shape how a product feels to use.</p>
+                  <h3 data-content="about.differentiators.0.title"></h3>
+                  <p data-content="about.differentiators.0.description"></p>
                 </div>
               </li>
               <li class="about-differentiator reveal reveal-delay-3">
                 <span class="about-differentiator-number" aria-hidden="true">02</span>
                 <div class="about-differentiator-content">
-                  <h3>Technical depth beyond the interface</h3>
-                  <p>I work beyond basic theme configuration and visual implementation, considering structure, data, integrations and maintainability so the finished product remains practical to manage and extend.</p>
+                  <h3 data-content="about.differentiators.1.title"></h3>
+                  <p data-content="about.differentiators.1.description"></p>
                 </div>
               </li>
               <li class="about-differentiator reveal reveal-delay-4">
                 <span class="about-differentiator-number" aria-hidden="true">03</span>
                 <div class="about-differentiator-content">
-                  <h3>One clear point of ownership</h3>
-                  <p>From understanding requirements and planning the approach to development, QA and launch, I remain directly involved. Communication stays clear, decisions keep their context and fewer details are lost between handoffs.</p>
+                  <h3 data-content="about.differentiators.2.title"></h3>
+                  <p data-content="about.differentiators.2.description"></p>
                 </div>
               </li>
               <li class="about-differentiator reveal reveal-delay-5">
                 <span class="about-differentiator-number" aria-hidden="true">04</span>
                 <div class="about-differentiator-content">
-                  <h3>Quality built into development</h3>
-                  <p>Performance, technical SEO and accessibility are considered while the product is being built—not added as a final checklist once the main work is complete.</p>
+                  <h3 data-content="about.differentiators.3.title"></h3>
+                  <p data-content="about.differentiators.3.description"></p>
                 </div>
               </li>
             </ol>
 
-            <p class="about-credibility reveal reveal-delay-5"><strong>6+ years</strong> across Shopify agency work and structured software-engineering environments shaped the way I combine commercial awareness with disciplined delivery.</p>
+            <p class="about-credibility reveal reveal-delay-5"><strong>{{text:about.credibility.emphasis}}</strong>{{text:about.credibility.remainder}}</p>
           </div>
         </div>
       </div>
@@ -450,15 +449,15 @@
   <section class="credibility-chapter section" id="experience-education" aria-labelledby="credibility-title" data-premium-section>
     <div class="container">
       <header class="credibility-chapter-header">
-        <div class="section-label reveal">Experience &amp; Education</div>
-        <h2 class="section-title reveal reveal-delay-1" id="credibility-title">Shopify specialization backed by engineering depth and academic distinction.</h2>
-        <p class="section-subtitle reveal reveal-delay-2">My professional path combines current Shopify agency work with lead responsibility in enterprise software development, supported by an academic progression marked by exceptional performance and repeated official recognition.</p>
+        <div class="section-label reveal" data-content="credibility.label"></div>
+        <h2 class="section-title reveal reveal-delay-1" id="credibility-title" data-content="credibility.title"></h2>
+        <p class="section-subtitle reveal reveal-delay-2" data-content="credibility.intro"></p>
       </header>
 
       <section class="credibility-subsection credibility-professional" aria-labelledby="professional-experience-title">
         <header class="credibility-subsection-header reveal">
           <span class="credibility-subsection-index" aria-hidden="true">01</span>
-          <h3 id="professional-experience-title">Professional Experience</h3>
+          <h3 id="professional-experience-title" data-content="credibility.experienceTitle"></h3>
         </header>
 
         <div class="current-role-grid">
@@ -468,77 +467,77 @@
                 <img src="https://www.codersy.com/favicon/favicon-32x32.png" alt="" width="32" height="32" loading="lazy" decoding="async" />
               </div>
               <div class="professional-role-identity">
-                <h4>Codersy</h4>
-                <p>Shopify Plus Partner Agency</p>
+                <h4 data-content="credibility.roles.0.company"></h4>
+                <p data-content="credibility.roles.0.context"></p>
               </div>
-              <span class="credibility-current">Current</span>
+              <span class="credibility-current" data-content="credibility.current"></span>
             </header>
             <div class="professional-role-primary">
-              <p class="professional-role-title">Shopify Developer · Freelance</p>
+              <p class="professional-role-title" data-content="credibility.roles.0.role"></p>
               <p class="credibility-date">
-                <time datetime="2024-12">December 2024</time>
+                <time datetime="2024-12" data-content="credibility.roles.0.start"></time>
                 <span aria-hidden="true"> — </span>
-                <span>Present</span>
+                <span data-content="credibility.present"></span>
               </p>
             </div>
-            <p class="professional-role-description">Working within a Shopify Plus Partner agency on client storefront delivery, e-commerce development and frontend implementation. This experience keeps my Shopify specialization grounded in real agency workflows and client projects.</p>
+            <p class="professional-role-description" data-content="credibility.roles.0.description"></p>
           </article>
 
           <article class="professional-role professional-role--bvk reveal reveal-delay-1">
             <header class="professional-role-header">
               <div class="credibility-brand-mark credibility-brand-mark--bvk">
-                <img src="assets/logo-bvk.jpg" alt="" width="900" height="900" loading="lazy" decoding="async" />
+                <img src="{{assetPrefix}}logo-bvk.jpg" alt="" width="900" height="900" loading="lazy" decoding="async" />
               </div>
               <div class="professional-role-identity">
-                <h4>PUC Belgrade Waterworks &amp; Sewerage</h4>
-                <p>Enterprise software engineering</p>
+                <h4 data-content="credibility.roles.1.company"></h4>
+                <p data-content="credibility.roles.1.context"></p>
               </div>
-              <span class="credibility-current">Current</span>
+              <span class="credibility-current" data-content="credibility.current"></span>
             </header>
 
             <ol class="role-progression">
               <li class="role-progression-item role-progression-item--current">
                 <span class="role-progression-marker" aria-hidden="true"></span>
                 <div>
-                  <p class="professional-role-title">Lead Software Developer</p>
+                  <p class="professional-role-title" data-content="credibility.roles.1.progression.0.role"></p>
                   <p class="credibility-date">
-                    <time datetime="2025-10">October 2025</time>
+                    <time datetime="2025-10" data-content="credibility.roles.1.progression.0.start"></time>
                     <span aria-hidden="true"> — </span>
-                    <span>Present</span>
+                    <span data-content="credibility.present"></span>
                   </p>
                 </div>
               </li>
               <li class="role-progression-item">
                 <span class="role-progression-marker" aria-hidden="true"></span>
                 <div>
-                  <p class="professional-role-title">Software Developer</p>
+                  <p class="professional-role-title" data-content="credibility.roles.1.progression.1.role"></p>
                   <p class="credibility-date">
-                    <time datetime="2023-10">October 2023</time>
+                    <time datetime="2023-10" data-content="credibility.roles.1.progression.1.start"></time>
                     <span aria-hidden="true"> — </span>
-                    <time datetime="2025-10">October 2025</time>
+                    <time datetime="2025-10" data-content="credibility.roles.1.progression.1.end"></time>
                   </p>
                 </div>
               </li>
             </ol>
-            <p class="professional-role-description">Progressed from Software Developer to Lead Software Developer in a structured engineering environment focused on enterprise and business-critical internal systems. The experience reflects long-term application development, technical ownership and disciplined delivery.</p>
+            <p class="professional-role-description" data-content="credibility.roles.1.description"></p>
           </article>
         </div>
 
         <article class="earlier-role-row reveal">
           <div class="credibility-brand-mark credibility-brand-mark--nelt">
-            <img src="assets/logo-nelt.jpg" alt="" width="226" height="223" loading="lazy" decoding="async" />
+            <img src="{{assetPrefix}}logo-nelt.jpg" alt="" width="226" height="223" loading="lazy" decoding="async" />
           </div>
           <div class="earlier-role-identity">
-            <span class="earlier-role-label">Earlier professional foundation</span>
-            <h4>Nelt Group</h4>
-            <p class="professional-role-title">Software Developer · Internship</p>
+            <span class="earlier-role-label" data-content="credibility.roles.2.label"></span>
+            <h4 data-content="credibility.roles.2.company"></h4>
+            <p class="professional-role-title" data-content="credibility.roles.2.role"></p>
           </div>
           <p class="credibility-date earlier-role-date">
-            <time datetime="2023-02">February 2023</time>
+            <time datetime="2023-02" data-content="credibility.roles.2.start"></time>
             <span aria-hidden="true"> — </span>
-            <time datetime="2023-07">July 2023</time>
+            <time datetime="2023-07" data-content="credibility.roles.2.end"></time>
           </p>
-          <p class="professional-role-description earlier-role-description">An early-career software development role within a large corporate environment, providing practical experience with business systems, structured team processes and professional software delivery.</p>
+          <p class="professional-role-description earlier-role-description" data-content="credibility.roles.2.description"></p>
         </article>
       </section>
 
@@ -548,8 +547,8 @@
         <header class="credibility-subsection-header credibility-education-header reveal">
           <span class="credibility-subsection-index" aria-hidden="true">02</span>
           <div>
-            <h3 id="academic-distinction-title">Education &amp; Academic Distinction</h3>
-            <p>A continuous progression from applied Information Technology foundations to a master’s degree, supported by exceptional academic performance and official recognition across two academic cycles.</p>
+            <h3 id="academic-distinction-title" data-content="credibility.education.title"></h3>
+            <p data-content="credibility.education.intro"></p>
           </div>
         </header>
 
@@ -557,22 +556,22 @@
           <div class="academic-degree">
             <header class="academic-institution-header">
               <div class="academic-brand-mark academic-brand-mark--its">
-                <img src="assets/education-its-logo.svg" alt="" width="350" height="120" loading="lazy" decoding="async" />
+                <img src="{{assetPrefix}}education-its-logo.svg" alt="" width="350" height="120" loading="lazy" decoding="async" />
               </div>
               <div>
-                <span class="academic-stage">Master studies</span>
-                <h4>ITS — College of Vocational Studies for Information Technologies</h4>
+                <span class="academic-stage" data-content="credibility.education.its.stage"></span>
+                <h4 data-content="credibility.education.its.institution"></h4>
               </div>
             </header>
-            <p class="academic-degree-title">Master’s Degree in Information Technology</p>
+            <p class="academic-degree-title" data-content="credibility.education.its.degree"></p>
             <p class="credibility-date academic-date">
-              <time datetime="2022-10">October 2022</time>
+              <time datetime="2022-10" data-content="credibility.education.its.start"></time>
               <span aria-hidden="true"> — </span>
-              <time datetime="2024-09">September 2024</time>
+              <time datetime="2024-09" data-content="credibility.education.its.end"></time>
             </p>
             <div class="academic-gpa">
-              <strong>9.87 <span>/ 10</span></strong>
-              <span>Degree GPA</span>
+              <strong>{{text:shared.gpa.score}} <span>{{text:shared.gpa.scale}}</span></strong>
+              <span data-content="credibility.education.its.gpaLabel"></span>
             </div>
           </div>
 
@@ -580,47 +579,47 @@
             <section class="recognition-group" aria-labelledby="recognition-2023-title">
               <header class="recognition-group-header">
                 <span class="recognition-year">2023/24</span>
-                <h5 id="recognition-2023-title">Overall ITS Recognition</h5>
+                <h5 id="recognition-2023-title" data-content="credibility.education.recognitions.0.label"></h5>
               </header>
               <ul>
-                <li>Student of the Generation — ITS</li>
-                <li>Top student on the Master Information Technologies programme</li>
-                <li>Gold Medal for Academic Achievement</li>
+                <li data-content="credibility.education.recognitions.0.items.0.label"></li>
+                <li data-content="credibility.education.recognitions.0.items.1.label"></li>
+                <li data-content="credibility.education.recognitions.0.items.2.label"></li>
               </ul>
-              <a class="verification-link" href="https://www.its.edu.rs/2025/03/18/its-obelezio-svecanu-dodelu-diploma-160-novih-its-diplomaca/" target="_blank" rel="noopener noreferrer" aria-label="Verify the 2023/24 recognition on the official ITS website (opens in a new tab)">Verify recognition ↗</a>
+              <a class="verification-link" href="{{attr:shared.urls.recognition2023}}" target="_blank" rel="noopener noreferrer" data-content="credibility.education.recognitions.0.verify" data-content-aria-label="credibility.education.recognitions.0.verifyAria"></a>
             </section>
 
             <section class="recognition-group" aria-labelledby="recognition-2024-title">
               <header class="recognition-group-header">
                 <span class="recognition-year">2024/25</span>
-                <h5 id="recognition-2024-title">Programme-level Recognition</h5>
+                <h5 id="recognition-2024-title" data-content="credibility.education.recognitions.1.label"></h5>
               </header>
               <ul>
-                <li>Student of the Generation — Master Information Technologies programme</li>
-                <li>Published GPA 9.86</li>
+                <li data-content="credibility.education.recognitions.1.items.0.label"></li>
+                <li data-content="credibility.education.recognitions.1.items.1.label"></li>
               </ul>
-              <a class="verification-link" href="https://www.its.edu.rs/2026/01/15/its-izabrao-studenta-generacije-i-studente-generacije-na-studijskim-programima-za-2024-25-godinu/" target="_blank" rel="noopener noreferrer" aria-label="Verify the 2024/25 recognition on the official ITS website (opens in a new tab)">Verify recognition ↗</a>
+              <a class="verification-link" href="{{attr:shared.urls.recognition2024}}" target="_blank" rel="noopener noreferrer" data-content="credibility.education.recognitions.0.verify" data-content-aria-label="credibility.education.recognitions.1.verifyAria"></a>
             </section>
           </div>
         </article>
 
         <article class="academic-foundation-row reveal">
           <div class="academic-brand-mark academic-brand-mark--ict">
-            <img src="assets/education-ict-logo.png" alt="" width="70" height="80" loading="lazy" decoding="async" />
+            <img src="{{assetPrefix}}education-ict-logo.png" alt="" width="70" height="80" loading="lazy" decoding="async" />
           </div>
           <div class="academic-foundation-identity">
-            <span class="academic-stage">Academic foundation</span>
-            <h4>ICT College of Vocational Studies</h4>
+            <span class="academic-stage" data-content="credibility.education.ict.stage"></span>
+            <h4 data-content="credibility.education.ict.institution"></h4>
           </div>
           <div class="academic-foundation-degree">
-            <p>Engineer of Electrical and Computer Engineering — Bachelor (Applied), Information Technology</p>
+            <p data-content="credibility.education.ict.degree"></p>
             <p class="credibility-date">
-              <time datetime="2019-10">October 2019</time>
+              <time datetime="2019-10" data-content="credibility.education.ict.start"></time>
               <span aria-hidden="true"> — </span>
-              <time datetime="2022-09">September 2022</time>
+              <time datetime="2022-09" data-content="credibility.education.ict.end"></time>
             </p>
           </div>
-          <p class="academic-foundation-description">The applied bachelor programme established my foundation in Information Technology, web and internet technologies, and practical software development before progression to master studies at ITS.</p>
+          <p class="academic-foundation-description" data-content="credibility.education.ict.description"></p>
         </article>
       </section>
     </div>
@@ -633,10 +632,10 @@
     <div class="container">
       <div class="process-editorial">
         <header class="process-header">
-          <div class="section-label">How We Work Together</div>
+          <div class="section-label" data-content="process.label"></div>
           <div class="process-header-row">
-            <h2 class="section-title" id="process-title">A clear path from first conversation to launch.</h2>
-            <p class="process-intro">You always know what is being decided, what comes next and what I need from you. I keep the process focused and involve you at the points where your input matters.</p>
+            <h2 class="section-title" id="process-title" data-content="process.title"></h2>
+            <p class="process-intro" data-content="process.intro"></p>
           </div>
         </header>
 
@@ -646,8 +645,8 @@
               <span class="process-step-number">01</span>
             </div>
             <div class="process-step-content">
-              <h3 class="process-step-title">Discovery &amp; Alignment</h3>
-              <p class="process-step-description">We begin with a focused conversation about your business, audience, requirements and what the project needs to accomplish. I identify priorities, dependencies and important constraints early so we start from a shared understanding.</p>
+              <h3 class="process-step-title" data-content="process.steps.0.title"></h3>
+              <p class="process-step-description" data-content="process.steps.0.description"></p>
             </div>
           </li>
           <li class="process-flow-item">
@@ -655,8 +654,8 @@
               <span class="process-step-number">02</span>
             </div>
             <div class="process-step-content">
-              <h3 class="process-step-title">Scope &amp; Technical Direction</h3>
-              <p class="process-step-description">Together, we confirm deliverables, responsibilities, milestones and project boundaries. I define the technical direction and clarify the content, assets and access needed before development begins.</p>
+              <h3 class="process-step-title" data-content="process.steps.1.title"></h3>
+              <p class="process-step-description" data-content="process.steps.1.description"></p>
             </div>
           </li>
           <li class="process-flow-item">
@@ -664,8 +663,8 @@
               <span class="process-step-number">03</span>
             </div>
             <div class="process-step-content">
-              <h3 class="process-step-title">Design, Development &amp; Reviews</h3>
-              <p class="process-step-description">I turn the agreed direction into working interfaces and functionality, making UX/UI and implementation decisions in context. You review progress at planned checkpoints—often through a preview or staging environment—so feedback stays timely and revisions remain focused.</p>
+              <h3 class="process-step-title" data-content="process.steps.2.title"></h3>
+              <p class="process-step-description" data-content="process.steps.2.description"></p>
             </div>
           </li>
           <li class="process-flow-item">
@@ -673,13 +672,13 @@
               <span class="process-step-number">04</span>
             </div>
             <div class="process-step-content">
-              <h3 class="process-step-title">QA, Launch &amp; Handoff</h3>
-              <p class="process-step-description">Before launch, I test responsive behavior, functionality and the final technical setup across relevant devices and scenarios. I then handle or support deployment and provide the agreed handoff, documentation or training needed to manage the finished product.</p>
+              <h3 class="process-step-title" data-content="process.steps.3.title"></h3>
+              <p class="process-step-description" data-content="process.steps.3.description"></p>
             </div>
           </li>
         </ol>
 
-        <p class="process-support-note">Optional ongoing support and improvements are available after launch.</p>
+        <p class="process-support-note" data-content="process.support"></p>
       </div>
     </div>
   </section>
@@ -691,10 +690,10 @@
     <div class="container">
       <div class="guarantee-editorial">
         <div class="guarantee-copy">
-          <div class="section-label reveal">A Personal Standard</div>
-          <h2 class="section-title reveal reveal-delay-1" id="guarantee-title">Everything I promise, I stand behind.</h2>
-          <p class="guarantee-text reveal reveal-delay-2">I take personal responsibility for the quality of every project I deliver—from the decisions made along the way to the details that shape the finished result. The work should feel considered, dependable and ready for real use.</p>
-          <p class="guarantee-followup reveal reveal-delay-3">If something needs refinement, I refine it.</p>
+          <div class="section-label reveal" data-content="guarantee.label"></div>
+          <h2 class="section-title reveal reveal-delay-1" id="guarantee-title" data-content="guarantee.title"></h2>
+          <p class="guarantee-text reveal reveal-delay-2" data-content="guarantee.primary"></p>
+          <p class="guarantee-followup reveal reveal-delay-3" data-content="guarantee.followup"></p>
         </div>
 
         <div class="guarantee-signoff reveal reveal-delay-2">
@@ -705,9 +704,9 @@
             </svg>
           </div>
           <div class="guarantee-signoff-meta">
-            <div class="guarantee-name">Kristina Glišović</div>
-            <div class="guarantee-role">Shopify &amp; Web Solutions Developer</div>
-            <div class="guarantee-signature-note">My personal commitment to quality, clear communication and follow-through.</div>
+            <div class="guarantee-name">{{text:shared.name}}</div>
+            <div class="guarantee-role" data-content="guarantee.role"></div>
+            <div class="guarantee-signature-note" data-content="guarantee.signatureNote"></div>
           </div>
         </div>
       </div>
@@ -722,15 +721,15 @@
       <div class="contact-editorial">
 
         <header class="contact-copy">
-          <div class="section-label reveal">Start a Conversation</div>
-          <h2 class="section-title reveal reveal-delay-1" id="contact-title">Have a project in mind? Let’s talk.</h2>
-          <p class="contact-intro reveal reveal-delay-2">Tell me what you’re building, improving or trying to solve. I’ll respond personally and let you know how I can help.</p>
+          <div class="section-label reveal" data-content="contact.label"></div>
+          <h2 class="section-title reveal reveal-delay-1" id="contact-title" data-content="contact.title"></h2>
+          <p class="contact-intro reveal reveal-delay-2" data-content="contact.intro"></p>
         </header>
 
         <div class="contact-action reveal reveal-delay-2">
-          <p class="contact-email-label">Email me directly</p>
-          <a href="mailto:hello@kristinaglisovic.dev" class="contact-email-link" aria-label="Email Kristina at hello@kristinaglisovic.dev">hello@kristinaglisovic.dev</a>
-          <p class="contact-support">A short project overview, approximate timeline and any useful links are enough to get started.</p>
+          <p class="contact-email-label" data-content="contact.emailLabel"></p>
+          <a href="mailto:{{attr:shared.email}}" class="contact-email-link" aria-label="" data-content-aria-label="contact.emailAria">{{text:shared.email}}</a>
+          <p class="contact-support" data-content="contact.support"></p>
         </div>
 
       </div>
@@ -743,13 +742,13 @@
   <footer class="footer">
     <div class="container footer-inner">
       <p class="footer-copy">
-        &copy; 2026 <a href="#home">Kristina Glišović</a><span>. All rights reserved.</span>
+        &copy; 2026 <a href="#home">{{text:shared.name}}</a><span data-content="footer.copySuffix"></span>
       </p>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#projects">Work</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <nav class="footer-links" aria-label="" data-content-aria-label="footer.navAria">
+        <a href="#projects" data-content="footer.items.0.label"></a>
+        <a href="#services" data-content="footer.items.1.label"></a>
+        <a href="#about" data-content="nav.items.2.label"></a>
+        <a href="#contact" data-content="nav.items.5.label"></a>
       </nav>
     </div>
   </footer>
@@ -757,7 +756,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════════════════════════════════ -->
-  <script src="assets/main.js?v=20260829-contact-2"></script>
+  <script src="{{assetPrefix}}main.js?v=20260829-contact-2"></script>
 
 </body>
 </html>

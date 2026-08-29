@@ -1,0 +1,10 @@
+{
+  "name": "kristina-glisovic-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "serve": "node scripts/serve.mjs"
+  }
+}
