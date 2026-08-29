@@ -410,7 +410,7 @@
     });
 
     /* ── Premium surface depth ──────────────────────────────────────── */
-    const depthSurfaceSelector = '.education-card, .certificate-card, .job-card, .project-card, .process-step, .testimonials-slider, .guarantee-card, .contact-form';
+    const depthSurfaceSelector = '.education-card, .certificate-card, .job-card, .project-card, .testimonials-slider, .guarantee-card, .contact-form';
 
     const resetDepthSurface = (surface) => {
       surface.style.setProperty('--surface-tilt-x', '0deg');

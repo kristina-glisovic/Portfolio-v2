@@ -394,65 +394,18 @@
     "common.github": "GitHub",
     "common.caseStudy": "Case Study",
 
-    "process.label": "How I Work",
-    "process.title.line1": "A process built",
-    "process.title.line2": "for quality.",
-    "process.text1": "As a frontend and Shopify developer, I approach every project as a <strong>performance-first digital product</strong>. From <strong>technical SEO and responsive design</strong> to clean architecture and polished UI, every decision is made to create websites and eCommerce experiences that are <strong>fast, discoverable, scalable</strong>, and built to support <strong>real business growth</strong>.",
-    "process.text2": "Whether I am building a custom Shopify storefront, optimizing a conversion-focused landing page, or developing a larger web application, the process stays the same: <strong>clear communication, thoughtful planning, accessibility, Core Web Vitals, and maintainable code</strong> that <strong>performs long after launch</strong>.",
-    "process.text1.lines": [
-      "I approach every project as a <strong>performance-first</strong>",
-      "<strong>digital product</strong>, shaped by structure and speed",
-      "and polished interface decisions.",
-      "From <strong>responsive design</strong> to <strong>technical SEO</strong>,",
-      "each choice supports <strong>measurable growth</strong>."
-    ],
-    "process.text2.lines": [
-      "Whether it's a <strong>custom Shopify storefront</strong>,",
-      "a conversion-focused landing page",
-      "or a larger web application, the process stays",
-      "<strong>clear, thoughtful and built to last</strong>."
-    ],
-    "process.badge1": "Core Web Vitals",
-    "process.badge2": "Technical SEO",
-    "process.badge3": "Shopify Storefronts",
-    "process.badge4": "Accessible UI",
-    "process.badge5": "Conversion Focus",
-    "process.badge6": "Scalable Frontends",
-    "process.step1.title": "Understand the Brand & Goal",
-    "process.step1.desc": "I start by understanding the <strong>business, brand positioning, audience, and exact goal</strong> of the project. Whether it is a Shopify store, landing page, or custom platform, <strong>clarity at this stage shapes everything that follows</strong>.",
-    "process.step1.desc.lines": [
-      "I start by understanding the <strong>business</strong>,",
-      "<strong>brand positioning, audience and project goal</strong>.",
-      "That <strong>clarity</strong> shapes everything that follows."
-    ],
-    "process.step2.title": "Plan for Structure & Scalability",
-    "process.step2.desc": "Before development begins, I define the <strong>right structure</strong> for the project: layout logic, content hierarchy, responsive behavior, Shopify setup, and <strong>technical foundations that support performance, SEO, and long-term scalability</strong>.",
-    "process.step2.desc.lines": [
-      "Before development begins, I define <strong>layout logic</strong>,",
-      "content hierarchy and responsive behavior,",
-      "with foundations that support <strong>performance, SEO and scale</strong>."
-    ],
-    "process.step3.title": "Build with Precision",
-    "process.step3.desc": "I develop <strong>clean, maintainable interfaces</strong> with close attention to detail. Every section is built to <strong>feel refined, load fast, work across devices</strong>, and support a smooth user experience from the first interaction to the final conversion point.",
-    "process.step3.desc.lines": [
-      "I build <strong>clean, maintainable interfaces</strong>",
-      "that <strong>feel refined, load fast and work across devices</strong>,",
-      "from first interaction to <strong>final conversion</strong>."
-    ],
-    "process.step4.title": "Optimize for Performance & SEO",
-    "process.step4.desc": "Optimization is <strong>part of the build, not an afterthought</strong>. I refine <strong>Core Web Vitals, technical SEO, accessibility, responsiveness, and overall usability</strong> so the final product is not only visually strong, but also <strong>discoverable and efficient</strong>.",
-    "process.step4.desc.lines": [
-      "<strong>Optimization is part of the build</strong>, not an afterthought.",
-      "I refine <strong>performance, SEO, accessibility and responsiveness</strong>",
-      "so the final product is <strong>discoverable and efficient</strong>."
-    ],
-    "process.step5.title": "Launch, Refine & Support",
-    "process.step5.desc": "After launch, I make sure everything is <strong>stable, polished, and ready for real use</strong>. From final testing and adjustments to handoff and <strong>post-launch support</strong>, the goal is a product that <strong>performs well today and stays easy to grow tomorrow</strong>.",
-    "process.step5.desc.lines": [
-      "After launch, I make sure everything is <strong>stable</strong>,",
-      "<strong>polished and ready for real use</strong>,",
-      "with support that keeps <strong>future growth easy</strong>."
-    ],
+    "process.label": "How We Work Together",
+    "process.title": "A clear path from first conversation to launch.",
+    "process.intro": "You always know what is being decided, what comes next and what I need from you. I keep the process focused and involve you at the points where your input matters.",
+    "process.step1.title": "Discovery & Alignment",
+    "process.step1.desc": "We begin with a focused conversation about your business, audience, requirements and what the project needs to accomplish. I identify priorities, dependencies and important constraints early so we start from a shared understanding.",
+    "process.step2.title": "Scope & Technical Direction",
+    "process.step2.desc": "Together, we confirm deliverables, responsibilities, milestones and project boundaries. I define the technical direction and clarify the content, assets and access needed before development begins.",
+    "process.step3.title": "Design, Development & Reviews",
+    "process.step3.desc": "I turn the agreed direction into working interfaces and functionality, making UX/UI and implementation decisions in context. You review progress at planned checkpoints—often through a preview or staging environment—so feedback stays timely and revisions remain focused.",
+    "process.step4.title": "QA, Launch & Handoff",
+    "process.step4.desc": "Before launch, I test responsive behavior, functionality and the final technical setup across relevant devices and scenarios. I then handle or support deployment and provide the agreed handoff, documentation or training needed to manage the finished product.",
+    "process.support": "Optional ongoing support and improvements are available after launch.",
 
     "testimonials.label": "Testimonials",
     "testimonials.title.line1": "Kind words from",
@@ -963,65 +916,18 @@
     "common.github": "GitHub",
     "common.caseStudy": "Studija slučaja",
 
-    "process.label": "Kako radim",
-    "process.title.line1": "Proces izgrađen",
-    "process.title.line2": "za kvalitet.",
-    "process.text1": "Kao frontend i Shopify developerka, svakom projektu pristupam kao <strong>digitalnom proizvodu u kome performanse imaju prioritet</strong>. Od <strong>tehničkog SEO-a i responzivnog dizajna</strong> do čiste arhitekture i doteranog UI-ja, svaka odluka usmerena je ka tome da sajtovi i eCommerce iskustva budu <strong>brzi, lako pronalažljivi, skalabilni</strong> i spremni da podrže <strong>konkretne poslovne ciljeve</strong>.",
-    "process.text2": "Bilo da razvijam prilagođeni Shopify storefront, optimizujem landing stranicu usmerenu na konverzije ili gradim veću web aplikaciju, moj proces ostaje isti: <strong>jasna komunikacija, promišljeno planiranje, pristupačnost, Core Web Vitals i održiv kod</strong> koji <strong>pouzdano radi i nakon lansiranja</strong>.",
-    "process.text1.lines": [
-      "Svakom projektu pristupam kao <strong>digitalnom</strong>",
-      "<strong>proizvodu u kome performanse imaju prioritet</strong>,",
-      "uz jasnu strukturu i doteran interfejs.",
-      "Od <strong>tehničkog SEO-a</strong> do <strong>responzivnog dizajna</strong>,",
-      "svaka odluka podržava <strong>konkretan rast</strong>."
-    ],
-    "process.text2.lines": [
-      "Bilo da razvijam <strong>Shopify storefront</strong>,",
-      "optimizujem landing stranicu",
-      "ili gradim veću web aplikaciju, proces ostaje",
-      "<strong>jasan, promišljen i dugoročno održiv</strong>."
-    ],
-    "process.badge1": "Core Web Vitals",
-    "process.badge2": "Tehnički SEO",
-    "process.badge3": "Shopify storefront-i",
-    "process.badge4": "Pristupačan UI",
-    "process.badge5": "Fokus na konverzije",
-    "process.badge6": "Skalabilni frontendi",
-    "process.step1.title": "Razumevanje brenda i cilja",
-    "process.step1.desc": "Počinjem razumevanjem <strong>biznisa, pozicioniranja brenda, publike i konkretnog cilja projekta</strong>. Bilo da je u pitanju Shopify prodavnica, landing stranica ili prilagođena platforma, <strong>jasno definisana osnova</strong> u ovoj fazi određuje kvalitet svega što sledi.",
-    "process.step1.desc.lines": [
-      "Počinjem razumevanjem <strong>biznisa</strong>,",
-      "<strong>pozicioniranja brenda, publike i konkretnog cilja</strong>,",
-      "jer ta <strong>osnova određuje kvalitet</strong> svega što sledi."
-    ],
-    "process.step2.title": "Planiranje strukture i skalabilnosti",
-    "process.step2.desc": "Pre početka razvoja definišem <strong>pravu strukturu projekta</strong>: logiku rasporeda, hijerarhiju sadržaja, responzivno ponašanje, Shopify setup i <strong>tehničke osnove koje podržavaju performanse, SEO i dugoročnu skalabilnost</strong>.",
-    "process.step2.desc.lines": [
-      "Pre početka razvoja definišem <strong>logiku rasporeda</strong>,",
-      "hijerarhiju sadržaja i responzivno ponašanje,",
-      "uz tehničke osnove koje podržavaju <strong>performanse i SEO</strong>."
-    ],
-    "process.step3.title": "Precizna izrada",
-    "process.step3.desc": "Razvijam <strong>čist i održiv interfejs</strong> sa velikom pažnjom prema detaljima. Svaka sekcija osmišljena je tako da <strong>izgleda profesionalno, učitava se brzo, radi pouzdano na svim uređajima</strong> i vodi korisnika od prvog kontakta do konverzije.",
-    "process.step3.desc.lines": [
-      "Razvijam <strong>čist i održiv interfejs</strong>",
-      "koji <strong>izgleda profesionalno, učitava se brzo</strong>",
-      "i vodi korisnika od prvog kontakta do <strong>konverzije</strong>."
-    ],
-    "process.step4.title": "Optimizacija za performanse i SEO",
-    "process.step4.desc": "Optimizacija je <strong>deo razvoja, a ne korak koji dolazi na kraju</strong>. Unapređujem <strong>Core Web Vitals, tehnički SEO, pristupačnost, responzivnost i ukupnu upotrebljivost</strong> kako bi finalni proizvod bio <strong>vizuelno ubedljiv, lako pronalažljiv i operativno efikasan</strong>.",
-    "process.step4.desc.lines": [
-      "<strong>Optimizacija je deo razvoja</strong>, a ne završna dorada.",
-      "Unapređujem <strong>performanse, SEO, pristupačnost i responzivnost</strong>,",
-      "kako bi proizvod bio <strong>lako pronalažljiv i efikasan</strong>."
-    ],
-    "process.step5.title": "Lansiranje, dorada i podrška",
-    "process.step5.desc": "Nakon lansiranja proveravam da je sve <strong>stabilno, doterano i spremno za realnu upotrebu</strong>. Od završnog testiranja i dorada do handoff-a i <strong>post-launch podrške</strong>, cilj je proizvod koji <strong>danas radi pouzdano i ostaje spreman za dalje širenje</strong>.",
-    "process.step5.desc.lines": [
-      "Nakon lansiranja proveravam da je sve <strong>stabilno</strong>,",
-      "<strong>doterano i spremno za realnu upotrebu</strong>,",
-      "uz podršku koja olakšava <strong>dalje širenje</strong>."
-    ],
+    "process.label": "Kako izgleda saradnja",
+    "process.title": "Jasan put od prvog razgovora do lansiranja.",
+    "process.intro": "U svakom trenutku znate koje odluke donosimo, šta sledi i šta mi je potrebno sa vaše strane. Proces držim fokusiranim i uključujem vas onda kada je vaš doprinos važan.",
+    "process.step1.title": "Razumevanje cilja i usaglašavanje",
+    "process.step1.desc": "Počinjemo fokusiranim razgovorom o poslovanju, publici, zahtevima i cilju koji projekat treba da ispuni. Prioritete, važne zavisnosti i ograničenja prepoznajem na početku kako bismo imali zajedničko razumevanje.",
+    "process.step2.title": "Obim i tehnički pravac",
+    "process.step2.desc": "Zajedno potvrđujemo šta tačno isporučujem, ko je za šta odgovoran, ključne rokove i granice projekta. Definišem tehnički pravac i unapred preciziramo potreban sadržaj, materijale i pristupe sistemima.",
+    "process.step3.title": "Dizajn, razvoj i zajednički pregledi",
+    "process.step3.desc": "Dogovoreni pravac pretvaram u funkcionalno digitalno rešenje, donoseći UX/UI i razvojne odluke u kontekstu projekta. Napredak pregledamo u dogovorenim tačkama, po potrebi kroz testno okruženje, kako bi povratne informacije stigle na vreme, a dorade ostale fokusirane.",
+    "process.step4.title": "Provera kvaliteta, lansiranje i predaja",
+    "process.step4.desc": "Pre lansiranja proveravam responzivno ponašanje, funkcionalnosti i završnu tehničku postavku na relevantnim uređajima i kroz realne scenarije korišćenja. Zatim preuzimam lansiranje ili pružam podršku tokom objavljivanja i predajem dogovorenu dokumentaciju, smernice ili kratku obuku kada je potrebna.",
+    "process.support": "Po potrebi, saradnja može da se nastavi kroz dalju podršku i unapređenja nakon lansiranja.",
 
     "testimonials.label": "Preporuke",
     "testimonials.title.line1": "Reči ljudi sa kojima sam",
