@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" role="img" aria-label="Kristina Glišović">
+  <defs>
+    <linearGradient id="faviconAccent" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6" />
+      <stop offset="0.52" stop-color="#6366f1" />
+      <stop offset="1" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" fill="#07070f" />
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#faviconAccent)" />
+  <path d="M23 16v32M23 32l20-16M23 32l21 17" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

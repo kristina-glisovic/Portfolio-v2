@@ -2,6 +2,33 @@
   "shared": {
     "name": "Kristina Glišović",
     "email": "hello@kristinaglisovic.dev",
+    "site": {
+      "origin": "https://example.com",
+      "originStatus": "placeholder-replace-before-launch",
+      "name": "Kristina Glišović",
+      "author": "Kristina Glišović",
+      "themeColor": "#020208",
+      "ogImagePath": "assets/og-portfolio.png",
+      "ogImageWidth": "1200",
+      "ogImageHeight": "630",
+      "country": "Serbia",
+      "knowsAbout": [
+        "Shopify development",
+        "E-commerce development",
+        "Custom websites",
+        "Web applications",
+        "Frontend development",
+        "UX implementation",
+        "Technical SEO",
+        "Web performance",
+        "Localization",
+        "Integrations"
+      ],
+      "alumniOf": [
+        "ITS – Visoka škola strukovnih studija za informacione tehnologije",
+        "ICT College of Vocational Studies"
+      ]
+    },
     "heroProofValues": [
       "6+",
       "Shopify",
@@ -21,8 +48,14 @@
     "en": {
       "lang": "en",
       "meta": {
-        "title": "Kristina Glišović — Shopify & Web Solutions Developer",
-        "description": "Shopify & Web Solutions Developer crafting high-performance digital experiences with precision and elegance."
+        "title": "Kristina Glišović | Shopify & Web Solutions Developer",
+        "description": "Independent Shopify and web developer for e-commerce stores, custom websites and web applications, with a focus on UX, performance and technical quality.",
+        "ogLocale": "en_US",
+        "ogAlternateLocale": "sr_RS",
+        "ogImageAlt": "Kristina Glišović — Shopify & Web Solutions Developer",
+        "schemaLanguage": "en",
+        "schemaJobTitle": "Shopify & Web Solutions Developer",
+        "schemaWebsiteName": "Kristina Glišović — Portfolio"
       },
       "a11y": {
         "skip": "Skip to content"
@@ -573,8 +606,14 @@
     "sr": {
       "lang": "sr-Latn",
       "meta": {
-        "title": "Kristina Glišović — Shopify & Web Solutions Developer",
-        "description": "Shopify & Web Solutions Developer za brze, SEO optimizovane sajtove, Shopify prodavnice i eCommerce rešenja koja unapređuju vidljivost i konverzije."
+        "title": "Kristina Glišović | Shopify i razvoj web rešenja",
+        "description": "Sarađujte direktno sa Kristinom na Shopify prodavnicama, custom sajtovima i web aplikacijama, uz fokus na UX, performanse i tehnički kvalitet.",
+        "ogLocale": "sr_RS",
+        "ogAlternateLocale": "en_US",
+        "ogImageAlt": "Kristina Glišović — Shopify & Web Solutions Developer",
+        "schemaLanguage": "sr-Latn",
+        "schemaJobTitle": "Shopify & Web Solutions Developer",
+        "schemaWebsiteName": "Portfolio Kristine Glišović"
       },
       "a11y": {
         "skip": "Pređi na sadržaj"

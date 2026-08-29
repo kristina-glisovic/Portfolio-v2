@@ -8,8 +8,10 @@ const rootDir = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const port = Number(process.env.PORT || 4173);
 const mimeTypes = {
   '.avif': 'image/avif', '.css': 'text/css; charset=utf-8', '.html': 'text/html; charset=utf-8',
+  '.ico': 'image/x-icon',
   '.jpg': 'image/jpeg', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8',
-  '.png': 'image/png', '.svg': 'image/svg+xml', '.webp': 'image/webp'
+  '.png': 'image/png', '.svg': 'image/svg+xml', '.txt': 'text/plain; charset=utf-8',
+  '.webp': 'image/webp', '.xml': 'application/xml; charset=utf-8'
 };
 
 createServer(async (request, response) => {

@@ -1,0 +1,3 @@
+# Generated file. Edit src/content.json and run npm run build.
+User-agent: *
+Allow: /
