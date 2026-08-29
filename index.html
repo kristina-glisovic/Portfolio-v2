@@ -10,14 +10,16 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link" data-i18n="a11y.skip"></a>
+
   <!-- ═══ NAV ══════════════════════════════════════════════════════════ -->
   <header class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#home" class="nav-logo">
-        <div class="nav-logo-mark">ER</div>
+        <div class="nav-logo-mark" aria-hidden="true">ER</div>
         <span class="nav-logo-text">Kristina Glišović</span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav-links" aria-label="" data-i18n-aria-label="nav.primaryAria">
         <a href="#projects" data-i18n="nav.work"></a>
         <a href="#services" data-i18n="nav.services"></a>
         <a href="#about" data-i18n="nav.about"></a>
@@ -28,19 +30,19 @@
       <div class="nav-right">
         <div class="nav-controls">
           <div class="lang-toggle" id="lang-toggle">
-            <button class="lang-btn" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="sr">SR</button>
+            <button class="lang-btn" data-lang="en" aria-label="" data-i18n-aria-label="ui.languageEnglish" aria-pressed="false">EN</button>
+            <button class="lang-btn" data-lang="sr" aria-label="" data-i18n-aria-label="ui.languageSerbian" aria-pressed="false">SR</button>
           </div>
         </div>
         <a href="#contact" class="nav-cta" data-i18n="nav.cta"></a>
-        <button class="nav-hamburger" id="hamburger" aria-label="" data-i18n-aria-label="ui.menu" aria-controls="nav-mobile" aria-expanded="false">
+        <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-controls="nav-mobile" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <nav class="nav-mobile" id="nav-mobile" aria-hidden="true" aria-label="" data-i18n-aria-label="nav.mobileAria">
     <div class="nav-mobile-panel">
       <div class="nav-mobile-links">
         <a href="#projects" class="nav-mobile-link" data-i18n="nav.work"></a>
@@ -54,16 +56,18 @@
         <a href="#contact" class="nav-mobile-cta" data-i18n="nav.cta"></a>
         <div class="nav-mobile-controls">
           <div class="lang-toggle-mobile">
-            <button class="lang-btn" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="sr">SR</button>
+            <button class="lang-btn" data-lang="en" aria-label="" data-i18n-aria-label="ui.languageEnglish" aria-pressed="false">EN</button>
+            <button class="lang-btn" data-lang="sr" aria-label="" data-i18n-aria-label="ui.languageSerbian" aria-pressed="false">SR</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
 
   <!-- ═══ HERO ══════════════════════════════════════════════════════════ -->
-  <section class="hero" id="home">
+  <section class="hero" id="home" aria-labelledby="hero-heading">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
     <div class="hero-orb hero-orb-3"></div>
@@ -76,7 +80,7 @@
           <span data-i18n="hero.badge"></span>
         </div>
 
-        <h1 class="hero-name">
+        <h1 class="hero-name" id="hero-heading">
           <span class="gradient-text">Kristina Glišović</span>
         </h1>
         <p class="hero-title" data-i18n="hero.title"></p>
@@ -85,11 +89,11 @@
         <div class="hero-ctas">
           <a href="#projects" class="btn btn-primary">
             <span data-i18n="hero.cta1"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
           <a href="#contact" class="btn btn-ghost">
             <span data-i18n="hero.cta2"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </a>
         </div>
 
@@ -116,13 +120,13 @@
   <div class="divider" aria-hidden="true"></div>
 
   <!-- ═══ PROJECTS ══════════════════════════════════════════════════════ -->
-  <section class="projects section" id="projects" data-premium-section>
+  <section class="projects section" id="projects" aria-labelledby="projects-title" data-premium-section>
     <div class="container">
       <header class="case-study-intro">
         <div class="section-label reveal" data-i18n="projects.label"></div>
         <div class="case-study-intro-grid">
           <div>
-            <h2 class="section-title reveal reveal-delay-1" data-i18n="projects.title"></h2>
+            <h2 class="section-title reveal reveal-delay-1" id="projects-title" data-i18n="projects.title"></h2>
             <p class="case-study-lead reveal reveal-delay-2" data-i18n="projects.intro"></p>
           </div>
           <ul class="case-study-meta reveal reveal-delay-2" data-i18n-aria-label="projects.meta.label">
@@ -258,9 +262,9 @@
             <li data-i18n="projects.capability6"></li>
             <li data-i18n="projects.capability7"></li>
           </ul>
-          <a href="https://mystaroptic.com" target="_blank" rel="noreferrer" class="project-btn project-btn-primary case-study-cta">
+          <a href="https://mystaroptic.com" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary case-study-cta">
             <span data-i18n="projects.cta"></span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </div>
       </section>
@@ -270,13 +274,13 @@
   <div class="divider" aria-hidden="true"></div>
 
   <!-- ═══ SERVICES ══════════════════════════════════════════════════════ -->
-  <section class="services section" id="services" data-premium-section>
+  <section class="services section" id="services" aria-labelledby="services-title" data-premium-section>
     <div class="container">
       <div class="services-shell">
         <header class="services-header">
           <div class="section-label reveal" data-i18n="services.label"></div>
           <div class="services-intro-grid">
-            <h2 class="section-title reveal reveal-delay-1" data-i18n="services.title"></h2>
+            <h2 class="section-title reveal reveal-delay-1" id="services-title" data-i18n="services.title"></h2>
             <p class="services-intro reveal reveal-delay-2" data-i18n="services.intro"></p>
           </div>
         </header>
@@ -351,7 +355,7 @@
           </div>
           <a href="#contact" class="btn btn-primary services-cta">
             <span data-i18n="services.cta"></span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </footer>
       </div>
@@ -710,7 +714,7 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- ═══ CONTACT ═══════════════════════════════════════════════════════ -->
   <section class="contact section" id="contact" aria-labelledby="contact-title">
@@ -732,6 +736,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
   <footer class="footer">

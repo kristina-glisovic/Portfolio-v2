@@ -16,8 +16,8 @@
     --line-reveal-glow: rgba(99,102,241,0.18);
     --t0:    #f8fafc;
     --t1:    #cbd5e1;
-    --t2:    #64748b;
-    --t3:    #334155;
+    --t2:    #74849a;
+    --t3:    #6f7f95;
     --border: rgba(255,255,255,0.07);
     --border-hi: rgba(99,102,241,0.45);
     --card:  rgba(255,255,255,0.025);
@@ -9837,6 +9837,77 @@ body {
     .contact-email-link,
     .footer-copy a,
     .footer-links a {
+        transition: none !important;
+    }
+}
+
+/* ── Baseline accessibility ─────────────────────────────────────── */
+.skip-link {
+    position: fixed;
+    top: .75rem;
+    left: .75rem;
+    z-index: 2000;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .7rem 1rem;
+    border: 2px solid rgba(255,255,255,.72);
+    border-radius: .75rem;
+    background: var(--bg-0);
+    color: var(--t0);
+    font-family: var(--ff-d);
+    font-size: .875rem;
+    font-weight: 700;
+    box-shadow: 0 14px 36px rgba(2,6,23,.5), 0 0 0 3px rgba(99,102,241,.38);
+    transform: translateY(calc(-100% - 1.5rem));
+    transition: transform .2s var(--ease);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    transform: translateY(0);
+    outline: 3px solid color-mix(in srgb, var(--a3) 72%, white 28%);
+    outline-offset: 3px;
+}
+
+.nav-logo,
+.nav-links a,
+.lang-btn,
+.nav-hamburger,
+.nav-cta,
+.nav-mobile-link,
+.nav-mobile-cta,
+.contact-email-link {
+    min-height: 44px;
+}
+
+.lang-btn,
+.nav-inner.nav-fit-tight .lang-btn {
+    min-width: 44px;
+}
+
+.nav-logo:focus-visible,
+.nav-links a:focus-visible,
+.nav-cta:focus-visible,
+.nav-hamburger:focus-visible,
+.nav-mobile-link:focus-visible,
+.nav-mobile-cta:focus-visible,
+.lang-btn:focus-visible,
+.btn:focus-visible,
+.project-btn:focus-visible,
+.verification-link:focus-visible,
+.contact-email-link:focus-visible,
+.footer-copy a:focus-visible,
+.footer-links a:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--a3) 72%, white 28%);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skip-link,
+    .nav-mobile,
+    .nav-mobile-panel {
         transition: none !important;
     }
 }
