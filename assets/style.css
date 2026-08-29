@@ -11253,3 +11253,928 @@ html[data-theme="light"] .divider::after {
         opacity: calc(.96 + (var(--divider-strength) * .08));
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   EXPERIENCE & EDUCATION — CONNECTED CREDIBILITY CHAPTER
+═══════════════════════════════════════════════════════════════════ */
+.credibility-chapter {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(3.6rem, 4.2vw, 3.9rem);
+    background:
+        radial-gradient(circle at 12% 16%, rgba(99,102,241,.075), transparent 27%),
+        radial-gradient(circle at 86% 68%, rgba(34,211,238,.055), transparent 25%),
+        linear-gradient(180deg, var(--bg-0), var(--bg-1) 48%, var(--bg-0));
+}
+
+.credibility-chapter::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, transparent 0 7%, rgba(129,140,248,.05) 7% calc(7% + 1px), transparent calc(7% + 1px)),
+        linear-gradient(90deg, transparent 0 93%, rgba(34,211,238,.04) 93% calc(93% + 1px), transparent calc(93% + 1px));
+    opacity: .65;
+}
+
+.credibility-chapter > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.credibility-chapter-header {
+    max-width: 70rem;
+    margin-bottom: 2.25rem;
+}
+
+.credibility-chapter-header .section-title {
+    max-width: 70rem;
+    margin-bottom: 1.15rem;
+    font-size: clamp(2.5rem, 4vw, 3.4rem);
+    line-height: 1.04;
+    text-wrap: balance;
+}
+
+.credibility-chapter-header .section-subtitle {
+    max-width: 52rem;
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.72;
+}
+
+.credibility-subsection {
+    position: relative;
+}
+
+.credibility-subsection-header {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.credibility-subsection-index {
+    padding-top: .24rem;
+    font-family: var(--ff-d);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    color: color-mix(in srgb, var(--a2) 72%, var(--t1));
+}
+
+.credibility-subsection-header h3 {
+    margin: 0;
+    font-family: var(--ff-d);
+    font-size: clamp(1.8rem, 2.8vw, 2.55rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.035em;
+}
+
+.current-role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.15rem;
+}
+
+.professional-role {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 21.5rem;
+    padding: 1.7rem;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
+    border-radius: 1.65rem;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.038), rgba(255,255,255,.014)),
+        color-mix(in srgb, var(--card) 76%, transparent);
+    box-shadow:
+        0 18px 48px rgba(2,6,23,.16),
+        inset 0 1px 0 rgba(255,255,255,.045);
+}
+
+.professional-role::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    pointer-events: none;
+}
+
+.professional-role--codersy::before {
+    background: linear-gradient(90deg, var(--a1), var(--a2), transparent 78%);
+}
+
+.professional-role--bvk::before {
+    background: linear-gradient(90deg, var(--a3), var(--a1), transparent 78%);
+}
+
+.professional-role-header {
+    display: grid;
+    grid-template-columns: 3.75rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.35rem;
+}
+
+.credibility-brand-mark,
+.academic-brand-mark {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: rgba(255,255,255,.96);
+    border: 1px solid rgba(255,255,255,.28);
+    box-shadow: 0 12px 26px rgba(2,6,23,.18);
+}
+
+.credibility-brand-mark {
+    width: 3.75rem;
+    height: 3.75rem;
+    padding: .62rem;
+    border-radius: 1rem;
+}
+
+.credibility-brand-mark img,
+.academic-brand-mark img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.credibility-brand-mark--bvk {
+    padding: .34rem;
+}
+
+.credibility-brand-mark--nelt {
+    padding: .52rem;
+}
+
+.professional-role-identity,
+.earlier-role-identity,
+.academic-foundation-identity,
+.academic-foundation-degree {
+    min-width: 0;
+}
+
+.professional-role-identity h4,
+.earlier-role-identity h4,
+.academic-institution-header h4,
+.academic-foundation-identity h4 {
+    margin: 0;
+    font-family: var(--ff-d);
+    font-weight: 700;
+    letter-spacing: -.025em;
+}
+
+.professional-role-identity h4 {
+    font-size: 1.16rem;
+    line-height: 1.2;
+}
+
+.professional-role-identity p {
+    margin: .25rem 0 0;
+    color: var(--t2);
+    font-size: .78rem;
+    line-height: 1.4;
+}
+
+.credibility-current {
+    align-self: start;
+    padding: .42rem .66rem;
+    border: 1px solid color-mix(in srgb, var(--a1) 32%, var(--border));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--a1) 11%, transparent);
+    color: color-mix(in srgb, var(--a2) 70%, var(--t0));
+    font-size: .67rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.professional-role-primary {
+    margin-bottom: 1.15rem;
+    padding-bottom: 1.05rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 76%, transparent);
+}
+
+.professional-role-title {
+    margin: 0;
+    color: var(--t0);
+    font-family: var(--ff-d);
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+.credibility-date {
+    margin: .35rem 0 0;
+    color: var(--t2);
+    font-size: .78rem;
+    font-weight: 550;
+    letter-spacing: .025em;
+    line-height: 1.5;
+}
+
+.professional-role-description {
+    margin: auto 0 0;
+    color: color-mix(in srgb, var(--t1) 76%, var(--t2));
+    font-size: .91rem;
+    line-height: 1.7;
+}
+
+.role-progression {
+    position: relative;
+    display: grid;
+    gap: .8rem;
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.role-progression::before {
+    content: '';
+    position: absolute;
+    left: .28rem;
+    top: .58rem;
+    bottom: .58rem;
+    width: 1px;
+    background: linear-gradient(var(--a3), color-mix(in srgb, var(--a1) 38%, transparent));
+}
+
+.role-progression-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: .62rem minmax(0, 1fr);
+    gap: .72rem;
+}
+
+.role-progression-marker {
+    position: relative;
+    z-index: 1;
+    width: .58rem;
+    height: .58rem;
+    margin-top: .3rem;
+    border: 2px solid color-mix(in srgb, var(--a1) 54%, var(--bg-0));
+    border-radius: 50%;
+    background: var(--bg-1);
+}
+
+.role-progression-item--current .role-progression-marker {
+    border-color: var(--a3);
+    background: var(--a3);
+    box-shadow: 0 0 0 5px rgba(34,211,238,.08);
+}
+
+.earlier-role-row {
+    display: grid;
+    grid-template-columns: 3.45rem minmax(12rem, .7fr) auto minmax(18rem, 1.3fr);
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1.1rem;
+    padding: 1.15rem 1.35rem;
+    border-block: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+    background: linear-gradient(90deg, rgba(255,255,255,.018), rgba(255,255,255,.006));
+}
+
+.earlier-role-row .credibility-brand-mark {
+    width: 3.45rem;
+    height: 3.45rem;
+}
+
+.earlier-role-label,
+.academic-stage {
+    display: block;
+    margin-bottom: .28rem;
+    color: color-mix(in srgb, var(--a2) 66%, var(--t2));
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.earlier-role-identity h4 {
+    font-size: 1.02rem;
+}
+
+.earlier-role-identity .professional-role-title {
+    margin-top: .22rem;
+    font-size: .86rem;
+}
+
+.earlier-role-date {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.earlier-role-description {
+    margin: 0;
+    font-size: .84rem;
+    line-height: 1.62;
+}
+
+.credibility-transition {
+    position: relative;
+    height: 1px;
+    margin: clamp(2.35rem, 3vw, 2.6rem) 0;
+    background: linear-gradient(90deg, transparent, rgba(129,140,248,.38) 20%, rgba(34,211,238,.3) 78%, transparent);
+}
+
+.credibility-transition::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: .44rem;
+    height: .44rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--a1), var(--a3));
+    box-shadow: 0 0 16px rgba(99,102,241,.34);
+    transform: translate(-50%, -50%);
+}
+
+.credibility-education-header {
+    max-width: 61rem;
+}
+
+.credibility-education-header p {
+    max-width: 50rem;
+    margin: .7rem 0 0;
+    color: var(--t1);
+    font-size: .96rem;
+    line-height: 1.68;
+}
+
+.academic-feature {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(17rem, .78fr) minmax(0, 1.22fr);
+    gap: 1.7rem;
+    padding: 1.8rem;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--a1) 20%, var(--border));
+    border-radius: 1.8rem;
+    background:
+        radial-gradient(circle at 13% 18%, rgba(99,102,241,.11), transparent 27%),
+        radial-gradient(circle at 88% 78%, rgba(34,211,238,.075), transparent 29%),
+        linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.014)),
+        color-mix(in srgb, var(--card) 78%, transparent);
+    box-shadow:
+        0 24px 60px rgba(2,6,23,.17),
+        inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.academic-degree {
+    min-width: 0;
+    padding-right: 1.7rem;
+    border-right: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+}
+
+.academic-institution-header {
+    display: grid;
+    grid-template-columns: 8.2rem minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.academic-brand-mark {
+    width: 8.2rem;
+    height: 4.2rem;
+    padding: .68rem .85rem;
+    border-radius: 1rem;
+}
+
+.academic-brand-mark--ict {
+    width: 3.7rem;
+    height: 3.7rem;
+    padding: .52rem;
+}
+
+.academic-institution-header h4 {
+    font-size: 1.08rem;
+    line-height: 1.28;
+}
+
+.academic-degree-title {
+    max-width: 27rem;
+    margin: 0;
+    color: var(--t0);
+    font-family: var(--ff-d);
+    font-size: 1.28rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.025em;
+}
+
+.academic-date {
+    margin-top: .55rem;
+}
+
+.academic-gpa {
+    display: flex;
+    align-items: baseline;
+    gap: .8rem;
+    margin-top: 1.65rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
+}
+
+.academic-gpa strong {
+    font-family: var(--ff-d);
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 760;
+    line-height: .9;
+    letter-spacing: -.06em;
+    background: linear-gradient(110deg, var(--a2), var(--a3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.academic-gpa strong span {
+    font-size: .48em;
+    letter-spacing: -.02em;
+}
+
+.academic-gpa > span {
+    color: var(--t2);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.recognition-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 0;
+}
+
+.recognition-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: .25rem 1.45rem .2rem;
+}
+
+.recognition-group:first-child {
+    padding-left: 0;
+}
+
+.recognition-group + .recognition-group {
+    border-left: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
+}
+
+.recognition-group-header {
+    margin-bottom: 1rem;
+}
+
+.recognition-year {
+    display: block;
+    margin-bottom: .42rem;
+    font-family: var(--ff-d);
+    font-size: 1.15rem;
+    font-weight: 750;
+    letter-spacing: -.02em;
+    color: color-mix(in srgb, var(--a2) 76%, var(--t0));
+}
+
+.recognition-group h5 {
+    margin: 0;
+    color: var(--t1);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.recognition-group ul {
+    display: grid;
+    gap: .75rem;
+    margin: 0 0 1.1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.recognition-group li {
+    position: relative;
+    padding-left: 1rem;
+    color: color-mix(in srgb, var(--t1) 80%, var(--t2));
+    font-size: .84rem;
+    line-height: 1.55;
+}
+
+.recognition-group li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: .55rem;
+    width: .35rem;
+    height: .35rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--a2), var(--a3));
+    box-shadow: 0 0 10px rgba(129,140,248,.28);
+}
+
+.verification-link {
+    width: fit-content;
+    margin-top: auto;
+    padding-block: .28rem;
+    color: color-mix(in srgb, var(--a3) 68%, var(--t1));
+    font-size: .74rem;
+    font-weight: 650;
+    line-height: 1.4;
+    text-decoration: none;
+    text-underline-offset: .24em;
+    transition: color .22s ease, text-decoration-color .22s ease;
+}
+
+.verification-link:hover {
+    color: var(--t0);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--a3) 68%, transparent);
+}
+
+.verification-link:focus-visible {
+    outline: 2px solid var(--a3);
+    outline-offset: 4px;
+    border-radius: .2rem;
+}
+
+.academic-foundation-row {
+    display: grid;
+    grid-template-columns: 3.7rem minmax(12rem, .7fr) minmax(17rem, 1.2fr) minmax(17rem, 1fr);
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1.1rem;
+    padding: 1.25rem 1.4rem;
+    border-block: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+    background: linear-gradient(90deg, rgba(255,255,255,.018), rgba(255,255,255,.006));
+}
+
+.academic-foundation-identity h4 {
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.academic-foundation-degree p,
+.academic-foundation-description {
+    margin: 0;
+}
+
+.academic-foundation-degree > p:first-child {
+    color: var(--t0);
+    font-family: var(--ff-d);
+    font-size: .88rem;
+    font-weight: 620;
+    line-height: 1.48;
+}
+
+.academic-foundation-description {
+    color: color-mix(in srgb, var(--t1) 74%, var(--t2));
+    font-size: .82rem;
+    line-height: 1.58;
+}
+
+html[data-theme="light"] .professional-role,
+html[data-theme="light"] .academic-feature {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.76), rgba(255,255,255,.48)),
+        color-mix(in srgb, var(--card) 82%, transparent);
+    box-shadow:
+        0 18px 48px rgba(71,85,105,.1),
+        inset 0 1px 0 rgba(255,255,255,.86);
+}
+
+html[data-theme="light"] .academic-feature {
+    background:
+        radial-gradient(circle at 13% 18%, rgba(99,102,241,.08), transparent 27%),
+        radial-gradient(circle at 88% 78%, rgba(34,211,238,.065), transparent 29%),
+        linear-gradient(145deg, rgba(255,255,255,.84), rgba(255,255,255,.52));
+}
+
+html[data-theme="light"] .role-progression-marker {
+    background: #f8fafc;
+}
+
+html[data-theme="light"] .role-progression-item--current .role-progression-marker {
+    background: var(--a3);
+}
+
+@media (max-width: 1040px) {
+    .professional-role-header {
+        grid-template-columns: 3.5rem minmax(0, 1fr);
+    }
+
+    .credibility-brand-mark {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .credibility-current {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: -.45rem;
+    }
+
+    .earlier-role-row {
+        grid-template-columns: 3.45rem minmax(0, .8fr) minmax(0, 1.2fr);
+    }
+
+    .earlier-role-date {
+        grid-column: 2;
+    }
+
+    .earlier-role-description {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+
+    .academic-feature {
+        grid-template-columns: minmax(15rem, .7fr) minmax(0, 1.3fr);
+    }
+
+    .recognition-group {
+        padding-inline: 1rem;
+    }
+
+    .academic-foundation-row {
+        grid-template-columns: 3.7rem minmax(0, .7fr) minmax(0, 1.3fr);
+    }
+
+    .academic-foundation-description {
+        grid-column: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .credibility-chapter {
+        padding-block: 2.9rem;
+    }
+
+    .credibility-chapter::before {
+        opacity: .34;
+    }
+
+    .credibility-chapter-header {
+        margin-bottom: 2.1rem;
+    }
+
+    .credibility-chapter-header .section-label {
+        margin-bottom: .8rem;
+    }
+
+    .credibility-chapter-header .section-title {
+        margin-bottom: .9rem;
+        font-size: clamp(1.95rem, 8.2vw, 2.15rem);
+        line-height: 1.04;
+        text-wrap: pretty;
+    }
+
+    .credibility-chapter-header .section-subtitle {
+        font-size: .94rem;
+        line-height: 1.58;
+    }
+
+    .credibility-subsection-header {
+        grid-template-columns: 2rem minmax(0, 1fr);
+        gap: .7rem;
+        margin-bottom: 1.15rem;
+    }
+
+    .credibility-subsection-header h3 {
+        font-size: 1.65rem;
+    }
+
+    .current-role-grid {
+        grid-template-columns: 1fr;
+        gap: .85rem;
+    }
+
+    .professional-role {
+        min-height: 0;
+        padding: 1rem;
+        border-radius: 1.3rem;
+    }
+
+    .professional-role-header {
+        grid-template-columns: 3.15rem minmax(0, 1fr) auto;
+        gap: .78rem;
+        margin-bottom: 1rem;
+    }
+
+    .credibility-brand-mark {
+        width: 3.15rem;
+        height: 3.15rem;
+        padding: .52rem;
+        border-radius: .85rem;
+    }
+
+    .credibility-brand-mark--bvk {
+        padding: .28rem;
+    }
+
+    .professional-role-identity h4 {
+        font-size: 1rem;
+        overflow-wrap: anywhere;
+    }
+
+    .professional-role-identity p {
+        font-size: .7rem;
+    }
+
+    .credibility-current {
+        grid-column: auto;
+        align-self: start;
+        margin-top: 0;
+        padding: .35rem .5rem;
+        font-size: .58rem;
+    }
+
+    .professional-role-primary {
+        margin-bottom: .9rem;
+        padding-bottom: .82rem;
+    }
+
+    .professional-role-title {
+        font-size: .94rem;
+    }
+
+    .professional-role-description {
+        font-size: .85rem;
+        line-height: 1.56;
+    }
+
+    .role-progression {
+        gap: .7rem;
+        margin-bottom: .9rem;
+    }
+
+    .earlier-role-row {
+        grid-template-columns: 3.15rem minmax(0, 1fr);
+        gap: .7rem .85rem;
+        margin-top: .85rem;
+        padding: .8rem .15rem;
+        background: none;
+    }
+
+    .earlier-role-row .credibility-brand-mark {
+        width: 3.15rem;
+        height: 3.15rem;
+    }
+
+    .earlier-role-date {
+        grid-column: 2;
+    }
+
+    .earlier-role-description {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        margin-top: .15rem;
+    }
+
+    .credibility-transition {
+        margin-block: 1.8rem;
+    }
+
+    .credibility-education-header p {
+        margin-top: .55rem;
+        font-size: .88rem;
+        line-height: 1.55;
+    }
+
+    .academic-feature {
+        grid-template-columns: 1fr;
+        gap: .95rem;
+        padding: 1rem;
+        border-radius: 1.35rem;
+    }
+
+    .academic-degree {
+        padding: 0 0 1.15rem;
+        border-right: 0;
+        border-bottom: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+    }
+
+    .academic-institution-header {
+        grid-template-columns: 5.8rem minmax(0, 1fr);
+        gap: .8rem;
+        margin-bottom: 1rem;
+    }
+
+    .academic-brand-mark {
+        width: 5.8rem;
+        height: 3.35rem;
+        padding: .5rem .62rem;
+    }
+
+    .academic-institution-header h4 {
+        font-size: .98rem;
+        overflow-wrap: anywhere;
+    }
+
+    .academic-degree-title {
+        font-size: 1.1rem;
+    }
+
+    .academic-gpa {
+        margin-top: 1.2rem;
+        padding-top: 1rem;
+    }
+
+    .academic-gpa strong {
+        font-size: 2.65rem;
+    }
+
+    .recognition-groups {
+        grid-template-columns: 1fr;
+    }
+
+    .recognition-group,
+    .recognition-group:first-child {
+        padding: 0;
+    }
+
+    .recognition-group + .recognition-group {
+        margin-top: 1.1rem;
+        padding-top: 1.1rem;
+        border-top: 1px solid color-mix(in srgb, var(--border) 82%, transparent);
+        border-left: 0;
+    }
+
+    .recognition-group-header {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: baseline;
+        gap: .65rem;
+        margin-bottom: .65rem;
+    }
+
+    .recognition-year {
+        margin-bottom: 0;
+        font-size: 1.02rem;
+    }
+
+    .recognition-group ul {
+        gap: .46rem;
+        margin-bottom: .65rem;
+    }
+
+    .recognition-group li {
+        font-size: .83rem;
+        line-height: 1.5;
+    }
+
+    .verification-link {
+        min-height: 2.5rem;
+        display: inline-flex;
+        align-items: center;
+        padding-block: .5rem;
+    }
+
+    .academic-foundation-row {
+        grid-template-columns: 3.15rem minmax(0, 1fr);
+        gap: .7rem .85rem;
+        margin-top: .85rem;
+        padding: .8rem .15rem;
+        background: none;
+    }
+
+    .academic-brand-mark--ict {
+        width: 3.15rem;
+        height: 3.15rem;
+        padding: .44rem;
+    }
+
+    .academic-foundation-degree,
+    .academic-foundation-description {
+        grid-column: 1 / -1;
+    }
+
+    .academic-foundation-degree {
+        margin-top: .15rem;
+    }
+
+    .academic-foundation-description {
+        font-size: .8rem;
+        line-height: 1.5;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .professional-role,
+    .earlier-role-row,
+    .academic-feature,
+    .academic-foundation-row,
+    .verification-link {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+}
