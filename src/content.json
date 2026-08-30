@@ -307,7 +307,7 @@
         "cta": "Visit MyStar"
       },
       "testimonials": {
-        "label": "Client Feedback",
+        "label": "Client Notes",
         "title": "What it’s like to work together.",
         "previousLabel": "Previous testimonial",
         "nextLabel": "Next testimonial",
@@ -997,7 +997,7 @@
         "cta": "Poseti MyStar"
       },
       "testimonials": {
-        "label": "Utisci klijenata",
+        "label": "Utisci",
         "title": "Kako izgleda naša saradnja.",
         "previousLabel": "Prethodni utisak",
         "nextLabel": "Sledeći utisak",
