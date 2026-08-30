@@ -1,5 +1,5 @@
 import { createReadStream } from 'node:fs';
-import { stat } from 'node:fs/promises';
+import { readFile, stat } from 'node:fs/promises';
 import { extname, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createServer } from 'node:http';
@@ -28,8 +28,12 @@ createServer(async (request, response) => {
     });
     createReadStream(filePath).pipe(response);
   } catch {
-    response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-    response.end('Not found');
+    const fallback = await readFile(resolve(rootDir, '404.html')).catch(() => null);
+    response.writeHead(404, {
+      'Content-Type': fallback ? 'text/html; charset=utf-8' : 'text/plain; charset=utf-8',
+      'Content-Length': fallback ? fallback.length : 9
+    });
+    response.end(fallback || 'Not found');
   }
 }).listen(port, '127.0.0.1', () => {
   console.log(`Portfolio available at http://127.0.0.1:${port}/`);

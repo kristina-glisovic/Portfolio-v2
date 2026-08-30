@@ -2,9 +2,13 @@
   "name": "kristina-glisovic-portfolio",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
     "check": "node scripts/build.mjs --check",
+    "check:production": "node scripts/check-production.mjs",
     "serve": "node scripts/serve.mjs"
   }
 }
