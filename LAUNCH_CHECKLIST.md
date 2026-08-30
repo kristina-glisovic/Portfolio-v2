@@ -5,6 +5,7 @@
 - [ ] Confirm the final HTTPS domain and canonical hostname (`www` or non-`www`).
 - [ ] Set `shared.site.origin` in `src/content.json` to that exact origin.
 - [ ] Set `shared.site.originStatus` to `configured`.
+- [ ] Configure `shared.contactForm` with the real HTTPS endpoint described in `CONTACT_FORM_BACKEND.md`.
 - [ ] Run `npm run build`.
 - [ ] Run `npm run check`.
 - [ ] Run `npm run check:production`.
@@ -43,6 +44,7 @@ Any Content Security Policy must be tested against the final configured producti
 - [ ] Test every navigation hash and footer link.
 - [ ] Open and close the mobile menu with pointer, keyboard and Escape.
 - [ ] Test the Contact email link.
+- [ ] Configure and test the real Contact form HTTPS endpoint.
 - [ ] Open MyStar and both ITS verification links.
 - [ ] Confirm favicon and Open Graph previews load.
 - [ ] Inspect canonical and reciprocal hreflang on both locales.
@@ -59,9 +61,8 @@ Any Content Security Policy must be tested against the final configured producti
 
 ## Optional later enhancements
 
-- Add a real contact form endpoint with server-side validation and spam protection.
 - Add privacy-friendly analytics if desired, then reassess privacy/consent requirements.
 - Add approved LinkedIn or GitHub profiles.
 - Publish dedicated case-study pages.
 
-These enhancements are not launch blockers for the approved email-only portfolio.
+These enhancements are not launch blockers once the configured Contact endpoint and direct email path have both passed live testing.

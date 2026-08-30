@@ -37,6 +37,6 @@ Until a real origin is configured, normal builds remain in safe pre-launch mode 
 
 ## Contact
 
-Contact is intentionally email-only through `mailto:hello@kristinaglisovic.dev`. A form should be added only after a real server endpoint, validation, spam protection, privacy handling and genuine response states are available.
+Direct email remains available through `mailto:hello@kristinaglisovic.dev`. The project-inquiry form is implemented in frontend-preview mode and cannot report success until a real HTTPS endpoint accepts the request. See `CONTACT_FORM_BACKEND.md` for the backend contract and configuration steps.
 
 See [LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md) for the final deployment checklist and host configuration requirements.

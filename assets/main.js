@@ -446,6 +446,125 @@
       updateSlider(0, { announce: false });
     });
 
+    /* ── Case-study progressive disclosure ─────────────────────────── */
+    document.querySelectorAll('[data-case-study-toggle]').forEach(toggle => {
+      const detailsId = toggle.getAttribute('aria-controls');
+      const details = detailsId ? document.getElementById(detailsId) : null;
+      const label = toggle.querySelector('[data-case-study-toggle-label]');
+      if (!details || !label) return;
+
+      const setExpanded = expanded => {
+        toggle.setAttribute('aria-expanded', String(expanded));
+        label.textContent = expanded ? toggle.dataset.labelCollapse : toggle.dataset.labelExpand;
+        details.hidden = !expanded;
+        details.classList.toggle('is-expanded', expanded);
+
+        if (expanded) {
+          details.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
+        }
+      };
+
+      toggle.hidden = false;
+      setExpanded(false);
+      toggle.addEventListener('click', () => {
+        setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+    });
+
+    /* ── Project inquiry form ───────────────────────────────────────── */
+    document.querySelectorAll('[data-contact-form]').forEach(form => {
+      const fields = Array.from(form.querySelectorAll('[data-contact-field]'));
+      const submit = form.querySelector('[data-contact-submit]');
+      const submitLabel = submit?.querySelector('span');
+      const status = form.querySelector('[data-contact-status]');
+      const endpoint = form.dataset.contactEndpoint?.trim() || '';
+
+      submit?.removeAttribute('disabled');
+
+      const clearFieldError = field => {
+        const error = field.closest('.contact-field')?.querySelector('[data-contact-error]');
+        field.removeAttribute('aria-invalid');
+        if (error) error.textContent = '';
+      };
+
+      const validateField = field => {
+        clearFieldError(field);
+        let message = '';
+        if (field.validity.valueMissing) {
+          message = status?.dataset.errorRequired || '';
+        } else if (field.validity.typeMismatch) {
+          message = status?.dataset.errorEmail || '';
+        } else if (field.validity.tooShort) {
+          message = status?.dataset.errorDetails || '';
+        }
+
+        if (message) {
+          field.setAttribute('aria-invalid', 'true');
+          const error = field.closest('.contact-field')?.querySelector('[data-contact-error]');
+          if (error) error.textContent = message;
+          return false;
+        }
+        return true;
+      };
+
+      const setStatus = (message, state = '') => {
+        if (!status) return;
+        status.textContent = message;
+        if (state) status.dataset.state = state;
+        else delete status.dataset.state;
+      };
+
+      fields.forEach(field => {
+        field.addEventListener('blur', () => validateField(field));
+        field.addEventListener('input', () => {
+          if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+          if (status?.dataset.state) setStatus('');
+        });
+        field.addEventListener('change', () => {
+          if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+          if (status?.dataset.state) setStatus('');
+        });
+      });
+
+      form.addEventListener('submit', async event => {
+        event.preventDefault();
+        const results = fields.map(validateField);
+        const firstInvalid = fields[results.findIndex(result => !result)];
+        if (firstInvalid) {
+          firstInvalid.focus();
+          return;
+        }
+
+        if (!endpoint || form.dataset.contactEndpointStatus !== 'configured') {
+          setStatus(status?.dataset.messageUnavailable || '', 'error');
+          return;
+        }
+
+        submit?.setAttribute('disabled', '');
+        submit?.setAttribute('aria-disabled', 'true');
+        if (submitLabel) submitLabel.textContent = submit.dataset.labelSending || '';
+        setStatus('', 'pending');
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(Object.fromEntries(new FormData(form)))
+          });
+          if (!response.ok) throw new Error(`Contact endpoint returned ${response.status}`);
+          form.reset();
+          fields.forEach(clearFieldError);
+          setStatus(status?.dataset.messageSuccess || '', 'success');
+        } catch {
+          setStatus(status?.dataset.messageError || '', 'error');
+        } finally {
+          submit?.removeAttribute('disabled');
+          submit?.removeAttribute('aria-disabled');
+          if (submitLabel) submitLabel.textContent = submit.dataset.labelDefault || '';
+        }
+      });
+    });
+
     /* ── Active nav link ─────────────────────────────────────────────── */
     const sections = Array.from(document.querySelectorAll('section[id]'));
 

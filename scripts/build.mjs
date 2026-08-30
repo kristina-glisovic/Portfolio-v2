@@ -42,6 +42,28 @@ function normalizeSiteOrigin(origin) {
   return url.origin;
 }
 
+function getContactFormEndpoint(content) {
+  const config = content.shared?.contactForm;
+  if (!config || !['unconfigured', 'configured'].includes(config.endpointStatus)) {
+    fail('shared.contactForm.endpointStatus must be "unconfigured" or "configured"');
+  }
+  if (config.endpointStatus === 'unconfigured') return '';
+  if (typeof config.endpoint !== 'string' || !config.endpoint.trim()) {
+    fail('shared.contactForm.endpoint is required when the contact form is configured');
+  }
+  let endpoint;
+  try {
+    endpoint = new URL(config.endpoint);
+  } catch {
+    fail('shared.contactForm.endpoint must be a valid absolute URL');
+  }
+  if (endpoint.protocol !== 'https:') fail('shared.contactForm.endpoint must use HTTPS');
+  if (endpoint.hostname === 'example.com' || endpoint.hostname.endsWith('.example.com')) {
+    fail('shared.contactForm.endpoint must not use example.com');
+  }
+  return endpoint.href;
+}
+
 function buildSeoContext(locale, content) {
   const configured = content.shared.site.originStatus === 'configured';
   if (!configured) return { configured };
@@ -105,6 +127,7 @@ function assertNonEmptyStrings(value, path) {
     if (/[<>]/.test(value)) fail(`Unrestricted HTML is not allowed in content: ${path}`);
     return;
   }
+  if (typeof value === 'boolean') return;
   if (Array.isArray(value)) {
     if (!value.length) {
       if (path.endsWith('.testimonials.entries')) return;
@@ -194,6 +217,9 @@ function renderTestimonials(localeContent) {
         fail(`Invalid optional testimonial ${field} at testimonials.entries.${index}`);
       }
     });
+    if (entry.isDemo !== undefined && typeof entry.isDemo !== 'boolean') {
+      fail(`Invalid testimonial isDemo marker at testimonials.entries.${index}`);
+    }
   });
 
   const slides = entries.map((entry, index) => {
@@ -254,6 +280,7 @@ function render(template, locale, content) {
 
   html = html.replace(/\{\{#if seo\.configured\}\}([\s\S]*?)\{\{\/if\}\}/g, (_, body) => seo.configured ? body : '');
   html = html.replace('{{testimonialsSection}}', renderTestimonials(localeContent));
+  html = html.replaceAll('{{contactFormEndpoint}}', escapeHtml(getContactFormEndpoint(content)));
   html = html.replace(/<([a-z][\w-]*)([^>]*?)\sdata-content="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/gi,
     (_, tag, before, key, after) => `<${tag}${before}${after}>${escapeHtml(getPath(context, key))}</${tag}>`);
   html = applyAttributeDirective(html, 'aria-label', 'aria-label', context);

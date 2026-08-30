@@ -18,6 +18,28 @@ process.stderr.write(buildCheck.stderr || '');
 if (buildCheck.status !== 0) fail('the standard static build check did not pass');
 
 const content = JSON.parse(await readFile(resolve(rootDir, 'src/content.json'), 'utf8'));
+const demoTestimonials = Object.entries(content.locales || {}).flatMap(([locale, data]) => (
+  (data.testimonials?.entries || [])
+    .filter(entry => entry?.isDemo === true)
+    .map(entry => `${locale}: ${entry.id}`)
+));
+if (demoTestimonials.length) {
+  fail(`demo testimonials are present (${demoTestimonials.join(', ')}); remove all entries marked isDemo before production launch`);
+}
+const contactFormConfig = content.shared?.contactForm;
+if (contactFormConfig?.endpointStatus !== 'configured') {
+  fail('shared.contactForm.endpointStatus is not "configured"; the inquiry form cannot launch without a real HTTPS endpoint');
+}
+let contactEndpoint;
+try {
+  contactEndpoint = new URL(contactFormConfig.endpoint);
+} catch {
+  fail('shared.contactForm.endpoint is not a valid absolute URL');
+}
+if (contactEndpoint.protocol !== 'https:') fail('the contact form endpoint must use HTTPS');
+if (contactEndpoint.hostname === 'example.com' || contactEndpoint.hostname.endsWith('.example.com')) {
+  fail('example.com cannot be used as the contact form endpoint');
+}
 if (content.shared?.site?.originStatus !== 'configured') {
   fail('shared.site.originStatus is not "configured"; placeholder mode is intentionally not launch-ready');
 }
@@ -88,8 +110,12 @@ for (const [locale, route] of Object.entries(routes)) {
   }
 
   if (/href="#"/.test(html)) fail(`${route.file} contains a placeholder href`);
-  if (/<form\b|handleFormSubmit|Message Sent!|Client Name|Company Name/i.test(html)) fail(`${route.file} contains placeholder or simulated form/proof content`);
-  if (/<section\b[^>]*\bid="(?:skills|certificates|testimonials)"/i.test(html)) {
+  if (/handleFormSubmit|Message Sent!|Client Name|Company Name/i.test(html)) fail(`${route.file} contains placeholder or simulated form/proof content`);
+  const contactForm = html.match(/<form\b[^>]*\bdata-contact-form[^>]*>/i)?.[0];
+  if (!contactForm || !contactForm.includes(`data-contact-endpoint="${contactEndpoint.href}"`)) {
+    fail(`${route.file} does not contain the configured contact form endpoint`);
+  }
+  if (/<section\b[^>]*\bid="(?:skills|certificates)"/i.test(html)) {
     fail(`${route.file} contains a removed legacy proof section`);
   }
 }

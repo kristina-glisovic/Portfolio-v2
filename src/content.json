@@ -37,6 +37,9 @@
       "mystar": "https://mystaroptic.com",
       "recognition2023": "https://www.its.edu.rs/2025/03/18/its-obelezio-svecanu-dodelu-diploma-160-novih-its-diplomaca/",
       "recognition2024": "https://www.its.edu.rs/2026/01/15/its-izabrao-studenta-generacije-i-studente-generacije-na-studijskim-programima-za-2024-25-godinu/"
+    },
+    "contactForm": {
+      "endpointStatus": "unconfigured"
     }
   },
   "locales": {
@@ -96,9 +99,9 @@
         "badge": "Available for new projects",
         "title": {
           "role": "Web Solutions Developer · Shopify Specialist",
-          "line1Prefix": "Building ",
-          "line1Strong": "high-performing websites, web applications and e-commerce experiences",
-          "line2": "where every detail matters."
+          "headlineLine1": "Building high-performing websites, web applications and e-commerce experiences",
+          "headlineLine2Prefix": "where ",
+          "headlineLine2Emphasis": "every detail matters."
         },
         "description": {
           "prefix": "I design and develop ",
@@ -138,7 +141,7 @@
       "projects": {
         "label": "Selected Work",
         "title": "MyStar — Taking Staroptic from physical retail to e-commerce",
-        "intro": "I built MyStar from the ground up as Staroptic’s dedicated Shopify storefront, creating a structured bilingual sales channel for eyewear and prescription ordering.",
+        "intro": "I built MyStar from the ground up as Staroptic’s bilingual Shopify sales channel for eyewear and prescription ordering.",
         "metaAria": "Project metadata",
         "meta": [
           {
@@ -163,17 +166,17 @@
           {
             "id": "context",
             "title": "Business Context",
-            "copy": "Staroptic is an established optical retailer that launched MyStar as its dedicated online brand and sales channel."
+            "copy": "Staroptic launched MyStar as a dedicated online brand and sales channel."
           },
           {
             "id": "challenge",
             "title": "Challenge",
-            "copy": "The storefront needed to organize a complex eyewear catalogue and translate key parts of the in-store optical sales process into a clear online journey."
+            "copy": "A complex eyewear catalogue and key parts of the in-store optical process needed a clear online structure."
           },
           {
             "id": "role",
             "title": "My Role",
-            "copy": "I led the storefront architecture, Shopify and frontend development, UX/UI decisions, localization, technical SEO, app integration, QA and ongoing improvements."
+            "copy": "I owned storefront architecture, Shopify and frontend development, UX/UI, localization, technical SEO, app integration, QA and ongoing improvements."
           }
         ],
         "highlightsAria": "Key implementation highlights",
@@ -197,7 +200,7 @@
         "prescription": {
           "label": "Standout Feature",
           "title": "Prescription ordering adapted to the real optical sales process",
-          "copy": "The functionality is powered by a third-party application that I integrated, configured and adapted to Staroptic’s requirements. The UX flow was developed in consultation with Staroptic employees so the online process reflects the information customers need when ordering prescription glasses.",
+          "copy": "I integrated and configured a third-party application, adapting the flow to Staroptic’s requirements and the information customers need when ordering prescription glasses.",
           "contributionsAria": "Prescription ordering contributions",
           "contributions": [
             {
@@ -220,6 +223,12 @@
         },
         "proof": {
           "label": "Visual Proof"
+        },
+        "details": {
+          "title": "More of the thinking behind the storefront",
+          "copy": "The prescription-ordering UX was defined in consultation with Staroptic employees so the online journey reflects the real optical sales process.",
+          "expand": "View more details",
+          "collapse": "Show less"
         },
         "visuals": {
           "home": {
@@ -303,72 +312,125 @@
         "previousLabel": "Previous testimonial",
         "nextLabel": "Next testimonial",
         "statusTemplate": "Client feedback {current} of {total}",
-        "entries": []
+        "entries": [
+          {
+            "id": "demo-testimonial-01",
+            "isDemo": true,
+            "quote": "Kristina understood the project quickly and translated our requirements into a solution that felt both polished and technically solid. Communication was clear throughout, and every detail was handled with care.",
+            "name": "Sample Client",
+            "role": "E-commerce Manager",
+            "company": "Demo E-commerce Brand",
+            "service": "Custom Web Development"
+          },
+          {
+            "id": "demo-testimonial-02",
+            "isDemo": true,
+            "quote": "What stood out most was the level of ownership. Kristina did not simply implement what was requested — she identified potential issues early, suggested better approaches and made sure the final result worked as a complete experience.",
+            "name": "Sample Client",
+            "role": "Product Lead",
+            "company": "Demo Digital Product",
+            "service": "Web Application Development"
+          },
+          {
+            "id": "demo-testimonial-03",
+            "isDemo": true,
+            "quote": "The collaboration was structured, responsive and very easy to follow. We always knew what was being worked on, what decisions were needed from us and what the next step would be.",
+            "name": "Sample Client",
+            "role": "Founder",
+            "company": "Demo Business",
+            "service": "Website Development"
+          },
+          {
+            "id": "demo-testimonial-04",
+            "isDemo": true,
+            "quote": "Kristina brought together technical implementation, UX thinking and attention to detail in a way that made the project feel much more refined than a standard development handoff.",
+            "name": "Sample Client",
+            "role": "E-commerce Lead",
+            "company": "Demo Retail Brand",
+            "service": "Shopify & E-commerce"
+          }
+        ]
       },
       "services": {
         "label": "Services",
-        "title": "Web solutions built around real business needs.",
-        "intro": "I build custom websites, web applications and e-commerce platforms with close attention to structure, usability and technical quality—from the initial build and launch to ongoing development.",
+        "title": "What do you need to build—or improve?",
+        "intro": "From focused websites to complex platforms and online stores, I shape the solution around the problem, the people using it and the way your business works.",
+        "needsLabel": "You may need this if:",
         "items": [
           {
             "id": "custom-websites",
             "eyebrow": "01 / Websites",
             "title": "Custom Websites & Web Solutions",
-            "description": "Business websites, marketing sites and landing pages developed around clear communication, responsive behavior and precise frontend implementation.",
+            "description": "Need a website that does more than simply exist online?",
             "points": [
               {
                 "id": "point-1",
-                "label": "Business and marketing websites with clear content hierarchy"
+                "label": "A completely new business or marketing website"
               },
               {
                 "id": "point-2",
-                "label": "Landing pages and custom frontend builds"
+                "label": "An outdated website redesigned around better UX"
               },
               {
                 "id": "point-3",
-                "label": "Responsive implementation, technical SEO and launch QA"
+                "label": "An existing design implemented for production"
+              },
+              {
+                "id": "point-4",
+                "label": "Custom functionality beyond a standard template"
               }
-            ]
+            ],
+            "solution": "I design and develop new builds, redesigns and custom functionality around the actual business requirement."
           },
           {
             "id": "web-applications",
             "eyebrow": "02 / Web Products",
             "title": "Web Applications & Custom Platforms",
-            "description": "Custom web applications and frontend-heavy platforms for businesses that need tailored workflows, interfaces or digital products beyond a conventional website or online store.",
+            "description": "Need a digital product people can actively use—not just browse?",
             "points": [
               {
                 "id": "point-1",
-                "label": "Internal and external platforms built around real workflows"
+                "label": "Internal tools, dashboards or operational interfaces"
               },
               {
                 "id": "point-2",
-                "label": "Frontend-heavy applications and interactive digital products"
+                "label": "Customer portals and data-driven experiences"
               },
               {
                 "id": "point-3",
-                "label": "Custom integrations, maintainable interface architecture and ongoing development"
+                "label": "Custom business workflows and application functionality"
+              },
+              {
+                "id": "point-4",
+                "label": "API-connected products and custom platforms"
               }
-            ]
+            ],
+            "solution": "I turn business requirements and workflows into clear, maintainable web applications and platforms."
           },
           {
             "id": "shopify",
-            "eyebrow": "03 / Core Specialization",
+            "eyebrow": "03 / E-commerce",
             "title": "Shopify & E-commerce Development",
-            "description": "Complete Shopify builds and strategic redesigns shaped around the brand’s products, customers and operational needs.",
+            "description": "Need to launch, rebuild or improve an online store?",
             "points": [
               {
                 "id": "point-1",
-                "label": "Complete store builds, redesigns and migrations"
+                "label": "New Shopify builds, migrations and restructuring"
               },
               {
                 "id": "point-2",
-                "label": "Custom themes, sections and product and collection architecture"
+                "label": "Strategic redesigns and custom theme development"
               },
               {
                 "id": "point-3",
-                "label": "App and payment integrations, localization and purchase-flow UX"
+                "label": "Purchase-flow UX, localization and integrations"
+              },
+              {
+                "id": "point-4",
+                "label": "Performance and technical SEO improvements"
               }
-            ]
+            ],
+            "solution": "I build and improve e-commerce experiences with the customer journey, daily operations and technical quality considered together."
           }
         ],
         "expertise": {
@@ -581,7 +643,72 @@
         "intro": "Tell me what you’re building, improving or trying to solve. I’ll respond personally and let you know how I can help.",
         "emailLabel": "Email me directly",
         "emailAria": "Email Kristina at hello@kristinaglisovic.dev",
-        "support": "A short project overview, approximate timeline and any useful links are enough to get started."
+        "support": "A short project overview, approximate timeline and any useful links are enough to get started.",
+        "form": {
+          "title": "Send a project inquiry",
+          "intro": "Share the essentials below and I’ll reply personally.",
+          "required": "Required",
+          "optional": "Optional",
+          "fields": {
+            "name": {
+              "label": "Name",
+              "autocomplete": "name"
+            },
+            "email": {
+              "label": "Email",
+              "autocomplete": "email"
+            },
+            "company": {
+              "label": "Company / Brand",
+              "autocomplete": "organization"
+            },
+            "projectType": {
+              "label": "What do you need help with?",
+              "placeholder": "Select a project type",
+              "options": [
+                "Custom Website",
+                "Web Application / Platform",
+                "Shopify / E-commerce",
+                "Redesign / Improvements",
+                "Other"
+              ]
+            },
+            "details": {
+              "label": "Project details",
+              "placeholder": "A short overview of the goal, current situation and any useful links."
+            },
+            "timeline": {
+              "label": "Approximate timeline",
+              "placeholder": "Select a timeline",
+              "options": [
+                "As soon as possible",
+                "Within 1–2 months",
+                "Within 3–6 months",
+                "Flexible / Not defined yet"
+              ]
+            },
+            "budget": {
+              "label": "Budget range",
+              "placeholder": "Select a range",
+              "options": [
+                "Under €2,500",
+                "€2,500–€5,000",
+                "€5,000–€10,000",
+                "€10,000+",
+                "Not sure yet"
+              ]
+            }
+          },
+          "submit": "Send project inquiry",
+          "sending": "Sending inquiry…",
+          "success": "Your inquiry was sent. I’ll reply personally as soon as possible.",
+          "error": "Your inquiry could not be sent. Please try again or email me directly.",
+          "unavailable": "Online inquiries are not connected yet. Please email me directly to start a conversation.",
+          "requiredError": "This field is required.",
+          "emailError": "Enter a valid email address.",
+          "detailsError": "Please add a little more detail about the project.",
+          "privacy": "Your details will only be used to respond to this inquiry."
+        }
       },
       "footer": {
         "copySuffix": ". All rights reserved.",
@@ -662,9 +789,9 @@
         "badge": "Dostupna za nove projekte",
         "title": {
           "role": "Web Developer · Shopify specijalista",
-          "line1Prefix": "Razvijam ",
-          "line1Strong": "sajtove visokih performansi, web aplikacije i e-commerce rešenja",
-          "line2": "gde je svaki detalj važan."
+          "headlineLine1": "Razvijam sajtove visokih performansi, web aplikacije i e-commerce rešenja",
+          "headlineLine2Prefix": "gde je ",
+          "headlineLine2Emphasis": "svaki detalj važan."
         },
         "description": {
           "prefix": "Kreiram i razvijam ",
@@ -704,7 +831,7 @@
       "projects": {
         "label": "Odabrani projekat",
         "title": "MyStar — Novi e-commerce kanal za Staroptic",
-        "intro": "MyStar sam razvila od početka kao zaseban Shopify storefront kojim je Staroptic svoje maloprodajno poslovanje proširio na online prodaju.",
+        "intro": "MyStar sam razvila od početka kao Staropticov dvojezični Shopify prodajni kanal za naočare i online poručivanje dioptrijskih modela.",
         "metaAria": "Podaci o projektu",
         "meta": [
           {
@@ -729,17 +856,17 @@
           {
             "id": "context",
             "title": "Poslovni kontekst",
-            "copy": "Staroptic je etablirana optika koja je kroz MyStar pokrenula zaseban online brend i prodajni kanal."
+            "copy": "Staroptic je kroz MyStar pokrenuo zaseban online brend i prodajni kanal."
           },
           {
             "id": "challenge",
             "title": "Izazov",
-            "copy": "Bilo je potrebno jasno organizovati složen katalog i deo stručnog procesa prodaje naočara prilagoditi samostalnoj online kupovini."
+            "copy": "Složen katalog i ključne delove stručnog procesa prodaje naočara trebalo je jasno prilagoditi online okruženju."
           },
           {
             "id": "role",
             "title": "Moja uloga",
-            "copy": "Bila sam odgovorna za arhitekturu storefronta, Shopify i frontend razvoj, UX/UI odluke, lokalizaciju, tehnički SEO, integraciju aplikacija, QA i dalja unapređenja."
+            "copy": "Preuzela sam arhitekturu storefronta, Shopify i frontend razvoj, UX/UI, lokalizaciju, tehnički SEO, integraciju aplikacija, QA i dalja unapređenja."
           }
         ],
         "highlightsAria": "Ključni delovi implementacije",
@@ -763,7 +890,7 @@
         "prescription": {
           "label": "Ključna funkcionalnost",
           "title": "Poručivanje dioptrijskih naočara prilagođeno stvarnom procesu optike",
-          "copy": "Funkcionalnost koristi aplikaciju treće strane koju sam integrisala, konfigurisala i prilagodila zahtevima Staroptica. UX tok je definisan u konsultaciji sa zaposlenima kako bi online proces obuhvatio informacije potrebne za poručivanje dioptrijskih naočara.",
+          "copy": "Integrisala sam i konfigurisala aplikaciju treće strane, prilagođavajući tok zahtevima Staroptica i informacijama potrebnim za poručivanje dioptrijskih naočara.",
           "contributionsAria": "Doprinos procesu poručivanja",
           "contributions": [
             {
@@ -786,6 +913,12 @@
         },
         "proof": {
           "label": "Vizuelni prikaz"
+        },
+        "details": {
+          "title": "Više o odlukama iza storefronta",
+          "copy": "UX tok poručivanja definisan je u konsultaciji sa zaposlenima u Staropticu kako bi online iskustvo pratilo stvarni proces optike.",
+          "expand": "Pogledaj više detalja",
+          "collapse": "Prikaži manje"
         },
         "visuals": {
           "home": {
@@ -869,72 +1002,125 @@
         "previousLabel": "Prethodni utisak",
         "nextLabel": "Sledeći utisak",
         "statusTemplate": "Utisak klijenta {current} od {total}",
-        "entries": []
+        "entries": [
+          {
+            "id": "demo-testimonial-01",
+            "isDemo": true,
+            "quote": "Kristina je veoma brzo razumela projekat i naše zahteve pretvorila u rešenje koje je istovremeno delovalo profesionalno i bilo tehnički veoma dobro izvedeno. Komunikacija je bila jasna tokom cele saradnje, a svakom detalju pristupila je pažljivo.",
+            "name": "Primer klijenta",
+            "role": "Menadžer e-commerce prodaje",
+            "company": "Demo e-commerce brend",
+            "service": "Razvoj web rešenja po meri"
+          },
+          {
+            "id": "demo-testimonial-02",
+            "isDemo": true,
+            "quote": "Najviše nam je značio nivo odgovornosti koji je preuzela. Kristina nije samo implementirala ono što smo tražili — na vreme je uočavala potencijalne probleme, predlagala bolja rešenja i vodila računa da krajnji rezultat funkcioniše kao celina.",
+            "name": "Primer klijenta",
+            "role": "Vođa razvoja proizvoda",
+            "company": "Demo digitalni proizvod",
+            "service": "Razvoj web aplikacije"
+          },
+          {
+            "id": "demo-testimonial-03",
+            "isDemo": true,
+            "quote": "Saradnja je bila organizovana, jasna i laka za praćenje. U svakom trenutku smo znali na čemu se radi, koje odluke su potrebne sa naše strane i šta je sledeći korak.",
+            "name": "Primer klijenta",
+            "role": "Osnivač",
+            "company": "Demo kompanija",
+            "service": "Razvoj sajta"
+          },
+          {
+            "id": "demo-testimonial-04",
+            "isDemo": true,
+            "quote": "Kristina je spojila tehničku realizaciju, UX razmišljanje i pažnju prema detaljima na način koji je ceo projekat podigao iznad standardne development isporuke.",
+            "name": "Primer klijenta",
+            "role": "E-commerce menadžer",
+            "company": "Demo maloprodajni brend",
+            "service": "Shopify i e-commerce"
+          }
+        ]
       },
       "services": {
         "label": "Usluge",
-        "title": "Web rešenja oblikovana prema stvarnim poslovnim potrebama.",
-        "intro": "Razvijam sajtove po meri, web aplikacije i e-commerce platforme, uz pažnju posvećenu strukturi, upotrebljivosti i tehničkom kvalitetu — od prve izrade i lansiranja do daljeg razvoja.",
+        "title": "Šta želite da izgradite ili unapredite?",
+        "intro": "Od jasnih poslovnih sajtova do kompleksnih platformi i online prodavnica, rešenje oblikujem prema konkretnom problemu, korisnicima i načinu na koji vaše poslovanje funkcioniše.",
+        "needsLabel": "Ovo je za vas ako vam treba:",
         "items": [
           {
             "id": "custom-websites",
             "eyebrow": "01 / Sajtovi",
             "title": "Sajtovi i web rešenja po meri",
-            "description": "Poslovni i marketinški sajtovi, landing stranice i prilagođena frontend rešenja sa jasnom komunikacijom i pouzdanim radom na svim uređajima.",
+            "description": "Potreban vam je sajt koji radi više od samog prisustva na internetu?",
             "points": [
               {
                 "id": "point-1",
-                "label": "Poslovni i marketinški sajtovi sa jasnom hijerarhijom sadržaja"
+                "label": "Potpuno nov poslovni ili marketinški sajt"
               },
               {
                 "id": "point-2",
-                "label": "Landing stranice i frontend rešenja po meri"
+                "label": "Redizajn zastarelog sajta i bolje korisničko iskustvo"
               },
               {
                 "id": "point-3",
-                "label": "Responzivna realizacija, tehnički SEO i QA pre lansiranja"
+                "label": "Realizacija postojećeg dizajna spremna za produkciju"
+              },
+              {
+                "id": "point-4",
+                "label": "Funkcionalnost koju standardni šablon ne može da podrži"
               }
-            ]
+            ],
+            "solution": "Nove sajtove, redizajn i funkcionalnosti po meri oblikujem i razvijam oko stvarnog poslovnog zahteva."
           },
           {
             "id": "web-applications",
             "eyebrow": "02 / Web proizvodi",
             "title": "Web aplikacije i platforme po meri",
-            "description": "Web aplikacije i frontend-orijentisane platforme za biznise kojima su potrebni prilagođeni tokovi rada, interfejsi ili digitalni proizvodi izvan klasičnog sajta ili online prodavnice.",
+            "description": "Potreban vam je digitalni proizvod koji korisnici aktivno koriste, a ne samo pregledaju?",
             "points": [
               {
                 "id": "point-1",
-                "label": "Interne i eksterne platforme zasnovane na stvarnim poslovnim procesima"
+                "label": "Interni alati, dashboardi i operativni interfejsi"
               },
               {
                 "id": "point-2",
-                "label": "Frontend-orijentisane aplikacije i interaktivni digitalni proizvodi"
+                "label": "Korisnički portali i interfejsi zasnovani na podacima"
               },
               {
                 "id": "point-3",
-                "label": "Prilagođene integracije, održiva arhitektura interfejsa i dalji razvoj"
+                "label": "Poslovni tokovi i aplikativne funkcionalnosti po meri"
+              },
+              {
+                "id": "point-4",
+                "label": "Proizvodi povezani sa API servisima i prilagođene platforme"
               }
-            ]
+            ],
+            "solution": "Poslovne zahteve i procese pretvaram u jasne, održive web aplikacije i platforme."
           },
           {
             "id": "shopify",
-            "eyebrow": "03 / Glavna specijalizacija",
+            "eyebrow": "03 / E-commerce",
             "title": "Razvoj Shopify prodavnica i e-commerce rešenja",
-            "description": "Izrada novih Shopify prodavnica i strateški redizajn postojećih rešenja, prilagođeni ponudi, kupcima i načinu poslovanja brenda.",
+            "description": "Potrebno vam je lansiranje, redizajn ili unapređenje online prodavnice?",
             "points": [
               {
                 "id": "point-1",
-                "label": "Kompletna izrada prodavnice, redizajn i migracija"
+                "label": "Nova Shopify prodavnica, migracija ili reorganizacija"
               },
               {
                 "id": "point-2",
-                "label": "Prilagođene teme, sekcije i struktura proizvoda i kolekcija"
+                "label": "Strateški redizajn i razvoj teme po meri"
               },
               {
                 "id": "point-3",
-                "label": "Integracije aplikacija i sistema za plaćanje, lokalizacija i UX kupovnog toka"
+                "label": "UX kupovnog toka, lokalizacija i integracije"
+              },
+              {
+                "id": "point-4",
+                "label": "Unapređenje performansi i tehničkog SEO-a"
               }
-            ]
+            ],
+            "solution": "E-commerce iskustvo razvijam tako da kupovni tok, svakodnevno upravljanje i tehnički kvalitet funkcionišu kao celina."
           }
         ],
         "expertise": {
@@ -1147,7 +1333,72 @@
         "intro": "Pišite mi šta razvijate, unapređujete ili pokušavate da rešite. Odgovoriću vam lično i jasno reći kako mogu da pomognem.",
         "emailLabel": "Pišite mi direktno",
         "emailAria": "Pošaljite email Kristini na hello@kristinaglisovic.dev",
-        "support": "Za početak su dovoljni kratak opis projekta, okvirni rok i relevantni linkovi."
+        "support": "Za početak su dovoljni kratak opis projekta, okvirni rok i relevantni linkovi.",
+        "form": {
+          "title": "Pošaljite upit za projekat",
+          "intro": "Podelite najvažnije informacije, a ja ću vam odgovoriti lično.",
+          "required": "Obavezno",
+          "optional": "Opciono",
+          "fields": {
+            "name": {
+              "label": "Ime i prezime",
+              "autocomplete": "name"
+            },
+            "email": {
+              "label": "Email",
+              "autocomplete": "email"
+            },
+            "company": {
+              "label": "Kompanija / brend",
+              "autocomplete": "organization"
+            },
+            "projectType": {
+              "label": "U čemu vam je potrebna pomoć?",
+              "placeholder": "Izaberite tip projekta",
+              "options": [
+                "Sajt po meri",
+                "Web aplikacija / platforma",
+                "Shopify / E-commerce",
+                "Redizajn / unapređenja",
+                "Drugo"
+              ]
+            },
+            "details": {
+              "label": "Detalji projekta",
+              "placeholder": "Kratko opišite cilj, trenutno stanje i dodajte relevantne linkove."
+            },
+            "timeline": {
+              "label": "Okvirni rok",
+              "placeholder": "Izaberite okvirni rok",
+              "options": [
+                "Što pre",
+                "U narednih 1–2 meseca",
+                "U narednih 3–6 meseci",
+                "Fleksibilno / još nije definisano"
+              ]
+            },
+            "budget": {
+              "label": "Okvirni budžet",
+              "placeholder": "Izaberite raspon",
+              "options": [
+                "Do €2.500",
+                "€2.500–€5.000",
+                "€5.000–€10.000",
+                "€10.000+",
+                "Još nije definisano"
+              ]
+            }
+          },
+          "submit": "Pošaljite upit",
+          "sending": "Slanje upita…",
+          "success": "Upit je poslat. Odgovoriću vam lično u najkraćem roku.",
+          "error": "Upit nije mogao da bude poslat. Pokušajte ponovo ili mi pišite direktno.",
+          "unavailable": "Online upiti još nisu povezani. Pišite mi direktno putem emaila da započnemo razgovor.",
+          "requiredError": "Ovo polje je obavezno.",
+          "emailError": "Unesite ispravnu email adresu.",
+          "detailsError": "Dodajte još nekoliko informacija o projektu.",
+          "privacy": "Vaše podatke koristiću isključivo za odgovor na ovaj upit."
+        }
       },
       "footer": {
         "copySuffix": ". Sva prava zadržana.",

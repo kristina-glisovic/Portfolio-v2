@@ -47,7 +47,7 @@
   <script type="application/ld+json">{{json:seo.jsonLd}}</script>
   {{/if}}
   <link rel="stylesheet" href="{{assetPrefix}}devices.min.css">
-  <link rel="stylesheet" href="{{assetPrefix}}style.css?v=20260829-contact-15">
+  <link rel="stylesheet" href="{{assetPrefix}}style.css?v=20260830-phase9-1">
 </head>
 <body>
 
@@ -124,7 +124,11 @@
         <h1 class="hero-name" id="hero-heading">
           <span class="gradient-text">{{text:shared.name}}</span>
         </h1>
-        <p class="hero-title"><span class="hero-title-role">{{text:hero.title.role}}</span><span class="hero-title-copy">{{text:hero.title.line1Prefix}}<strong>{{text:hero.title.line1Strong}}</strong></span><span class="hero-title-copy hero-title-copy-secondary">{{text:hero.title.line2}}</span></p>
+        <p class="hero-title">
+          <span class="hero-title-role">{{text:hero.title.role}}</span>
+          <span class="hero-title-copy">{{text:hero.title.headlineLine1}}</span>
+          <span class="hero-title-copy hero-title-copy-secondary">{{text:hero.title.headlineLine2Prefix}}<strong>{{text:hero.title.headlineLine2Emphasis}}</strong></span>
+        </p>
         <p class="hero-desc scroll-line-reveal scroll-line-reveal-soft" data-line-reveal-source>{{text:hero.description.prefix}}<strong>{{text:hero.description.emphasis1}}</strong>{{text:hero.description.middle}}<strong>{{text:hero.description.emphasis2}}</strong>{{text:hero.description.suffix}}</p>
 
         <div class="hero-ctas">
@@ -183,12 +187,15 @@
               </span>
             </div>
             <h3 class="service-card-title" data-content="services.items.0.title"></h3>
-            <p class="service-card-desc" data-content="services.items.0.description"></p>
+            <p class="service-card-question" data-content="services.items.0.description"></p>
+            <p class="service-card-needs-label" data-content="services.needsLabel"></p>
             <ul class="service-card-points">
               <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.0.points.0.label"></span></li>
               <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.0.points.1.label"></span></li>
               <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.0.points.2.label"></span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.0.points.3.label"></span></li>
             </ul>
+            <p class="service-card-solution" data-content="services.items.0.solution"></p>
           </article>
 
           <article class="service-card reveal reveal-delay-1">
@@ -201,12 +208,15 @@
               </span>
             </div>
             <h3 class="service-card-title" data-content="services.items.1.title"></h3>
-            <p class="service-card-desc" data-content="services.items.1.description"></p>
+            <p class="service-card-question" data-content="services.items.1.description"></p>
+            <p class="service-card-needs-label" data-content="services.needsLabel"></p>
             <ul class="service-card-points">
               <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.1.points.0.label"></span></li>
               <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.1.points.1.label"></span></li>
               <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.1.points.2.label"></span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.1.points.3.label"></span></li>
             </ul>
+            <p class="service-card-solution" data-content="services.items.1.solution"></p>
           </article>
 
           <article class="service-card reveal reveal-delay-2">
@@ -219,12 +229,15 @@
               </span>
             </div>
             <h3 class="service-card-title" data-content="services.items.2.title"></h3>
-            <p class="service-card-desc" data-content="services.items.2.description"></p>
+            <p class="service-card-question" data-content="services.items.2.description"></p>
+            <p class="service-card-needs-label" data-content="services.needsLabel"></p>
             <ul class="service-card-points">
               <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.2.points.0.label"></span></li>
               <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.2.points.1.label"></span></li>
               <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.2.points.2.label"></span></li>
+              <li class="service-card-point"><span class="service-card-point-dot" aria-hidden="true"></span><span data-content="services.items.2.points.3.label"></span></li>
             </ul>
+            <p class="service-card-solution" data-content="services.items.2.solution"></p>
           </article>
         </div>
 
@@ -356,21 +369,43 @@
         </figure>
       </article>
 
-      <section class="case-study-proof" aria-labelledby="case-study-proof-title">
-        <div class="case-study-proof-heading reveal">
-          <div class="case-study-kicker" id="case-study-proof-title" data-content="projects.proof.label"></div>
+      <div class="case-study-disclosure reveal">
+        <button class="case-study-disclosure-button" type="button" aria-expanded="true" aria-controls="case-study-details" data-case-study-toggle hidden data-label-expand="{{attr:projects.details.expand}}" data-label-collapse="{{attr:projects.details.collapse}}">
+          <span data-case-study-toggle-label data-content="projects.details.collapse"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+      </div>
+
+      <div class="case-study-details" id="case-study-details" data-case-study-details>
+        <div class="case-study-details-copy case-study-surface">
+          <h3 data-content="projects.details.title"></h3>
+          <p data-content="projects.details.copy"></p>
         </div>
-        <div class="case-study-proof-grid">
-          <figure class="case-study-proof-card case-study-proof-card-collection case-study-surface reveal">
-            <img src="{{assetPrefix}}mystar-collection.avif" alt="" data-content-alt="projects.visuals.collection.alt" width="1360" height="650" loading="lazy" decoding="async" />
-            <figcaption data-content="projects.visuals.collection.caption"></figcaption>
-          </figure>
-          <figure class="case-study-proof-card case-study-proof-card-product case-study-surface reveal reveal-delay-1">
-            <img src="{{assetPrefix}}mystar-product.avif" alt="" data-content-alt="projects.visuals.product.alt" width="1360" height="818" loading="lazy" decoding="async" />
-            <figcaption data-content="projects.visuals.product.caption"></figcaption>
-          </figure>
-        </div>
-      </section>
+        <section class="case-study-proof" aria-labelledby="case-study-proof-title">
+          <div class="case-study-proof-heading reveal">
+            <div class="case-study-kicker" id="case-study-proof-title" data-content="projects.proof.label"></div>
+          </div>
+          <div class="case-study-proof-grid">
+            <figure class="case-study-proof-card case-study-proof-card-collection case-study-surface reveal">
+              <img src="{{assetPrefix}}mystar-collection.avif" alt="" data-content-alt="projects.visuals.collection.alt" width="1360" height="650" loading="lazy" decoding="async" />
+              <figcaption data-content="projects.visuals.collection.caption"></figcaption>
+            </figure>
+            <figure class="case-study-proof-card case-study-proof-card-product case-study-surface reveal reveal-delay-1">
+              <img src="{{assetPrefix}}mystar-product.avif" alt="" data-content-alt="projects.visuals.product.alt" width="1360" height="818" loading="lazy" decoding="async" />
+              <figcaption data-content="projects.visuals.product.caption"></figcaption>
+            </figure>
+          </div>
+        </section>
+        <ul class="case-study-capabilities" data-content-aria-label="projects.capabilitiesAria">
+          <li data-content="projects.capabilities.0.label"></li>
+          <li data-content="projects.capabilities.1.label"></li>
+          <li data-content="projects.capabilities.2.label"></li>
+          <li data-content="projects.capabilities.3.label"></li>
+          <li data-content="projects.capabilities.4.label"></li>
+          <li data-content="projects.capabilities.5.label"></li>
+          <li data-content="projects.capabilities.6.label"></li>
+        </ul>
+      </div>
 
       <section class="case-study-outcomes case-study-surface reveal" aria-labelledby="case-study-outcomes-title">
         <div class="case-study-outcomes-heading">
@@ -384,15 +419,6 @@
           <li data-content="projects.outcomes.items.3.label"></li>
         </ul>
         <div class="case-study-outcomes-footer">
-          <ul class="case-study-capabilities" data-content-aria-label="projects.capabilitiesAria">
-            <li data-content="projects.capabilities.0.label"></li>
-            <li data-content="projects.capabilities.1.label"></li>
-            <li data-content="projects.capabilities.2.label"></li>
-            <li data-content="projects.capabilities.3.label"></li>
-            <li data-content="projects.capabilities.4.label"></li>
-            <li data-content="projects.capabilities.5.label"></li>
-            <li data-content="projects.capabilities.6.label"></li>
-          </ul>
           <a href="{{attr:shared.urls.mystar}}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary case-study-cta">
             <span data-content="projects.cta"></span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -772,11 +798,85 @@
           <p class="contact-intro reveal reveal-delay-2" data-content="contact.intro"></p>
         </header>
 
-        <div class="contact-action reveal reveal-delay-2">
+        <div class="contact-direct reveal reveal-delay-2">
           <p class="contact-email-label" data-content="contact.emailLabel"></p>
           <a href="mailto:{{attr:shared.email}}" class="contact-email-link" aria-label="" data-content-aria-label="contact.emailAria">{{text:shared.email}}</a>
           <p class="contact-support" data-content="contact.support"></p>
         </div>
+
+        <form class="contact-form-editorial reveal reveal-delay-2" method="post" novalidate data-contact-form data-contact-endpoint="{{contactFormEndpoint}}" data-contact-endpoint-status="{{text:shared.contactForm.endpointStatus}}">
+          <header class="contact-form-header">
+            <h3 data-content="contact.form.title"></h3>
+            <p data-content="contact.form.intro"></p>
+          </header>
+
+          <div class="contact-form-grid">
+            <div class="contact-field">
+              <label for="contact-name"><span data-content="contact.form.fields.name.label"></span><small data-content="contact.form.required"></small></label>
+              <input id="contact-name" name="name" type="text" autocomplete="{{attr:contact.form.fields.name.autocomplete}}" required aria-describedby="contact-name-error" data-contact-field />
+              <span class="contact-field-error" id="contact-name-error" data-contact-error></span>
+            </div>
+            <div class="contact-field">
+              <label for="contact-email"><span data-content="contact.form.fields.email.label"></span><small data-content="contact.form.required"></small></label>
+              <input id="contact-email" name="email" type="email" autocomplete="{{attr:contact.form.fields.email.autocomplete}}" required aria-describedby="contact-email-error" data-contact-field />
+              <span class="contact-field-error" id="contact-email-error" data-contact-error></span>
+            </div>
+            <div class="contact-field">
+              <label for="contact-company"><span data-content="contact.form.fields.company.label"></span><small data-content="contact.form.optional"></small></label>
+              <input id="contact-company" name="company" type="text" autocomplete="{{attr:contact.form.fields.company.autocomplete}}" aria-describedby="contact-company-error" data-contact-field />
+              <span class="contact-field-error" id="contact-company-error" data-contact-error></span>
+            </div>
+            <div class="contact-field">
+              <label for="contact-project-type"><span data-content="contact.form.fields.projectType.label"></span><small data-content="contact.form.required"></small></label>
+              <select id="contact-project-type" name="projectType" required aria-describedby="contact-project-type-error" data-contact-field>
+                <option value="" selected disabled data-content="contact.form.fields.projectType.placeholder"></option>
+                <option value="custom-website" data-content="contact.form.fields.projectType.options.0"></option>
+                <option value="web-application" data-content="contact.form.fields.projectType.options.1"></option>
+                <option value="shopify-ecommerce" data-content="contact.form.fields.projectType.options.2"></option>
+                <option value="redesign-improvements" data-content="contact.form.fields.projectType.options.3"></option>
+                <option value="other" data-content="contact.form.fields.projectType.options.4"></option>
+              </select>
+              <span class="contact-field-error" id="contact-project-type-error" data-contact-error></span>
+            </div>
+            <div class="contact-field contact-field-wide">
+              <label for="contact-details"><span data-content="contact.form.fields.details.label"></span><small data-content="contact.form.required"></small></label>
+              <textarea id="contact-details" name="details" rows="5" minlength="20" required aria-describedby="contact-details-error" data-contact-field placeholder="{{attr:contact.form.fields.details.placeholder}}"></textarea>
+              <span class="contact-field-error" id="contact-details-error" data-contact-error></span>
+            </div>
+            <div class="contact-field">
+              <label for="contact-timeline"><span data-content="contact.form.fields.timeline.label"></span><small data-content="contact.form.optional"></small></label>
+              <select id="contact-timeline" name="timeline" aria-describedby="contact-timeline-error" data-contact-field>
+                <option value="" selected data-content="contact.form.fields.timeline.placeholder"></option>
+                <option value="asap" data-content="contact.form.fields.timeline.options.0"></option>
+                <option value="1-2-months" data-content="contact.form.fields.timeline.options.1"></option>
+                <option value="3-6-months" data-content="contact.form.fields.timeline.options.2"></option>
+                <option value="flexible" data-content="contact.form.fields.timeline.options.3"></option>
+              </select>
+              <span class="contact-field-error" id="contact-timeline-error" data-contact-error></span>
+            </div>
+            <div class="contact-field">
+              <label for="contact-budget"><span data-content="contact.form.fields.budget.label"></span><small data-content="contact.form.optional"></small></label>
+              <select id="contact-budget" name="budget" aria-describedby="contact-budget-error" data-contact-field>
+                <option value="" selected data-content="contact.form.fields.budget.placeholder"></option>
+                <option value="under-2500" data-content="contact.form.fields.budget.options.0"></option>
+                <option value="2500-5000" data-content="contact.form.fields.budget.options.1"></option>
+                <option value="5000-10000" data-content="contact.form.fields.budget.options.2"></option>
+                <option value="10000-plus" data-content="contact.form.fields.budget.options.3"></option>
+                <option value="not-sure" data-content="contact.form.fields.budget.options.4"></option>
+              </select>
+              <span class="contact-field-error" id="contact-budget-error" data-contact-error></span>
+            </div>
+          </div>
+
+          <div class="contact-form-footer">
+            <p class="contact-form-privacy" data-content="contact.form.privacy"></p>
+            <button class="btn btn-primary contact-form-submit" type="submit" data-contact-submit data-label-default="{{attr:contact.form.submit}}" data-label-sending="{{attr:contact.form.sending}}" disabled>
+              <span data-content="contact.form.submit"></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <p class="contact-form-status" role="status" aria-live="polite" data-contact-status data-message-success="{{attr:contact.form.success}}" data-message-error="{{attr:contact.form.error}}" data-message-unavailable="{{attr:contact.form.unavailable}}" data-error-required="{{attr:contact.form.requiredError}}" data-error-email="{{attr:contact.form.emailError}}" data-error-details="{{attr:contact.form.detailsError}}"></p>
+        </form>
 
       </div>
     </div>
@@ -802,7 +902,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════════════════════════════════ -->
-  <script src="{{assetPrefix}}main.js?v=20260829-contact-2"></script>
+  <script src="{{assetPrefix}}main.js?v=20260830-phase9-1"></script>
 
 </body>
 </html>
