@@ -29,11 +29,6 @@
         "ICT College of Vocational Studies"
       ]
     },
-    "heroProofValues": [
-      "6+",
-      "Shopify",
-      "Worldwide"
-    ],
     "gpa": {
       "score": "9.87",
       "scale": "/ 10"
@@ -48,8 +43,8 @@
     "en": {
       "lang": "en",
       "meta": {
-        "title": "Kristina Glišović | Shopify & Web Solutions Developer",
-        "description": "Independent Shopify and web developer for e-commerce stores, custom websites and web applications, with a focus on UX, performance and technical quality.",
+        "title": "Kristina Glišović | Web Developer & Shopify Specialist",
+        "description": "Web developer creating custom websites, web applications, e-commerce solutions and Shopify stores, with a focus on UX, performance and technical quality.",
         "ogLocale": "en_US",
         "ogAlternateLocale": "sr_RS",
         "ogImageAlt": "Kristina Glišović — Shopify & Web Solutions Developer",
@@ -72,12 +67,12 @@
         "cta": "Let's Talk",
         "items": [
           {
-            "id": "projects",
-            "label": "Work"
-          },
-          {
             "id": "services",
             "label": "Services"
+          },
+          {
+            "id": "projects",
+            "label": "Work"
           },
           {
             "id": "about",
@@ -100,14 +95,14 @@
       "hero": {
         "badge": "Available for new projects",
         "title": {
-          "role": "Shopify & Web Solutions Developer",
+          "role": "Web Solutions Developer · Shopify Specialist",
           "line1Prefix": "Building ",
-          "line1Strong": "high-performing Shopify stores",
-          "line2": "and custom web solutions where every detail matters."
+          "line1Strong": "high-performing websites, web applications and e-commerce experiences",
+          "line2": "where every detail matters."
         },
         "description": {
           "prefix": "I design and develop ",
-          "emphasis1": "Shopify stores, custom websites and web applications",
+          "emphasis1": "custom websites, web applications and Shopify stores",
           "middle": " with a strong focus on ",
           "emphasis2": "UX, performance, technical SEO and pixel-perfect execution",
           "suffix": "."
@@ -125,13 +120,13 @@
         "proof": [
           {
             "id": "proof-1",
-            "value": "6+",
-            "label": "Years of Experience"
+            "value": "6+ Years",
+            "label": "Development Experience"
           },
           {
             "id": "proof-2",
-            "value": "Shopify",
-            "label": "Core Specialization"
+            "value": "Web + E-commerce",
+            "label": "End-to-End Development"
           },
           {
             "id": "proof-3",
@@ -302,35 +297,23 @@
         ],
         "cta": "Visit MyStar"
       },
+      "testimonials": {
+        "label": "Client Feedback",
+        "title": "What it’s like to work together.",
+        "previousLabel": "Previous testimonial",
+        "nextLabel": "Next testimonial",
+        "statusTemplate": "Client feedback {current} of {total}",
+        "entries": []
+      },
       "services": {
         "label": "Services",
-        "title": "Shopify at the core. Web solutions beyond e-commerce.",
-        "intro": "I build Shopify stores, custom websites and web applications with close attention to structure, usability and technical quality—from the initial build and launch to ongoing development.",
+        "title": "Web solutions built around real business needs.",
+        "intro": "I build custom websites, web applications and e-commerce platforms with close attention to structure, usability and technical quality—from the initial build and launch to ongoing development.",
         "items": [
           {
-            "id": "service-1",
-            "eyebrow": "01 / Core Specialization",
-            "title": "Shopify & E-commerce Development",
-            "description": "Complete Shopify builds and strategic redesigns shaped around the brand’s products, customers and operational needs.",
-            "points": [
-              {
-                "id": "point-1",
-                "label": "Complete store builds, redesigns and migrations"
-              },
-              {
-                "id": "point-2",
-                "label": "Custom themes, sections and product and collection architecture"
-              },
-              {
-                "id": "point-3",
-                "label": "App and payment integrations, localization and purchase-flow UX"
-              }
-            ]
-          },
-          {
-            "id": "service-2",
-            "eyebrow": "02 / Websites",
-            "title": "Custom Websites",
+            "id": "custom-websites",
+            "eyebrow": "01 / Websites",
+            "title": "Custom Websites & Web Solutions",
             "description": "Business websites, marketing sites and landing pages developed around clear communication, responsive behavior and precise frontend implementation.",
             "points": [
               {
@@ -348,8 +331,8 @@
             ]
           },
           {
-            "id": "service-3",
-            "eyebrow": "03 / Web Products",
+            "id": "web-applications",
+            "eyebrow": "02 / Web Products",
             "title": "Web Applications & Custom Platforms",
             "description": "Custom web applications and frontend-heavy platforms for businesses that need tailored workflows, interfaces or digital products beyond a conventional website or online store.",
             "points": [
@@ -364,6 +347,26 @@
               {
                 "id": "point-3",
                 "label": "Custom integrations, maintainable interface architecture and ongoing development"
+              }
+            ]
+          },
+          {
+            "id": "shopify",
+            "eyebrow": "03 / Core Specialization",
+            "title": "Shopify & E-commerce Development",
+            "description": "Complete Shopify builds and strategic redesigns shaped around the brand’s products, customers and operational needs.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Complete store builds, redesigns and migrations"
+              },
+              {
+                "id": "point-2",
+                "label": "Custom themes, sections and product and collection architecture"
+              },
+              {
+                "id": "point-3",
+                "label": "App and payment integrations, localization and purchase-flow UX"
               }
             ]
           }
@@ -569,7 +572,7 @@
         "title": "Everything I promise, I stand behind.",
         "primary": "I take personal responsibility for the quality of every project I deliver—from the decisions made along the way to the details that shape the finished result. The work should feel considered, dependable and ready for real use.",
         "followup": "If something needs refinement, I refine it.",
-        "role": "Shopify & Web Solutions Developer",
+        "role": "Web Solutions Developer · Shopify Specialist",
         "signatureNote": "My personal commitment to quality, clear communication and follow-through."
       },
       "contact": {
@@ -606,8 +609,8 @@
     "sr": {
       "lang": "sr-Latn",
       "meta": {
-        "title": "Kristina Glišović | Shopify i razvoj web rešenja",
-        "description": "Sarađujte direktno sa Kristinom na Shopify prodavnicama, custom sajtovima i web aplikacijama, uz fokus na UX, performanse i tehnički kvalitet.",
+        "title": "Kristina Glišović | Web developer i Shopify specijalista",
+        "description": "Web developer za custom sajtove, web aplikacije, e-commerce rešenja i Shopify prodavnice, uz fokus na UX, performanse i tehnički kvalitet.",
         "ogLocale": "sr_RS",
         "ogAlternateLocale": "en_US",
         "ogImageAlt": "Kristina Glišović — Shopify & Web Solutions Developer",
@@ -630,12 +633,12 @@
         "cta": "Započnimo razgovor",
         "items": [
           {
-            "id": "projects",
-            "label": "Radovi"
-          },
-          {
             "id": "services",
             "label": "Usluge"
+          },
+          {
+            "id": "projects",
+            "label": "Radovi"
           },
           {
             "id": "about",
@@ -658,16 +661,16 @@
       "hero": {
         "badge": "Dostupna za nove projekte",
         "title": {
-          "role": "Shopify & Web Solutions Developer",
+          "role": "Web Developer · Shopify specijalista",
           "line1Prefix": "Razvijam ",
-          "line1Strong": "Shopify prodavnice visokih performansi",
-          "line2": "i custom web rešenja gde je svaki detalj važan."
+          "line1Strong": "sajtove visokih performansi, web aplikacije i e-commerce rešenja",
+          "line2": "gde je svaki detalj važan."
         },
         "description": {
           "prefix": "Kreiram i razvijam ",
-          "emphasis1": "Shopify prodavnice, custom sajtove i web aplikacije",
+          "emphasis1": "sajtove po meri, web aplikacije i Shopify prodavnice",
           "middle": " sa fokusom na ",
-          "emphasis2": "UX, performanse, tehnički SEO i preciznu, pixel-perfect realizaciju",
+          "emphasis2": "UX, performanse, tehnički SEO i preciznu realizaciju do poslednjeg detalja",
           "suffix": "."
         },
         "ctas": [
@@ -683,13 +686,13 @@
         "proof": [
           {
             "id": "proof-1",
-            "value": "6+",
-            "label": "Godina iskustva"
+            "value": "6+ godina",
+            "label": "Iskustva u razvoju"
           },
           {
             "id": "proof-2",
-            "value": "Shopify",
-            "label": "Glavna specijalizacija"
+            "value": "Web + E-commerce",
+            "label": "Razvoj od početka do lansiranja"
           },
           {
             "id": "proof-3",
@@ -860,35 +863,23 @@
         ],
         "cta": "Poseti MyStar"
       },
+      "testimonials": {
+        "label": "Utisci klijenata",
+        "title": "Kako izgleda naša saradnja.",
+        "previousLabel": "Prethodni utisak",
+        "nextLabel": "Sledeći utisak",
+        "statusTemplate": "Utisak klijenta {current} od {total}",
+        "entries": []
+      },
       "services": {
         "label": "Usluge",
-        "title": "Shopify u fokusu. Web rešenja i izvan online prodaje.",
-        "intro": "Razvijam Shopify prodavnice, sajtove po meri i web aplikacije, uz pažnju posvećenu strukturi, upotrebljivosti i tehničkom kvalitetu — od prve izrade i lansiranja do daljeg razvoja.",
+        "title": "Web rešenja oblikovana prema stvarnim poslovnim potrebama.",
+        "intro": "Razvijam sajtove po meri, web aplikacije i e-commerce platforme, uz pažnju posvećenu strukturi, upotrebljivosti i tehničkom kvalitetu — od prve izrade i lansiranja do daljeg razvoja.",
         "items": [
           {
-            "id": "service-1",
-            "eyebrow": "01 / Glavna specijalizacija",
-            "title": "Razvoj Shopify prodavnica i e-commerce rešenja",
-            "description": "Izrada novih Shopify prodavnica i strateški redizajn postojećih rešenja, prilagođeni ponudi, kupcima i načinu poslovanja brenda.",
-            "points": [
-              {
-                "id": "point-1",
-                "label": "Kompletna izrada prodavnice, redizajn i migracija"
-              },
-              {
-                "id": "point-2",
-                "label": "Prilagođene teme, sekcije i struktura proizvoda i kolekcija"
-              },
-              {
-                "id": "point-3",
-                "label": "Integracije aplikacija i sistema za plaćanje, lokalizacija i UX kupovnog toka"
-              }
-            ]
-          },
-          {
-            "id": "service-2",
-            "eyebrow": "02 / Sajtovi",
-            "title": "Sajtovi po meri",
+            "id": "custom-websites",
+            "eyebrow": "01 / Sajtovi",
+            "title": "Sajtovi i web rešenja po meri",
             "description": "Poslovni i marketinški sajtovi, landing stranice i prilagođena frontend rešenja sa jasnom komunikacijom i pouzdanim radom na svim uređajima.",
             "points": [
               {
@@ -906,8 +897,8 @@
             ]
           },
           {
-            "id": "service-3",
-            "eyebrow": "03 / Web proizvodi",
+            "id": "web-applications",
+            "eyebrow": "02 / Web proizvodi",
             "title": "Web aplikacije i platforme po meri",
             "description": "Web aplikacije i frontend-orijentisane platforme za biznise kojima su potrebni prilagođeni tokovi rada, interfejsi ili digitalni proizvodi izvan klasičnog sajta ili online prodavnice.",
             "points": [
@@ -922,6 +913,26 @@
               {
                 "id": "point-3",
                 "label": "Prilagođene integracije, održiva arhitektura interfejsa i dalji razvoj"
+              }
+            ]
+          },
+          {
+            "id": "shopify",
+            "eyebrow": "03 / Glavna specijalizacija",
+            "title": "Razvoj Shopify prodavnica i e-commerce rešenja",
+            "description": "Izrada novih Shopify prodavnica i strateški redizajn postojećih rešenja, prilagođeni ponudi, kupcima i načinu poslovanja brenda.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Kompletna izrada prodavnice, redizajn i migracija"
+              },
+              {
+                "id": "point-2",
+                "label": "Prilagođene teme, sekcije i struktura proizvoda i kolekcija"
+              },
+              {
+                "id": "point-3",
+                "label": "Integracije aplikacija i sistema za plaćanje, lokalizacija i UX kupovnog toka"
               }
             ]
           }
@@ -1127,7 +1138,7 @@
         "title": "Za sve što obećam, ličnim imenom stojim iza toga.",
         "primary": "Lično preuzimam odgovornost za kvalitet svakog projekta koji isporučim—od odluka koje donosimo tokom saradnje do detalja koji oblikuju završni rezultat. Rešenje treba da bude promišljeno, pouzdano i spremno za stvarnu upotrebu.",
         "followup": "Ako nešto zahteva doradu, dorađujem ga.",
-        "role": "Shopify & Web Solutions Developer",
+        "role": "Web Developer · Shopify specijalista",
         "signatureNote": "Moj lični potpis na kvalitet, jasnu komunikaciju i odgovornu isporuku."
       },
       "contact": {

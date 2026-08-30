@@ -368,6 +368,84 @@
     bindMediaChange(prefersReducedMotion, syncScrollRevealMotion);
     bindMediaChange(compactMotionQuery, syncScrollRevealMotion);
 
+    /* ── Client feedback slider ─────────────────────────────────────── */
+    document.querySelectorAll('[data-testimonial-slider]').forEach(slider => {
+      const slides = Array.from(slider.querySelectorAll('[data-testimonial-slide]'));
+      const previous = slider.querySelector('[data-testimonial-previous]');
+      const next = slider.querySelector('[data-testimonial-next]');
+      const counter = slider.querySelector('[data-testimonial-counter]');
+      const status = slider.querySelector('[data-testimonial-status]');
+      const statusTemplate = slider.dataset.statusTemplate || '{current} / {total}';
+      let currentIndex = 0;
+      let touchStartX = null;
+      let touchStartY = null;
+
+      if (!slides.length) return;
+
+      const updateSlider = (nextIndex, { announce = true, direction = 1 } = {}) => {
+        currentIndex = (nextIndex + slides.length) % slides.length;
+
+        slides.forEach((slide, index) => {
+          const isCurrent = index === currentIndex;
+          slide.hidden = !isCurrent;
+          slide.setAttribute('aria-hidden', String(!isCurrent));
+
+          if (isCurrent && !prefersReducedMotion.matches) {
+            slide.dataset.direction = direction > 0 ? 'next' : 'previous';
+            slide.classList.add('is-entering');
+            requestAnimationFrame(() => slide.classList.remove('is-entering'));
+          } else {
+            slide.classList.remove('is-entering');
+            delete slide.dataset.direction;
+          }
+        });
+
+        const current = String(currentIndex + 1).padStart(2, '0');
+        const total = String(slides.length).padStart(2, '0');
+        if (counter) counter.textContent = `${current} / ${total}`;
+        if (status) {
+          const message = statusTemplate
+            .replace('{current}', String(currentIndex + 1))
+            .replace('{total}', String(slides.length));
+          if (announce) status.textContent = '';
+          requestAnimationFrame(() => { status.textContent = message; });
+        }
+      };
+
+      previous?.addEventListener('click', () => updateSlider(currentIndex - 1, { direction: -1 }));
+      next?.addEventListener('click', () => updateSlider(currentIndex + 1, { direction: 1 }));
+
+      slider.addEventListener('keydown', event => {
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          updateSlider(currentIndex - 1, { direction: -1 });
+        } else if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          updateSlider(currentIndex + 1, { direction: 1 });
+        }
+      });
+
+      slider.addEventListener('touchstart', event => {
+        const touch = event.changedTouches[0];
+        touchStartX = touch?.clientX ?? null;
+        touchStartY = touch?.clientY ?? null;
+      }, { passive: true });
+
+      slider.addEventListener('touchend', event => {
+        if (touchStartX === null || touchStartY === null) return;
+        const touch = event.changedTouches[0];
+        const deltaX = (touch?.clientX ?? touchStartX) - touchStartX;
+        const deltaY = (touch?.clientY ?? touchStartY) - touchStartY;
+        touchStartX = null;
+        touchStartY = null;
+
+        if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
+        updateSlider(currentIndex + (deltaX < 0 ? 1 : -1), { direction: deltaX < 0 ? 1 : -1 });
+      }, { passive: true });
+
+      updateSlider(0, { announce: false });
+    });
+
     /* ── Active nav link ─────────────────────────────────────────────── */
     const sections = Array.from(document.querySelectorAll('section[id]'));
 

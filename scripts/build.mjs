@@ -106,7 +106,10 @@ function assertNonEmptyStrings(value, path) {
     return;
   }
   if (Array.isArray(value)) {
-    if (!value.length) fail(`Empty array at ${path}`);
+    if (!value.length) {
+      if (path.endsWith('.testimonials.entries')) return;
+      fail(`Empty array at ${path}`);
+    }
     value.forEach((item, index) => assertNonEmptyStrings(item, `${path}.${index}`));
     return;
   }
@@ -167,6 +170,82 @@ function renderLocaleLinks(html, locale, context) {
   });
 }
 
+function renderTestimonials(localeContent) {
+  const testimonials = localeContent.testimonials;
+  const entries = testimonials?.entries;
+
+  if (!Array.isArray(entries)) fail('testimonials.entries must be an array');
+  if (!entries.length) return '';
+  if (entries.length > 6) fail('testimonials.entries supports a maximum of six homepage testimonials');
+
+  const ids = new Set();
+  entries.forEach((entry, index) => {
+    if (!entry || typeof entry !== 'object') fail(`Invalid testimonial at testimonials.entries.${index}`);
+    if (!/^[a-z0-9-]+$/.test(entry.id || '')) fail(`Invalid testimonial ID at testimonials.entries.${index}`);
+    if (ids.has(entry.id)) fail(`Duplicate testimonial ID: ${entry.id}`);
+    ids.add(entry.id);
+    ['quote', 'name'].forEach(field => {
+      if (typeof entry[field] !== 'string' || !entry[field].trim()) {
+        fail(`Missing testimonial ${field} at testimonials.entries.${index}`);
+      }
+    });
+    ['role', 'company', 'service'].forEach(field => {
+      if (entry[field] !== undefined && (typeof entry[field] !== 'string' || !entry[field].trim())) {
+        fail(`Invalid optional testimonial ${field} at testimonials.entries.${index}`);
+      }
+    });
+  });
+
+  const slides = entries.map((entry, index) => {
+    const personDetails = [entry.role, entry.company].filter(Boolean).map(escapeHtml).join(' · ');
+    const detailMarkup = personDetails ? `\n                <p class="client-feedback-person-role">${personDetails}</p>` : '';
+    const serviceMarkup = entry.service ? `\n              <p class="client-feedback-service">${escapeHtml(entry.service)}</p>` : '';
+    return `          <article class="client-feedback-slide" data-testimonial-slide data-testimonial-id="${escapeHtml(entry.id)}"${index ? ' hidden' : ''}>
+            <blockquote class="client-feedback-quote">
+              <p>${escapeHtml(entry.quote)}</p>
+            </blockquote>
+            <footer class="client-feedback-person">
+              <div>
+                <p class="client-feedback-person-name">${escapeHtml(entry.name)}</p>${detailMarkup}
+              </div>${serviceMarkup}
+            </footer>
+          </article>`;
+  }).join('\n');
+  const total = String(entries.length).padStart(2, '0');
+  const controlsHidden = entries.length < 2 ? ' hidden' : '';
+
+  return `<div class="divider" aria-hidden="true"></div>
+
+  <!-- ═══ CLIENT FEEDBACK ══════════════════════════════════════════════ -->
+  <section class="client-feedback section" id="testimonials" aria-labelledby="testimonials-title" data-premium-section>
+    <div class="container">
+      <header class="client-feedback-header">
+        <div class="section-label reveal">${escapeHtml(testimonials.label)}</div>
+        <h2 class="section-title reveal reveal-delay-1" id="testimonials-title">${escapeHtml(testimonials.title)}</h2>
+      </header>
+
+      <div class="client-feedback-slider reveal reveal-delay-2" data-testimonial-slider data-status-template="${escapeHtml(testimonials.statusTemplate)}">
+        <div class="client-feedback-viewport">
+${slides}
+        </div>
+        <div class="client-feedback-controls"${controlsHidden}>
+          <div class="client-feedback-buttons">
+            <button class="client-feedback-button" type="button" data-testimonial-previous aria-label="${escapeHtml(testimonials.previousLabel)}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            </button>
+            <button class="client-feedback-button" type="button" data-testimonial-next aria-label="${escapeHtml(testimonials.nextLabel)}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <span class="client-feedback-counter" data-testimonial-counter aria-hidden="true">01 / ${total}</span>
+          <p class="client-feedback-sr-only" data-testimonial-status aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+`;
+}
+
 function render(template, locale, content) {
   const localeContent = content.locales[locale];
   const seo = buildSeoContext(locale, content);
@@ -174,6 +253,7 @@ function render(template, locale, content) {
   let html = template;
 
   html = html.replace(/\{\{#if seo\.configured\}\}([\s\S]*?)\{\{\/if\}\}/g, (_, body) => seo.configured ? body : '');
+  html = html.replace('{{testimonialsSection}}', renderTestimonials(localeContent));
   html = html.replace(/<([a-z][\w-]*)([^>]*?)\sdata-content="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/gi,
     (_, tag, before, key, after) => `<${tag}${before}${after}>${escapeHtml(getPath(context, key))}</${tag}>`);
   html = applyAttributeDirective(html, 'aria-label', 'aria-label', context);
