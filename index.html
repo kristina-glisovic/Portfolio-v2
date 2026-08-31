@@ -55,10 +55,22 @@
       </nav>
       <div class="nav-right">
         <div class="nav-controls">
-          <div class="lang-toggle" id="lang-toggle">
-            <a class="lang-btn active" href="./" lang="en" hreflang="en" aria-label="Switch to English" aria-current="page">EN</a>
-            <a class="lang-btn" href="sr/" lang="sr-Latn" hreflang="sr-Latn" aria-label="Switch to Serbian">SR</a>
-          </div>
+          <div class="language-menu language-menu--desktop" data-language-menu>
+      <button class="language-menu-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="language-menu-desktop" aria-label="Choose language. Current language: English">
+        <span aria-hidden="true">EN</span>
+        <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m1 1.5 5 5 5-5"/></svg>
+      </button>
+      <div class="language-menu-popover" id="language-menu-desktop" role="menu" aria-label="Choose language" hidden>
+        <a class="language-menu-option is-current" role="menuitem" href="./" lang="en" hreflang="en" aria-current="page">
+          <span>English</span>
+          <span class="language-menu-option-code" aria-hidden="true">EN</span>
+        </a>
+        <a class="language-menu-option" role="menuitem" href="sr/" lang="sr-Latn" hreflang="sr-Latn">
+          <span>Srpski</span>
+          <span class="language-menu-option-code" aria-hidden="true">SR</span>
+        </a>
+      </div>
+    </div>
         </div>
         <a href="#contact" class="nav-cta">Let&#39;s Talk</a>
         <button class="nav-hamburger" id="hamburger" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu" aria-controls="nav-mobile" aria-expanded="false">
@@ -81,10 +93,22 @@
       <div class="nav-mobile-footer">
         <a href="#contact" class="nav-mobile-cta">Let&#39;s Talk</a>
         <div class="nav-mobile-controls">
-          <div class="lang-toggle-mobile">
-            <a class="lang-btn active" href="./" lang="en" hreflang="en" aria-label="Switch to English" aria-current="page">EN</a>
-            <a class="lang-btn" href="sr/" lang="sr-Latn" hreflang="sr-Latn" aria-label="Switch to Serbian">SR</a>
-          </div>
+          <div class="language-menu language-menu--mobile" data-language-menu>
+      <button class="language-menu-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="language-menu-mobile" aria-label="Choose language. Current language: English">
+        <span aria-hidden="true">EN</span>
+        <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m1 1.5 5 5 5-5"/></svg>
+      </button>
+      <div class="language-menu-popover" id="language-menu-mobile" role="menu" aria-label="Choose language" hidden>
+        <a class="language-menu-option is-current" role="menuitem" href="./" lang="en" hreflang="en" aria-current="page">
+          <span>English</span>
+          <span class="language-menu-option-code" aria-hidden="true">EN</span>
+        </a>
+        <a class="language-menu-option" role="menuitem" href="sr/" lang="sr-Latn" hreflang="sr-Latn">
+          <span>Srpski</span>
+          <span class="language-menu-option-code" aria-hidden="true">SR</span>
+        </a>
+      </div>
+    </div>
         </div>
       </div>
     </div>

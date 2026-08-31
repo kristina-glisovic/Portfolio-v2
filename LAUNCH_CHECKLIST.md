@@ -47,7 +47,7 @@ Any Content Security Policy must be tested against the final configured producti
 - [ ] Configure and test the real Contact form HTTPS endpoint.
 - [ ] Open MyStar and both ITS verification links.
 - [ ] Confirm favicon and Open Graph previews load.
-- [ ] Inspect canonical and reciprocal hreflang on both locales.
+- [ ] Inspect canonical and reciprocal hreflang on every enabled locale (currently EN and SR; DE remains disabled until approved).
 - [ ] Confirm `robots.txt` and `sitemap.xml` use the final origin.
 - [ ] Confirm an unknown URL returns `404.html` with HTTP status 404.
 - [ ] Check desktop, tablet, 390px and 320px layouts without horizontal overflow.
@@ -56,7 +56,13 @@ Any Content Security Policy must be tested against the final configured producti
 
 - [ ] Add the production property to Google Search Console.
 - [ ] Submit `sitemap.xml` after the live-site checks pass.
-- [ ] Inspect both locale URLs and verify canonical/hreflang interpretation.
+- [ ] Inspect every enabled locale URL and verify canonical/hreflang interpretation.
+
+## German locale activation (when approved)
+
+- [ ] Add complete reviewed German content; do not use draft or machine-translated copy.
+- [ ] Mark DE content `approved`, then set DE `enabled` to `true` in `localeConfig`.
+- [ ] Rebuild and verify `/de/`, the language dropdown, `de` hreflang, `de_DE` Open Graph locale, JSON-LD `inLanguage` and sitemap inclusion.
 - [ ] Optionally repeat the checks in Bing Webmaster Tools.
 
 ## Optional later enhancements

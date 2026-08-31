@@ -1,4 +1,45 @@
 {
+  "localeConfig": {
+    "defaultLocale": "en",
+    "locales": [
+      {
+        "id": "en",
+        "htmlLang": "en",
+        "hreflang": "en",
+        "ogLocale": "en_US",
+        "route": "/",
+        "output": "index.html",
+        "code": "EN",
+        "label": "English",
+        "enabled": true,
+        "contentStatus": "approved"
+      },
+      {
+        "id": "sr",
+        "htmlLang": "sr-Latn",
+        "hreflang": "sr-Latn",
+        "ogLocale": "sr_RS",
+        "route": "/sr/",
+        "output": "sr/index.html",
+        "code": "SR",
+        "label": "Srpski",
+        "enabled": true,
+        "contentStatus": "approved"
+      },
+      {
+        "id": "de",
+        "htmlLang": "de",
+        "hreflang": "de",
+        "ogLocale": "de_DE",
+        "route": "/de/",
+        "output": "de/index.html",
+        "code": "DE",
+        "label": "Deutsch",
+        "enabled": false,
+        "contentStatus": "draft"
+      }
+    ]
+  },
   "shared": {
     "name": "Kristina Glišović",
     "email": "hello@kristinaglisovic.dev",
@@ -49,7 +90,6 @@
         "title": "Kristina Glišović | Web Developer & Shopify Specialist",
         "description": "Web developer creating custom websites, web applications, e-commerce solutions and Shopify stores, with a focus on UX, performance and technical quality.",
         "ogLocale": "en_US",
-        "ogAlternateLocale": "sr_RS",
         "ogImageAlt": "Kristina Glišović — Shopify & Web Solutions Developer",
         "schemaLanguage": "en",
         "schemaJobTitle": "Shopify & Web Solutions Developer",
@@ -61,8 +101,8 @@
       "ui": {
         "menuOpen": "Open menu",
         "menuClose": "Close menu",
-        "languageEnglish": "Switch to English",
-        "languageSerbian": "Switch to Serbian"
+        "languageMenuLabel": "Choose language",
+        "languageCurrent": "Current language"
       },
       "nav": {
         "primaryAria": "Primary navigation",
@@ -739,7 +779,6 @@
         "title": "Kristina Glišović | Web developer i Shopify specijalista",
         "description": "Web developer za custom sajtove, web aplikacije, e-commerce rešenja i Shopify prodavnice, uz fokus na UX, performanse i tehnički kvalitet.",
         "ogLocale": "sr_RS",
-        "ogAlternateLocale": "en_US",
         "ogImageAlt": "Kristina Glišović — Shopify & Web Solutions Developer",
         "schemaLanguage": "sr-Latn",
         "schemaJobTitle": "Shopify & Web Solutions Developer",
@@ -751,8 +790,8 @@
       "ui": {
         "menuOpen": "Otvori meni",
         "menuClose": "Zatvori meni",
-        "languageEnglish": "Prebaci na engleski",
-        "languageSerbian": "Prebaci na srpski"
+        "languageMenuLabel": "Izaberite jezik",
+        "languageCurrent": "Trenutni jezik"
       },
       "nav": {
         "primaryAria": "Glavna navigacija",

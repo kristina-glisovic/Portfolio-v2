@@ -6,11 +6,10 @@ const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const templatePath = resolve(rootDir, 'src/template.html');
 const contentPath = resolve(rootDir, 'src/content.json');
 const checkOnly = process.argv.includes('--check');
-const localeOrder = ['en', 'sr'];
-const outputConfig = {
-  en: { path: resolve(rootDir, 'index.html'), assetPrefix: 'assets/', rootPrefix: '', route: '/' },
-  sr: { path: resolve(rootDir, 'sr/index.html'), assetPrefix: '../assets/', rootPrefix: '../', route: '/sr/' }
-};
+let localeDefinitions = [];
+let enabledLocaleDefinitions = [];
+let localeOrder = [];
+let outputConfig = {};
 const robotsPath = resolve(rootDir, 'robots.txt');
 const sitemapPath = resolve(rootDir, 'sitemap.xml');
 
@@ -26,6 +25,94 @@ const escapeHtml = value => String(value)
   .replaceAll("'", '&#39;');
 
 const escapeXml = value => escapeHtml(value);
+
+function validateAndConfigureLocales(content) {
+  const config = content.localeConfig;
+  if (!config || !Array.isArray(config.locales) || !config.locales.length) {
+    fail('localeConfig.locales must be a non-empty array');
+  }
+  if (typeof config.defaultLocale !== 'string' || !config.defaultLocale) {
+    fail('localeConfig.defaultLocale is required');
+  }
+
+  const requiredFields = ['id', 'htmlLang', 'hreflang', 'ogLocale', 'route', 'output', 'code', 'label', 'contentStatus'];
+  const ids = new Set();
+  const routes = new Set();
+  const outputs = new Set();
+  const hreflangs = new Set();
+  localeDefinitions = config.locales.map((definition, index) => {
+    if (!definition || typeof definition !== 'object') fail(`Invalid locale definition at localeConfig.locales.${index}`);
+    for (const field of requiredFields) {
+      if (typeof definition[field] !== 'string' || !definition[field].trim()) {
+        fail(`Missing locale configuration string: localeConfig.locales.${index}.${field}`);
+      }
+    }
+    if (!/^[a-z]{2}(?:-[a-z0-9]+)*$/i.test(definition.id)) fail(`Invalid locale ID: ${definition.id}`);
+    if (typeof definition.enabled !== 'boolean') fail(`Locale ${definition.id} enabled must be boolean`);
+    if (!['approved', 'draft'].includes(definition.contentStatus)) {
+      fail(`Locale ${definition.id} contentStatus must be "approved" or "draft"`);
+    }
+    if (definition.route !== '/' && !/^\/[a-z0-9-]+\/$/i.test(definition.route)) {
+      fail(`Locale ${definition.id} route must be / or a single deterministic directory route`);
+    }
+    const expectedOutput = definition.route === '/' ? 'index.html' : `${definition.route.slice(1)}index.html`;
+    if (definition.output !== expectedOutput) {
+      fail(`Locale ${definition.id} output must be ${expectedOutput} for route ${definition.route}`);
+    }
+    if (ids.has(definition.id)) fail(`Duplicate locale ID: ${definition.id}`);
+    if (routes.has(definition.route)) fail(`Duplicate locale route: ${definition.route}`);
+    if (outputs.has(definition.output)) fail(`Duplicate locale output: ${definition.output}`);
+    if (hreflangs.has(definition.hreflang)) fail(`Duplicate locale hreflang: ${definition.hreflang}`);
+    ids.add(definition.id);
+    routes.add(definition.route);
+    outputs.add(definition.output);
+    hreflangs.add(definition.hreflang);
+    return { ...definition };
+  });
+
+  const defaultDefinition = localeDefinitions.find(definition => definition.id === config.defaultLocale);
+  if (!defaultDefinition?.enabled) fail('localeConfig.defaultLocale must reference an enabled locale');
+  if (config.defaultLocale !== 'en') fail('English must remain the x-default locale');
+
+  enabledLocaleDefinitions = localeDefinitions.filter(definition => definition.enabled);
+  if (!enabledLocaleDefinitions.length) fail('At least one locale must be enabled');
+  for (const definition of enabledLocaleDefinitions) {
+    if (definition.contentStatus !== 'approved') {
+      fail(`Enabled locale ${definition.id} must have contentStatus "approved"`);
+    }
+    if (!content.locales?.[definition.id]) {
+      fail(`Enabled locale ${definition.id} is missing its complete content object`);
+    }
+    if (content.locales[definition.id].lang !== definition.htmlLang) {
+      fail(`Enabled locale ${definition.id} content lang does not match localeConfig`);
+    }
+    if (content.locales[definition.id].meta?.ogLocale !== definition.ogLocale) {
+      fail(`Enabled locale ${definition.id} OG locale does not match localeConfig`);
+    }
+  }
+  for (const locale of Object.keys(content.locales || {})) {
+    if (!ids.has(locale)) fail(`Locale content ${locale} has no localeConfig definition`);
+  }
+
+  localeOrder = enabledLocaleDefinitions.map(definition => definition.id);
+  outputConfig = Object.fromEntries(localeDefinitions.map(definition => {
+    const depth = definition.output.split('/').length - 1;
+    const rootPrefix = '../'.repeat(depth);
+    return [definition.id, {
+      path: resolve(rootDir, definition.output),
+      assetPrefix: `${rootPrefix}assets/`,
+      rootPrefix,
+      route: definition.route,
+      output: definition.output
+    }];
+  }));
+}
+
+const getLocaleDefinition = locale => {
+  const definition = localeDefinitions.find(item => item.id === locale);
+  if (!definition) fail(`Unknown locale: ${locale}`);
+  return definition;
+};
 
 function normalizeSiteOrigin(origin) {
   let url;
@@ -69,10 +156,13 @@ function buildSeoContext(locale, content) {
   if (!configured) return { configured };
   const origin = normalizeSiteOrigin(content.shared.site.origin);
   const canonical = `${origin}${outputConfig[locale].route}`;
-  const englishUrl = `${origin}${outputConfig.en.route}`;
-  const serbianUrl = `${origin}${outputConfig.sr.route}`;
+  const localeUrls = Object.fromEntries(enabledLocaleDefinitions.map(definition => [
+    definition.id,
+    `${origin}${definition.route}`
+  ]));
+  const defaultUrl = localeUrls[content.localeConfig.defaultLocale];
   const ogImageUrl = `${origin}/${content.shared.site.ogImagePath.replace(/^\/+/, '')}`;
-  const personId = `${englishUrl}#person`;
+  const personId = `${defaultUrl}#person`;
   const localeMeta = content.locales[locale].meta;
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -81,7 +171,7 @@ function buildSeoContext(locale, content) {
         '@type': 'Person',
         '@id': personId,
         name: content.shared.name,
-        url: englishUrl,
+        url: defaultUrl,
         jobTitle: localeMeta.schemaJobTitle,
         homeLocation: {
           '@type': 'Country',
@@ -104,7 +194,7 @@ function buildSeoContext(locale, content) {
       }
     ]
   };
-  return { configured, canonical, englishUrl, serbianUrl, ogImageUrl, jsonLd };
+  return { configured, canonical, defaultUrl, localeUrls, ogImageUrl, jsonLd };
 }
 
 function getPath(context, path) {
@@ -181,16 +271,52 @@ function applyAttributeDirective(html, directive, attribute, context) {
   });
 }
 
-function renderLocaleLinks(html, locale, context) {
-  return html.replace(/<a class="lang-btn" data-locale-link="(en|sr)">(EN|SR)<\/a>/g, (_, target, label) => {
-    const isCurrent = target === locale;
-    const href = locale === 'en'
-      ? (target === 'en' ? './' : 'sr/')
-      : (target === 'en' ? '../' : './');
-    const language = target === 'en' ? 'en' : 'sr-Latn';
-    const accessible = target === 'en' ? context.ui.languageEnglish : context.ui.languageSerbian;
-    return `<a class="lang-btn${isCurrent ? ' active' : ''}" href="${href}" lang="${language}" hreflang="${language}" aria-label="${escapeHtml(accessible)}"${isCurrent ? ' aria-current="page"' : ''}>${label}</a>`;
-  });
+function localeHref(currentLocale, targetLocale) {
+  if (currentLocale === targetLocale) return './';
+  const current = outputConfig[currentLocale];
+  const target = outputConfig[targetLocale];
+  if (target.route === '/') return current.route === '/' ? './' : '../';
+  if (current.route === '/') return target.route.slice(1);
+  return `../${target.route.slice(1)}`;
+}
+
+function renderLocaleMenu(locale, context, variant) {
+  const current = getLocaleDefinition(locale);
+  const menuId = `language-menu-${variant}`;
+  const triggerLabel = `${context.ui.languageMenuLabel}. ${context.ui.languageCurrent}: ${current.label}`;
+  const options = enabledLocaleDefinitions.map(definition => {
+    const isCurrent = definition.id === locale;
+    return `        <a class="language-menu-option${isCurrent ? ' is-current' : ''}" role="menuitem" href="${localeHref(locale, definition.id)}" lang="${definition.htmlLang}" hreflang="${definition.hreflang}"${isCurrent ? ' aria-current="page"' : ''}>
+          <span>${escapeHtml(definition.label)}</span>
+          <span class="language-menu-option-code" aria-hidden="true">${escapeHtml(definition.code)}</span>
+        </a>`;
+  }).join('\n');
+
+  return `<div class="language-menu language-menu--${variant}" data-language-menu>
+      <button class="language-menu-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="${menuId}" aria-label="${escapeHtml(triggerLabel)}">
+        <span aria-hidden="true">${escapeHtml(current.code)}</span>
+        <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m1 1.5 5 5 5-5"/></svg>
+      </button>
+      <div class="language-menu-popover" id="${menuId}" role="menu" aria-label="${escapeHtml(context.ui.languageMenuLabel)}" hidden>
+${options}
+      </div>
+    </div>`;
+}
+
+function renderSeoHeadAlternates(seo, content) {
+  if (!seo.configured) return '';
+  const links = enabledLocaleDefinitions.map(definition => (
+    `<link rel="alternate" hreflang="${escapeHtml(definition.hreflang)}" href="${escapeHtml(seo.localeUrls[definition.id])}" />`
+  ));
+  links.push(`<link rel="alternate" hreflang="x-default" href="${escapeHtml(seo.defaultUrl)}" />`);
+  return links.join('\n  ');
+}
+
+function renderOgAlternateLocales(locale) {
+  return enabledLocaleDefinitions
+    .filter(definition => definition.id !== locale)
+    .map(definition => `<meta property="og:locale:alternate" content="${escapeHtml(definition.ogLocale)}" />`)
+    .join('\n  ');
 }
 
 function renderTestimonials(localeContent) {
@@ -279,6 +405,10 @@ function render(template, locale, content) {
   let html = template;
 
   html = html.replace(/\{\{#if seo\.configured\}\}([\s\S]*?)\{\{\/if\}\}/g, (_, body) => seo.configured ? body : '');
+  html = html.replace('{{seoHeadAlternates}}', renderSeoHeadAlternates(seo, content));
+  html = html.replace('{{ogAlternateLocales}}', renderOgAlternateLocales(locale));
+  html = html.replace('{{localeMenu:desktop}}', renderLocaleMenu(locale, context, 'desktop'));
+  html = html.replace('{{localeMenu:mobile}}', renderLocaleMenu(locale, context, 'mobile'));
   html = html.replace('{{testimonialsSection}}', renderTestimonials(localeContent));
   html = html.replaceAll('{{contactFormEndpoint}}', escapeHtml(getContactFormEndpoint(content)));
   html = html.replace(/<([a-z][\w-]*)([^>]*?)\sdata-content="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/gi,
@@ -286,7 +416,6 @@ function render(template, locale, content) {
   html = applyAttributeDirective(html, 'aria-label', 'aria-label', context);
   html = applyAttributeDirective(html, 'alt', 'alt', context);
   html = applyAttributeDirective(html, 'content', 'content', context);
-  html = renderLocaleLinks(html, locale, context);
   html = html.replace(/\{\{json:([^}]+)\}\}/g, (_, key) => JSON.stringify(getValue(context, key)).replaceAll('<', '\\u003c'));
   html = html.replace(/\{\{(text|attr):([^}]+)\}\}/g, (_, __, key) => escapeHtml(getPath(context, key)));
   html = html.replaceAll('{{assetPrefix}}', outputConfig[locale].assetPrefix);
@@ -297,10 +426,11 @@ function render(template, locale, content) {
 }
 
 function validateGeneratedHtml(html, locale, content) {
+  const localeDefinition = getLocaleDefinition(locale);
   if (/\{\{[^}]+\}\}/.test(html)) fail(`${locale}: unresolved template token`);
   if (/\bdata-(?:i18n|content)(?:-[\w-]+)?=/.test(html)) fail(`${locale}: unresolved content directive`);
   if (/translations\.json/.test(html)) fail(`${locale}: generated HTML references translations.json`);
-  if (!new RegExp(`<html lang="${locale === 'en' ? 'en' : 'sr-Latn'}"`).test(html)) fail(`${locale}: incorrect html lang`);
+  if (!new RegExp(`<html lang="${localeDefinition.htmlLang}"`).test(html)) fail(`${locale}: incorrect html lang`);
   if (!/<title>\s*[^<]+\s*<\/title>/.test(html)) fail(`${locale}: missing title`);
   if (!/<meta name="description" content="[^"]+"/.test(html)) fail(`${locale}: missing meta description`);
 
@@ -312,6 +442,16 @@ function validateGeneratedHtml(html, locale, content) {
   if (!metaContent('property', 'og:title') || !metaContent('property', 'og:description')
     || !metaContent('property', 'og:site_name') || !metaContent('property', 'og:locale')) {
     fail(`${locale}: incomplete origin-independent Open Graph metadata`);
+  }
+  if (metaContent('property', 'og:locale') !== localeDefinition.ogLocale) {
+    fail(`${locale}: Open Graph locale does not match localeConfig`);
+  }
+  const ogAlternateLocales = [...html.matchAll(/<meta property="og:locale:alternate" content="([^"]+)"/g)].map(match => match[1]);
+  const expectedOgAlternates = enabledLocaleDefinitions
+    .filter(definition => definition.id !== locale)
+    .map(definition => definition.ogLocale);
+  if (JSON.stringify(ogAlternateLocales) !== JSON.stringify(expectedOgAlternates)) {
+    fail(`${locale}: Open Graph alternate locales do not match enabled locales`);
   }
   if (metaContent('name', 'twitter:card') !== 'summary_large_image'
     || !metaContent('name', 'twitter:title') || !metaContent('name', 'twitter:description')) {
@@ -325,8 +465,13 @@ function validateGeneratedHtml(html, locale, content) {
     if (canonicalMatches.length !== 1) fail(`${locale}: expected exactly one canonical link`);
     if (canonicalMatches[0][1] !== seo.canonical) fail(`${locale}: self-canonical does not match the locale route`);
     const alternates = Object.fromEntries(alternateMatches.map(match => [match[1], match[2]]));
-    if (alternates.en !== seo.englishUrl || alternates['sr-Latn'] !== seo.serbianUrl || alternates['x-default'] !== seo.englishUrl) {
-      fail(`${locale}: hreflang targets are incomplete or inconsistent`);
+    const expectedAlternates = Object.fromEntries(enabledLocaleDefinitions.map(definition => [
+      definition.hreflang,
+      seo.localeUrls[definition.id]
+    ]));
+    expectedAlternates['x-default'] = seo.defaultUrl;
+    if (JSON.stringify(alternates) !== JSON.stringify(expectedAlternates)) {
+      fail(`${locale}: enabled-locale hreflang targets are incomplete or inconsistent`);
     }
     if (metaContent('property', 'og:url') !== seo.canonical) fail(`${locale}: og:url must equal canonical`);
     if (metaContent('property', 'og:image') !== seo.ogImageUrl || !metaContent('property', 'og:image:alt')) {
@@ -346,7 +491,7 @@ function validateGeneratedHtml(html, locale, content) {
     const person = graph?.find(item => item['@type'] === 'Person');
     const website = graph?.find(item => item['@type'] === 'WebSite');
     if (!person || !website) fail(`${locale}: JSON-LD must contain Person and WebSite entities`);
-    if (person.url !== seo.englishUrl || website.url !== seo.canonical || website.inLanguage !== content.locales[locale].meta.schemaLanguage) {
+    if (person.url !== seo.defaultUrl || website.url !== seo.canonical || website.inLanguage !== content.locales[locale].meta.schemaLanguage) {
       fail(`${locale}: JSON-LD URLs or language do not match the canonical strategy`);
     }
   } else {
@@ -384,6 +529,16 @@ function validateGeneratedHtml(html, locale, content) {
   }
   if ((html.match(/<main\b/g) || []).length !== 1) fail(`${locale}: expected exactly one main`);
   if ((html.match(/<h1\b/g) || []).length !== 1) fail(`${locale}: expected exactly one h1`);
+  const languageMenuOptions = [...html.matchAll(/<a class="language-menu-option[^>]*hreflang="([^"]+)"/g)].map(match => match[1]);
+  const expectedMenuLanguages = enabledLocaleDefinitions.map(definition => definition.hreflang);
+  if (languageMenuOptions.length !== expectedMenuLanguages.length * 2
+    || JSON.stringify(languageMenuOptions.slice(0, expectedMenuLanguages.length)) !== JSON.stringify(expectedMenuLanguages)
+    || JSON.stringify(languageMenuOptions.slice(expectedMenuLanguages.length)) !== JSON.stringify(expectedMenuLanguages)) {
+    fail(`${locale}: desktop/mobile language menus do not contain exactly the enabled locales`);
+  }
+  for (const definition of localeDefinitions.filter(item => !item.enabled)) {
+    if (languageMenuOptions.includes(definition.hreflang)) fail(`${locale}: disabled locale ${definition.id} is publicly linked`);
+  }
 }
 
 async function validateAssets(html, outputPath, locale, content) {
@@ -445,10 +600,21 @@ function renderRobots(content) {
 function renderSitemap(content) {
   if (content.shared.site.originStatus !== 'configured') return null;
   const origin = normalizeSiteOrigin(content.shared.site.origin);
-  const englishUrl = `${origin}${outputConfig.en.route}`;
-  const serbianUrl = `${origin}${outputConfig.sr.route}`;
-  const alternates = `    <xhtml:link rel="alternate" hreflang="en" href="${escapeXml(englishUrl)}" />\n    <xhtml:link rel="alternate" hreflang="sr-Latn" href="${escapeXml(serbianUrl)}" />\n    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(englishUrl)}" />`;
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<!-- Generated file. Edit src/content.json and run npm run build. -->\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n  <url>\n    <loc>${escapeXml(englishUrl)}</loc>\n${alternates}\n  </url>\n  <url>\n    <loc>${escapeXml(serbianUrl)}</loc>\n${alternates}\n  </url>\n</urlset>\n`;
+  const localeUrls = Object.fromEntries(enabledLocaleDefinitions.map(definition => [
+    definition.id,
+    `${origin}${definition.route}`
+  ]));
+  const defaultUrl = localeUrls[content.localeConfig.defaultLocale];
+  const alternates = [
+    ...enabledLocaleDefinitions.map(definition => (
+      `    <xhtml:link rel="alternate" hreflang="${escapeXml(definition.hreflang)}" href="${escapeXml(localeUrls[definition.id])}" />`
+    )),
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(defaultUrl)}" />`
+  ].join('\n');
+  const entries = enabledLocaleDefinitions.map(definition => (
+    `  <url>\n    <loc>${escapeXml(localeUrls[definition.id])}</loc>\n${alternates}\n  </url>`
+  )).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<!-- Generated file. Edit src/content.json and run npm run build. -->\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries}\n</urlset>\n`;
 }
 
 function validateCrawlFiles(robots, sitemap, content) {
@@ -461,16 +627,25 @@ function validateCrawlFiles(robots, sitemap, content) {
     return;
   }
   const origin = normalizeSiteOrigin(content.shared.site.origin);
-  const englishUrl = `${origin}${outputConfig.en.route}`;
-  const serbianUrl = `${origin}${outputConfig.sr.route}`;
   if (!robots.includes(`Sitemap: ${origin}/sitemap.xml`)) fail('robots.txt sitemap URL does not match site origin');
   const sitemapLocations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
-  if (JSON.stringify(sitemapLocations) !== JSON.stringify([englishUrl, serbianUrl])) fail('sitemap.xml must contain exactly the EN and SR canonical URLs');
-  const expectedAlternates = { en: englishUrl, 'sr-Latn': serbianUrl, 'x-default': englishUrl };
+  const localeUrls = Object.fromEntries(enabledLocaleDefinitions.map(definition => [
+    definition.id,
+    `${origin}${definition.route}`
+  ]));
+  const expectedLocations = enabledLocaleDefinitions.map(definition => localeUrls[definition.id]);
+  if (JSON.stringify(sitemapLocations) !== JSON.stringify(expectedLocations)) {
+    fail('sitemap.xml must contain exactly the enabled locale canonical URLs');
+  }
+  const expectedAlternates = Object.fromEntries(enabledLocaleDefinitions.map(definition => [
+    definition.hreflang,
+    localeUrls[definition.id]
+  ]));
+  expectedAlternates['x-default'] = localeUrls[content.localeConfig.defaultLocale];
   for (const [hreflang, url] of Object.entries(expectedAlternates)) {
     const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const count = (sitemap.match(new RegExp(`hreflang="${hreflang}" href="${escapedUrl}"`, 'g')) || []).length;
-    if (count !== 2) fail(`sitemap.xml reciprocal ${hreflang} hreflang is incomplete`);
+    if (count !== enabledLocaleDefinitions.length) fail(`sitemap.xml reciprocal ${hreflang} hreflang is incomplete`);
   }
 }
 
@@ -480,12 +655,15 @@ const [template, contentRaw, mainJs] = await Promise.all([
   readFile(resolve(rootDir, 'assets/main.js'), 'utf8')
 ]);
 const content = JSON.parse(contentRaw);
-if (!content.shared || !content.locales?.en || !content.locales?.sr) fail('Required shared/en/sr content objects are missing');
-if (content.locales.en.lang !== 'en' || content.locales.sr.lang !== 'sr-Latn') fail('Locale language tags are invalid');
+if (!content.shared || !content.locales) fail('Required shared and locale content objects are missing');
+validateAndConfigureLocales(content);
+assertNonEmptyStrings(content.localeConfig, 'localeConfig');
 assertNonEmptyStrings(content.shared, 'shared');
-assertNonEmptyStrings(content.locales.en, 'locales.en');
-assertNonEmptyStrings(content.locales.sr, 'locales.sr');
-assertParity(content.locales.en, content.locales.sr);
+for (const locale of localeOrder) assertNonEmptyStrings(content.locales[locale], `locales.${locale}`);
+const defaultLocale = content.localeConfig.defaultLocale;
+for (const locale of localeOrder.filter(item => item !== defaultLocale)) {
+  assertParity(content.locales[defaultLocale], content.locales[locale], `locales.${defaultLocale}/${locale}`);
+}
 for (const [key, value] of Object.entries(content.shared.urls)) {
   try {
     const url = new URL(value);
@@ -509,7 +687,12 @@ for (const locale of localeOrder) {
   await validateAssets(generated[locale], outputConfig[locale].path, locale, content);
 }
 validateCrawlFiles(robots, sitemap, content);
-if (structuralSignature(generated.en) !== structuralSignature(generated.sr)) fail('Generated EN/SR DOM structures differ');
+const defaultSignature = structuralSignature(generated[defaultLocale]);
+for (const locale of localeOrder.filter(item => item !== defaultLocale)) {
+  if (structuralSignature(generated[locale]) !== defaultSignature) {
+    fail(`Generated ${defaultLocale.toUpperCase()}/${locale.toUpperCase()} DOM structures differ`);
+  }
+}
 if (/translations\.json|localStorage\.getItem\(['"]language|localStorage\.setItem\(['"]language/.test(mainJs)) {
   fail('Production JavaScript still contains runtime localization code');
 }
@@ -530,12 +713,24 @@ if (checkOnly) {
   } else if (committedSitemap !== null) {
     fail('Placeholder mode must not retain sitemap.xml; run npm run build');
   }
-  console.log('Static bilingual output is valid and up to date.');
+  for (const definition of localeDefinitions.filter(item => !item.enabled)) {
+    const disabledOutput = await readFile(outputConfig[definition.id].path, 'utf8').catch(error => {
+      if (error.code === 'ENOENT') return null;
+      throw error;
+    });
+    if (disabledOutput !== null) fail(`Disabled locale ${definition.id} must not have a public generated route`);
+  }
+  console.log(`Static output is valid and up to date for enabled locales: ${localeOrder.join(', ')}.`);
 } else {
-  await mkdir(dirname(outputConfig.sr.path), { recursive: true });
+  await Promise.all(localeOrder.map(locale => mkdir(dirname(outputConfig[locale].path), { recursive: true })));
   const writes = [
     ...localeOrder.map(locale => writeFile(outputConfig[locale].path, generated[locale])),
-    writeFile(robotsPath, robots)
+    writeFile(robotsPath, robots),
+    ...localeDefinitions.filter(item => !item.enabled).map(definition => (
+      unlink(outputConfig[definition.id].path).catch(error => {
+        if (error.code !== 'ENOENT') throw error;
+      })
+    ))
   ];
   if (content.shared.site.originStatus === 'configured') {
     writes.push(writeFile(sitemapPath, sitemap));
@@ -545,7 +740,8 @@ if (checkOnly) {
     }));
   }
   await Promise.all(writes);
+  const generatedRoutes = enabledLocaleDefinitions.map(definition => definition.route).join(', ');
   console.log(content.shared.site.originStatus === 'configured'
-    ? 'Generated index.html, sr/index.html, robots.txt and sitemap.xml.'
-    : 'Generated pre-launch index.html, sr/index.html and robots.txt; sitemap.xml omitted.');
+    ? `Generated enabled locale routes (${generatedRoutes}), robots.txt and sitemap.xml.`
+    : `Generated pre-launch enabled locale routes (${generatedRoutes}) and robots.txt; sitemap.xml omitted.`);
 }

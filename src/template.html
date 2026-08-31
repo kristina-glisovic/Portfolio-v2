@@ -11,9 +11,7 @@
 
   {{#if seo.configured}}
   <link rel="canonical" href="{{attr:seo.canonical}}" />
-  <link rel="alternate" hreflang="en" href="{{attr:seo.englishUrl}}" />
-  <link rel="alternate" hreflang="sr-Latn" href="{{attr:seo.serbianUrl}}" />
-  <link rel="alternate" hreflang="x-default" href="{{attr:seo.englishUrl}}" />
+  {{seoHeadAlternates}}
   {{/if}}
 
   <meta property="og:type" content="website" />
@@ -21,7 +19,7 @@
   <meta property="og:description" content="" data-content-content="meta.description" />
   <meta property="og:site_name" content="{{attr:shared.site.name}}" />
   <meta property="og:locale" content="{{attr:meta.ogLocale}}" />
-  <meta property="og:locale:alternate" content="{{attr:meta.ogAlternateLocale}}" />
+  {{ogAlternateLocales}}
   {{#if seo.configured}}
   <meta property="og:url" content="{{attr:seo.canonical}}" />
   <meta property="og:image" content="{{attr:seo.ogImageUrl}}" />
@@ -70,10 +68,7 @@
       </nav>
       <div class="nav-right">
         <div class="nav-controls">
-          <div class="lang-toggle" id="lang-toggle">
-            <a class="lang-btn" data-locale-link="en">EN</a>
-            <a class="lang-btn" data-locale-link="sr">SR</a>
-          </div>
+          {{localeMenu:desktop}}
         </div>
         <a href="#contact" class="nav-cta" data-content="nav.cta"></a>
         <button class="nav-hamburger" id="hamburger" aria-label="{{attr:ui.menuOpen}}" data-label-open="{{attr:ui.menuOpen}}" data-label-close="{{attr:ui.menuClose}}" aria-controls="nav-mobile" aria-expanded="false">
@@ -96,10 +91,7 @@
       <div class="nav-mobile-footer">
         <a href="#contact" class="nav-mobile-cta" data-content="nav.cta"></a>
         <div class="nav-mobile-controls">
-          <div class="lang-toggle-mobile">
-            <a class="lang-btn" data-locale-link="en">EN</a>
-            <a class="lang-btn" data-locale-link="sr">SR</a>
-          </div>
+          {{localeMenu:mobile}}
         </div>
       </div>
     </div>

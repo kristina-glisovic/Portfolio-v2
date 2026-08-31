@@ -58,7 +58,97 @@
     const navMobileLinks = Array.from(document.querySelectorAll('.nav-mobile-link'));
     const navAllLinks = [...navDesktopLinks, ...navMobileLinks];
     const navBackgroundTargets = [navLogo, navLinksBar, navCta, navControls, mainContent, footer, skipLink].filter(Boolean);
+    const languageMenus = Array.from(document.querySelectorAll('[data-language-menu]'));
     let navFitFrame = 0;
+
+    function getLanguageMenuParts(menu) {
+      return {
+        trigger: menu.querySelector('.language-menu-trigger'),
+        popover: menu.querySelector('.language-menu-popover'),
+        options: Array.from(menu.querySelectorAll('.language-menu-option'))
+      };
+    }
+
+    function closeLanguageMenu(menu, { restoreFocus = false } = {}) {
+      const { trigger, popover } = getLanguageMenuParts(menu);
+      if (!trigger || !popover) return;
+      menu.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+      popover.hidden = true;
+      if (restoreFocus) trigger.focus({ preventScroll: true });
+    }
+
+    function closeLanguageMenus(except = null) {
+      languageMenus.forEach(menu => {
+        if (menu !== except) closeLanguageMenu(menu);
+      });
+    }
+
+    function openLanguageMenu(menu, focusTarget = 'current') {
+      const { trigger, popover, options } = getLanguageMenuParts(menu);
+      if (!trigger || !popover || !options.length) return;
+      closeLanguageMenus(menu);
+      menu.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+      popover.hidden = false;
+      const target = focusTarget === 'last'
+        ? options.at(-1)
+        : (options.find(option => option.hasAttribute('aria-current')) || options[0]);
+      window.requestAnimationFrame(() => target?.focus({ preventScroll: true }));
+    }
+
+    languageMenus.forEach(menu => {
+      const { trigger, popover, options } = getLanguageMenuParts(menu);
+      if (!trigger || !popover || !options.length) return;
+
+      const toggleLanguageMenu = () => {
+        if (trigger.getAttribute('aria-expanded') === 'true') {
+          closeLanguageMenu(menu, { restoreFocus: true });
+        } else {
+          openLanguageMenu(menu);
+        }
+      };
+
+      trigger.addEventListener('click', toggleLanguageMenu);
+
+      trigger.addEventListener('keydown', event => {
+        if (['Enter', ' ', 'Spacebar'].includes(event.key)) {
+          event.preventDefault();
+          toggleLanguageMenu();
+          return;
+        }
+        if (['ArrowDown', 'ArrowUp'].includes(event.key)) {
+          event.preventDefault();
+          openLanguageMenu(menu, event.key === 'ArrowUp' ? 'last' : 'current');
+        }
+      });
+
+      popover.addEventListener('keydown', event => {
+        const currentIndex = options.indexOf(document.activeElement);
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          event.stopPropagation();
+          closeLanguageMenu(menu, { restoreFocus: true });
+          return;
+        }
+        if (event.key === 'Tab') {
+          closeLanguageMenu(menu);
+          return;
+        }
+        if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        let nextIndex = currentIndex;
+        if (event.key === 'Home') nextIndex = 0;
+        if (event.key === 'End') nextIndex = options.length - 1;
+        if (event.key === 'ArrowDown') nextIndex = currentIndex < 0 ? 0 : (currentIndex + 1) % options.length;
+        if (event.key === 'ArrowUp') nextIndex = currentIndex < 0 ? options.length - 1 : (currentIndex - 1 + options.length) % options.length;
+        options[nextIndex]?.focus({ preventScroll: true });
+      });
+    });
+
+    document.addEventListener('click', event => {
+      if (!(event.target instanceof Element) || !event.target.closest('[data-language-menu]')) closeLanguageMenus();
+    });
 
     function syncNavSurface() {
       nav.classList.toggle('scrolled', window.scrollY > 24 || ham.classList.contains('open'));
@@ -100,7 +190,7 @@
 
     function getMobileMenuFocusables() {
       return Array.from(mob.querySelectorAll('a[href], button:not([disabled])'))
-        .filter(element => !element.hasAttribute('inert'));
+        .filter(element => !element.hasAttribute('inert') && !element.closest('[hidden]') && element.getClientRects().length);
     }
 
     function syncMobileMenuLabel() {
@@ -116,6 +206,7 @@
     }
 
     function setNavOpen(isOpen, { restoreFocus = !isOpen } = {}) {
+      closeLanguageMenus();
       ham.classList.toggle('open', isOpen);
       ham.setAttribute('aria-expanded', String(isOpen));
       mob.classList.toggle('open', isOpen);
