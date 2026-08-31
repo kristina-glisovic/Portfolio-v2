@@ -205,6 +205,7 @@ if (/<script\b/i.test(notFound)) fail('404.html must remain functional without J
 const requiredAssets = [
   'assets/favicon.svg',
   'assets/favicon-32.png',
+  'assets/favicon-16.png',
   'assets/apple-touch-icon.png',
   'assets/og-portfolio.png',
   'favicon.ico'

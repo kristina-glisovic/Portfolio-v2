@@ -510,6 +510,7 @@ function validateGeneratedHtml(html, locale, content) {
   }
   if (!/<link rel="icon" href="[^"]+favicon\.svg" type="image\/svg\+xml"/.test(html)
     || !/<link rel="icon" href="[^"]+favicon-32\.png" type="image\/png" sizes="32x32"/.test(html)
+    || !/<link rel="icon" href="[^"]+favicon-16\.png" type="image\/png" sizes="16x16"/.test(html)
     || !/<link rel="icon" href="[^"]*favicon\.ico" type="image\/x-icon" sizes="32x32"/.test(html)
     || !/<link rel="apple-touch-icon" href="[^"]+apple-touch-icon\.png" sizes="180x180"/.test(html)) {
     fail(`${locale}: favicon links are incomplete`);
@@ -580,6 +581,7 @@ async function validateRequiredSeoAssets(content) {
     resolve(rootDir, content.shared.site.ogImagePath),
     resolve(rootDir, 'assets/favicon.svg'),
     resolve(rootDir, 'assets/favicon-32.png'),
+    resolve(rootDir, 'assets/favicon-16.png'),
     resolve(rootDir, 'assets/apple-touch-icon.png'),
     resolve(rootDir, 'favicon.ico')
   ];

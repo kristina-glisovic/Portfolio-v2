@@ -38,6 +38,7 @@
 
   <link rel="icon" href="{{assetPrefix}}favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="{{assetPrefix}}favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="{{assetPrefix}}favicon-16.png" type="image/png" sizes="16x16" />
   <link rel="icon" href="{{rootPrefix}}favicon.ico" type="image/x-icon" sizes="32x32" />
   <link rel="apple-touch-icon" href="{{assetPrefix}}apple-touch-icon.png" sizes="180x180" />
 
@@ -55,7 +56,9 @@
   <header class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#home" class="nav-logo">
-        <div class="nav-logo-mark" aria-hidden="true">ER</div>
+        <span class="nav-logo-mark" aria-hidden="true">
+          <img src="{{assetPrefix}}brand/header-logo.svg" alt="" width="65" height="45" />
+        </span>
         <span class="nav-logo-text">{{text:shared.name}}</span>
       </a>
       <nav class="nav-links" aria-label="" data-content-aria-label="nav.primaryAria">
