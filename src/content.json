@@ -102,7 +102,8 @@
         "menuOpen": "Open menu",
         "menuClose": "Close menu",
         "languageMenuLabel": "Choose language",
-        "languageCurrent": "Current language"
+        "languageCurrent": "Current language",
+        "languageUnavailable": "Coming soon"
       },
       "nav": {
         "primaryAria": "Primary navigation",
@@ -791,7 +792,8 @@
         "menuOpen": "Otvori meni",
         "menuClose": "Zatvori meni",
         "languageMenuLabel": "Izaberite jezik",
-        "languageCurrent": "Trenutni jezik"
+        "languageCurrent": "Trenutni jezik",
+        "languageUnavailable": "Uskoro"
       },
       "nav": {
         "primaryAria": "Glavna navigacija",

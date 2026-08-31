@@ -284,8 +284,14 @@ function renderLocaleMenu(locale, context, variant) {
   const current = getLocaleDefinition(locale);
   const menuId = `language-menu-${variant}`;
   const triggerLabel = `${context.ui.languageMenuLabel}. ${context.ui.languageCurrent}: ${current.label}`;
-  const options = enabledLocaleDefinitions.map(definition => {
+  const options = localeDefinitions.map(definition => {
     const isCurrent = definition.id === locale;
+    if (!definition.enabled) {
+      return `        <span class="language-menu-option is-disabled" role="menuitem" aria-disabled="true" tabindex="-1" lang="${definition.htmlLang}" data-locale="${definition.id}">
+          <span>${escapeHtml(definition.label)}</span>
+          <span class="language-menu-option-status">${escapeHtml(context.ui.languageUnavailable)}</span>
+        </span>`;
+    }
     return `        <a class="language-menu-option${isCurrent ? ' is-current' : ''}" role="menuitem" href="${localeHref(locale, definition.id)}" lang="${definition.htmlLang}" hreflang="${definition.hreflang}"${isCurrent ? ' aria-current="page"' : ''}>
           <span>${escapeHtml(definition.label)}</span>
           <span class="language-menu-option-code" aria-hidden="true">${escapeHtml(definition.code)}</span>
@@ -538,6 +544,9 @@ function validateGeneratedHtml(html, locale, content) {
   }
   for (const definition of localeDefinitions.filter(item => !item.enabled)) {
     if (languageMenuOptions.includes(definition.hreflang)) fail(`${locale}: disabled locale ${definition.id} is publicly linked`);
+    const disabledPattern = new RegExp(`<span class="language-menu-option is-disabled"[^>]*role="menuitem"[^>]*aria-disabled="true"[^>]*data-locale="${definition.id}"`, 'g');
+    const disabledOptions = html.match(disabledPattern) || [];
+    if (disabledOptions.length !== 2) fail(`${locale}: disabled locale ${definition.id} must appear as unavailable in both language menus`);
   }
 }
 
