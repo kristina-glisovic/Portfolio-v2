@@ -9735,6 +9735,168 @@ body {
     margin: 0 0 1rem;
 }
 
+/* MyStar's first read stays visual and concise; the analytical layer follows on demand. */
+.case-study-primary-visual-feature {
+    min-height: 310px;
+    margin-bottom: 1rem;
+    border-left: 1px solid var(--border);
+}
+
+.case-study-primary-visual-feature .case-study-device-stage {
+    min-height: 310px;
+    padding-inline: 4rem 8rem;
+}
+
+.case-study-primary-visual-feature .case-study-laptop-shell {
+    width: calc(740px * .7);
+    height: calc(434px * .7);
+}
+
+.case-study-primary-visual-feature .case-study-laptop-device {
+    transform: translateX(-50%) scale(.7);
+}
+
+.case-study-primary-visual-feature .case-study-phone-shell {
+    right: 5%;
+}
+
+.case-study-snapshot {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 1rem;
+    padding: .8rem 1.1rem;
+}
+
+.case-study-snapshot-item {
+    min-width: 0;
+    padding: .05rem 1.15rem .1rem;
+}
+
+.case-study-snapshot-item:first-child {
+    padding-left: .25rem;
+}
+
+.case-study-snapshot-item + .case-study-snapshot-item {
+    border-left: 1px solid color-mix(in srgb, var(--border) 78%, transparent);
+}
+
+.case-study-snapshot-item .case-study-number {
+    margin-bottom: .3rem;
+}
+
+.case-study-snapshot-item h3,
+.case-study-prescription-detail h3 {
+    color: var(--t0);
+    font-family: var(--ff-d);
+    letter-spacing: -.02em;
+}
+
+.case-study-snapshot-item h3 {
+    margin-bottom: .35rem;
+    font-size: .94rem;
+}
+
+.case-study-snapshot-item p {
+    color: var(--t1);
+    font-size: .75rem;
+    line-height: 1.5;
+}
+
+.case-study-outcomes-heading h3.case-study-kicker {
+    max-width: none;
+    font-size: .64rem;
+    text-align: left;
+}
+
+@media (min-width: 981px) {
+    .case-study-prescription {
+        min-height: 280px;
+    }
+
+    .case-study-prescription-visual,
+    .case-study-prescription-visual img {
+        min-height: 280px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+    .case-study-prescription {
+        grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .8fr);
+        min-height: 280px;
+    }
+
+    .case-study-prescription-visual,
+    .case-study-prescription-visual img {
+        min-height: 280px;
+    }
+
+    .case-study-prescription-visual {
+        border-top: 0;
+        border-left: 1px solid var(--border);
+    }
+}
+
+.case-study-overview-detail {
+    display: block;
+    min-height: 0;
+}
+
+.case-study-overview-detail .case-study-overview-copy {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    padding: 1.1rem 1.2rem;
+}
+
+.case-study-overview-detail .case-study-ownership {
+    grid-column: 1 / -1;
+    margin-bottom: .8rem;
+}
+
+.case-study-overview-detail .case-study-summary {
+    min-width: 0;
+    padding: .1rem 1rem;
+}
+
+.case-study-overview-detail .case-study-summary:first-of-type {
+    padding-left: 0;
+}
+
+.case-study-overview-detail .case-study-summary + .case-study-summary {
+    padding-top: .1rem;
+    border-top: 0;
+    border-left: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+}
+
+.case-study-prescription-detail {
+    margin-bottom: 1rem;
+    padding: 1rem 1.15rem;
+}
+
+.case-study-prescription-detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+    align-items: end;
+    gap: 2rem;
+}
+
+.case-study-prescription-detail h3 {
+    margin-bottom: .4rem;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.case-study-prescription-detail p {
+    color: var(--t1);
+    font-size: .78rem;
+    line-height: 1.55;
+}
+
+.case-study-prescription-detail .case-study-contributions {
+    justify-content: flex-end;
+    margin-top: 0;
+}
+
 .case-study-outcomes-footer {
     justify-content: flex-end;
 }
@@ -10022,6 +10184,70 @@ html[lang='sr-Latn'] .nav-links a {
         display: none;
     }
 
+    .case-study-primary-visual-feature {
+        border-left: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .case-study-primary-visual-feature,
+    .case-study-primary-visual-feature .case-study-device-stage {
+        min-height: 280px;
+    }
+
+    .case-study-prescription {
+        grid-template-columns: minmax(0, 1.2fr) minmax(14rem, .8fr);
+        min-height: 250px;
+    }
+
+    .case-study-prescription-visual,
+    .case-study-prescription-visual img {
+        min-height: 250px;
+    }
+
+    .case-study-prescription-visual {
+        border-top: 0;
+        border-left: 1px solid var(--border);
+    }
+
+    .case-study-snapshot {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: .35rem .85rem;
+    }
+
+    .case-study-snapshot-item,
+    .case-study-snapshot-item:first-child {
+        padding: .65rem 0;
+    }
+
+    .case-study-snapshot-item + .case-study-snapshot-item {
+        border-top: 1px solid color-mix(in srgb, var(--border) 78%, transparent);
+        border-left: 0;
+    }
+
+    .case-study-overview-detail .case-study-overview-copy {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-overview-detail .case-study-summary,
+    .case-study-overview-detail .case-study-summary:first-of-type {
+        padding: .65rem 0;
+    }
+
+    .case-study-overview-detail .case-study-summary + .case-study-summary {
+        border-top: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+        border-left: 0;
+    }
+
+    .case-study-prescription-detail-grid {
+        grid-template-columns: 1fr;
+        gap: .8rem;
+    }
+
+    .case-study-prescription-detail .case-study-contributions {
+        justify-content: flex-start;
+    }
+
     .process-step-marker::after {
         top: .45rem;
         right: auto;
@@ -10065,6 +10291,117 @@ html[lang='sr-Latn'] .nav-links a {
 
     .contact-form-submit {
         width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .case-study-primary-visual-feature,
+    .case-study-primary-visual-feature .case-study-device-stage {
+        min-height: 156px;
+    }
+
+    .case-study-primary-visual-feature {
+        margin-bottom: .55rem;
+    }
+
+    .case-study-primary-visual-feature .case-study-device-stage {
+        padding: .5rem;
+    }
+
+    .case-study-primary-visual-feature .case-study-laptop-shell {
+        width: 100%;
+        height: 140px;
+    }
+
+    .case-study-primary-visual-feature .case-study-laptop-device {
+        transform: none;
+    }
+
+    .case-study-snapshot {
+        margin-bottom: .55rem;
+        padding: .2rem .65rem;
+    }
+
+    .case-study-snapshot-item,
+    .case-study-snapshot-item:first-child {
+        display: grid;
+        grid-template-columns: 1.55rem minmax(4rem, .34fr) minmax(0, 1fr);
+        align-items: start;
+        gap: .35rem;
+        padding: .45rem 0;
+    }
+
+    .case-study-snapshot-item .case-study-number {
+        width: auto;
+        margin: .15rem 0 0;
+    }
+
+    .case-study-snapshot-item h3 {
+        margin: .05rem 0 0;
+        font-size: .78rem;
+    }
+
+    .case-study-snapshot-item p {
+        margin: 0;
+        font-size: .68rem;
+        line-height: 1.4;
+    }
+
+    .case-study-prescription {
+        grid-template-columns: minmax(0, 1.25fr) minmax(6.8rem, .75fr);
+        min-height: 0;
+    }
+
+    .case-study-prescription-copy {
+        padding: .65rem .75rem;
+    }
+
+    .case-study-prescription-visual,
+    .case-study-prescription-visual img {
+        min-height: 100%;
+        height: 100%;
+    }
+
+    .case-study-prescription-visual {
+        border-top: 0;
+        border-left: 1px solid var(--border);
+    }
+
+    .case-study-disclosure {
+        margin: .7rem 0;
+    }
+
+    .case-study-overview-detail .case-study-overview-copy {
+        padding: .75rem;
+    }
+
+    .case-study-prescription-detail {
+        padding: .75rem;
+    }
+
+    .case-study-outcome-grid {
+        display: flex;
+        gap: .4rem;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        padding-bottom: .12rem;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+    }
+
+    .case-study-outcome-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .case-study-outcome-grid li {
+        flex: 0 0 11.5rem;
+        min-height: 2.35rem;
+        scroll-snap-align: start;
+    }
+
+    .case-study-outcomes-heading h3.case-study-kicker {
+        margin-top: 0;
+        font-size: .6rem;
     }
 }
 

@@ -203,6 +203,23 @@
           }
         ],
         "ownership": "Sole Developer · Built from the Ground Up",
+        "snapshot": [
+          {
+            "id": "challenge",
+            "title": "Challenge",
+            "copy": "Translate a complex eyewear catalogue and optical sales process into a clear online experience."
+          },
+          {
+            "id": "role",
+            "title": "My Role",
+            "copy": "Storefront architecture, Shopify and frontend development, UX/UI, localization, integrations and QA."
+          },
+          {
+            "id": "result",
+            "title": "Result",
+            "copy": "A bilingual, responsive Shopify sales channel with online prescription ordering."
+          }
+        ],
         "overview": [
           {
             "id": "context",
@@ -241,6 +258,7 @@
         "prescription": {
           "label": "Standout Feature",
           "title": "Prescription ordering adapted to the real optical sales process",
+          "summary": "I adapted a third-party prescription flow to Staroptic’s real sales process.",
           "copy": "I integrated and configured a third-party application, adapting the flow to Staroptic’s requirements and the information customers need when ordering prescription glasses.",
           "contributionsAria": "Prescription ordering contributions",
           "contributions": [
@@ -884,6 +902,23 @@
           }
         ],
         "ownership": "Samostalni razvoj · Izgrađeno od početka",
+        "snapshot": [
+          {
+            "id": "challenge",
+            "title": "Izazov",
+            "copy": "Složen katalog naočara i proces prodaje u optici pretočiti u jasno online iskustvo."
+          },
+          {
+            "id": "role",
+            "title": "Moja uloga",
+            "copy": "Arhitektura storefronta, Shopify/frontend razvoj, UX/UI, lokalizacija, integracije i QA."
+          },
+          {
+            "id": "result",
+            "title": "Rezultat",
+            "copy": "Dvojezičan, responsive Shopify prodajni kanal sa online poručivanjem dioptrijskih naočara."
+          }
+        ],
         "overview": [
           {
             "id": "context",
@@ -922,6 +957,7 @@
         "prescription": {
           "label": "Ključna funkcionalnost",
           "title": "Poručivanje dioptrijskih naočara prilagođeno stvarnom procesu optike",
+          "summary": "Tok aplikacije treće strane prilagodila sam stvarnom prodajnom procesu Staroptica.",
           "copy": "Integrisala sam i konfigurisala aplikaciju treće strane, prilagođavajući tok zahtevima Staroptica i informacijama potrebnim za poručivanje dioptrijskih naočara.",
           "contributionsAria": "Doprinos procesu poručivanja",
           "contributions": [

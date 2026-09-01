@@ -304,24 +304,7 @@
         </div>
       </header>
 
-      <article class="case-study-overview case-study-surface reveal">
-        <div class="case-study-overview-copy">
-          <div class="case-study-ownership" data-content="projects.ownership"></div>
-          <section class="case-study-summary">
-            <h3 data-content="projects.overview.0.title"></h3>
-            <p data-content="projects.overview.0.copy"></p>
-          </section>
-          <section class="case-study-summary">
-            <h3 data-content="projects.overview.1.title"></h3>
-            <p data-content="projects.overview.1.copy"></p>
-          </section>
-          <section class="case-study-summary">
-            <h3 data-content="projects.overview.2.title"></h3>
-            <p data-content="projects.overview.2.copy"></p>
-          </section>
-        </div>
-
-        <figure class="case-study-primary-visual">
+      <figure class="case-study-primary-visual case-study-primary-visual-feature case-study-surface reveal">
           <div class="case-study-device-stage">
             <div class="case-study-laptop-shell">
               <div class="device device-macbook-pro device-spacegray case-study-laptop-device">
@@ -351,38 +334,31 @@
             </div>
           </div>
           <figcaption data-content="projects.visuals.home.caption"></figcaption>
-        </figure>
-      </article>
+      </figure>
 
-      <div class="case-study-highlights" role="list" data-content-aria-label="projects.highlightsAria">
-        <article class="case-study-highlight case-study-surface reveal" role="listitem">
+      <div class="case-study-snapshot case-study-surface reveal" role="list">
+        <section class="case-study-snapshot-item" role="listitem">
           <span class="case-study-number">01</span>
-          <h3 data-content="projects.highlights.0.title"></h3>
-          <p data-content="projects.highlights.0.copy"></p>
-        </article>
-        <article class="case-study-highlight case-study-surface reveal reveal-delay-1" role="listitem">
+          <h3 data-content="projects.snapshot.0.title"></h3>
+          <p data-content="projects.snapshot.0.copy"></p>
+        </section>
+        <section class="case-study-snapshot-item" role="listitem">
           <span class="case-study-number">02</span>
-          <h3 data-content="projects.highlights.1.title"></h3>
-          <p data-content="projects.highlights.1.copy"></p>
-        </article>
-        <article class="case-study-highlight case-study-surface reveal reveal-delay-2" role="listitem">
+          <h3 data-content="projects.snapshot.1.title"></h3>
+          <p data-content="projects.snapshot.1.copy"></p>
+        </section>
+        <section class="case-study-snapshot-item" role="listitem">
           <span class="case-study-number">03</span>
-          <h3 data-content="projects.highlights.2.title"></h3>
-          <p data-content="projects.highlights.2.copy"></p>
-        </article>
+          <h3 data-content="projects.snapshot.2.title"></h3>
+          <p data-content="projects.snapshot.2.copy"></p>
+        </section>
       </div>
 
       <article class="case-study-prescription case-study-surface reveal">
         <div class="case-study-prescription-copy">
           <div class="case-study-kicker" data-content="projects.prescription.label"></div>
           <h3 data-content="projects.prescription.title"></h3>
-          <p data-content="projects.prescription.copy"></p>
-          <ul class="case-study-contributions" data-content-aria-label="projects.prescription.contributionsAria">
-            <li data-content="projects.prescription.contributions.0.label"></li>
-            <li data-content="projects.prescription.contributions.1.label"></li>
-            <li data-content="projects.prescription.contributions.2.label"></li>
-            <li data-content="projects.prescription.contributions.3.label"></li>
-          </ul>
+          <p data-content="projects.prescription.summary"></p>
         </div>
         <figure class="case-study-prescription-visual">
           <img src="{{assetPrefix}}mystar-prescription.avif" alt="" data-content-alt="projects.visuals.prescription.alt" width="1360" height="900" loading="lazy" decoding="async" />
@@ -402,6 +378,59 @@
           <h3 data-content="projects.details.title"></h3>
           <p data-content="projects.details.copy"></p>
         </div>
+
+        <article class="case-study-overview case-study-overview-detail case-study-surface">
+          <div class="case-study-overview-copy">
+            <div class="case-study-ownership" data-content="projects.ownership"></div>
+            <section class="case-study-summary">
+              <h3 data-content="projects.overview.0.title"></h3>
+              <p data-content="projects.overview.0.copy"></p>
+            </section>
+            <section class="case-study-summary">
+              <h3 data-content="projects.overview.1.title"></h3>
+              <p data-content="projects.overview.1.copy"></p>
+            </section>
+            <section class="case-study-summary">
+              <h3 data-content="projects.overview.2.title"></h3>
+              <p data-content="projects.overview.2.copy"></p>
+            </section>
+          </div>
+        </article>
+
+        <div class="case-study-highlights" role="list" data-content-aria-label="projects.highlightsAria">
+          <article class="case-study-highlight case-study-surface" role="listitem">
+            <span class="case-study-number">01</span>
+            <h3 data-content="projects.highlights.0.title"></h3>
+            <p data-content="projects.highlights.0.copy"></p>
+          </article>
+          <article class="case-study-highlight case-study-surface" role="listitem">
+            <span class="case-study-number">02</span>
+            <h3 data-content="projects.highlights.1.title"></h3>
+            <p data-content="projects.highlights.1.copy"></p>
+          </article>
+          <article class="case-study-highlight case-study-surface" role="listitem">
+            <span class="case-study-number">03</span>
+            <h3 data-content="projects.highlights.2.title"></h3>
+            <p data-content="projects.highlights.2.copy"></p>
+          </article>
+        </div>
+
+        <article class="case-study-prescription-detail case-study-surface">
+          <div class="case-study-kicker" data-content="projects.prescription.label"></div>
+          <div class="case-study-prescription-detail-grid">
+            <div>
+              <h3 data-content="projects.prescription.title"></h3>
+              <p data-content="projects.prescription.copy"></p>
+            </div>
+            <ul class="case-study-contributions" data-content-aria-label="projects.prescription.contributionsAria">
+              <li data-content="projects.prescription.contributions.0.label"></li>
+              <li data-content="projects.prescription.contributions.1.label"></li>
+              <li data-content="projects.prescription.contributions.2.label"></li>
+              <li data-content="projects.prescription.contributions.3.label"></li>
+            </ul>
+          </div>
+        </article>
+
         <section class="case-study-proof" aria-labelledby="case-study-proof-title">
           <div class="case-study-proof-heading reveal">
             <div class="case-study-kicker" id="case-study-proof-title" data-content="projects.proof.label"></div>
@@ -430,8 +459,7 @@
 
       <section class="case-study-outcomes case-study-surface reveal" aria-labelledby="case-study-outcomes-title">
         <div class="case-study-outcomes-heading">
-          <div class="case-study-kicker" data-content="projects.outcomes.label"></div>
-          <h3 id="case-study-outcomes-title" data-content="projects.outcomes.title"></h3>
+          <h3 class="case-study-kicker" id="case-study-outcomes-title" data-content="projects.outcomes.label"></h3>
         </div>
         <ul class="case-study-outcome-grid">
           <li data-content="projects.outcomes.items.0.label"></li>
