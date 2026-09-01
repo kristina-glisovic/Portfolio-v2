@@ -3,7 +3,7 @@
 <html lang="sr-Latn" class="performance-mode" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Kristina Glišović | Web Developer &amp; Shopify Specialist</title>
   <meta name="description" content="Web developer za custom sajtove, web aplikacije, e-commerce rešenja i Shopify prodavnice, uz fokus na UX, performanse i tehnički kvalitet." />
   <meta name="author" content="Kristina Glišović" />
@@ -33,7 +33,7 @@
 
 
   <link rel="stylesheet" href="../assets/devices.min.css">
-  <link rel="stylesheet" href="../assets/style.css?v=20260901-phase11-1">
+  <link rel="stylesheet" href="../assets/style.css?v=20260901-mobile-nav-1">
 </head>
 <body>
 
@@ -91,18 +91,25 @@
 
   <nav class="nav-mobile" id="nav-mobile" aria-hidden="true" aria-label="Mobilna navigacija">
     <div class="nav-mobile-panel">
-      <div class="nav-mobile-links">
-        <a href="#services" class="nav-mobile-link">Usluge</a>
-        <a href="#projects" class="nav-mobile-link">Radovi</a>
-        <a href="#about" class="nav-mobile-link">O meni</a>
-        <a href="#experience-education" class="nav-mobile-link">Iskustvo i obrazovanje</a>
-        <a href="#process" class="nav-mobile-link">Proces</a>
-        <a href="#contact" class="nav-mobile-link">Kontakt</a>
-      </div>
-      <div class="nav-mobile-footer">
-        <a href="#contact" class="nav-mobile-cta">Započnimo razgovor</a>
-        <div class="nav-mobile-controls">
-          <div class="language-menu language-menu--mobile" data-language-menu>
+      <div class="nav-mobile-top">
+        <div class="nav-mobile-brand-row">
+          <div class="nav-mobile-brand">
+            <span class="nav-logo-mark" aria-hidden="true">
+              <svg class="nav-signature-svg" viewBox="0 0 199 163" width="61" height="50" focusable="false">
+                <use class="nav-signature-path" href="#guarantee-signature-artwork" transform="translate(128,10)"></use>
+              </svg>
+            </span>
+            <span class="nav-mobile-brand-name">Kristina Glišović</span>
+          </div>
+          <button class="nav-mobile-close" type="button" data-mobile-menu-close aria-label="Zatvori meni">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false">
+              <path d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+        <div class="nav-mobile-utility">
+          <div class="nav-mobile-controls">
+            <div class="language-menu language-menu--mobile" data-language-menu>
       <button class="language-menu-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="language-menu-mobile" aria-label="Izaberite jezik. Trenutni jezik: Srpski">
         <span aria-hidden="true">SR</span>
         <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m1 1.5 5 5 5-5"/></svg>
@@ -122,7 +129,17 @@
         </span>
       </div>
     </div>
+          </div>
+          <a href="#contact" class="nav-mobile-cta">Započnimo razgovor</a>
         </div>
+      </div>
+      <div class="nav-mobile-links">
+        <a href="#services" class="nav-mobile-link">Usluge</a>
+        <a href="#projects" class="nav-mobile-link">Radovi</a>
+        <a href="#about" class="nav-mobile-link">O meni</a>
+        <a href="#experience-education" class="nav-mobile-link">Iskustvo i obrazovanje</a>
+        <a href="#process" class="nav-mobile-link">Proces</a>
+        <a href="#contact" class="nav-mobile-link">Kontakt</a>
       </div>
     </div>
   </nav>
@@ -1064,7 +1081,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════════════════════════════════ -->
-  <script src="../assets/main.js?v=20260901-phase11-2"></script>
+  <script src="../assets/main.js?v=20260901-mobile-nav-1"></script>
 
 </body>
 </html>

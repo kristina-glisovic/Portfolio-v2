@@ -51,13 +51,14 @@
     const navRight = nav?.querySelector('.nav-right');
     const navCta = nav?.querySelector('.nav-cta');
     const navControls = nav?.querySelector('.nav-controls');
+    const mobileMenuClose = mob?.querySelector('[data-mobile-menu-close]');
     const mainContent = document.getElementById('main-content');
     const footer = document.querySelector('.footer');
     const skipLink = document.querySelector('.skip-link');
     const navDesktopLinks = Array.from(document.querySelectorAll('.nav-links a'));
     const navMobileLinks = Array.from(document.querySelectorAll('.nav-mobile-link'));
     const navAllLinks = [...navDesktopLinks, ...navMobileLinks];
-    const navBackgroundTargets = [navLogo, navLinksBar, navCta, navControls, mainContent, footer, skipLink].filter(Boolean);
+    const navBackgroundTargets = [navLogo, navLinksBar, navCta, navControls, ham, mainContent, footer, skipLink].filter(Boolean);
     const languageMenus = Array.from(document.querySelectorAll('[data-language-menu]'));
     let navFitFrame = 0;
     const navTopRevealThreshold = 56;
@@ -293,6 +294,7 @@
       if (isOpen) revealNavForInteraction();
       ham.classList.toggle('open', isOpen);
       ham.setAttribute('aria-expanded', String(isOpen));
+      nav.classList.toggle('menu-open', isOpen);
       mob.classList.toggle('open', isOpen);
       mob.setAttribute('aria-hidden', String(!isOpen));
       mob.toggleAttribute('inert', !isOpen);
@@ -331,6 +333,10 @@
 
     ham.addEventListener('click', () => {
       setNavOpen(!ham.classList.contains('open'));
+    });
+
+    mobileMenuClose?.addEventListener('click', () => {
+      setNavOpen(false);
     });
 
     mob.addEventListener('click', e => {
