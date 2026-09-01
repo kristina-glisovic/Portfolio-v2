@@ -9079,7 +9079,7 @@ body {
 }
 
 .client-feedback-header .section-title {
-    max-width: 14ch;
+    max-width: none;
     margin: 0;
 }
 
