@@ -1439,16 +1439,34 @@ ul, ol { list-style: none; }
     height: 1.15rem;
 }
 .nav-mobile-utility {
+    display: grid;
+    grid-template-columns: minmax(5.25rem, .72fr) minmax(0, 1.28fr);
+    align-items: start;
     gap: .65rem;
 }
 .nav-mobile-utility .nav-mobile-controls {
-    min-width: 5.25rem;
-    flex: .72 1 0;
+    display: contents;
+}
+.nav-mobile-utility .language-menu {
+    display: contents;
+}
+.nav-mobile-utility .language-menu-trigger {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    min-height: 57px;
+    padding-inline: .9rem;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 1rem;
+    background: rgba(255,255,255,.04);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
 }
 .nav-mobile-utility .nav-mobile-cta {
+    grid-column: 2;
+    grid-row: 1;
     min-width: 0;
     min-height: 48px;
-    flex: 1.28 1 auto;
+    align-self: center;
     padding: .75rem 1rem;
     font-size: .78rem;
     line-height: 1.15;
@@ -5094,9 +5112,12 @@ html.performance-mode .hero-stat-divider {
 }
 
 .nav-mobile-controls .language-menu-popover {
-    top: calc(100% + .6rem);
-    bottom: auto;
+    position: static;
+    grid-column: 1 / -1;
+    grid-row: 2;
     width: 100%;
+    max-width: none;
+    margin-top: 0;
 }
 
 @keyframes languageMenuIn {
