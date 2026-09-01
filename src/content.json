@@ -66,7 +66,7 @@
         "Integrations"
       ],
       "alumniOf": [
-        "ITS – Visoka škola strukovnih studija za informacione tehnologije",
+        "ITS - Visoka škola strukovnih studija za informacione tehnologije",
         "ICT College of Vocational Studies"
       ]
     },
@@ -90,10 +90,10 @@
         "title": "Kristina Glišović | Web Developer & Shopify Specialist",
         "description": "Web developer creating custom websites, web applications, e-commerce solutions and Shopify stores, with a focus on UX, performance and technical quality.",
         "ogLocale": "en_US",
-        "ogImageAlt": "Kristina Glišović — Shopify & Web Solutions Developer",
+        "ogImageAlt": "Kristina Glišović - Shopify & Web Solutions Developer",
         "schemaLanguage": "en",
         "schemaJobTitle": "Shopify & Web Solutions Developer",
-        "schemaWebsiteName": "Kristina Glišović — Portfolio"
+        "schemaWebsiteName": "Kristina Glišović - Portfolio"
       },
       "a11y": {
         "skip": "Skip to content"
@@ -181,7 +181,7 @@
       },
       "projects": {
         "label": "Selected Work",
-        "title": "MyStar — Taking Staroptic from physical retail to e-commerce",
+        "title": "MyStar - Taking Staroptic from physical retail to e-commerce",
         "intro": "I built MyStar from the ground up as Staroptic’s bilingual Shopify sales channel for eyewear and prescription ordering.",
         "metaAria": "Project metadata",
         "meta": [
@@ -384,7 +384,7 @@
           {
             "id": "demo-testimonial-02",
             "isDemo": true,
-            "quote": "What stood out most was the level of ownership. Kristina did not simply implement what was requested — she identified potential issues early, suggested better approaches and made sure the final result worked as a complete experience.",
+            "quote": "What stood out most was the level of ownership. Kristina did not simply implement what was requested - she identified potential issues early, suggested better approaches and made sure the final result worked as a complete experience.",
             "name": "Sample Client",
             "role": "Product Lead",
             "company": "Demo Digital Product",
@@ -412,7 +412,7 @@
       },
     "services": {
       "label": "Services",
-      "title": "What do you need to build—or improve?",
+      "title": "What do you need to build-or improve?",
       "intro": "From focused websites to complex platforms and online stores, I shape the solution around the problem, the people using it and the way your business works.",
       "groupLabels": {
         "bestFor": "Best for",
@@ -518,7 +518,7 @@
       "about": {
         "label": "Why Work With Me",
         "title": "Thoughtful decisions, precise execution and clear ownership.",
-        "intro": "I stay close to both the business goal and the implementation—asking the right questions early, identifying UX and technical risks, and carrying each decision through to a launch-ready result.",
+        "intro": "I stay close to both the business goal and the implementation-asking the right questions early, identifying UX and technical risks, and carrying each decision through to a launch-ready result.",
         "portraitAlt": "Portrait of Kristina Glišović",
         "differentiators": [
           {
@@ -539,7 +539,7 @@
           {
             "id": "differentiator-4",
             "title": "Quality built into development",
-            "description": "Performance, technical SEO and accessibility are considered while the product is being built—not added as a final checklist once the main work is complete."
+            "description": "Performance, technical SEO and accessibility are considered while the product is being built-not added as a final checklist once the main work is complete."
           }
         ],
         "credibility": {
@@ -597,7 +597,7 @@
           "intro": "A continuous progression from applied Information Technology foundations to a master’s degree, supported by exceptional academic performance and official recognition across two academic cycles.",
           "its": {
             "stage": "Master studies",
-            "institution": "ITS — College of Vocational Studies for Information Technologies",
+            "institution": "ITS - College of Vocational Studies for Information Technologies",
             "degree": "Master’s Degree in Information Technology",
             "start": "October 2022",
             "end": "September 2024",
@@ -610,7 +610,7 @@
               "items": [
                 {
                   "id": "item-1",
-                  "label": "Student of the Generation — ITS"
+                  "label": "Student of the Generation - ITS"
                 },
                 {
                   "id": "item-2",
@@ -630,7 +630,7 @@
               "items": [
                 {
                   "id": "item-1",
-                  "label": "Student of the Generation — Master Information Technologies programme"
+                  "label": "Student of the Generation - Master Information Technologies programme"
                 },
                 {
                   "id": "item-2",
@@ -644,7 +644,7 @@
           "ict": {
             "stage": "Academic foundation",
             "institution": "ICT College of Vocational Studies",
-            "degree": "Engineer of Electrical and Computer Engineering — Bachelor (Applied), Information Technology",
+            "degree": "Engineer of Electrical and Computer Engineering - Bachelor (Applied), Information Technology",
             "start": "October 2019",
             "end": "September 2022",
             "description": "The applied bachelor programme established my foundation in Information Technology, web and internet technologies, and practical software development before progression to master studies at ITS."
@@ -669,7 +669,7 @@
           {
             "id": "step-3",
             "title": "Design, Development & Reviews",
-            "description": "I turn the agreed direction into working interfaces and functionality, making UX/UI and implementation decisions in context. You review progress at planned checkpoints—often through a preview or staging environment—so feedback stays timely and revisions remain focused."
+            "description": "I turn the agreed direction into working interfaces and functionality, making UX/UI and implementation decisions in context. You review progress at planned checkpoints-often through a preview or staging environment-so feedback stays timely and revisions remain focused."
           },
           {
             "id": "step-4",
@@ -682,7 +682,7 @@
       "guarantee": {
         "label": "A Personal Standard",
         "title": "Everything I promise, I stand behind.",
-        "primary": "I take personal responsibility for the quality of every project I deliver—from the decisions made along the way to the details that shape the finished result. The work should feel considered, dependable and ready for real use.",
+        "primary": "I take personal responsibility for the quality of every project I deliver-from the decisions made along the way to the details that shape the finished result. The work should feel considered, dependable and ready for real use.",
         "followup": "If something needs refinement, I refine it.",
         "role": "Web Solutions Developer · Shopify Specialist",
         "signatureNote": "My personal commitment to quality, clear communication and follow-through."
@@ -732,8 +732,8 @@
               "placeholder": "Select a timeline",
               "options": [
                 "As soon as possible",
-                "Within 1–2 months",
-                "Within 3–6 months",
+                "Within 1-2 months",
+                "Within 3-6 months",
                 "Flexible / Not defined yet"
               ]
             },
@@ -742,8 +742,8 @@
               "placeholder": "Select a range",
               "options": [
                 "Under €2,500",
-                "€2,500–€5,000",
-                "€5,000–€10,000",
+                "€2,500-€5,000",
+                "€5,000-€10,000",
                 "€10,000+",
                 "Not sure yet"
               ]
@@ -789,7 +789,7 @@
         "title": "Kristina Glišović | Web developer i Shopify specijalista",
         "description": "Web developer za custom sajtove, web aplikacije, e-commerce rešenja i Shopify prodavnice, uz fokus na UX, performanse i tehnički kvalitet.",
         "ogLocale": "sr_RS",
-        "ogImageAlt": "Kristina Glišović — Shopify & Web Solutions Developer",
+        "ogImageAlt": "Kristina Glišović - Shopify & Web Solutions Developer",
         "schemaLanguage": "sr-Latn",
         "schemaJobTitle": "Shopify & Web Solutions Developer",
         "schemaWebsiteName": "Portfolio Kristine Glišović"
@@ -880,7 +880,7 @@
       },
       "projects": {
         "label": "Odabrani projekat",
-        "title": "MyStar — Novi e-commerce kanal za Staroptic",
+        "title": "MyStar - Novi e-commerce kanal za Staroptic",
         "intro": "MyStar sam razvila od početka kao Staropticov dvojezični Shopify prodajni kanal za naočare i online poručivanje dioptrijskih modela.",
         "metaAria": "Podaci o projektu",
         "meta": [
@@ -1083,7 +1083,7 @@
           {
             "id": "demo-testimonial-02",
             "isDemo": true,
-            "quote": "Najviše nam je značio nivo odgovornosti koji je preuzela. Kristina nije samo implementirala ono što smo tražili — na vreme je uočavala potencijalne probleme, predlagala bolja rešenja i vodila računa da krajnji rezultat funkcioniše kao celina.",
+            "quote": "Najviše nam je značio nivo odgovornosti koji je preuzela. Kristina nije samo implementirala ono što smo tražili - na vreme je uočavala potencijalne probleme, predlagala bolja rešenja i vodila računa da krajnji rezultat funkcioniše kao celina.",
             "name": "Primer klijenta",
             "role": "Vođa razvoja proizvoda",
             "company": "Demo digitalni proizvod",
@@ -1217,7 +1217,7 @@
       "about": {
         "label": "Zašto sarađivati sa mnom",
         "title": "Promišljene odluke, precizna realizacija i jasna odgovornost.",
-        "intro": "Podjednako sam uključena u razumevanje poslovnog cilja i samu realizaciju—na početku postavljam prava pitanja, prepoznajem UX i tehničke rizike i svaku odluku sprovodim do rešenja spremnog za lansiranje.",
+        "intro": "Podjednako sam uključena u razumevanje poslovnog cilja i samu realizaciju-na početku postavljam prava pitanja, prepoznajem UX i tehničke rizike i svaku odluku sprovodim do rešenja spremnog za lansiranje.",
         "portraitAlt": "Portret Kristine Glišović",
         "differentiators": [
           {
@@ -1296,8 +1296,8 @@
           "intro": "Kontinuirani akademski razvoj od praktične osnove u informacionim tehnologijama do master studija, praćen izuzetnim uspehom i zvaničnim priznanjima u dva odvojena akademska ciklusa.",
           "its": {
             "stage": "Master studije",
-            "institution": "ITS — Visoka škola strukovnih studija za informacione tehnologije",
-            "degree": "Master strukovne studije — Informacione tehnologije",
+            "institution": "ITS - Visoka škola strukovnih studija za informacione tehnologije",
+            "degree": "Master strukovne studije - Informacione tehnologije",
             "start": "Oktobar 2022",
             "end": "Septembar 2024",
             "gpaLabel": "Prosek na studijama"
@@ -1309,7 +1309,7 @@
               "items": [
                 {
                   "id": "item-1",
-                  "label": "Student generacije — ITS"
+                  "label": "Student generacije - ITS"
                 },
                 {
                   "id": "item-2",
@@ -1329,7 +1329,7 @@
               "items": [
                 {
                   "id": "item-1",
-                  "label": "Student generacije — program Master informacione tehnologije"
+                  "label": "Student generacije - program Master informacione tehnologije"
                 },
                 {
                   "id": "item-2",
@@ -1343,7 +1343,7 @@
           "ict": {
             "stage": "Akademska osnova",
             "institution": "Visoka ICT škola strukovnih studija",
-            "degree": "Strukovni inženjer elektrotehnike i računarstva — Informacione tehnologije",
+            "degree": "Strukovni inženjer elektrotehnike i računarstva - Informacione tehnologije",
             "start": "Oktobar 2019",
             "end": "Septembar 2022",
             "description": "Osnovne strukovne studije postavile su praktičan temelj u informacionim tehnologijama, web i internet tehnologijama i razvoju softvera, pre nastavka obrazovanja na master studijama ITS-a."
@@ -1381,7 +1381,7 @@
       "guarantee": {
         "label": "Lični standard",
         "title": "Za sve što obećam, ličnim imenom stojim iza toga.",
-        "primary": "Lično preuzimam odgovornost za kvalitet svakog projekta koji isporučim—od odluka koje donosimo tokom saradnje do detalja koji oblikuju završni rezultat. Rešenje treba da bude promišljeno, pouzdano i spremno za stvarnu upotrebu.",
+        "primary": "Lično preuzimam odgovornost za kvalitet svakog projekta koji isporučim-od odluka koje donosimo tokom saradnje do detalja koji oblikuju završni rezultat. Rešenje treba da bude promišljeno, pouzdano i spremno za stvarnu upotrebu.",
         "followup": "Ako nešto zahteva doradu, dorađujem ga.",
         "role": "Web Developer · Shopify specijalista",
         "signatureNote": "Moj lični potpis na kvalitet, jasnu komunikaciju i odgovornu isporuku."
@@ -1431,8 +1431,8 @@
               "placeholder": "Izaberite okvirni rok",
               "options": [
                 "Što pre",
-                "U narednih 1–2 meseca",
-                "U narednih 3–6 meseci",
+                "U narednih 1-2 meseca",
+                "U narednih 3-6 meseci",
                 "Fleksibilno / još nije definisano"
               ]
             },
@@ -1441,8 +1441,8 @@
               "placeholder": "Izaberite raspon",
               "options": [
                 "Do €2.500",
-                "€2.500–€5.000",
-                "€5.000–€10.000",
+                "€2.500-€5.000",
+                "€5.000-€10.000",
                 "€10.000+",
                 "Još nije definisano"
               ]

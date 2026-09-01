@@ -9749,7 +9749,7 @@ body {
 
 .case-study-primary-visual-feature .case-study-laptop-shell {
     width: calc(740px * .7);
-    height: calc(434px * .7);
+    height: calc(395px * .7);
 }
 
 .case-study-primary-visual-feature .case-study-laptop-device {
@@ -9758,6 +9758,148 @@ body {
 
 .case-study-primary-visual-feature .case-study-phone-shell {
     right: 5%;
+}
+
+/* Premium device apertures follow the exact approved screenshot ratios. */
+.case-study-laptop-device.device-macbook-pro {
+    height: 395px;
+}
+
+.case-study-laptop-device.device-macbook-pro .device-frame {
+    width: 620px;
+    height: 375px;
+    padding: 9px 10px 24px;
+    overflow: visible;
+    border: 1px solid rgba(143, 148, 160, .42);
+    border-radius: 18px;
+    background: linear-gradient(145deg, #30343b 0%, #111318 18%, #090a0e 78%, #242830 100%);
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, .08),
+        inset 0 1px 0 rgba(255, 255, 255, .16),
+        0 26px 52px rgba(2, 6, 23, .32);
+}
+
+.case-study-laptop-device.device-macbook-pro .device-frame::after {
+    left: 2px;
+    bottom: 2px;
+    width: 614px;
+    height: 22px;
+    border-radius: 0 0 16px 16px;
+    background: linear-gradient(180deg, rgba(40, 44, 52, .96), rgba(10, 11, 15, .98));
+}
+
+.case-study-laptop-device.device-macbook-pro .device-screen {
+    width: 600px;
+    height: 342px;
+    overflow: hidden;
+    border: 1px solid rgba(4, 5, 8, .92);
+    border-radius: 10px 10px 2px 2px;
+    background: #f7f7f8;
+    object-fit: contain;
+    object-position: center;
+    clip-path: inset(0 round 10px 10px 2px 2px);
+    filter: saturate(.98) contrast(1.015);
+}
+
+.case-study-laptop-device.device-macbook-pro .device-header {
+    top: 10px;
+    height: 9px;
+    background: rgba(4, 5, 7, .96);
+}
+
+.case-study-laptop-device.device-macbook-pro .device-power {
+    height: 20px;
+    margin-top: -6px;
+    border-color: #30343a;
+    background: linear-gradient(180deg, #747982 0%, #454951 38%, #25282e 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .22),
+        inset 0 -3px 8px rgba(0, 0, 0, .38),
+        0 10px 18px rgba(2, 6, 23, .24);
+}
+
+.case-study-laptop-device.device-macbook-pro .device-power::after {
+    background: linear-gradient(180deg, #92969d, #555961);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, .28);
+}
+
+.case-study-phone-shell {
+    height: calc(798px * .29);
+}
+
+.case-study-phone-device.device-iphone-14-pro {
+    height: 798px;
+}
+
+.case-study-phone-device.device-iphone-14-pro .device-frame {
+    width: 428px;
+    height: 798px;
+    padding: 19px;
+    overflow: visible;
+    border: 1px solid rgba(135, 140, 150, .72);
+    border-radius: 66px;
+    background: linear-gradient(145deg, #5d626b 0%, #17191e 9%, #07080b 88%, #4a4f58 100%);
+    box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, .08),
+        inset 0 0 0 7px rgba(70, 74, 82, .88),
+        inset 0 1px 2px rgba(255, 255, 255, .35),
+        0 28px 54px rgba(2, 6, 23, .38);
+}
+
+.case-study-phone-device.device-iphone-14-pro .device-screen {
+    width: 390px;
+    height: 760px;
+    overflow: hidden;
+    border: 1px solid rgba(4, 5, 8, .95);
+    border-radius: 48px;
+    background: #f7f7f8;
+    object-fit: contain;
+    object-position: center;
+    clip-path: inset(0 round 48px);
+    filter: saturate(.98) contrast(1.015);
+}
+
+.case-study-phone-device.device-iphone-14-pro .device-header {
+    top: 28px;
+    background: rgba(3, 4, 6, .98);
+}
+
+.case-study-phone-device.device-iphone-14-pro .device-btns,
+.case-study-phone-device.device-iphone-14-pro .device-btns::after,
+.case-study-phone-device.device-iphone-14-pro .device-btns::before,
+.case-study-phone-device.device-iphone-14-pro .device-power {
+    background: #555a63;
+}
+
+.case-study-phone-shell {
+    filter: drop-shadow(0 24px 32px rgba(2, 6, 23, .34));
+}
+
+.case-study-prescription-visual {
+    isolation: isolate;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, .045), transparent 42%),
+        #11141b;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .045);
+}
+
+.case-study-prescription-visual::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow:
+        inset 1px 0 0 rgba(255, 255, 255, .055),
+        inset 0 1px 0 rgba(255, 255, 255, .045);
+    pointer-events: none;
+}
+
+.case-study-prescription-visual img {
+    background: #f7f7f8;
+    object-fit: contain;
+    object-position: center;
+    filter: saturate(.98) contrast(1.01);
 }
 
 .case-study-snapshot {
@@ -10297,7 +10439,7 @@ html[lang='sr-Latn'] .nav-links a {
 @media (max-width: 520px) {
     .case-study-primary-visual-feature,
     .case-study-primary-visual-feature .case-study-device-stage {
-        min-height: 156px;
+        min-height: 0;
     }
 
     .case-study-primary-visual-feature {
@@ -10305,16 +10447,43 @@ html[lang='sr-Latn'] .nav-links a {
     }
 
     .case-study-primary-visual-feature .case-study-device-stage {
-        padding: .5rem;
+        padding: .6rem;
     }
 
     .case-study-primary-visual-feature .case-study-laptop-shell {
         width: 100%;
-        height: 140px;
+        height: auto;
+        aspect-ratio: 1440 / 820;
     }
 
-    .case-study-primary-visual-feature .case-study-laptop-device {
+    .case-study-primary-visual-feature .case-study-laptop-device.device-macbook-pro {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1440 / 820;
         transform: none;
+    }
+
+    .case-study-primary-visual-feature .case-study-laptop-device.device-macbook-pro .device-frame {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1440 / 820;
+        padding: 5px;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .case-study-primary-visual-feature .case-study-laptop-device.device-macbook-pro .device-frame::after,
+    .case-study-primary-visual-feature .case-study-laptop-device.device-macbook-pro .device-header {
+        display: none;
+    }
+
+    .case-study-primary-visual-feature .case-study-laptop-device.device-macbook-pro .device-screen {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: .75rem;
+        object-fit: contain;
+        clip-path: inset(0 round .75rem);
     }
 
     .case-study-snapshot {
@@ -10402,6 +10571,30 @@ html[lang='sr-Latn'] .nav-links a {
     .case-study-outcomes-heading h3.case-study-kicker {
         margin-top: 0;
         font-size: .6rem;
+    }
+}
+
+/* Keep the complete prescription UI legible once the feature stacks vertically. */
+@media (max-width: 820px) {
+    .case-study-prescription {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-prescription-visual {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 1360 / 900;
+        border-top: 1px solid var(--border);
+        border-left: 0;
+    }
+
+    .case-study-prescription-visual img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        aspect-ratio: 1360 / 900;
+        object-fit: contain;
+        object-position: center;
     }
 }
 
