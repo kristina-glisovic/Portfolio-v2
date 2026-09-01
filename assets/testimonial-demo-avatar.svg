@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Demo testimonial avatar">
+  <defs>
+    <linearGradient id="surface" x1="18" y1="12" x2="108" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20243a"/>
+      <stop offset="0.55" stop-color="#121629"/>
+      <stop offset="1" stop-color="#09141d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="28" y1="26" x2="101" y2="103" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="translate(38 31) rotate(48) scale(82)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.17"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="128" height="128" rx="34" fill="url(#surface)"/>
+  <rect x="1" y="1" width="126" height="126" rx="33" fill="none" stroke="url(#accent)" stroke-opacity="0.54" stroke-width="2"/>
+  <circle cx="91" cy="34" r="38" fill="#22d3ee" fill-opacity="0.08"/>
+  <circle cx="34" cy="99" r="45" fill="#8b5cf6" fill-opacity="0.12"/>
+  <path d="M27 84C43 61 55 51 76 35M45 99C64 70 79 57 101 43" fill="none" stroke="url(#accent)" stroke-linecap="round" stroke-opacity="0.34" stroke-width="2"/>
+  <rect width="128" height="128" rx="34" fill="url(#light)"/>
+  <text x="64" y="73" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="31" font-weight="700" letter-spacing="1.5" text-anchor="middle">SC</text>
+</svg>

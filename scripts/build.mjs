@@ -325,7 +325,13 @@ function renderOgAlternateLocales(locale) {
     .join('\n  ');
 }
 
-function renderTestimonials(localeContent) {
+function testimonialInitials(name) {
+  const parts = String(name).trim().split(/\s+/).filter(Boolean);
+  const selected = parts.length > 1 ? [parts[0], parts.at(-1)] : parts;
+  return selected.map(part => Array.from(part)[0] || '').join('').toLocaleUpperCase().slice(0, 2);
+}
+
+function renderTestimonials(localeContent, locale) {
   const testimonials = localeContent.testimonials;
   const entries = testimonials?.entries;
 
@@ -349,6 +355,11 @@ function renderTestimonials(localeContent) {
         fail(`Invalid optional testimonial ${field} at testimonials.entries.${index}`);
       }
     });
+    if (entry.image !== undefined) {
+      if (typeof entry.image !== 'string' || !/^assets\/[a-z0-9][a-z0-9._/-]*$/i.test(entry.image) || entry.image.includes('..')) {
+        fail(`Invalid optional testimonial image at testimonials.entries.${index}`);
+      }
+    }
     if (entry.isDemo !== undefined && typeof entry.isDemo !== 'boolean') {
       fail(`Invalid testimonial isDemo marker at testimonials.entries.${index}`);
     }
@@ -358,13 +369,19 @@ function renderTestimonials(localeContent) {
     const personDetails = [entry.role, entry.company].filter(Boolean).map(escapeHtml).join(' · ');
     const detailMarkup = personDetails ? `\n                <p class="client-feedback-person-role">${personDetails}</p>` : '';
     const serviceMarkup = entry.service ? `\n              <p class="client-feedback-service">${escapeHtml(entry.service)}</p>` : '';
+    const avatarMarkup = entry.image
+      ? `<img class="client-feedback-avatar" src="${escapeHtml(`${outputConfig[locale].rootPrefix}${entry.image}`)}" alt="" width="64" height="64" loading="lazy" decoding="async" aria-hidden="true" />`
+      : `<span class="client-feedback-avatar client-feedback-avatar-fallback" aria-hidden="true">${escapeHtml(testimonialInitials(entry.name))}</span>`;
     return `          <article class="client-feedback-slide" data-testimonial-slide data-testimonial-id="${escapeHtml(entry.id)}"${index ? ' hidden' : ''}>
             <blockquote class="client-feedback-quote">
               <p>${escapeHtml(entry.quote)}</p>
             </blockquote>
             <footer class="client-feedback-person">
-              <div>
-                <p class="client-feedback-person-name">${escapeHtml(entry.name)}</p>${detailMarkup}
+              <div class="client-feedback-person-identity">
+                ${avatarMarkup}
+                <div class="client-feedback-person-copy">
+                  <p class="client-feedback-person-name">${escapeHtml(entry.name)}</p>${detailMarkup}
+                </div>
               </div>${serviceMarkup}
             </footer>
           </article>`;
@@ -415,7 +432,7 @@ function render(template, locale, content) {
   html = html.replace('{{ogAlternateLocales}}', renderOgAlternateLocales(locale));
   html = html.replace('{{localeMenu:desktop}}', renderLocaleMenu(locale, context, 'desktop'));
   html = html.replace('{{localeMenu:mobile}}', renderLocaleMenu(locale, context, 'mobile'));
-  html = html.replace('{{testimonialsSection}}', renderTestimonials(localeContent));
+  html = html.replace('{{testimonialsSection}}', renderTestimonials(localeContent, locale));
   html = html.replaceAll('{{contactFormEndpoint}}', escapeHtml(getContactFormEndpoint(content)));
   html = html.replace(/<([a-z][\w-]*)([^>]*?)\sdata-content="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/gi,
     (_, tag, before, key, after) => `<${tag}${before}${after}>${escapeHtml(getPath(context, key))}</${tag}>`);

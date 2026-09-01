@@ -1116,10 +1116,16 @@ ul, ol { list-style: none; }
     top: 0; left: 0; right: 0;
     z-index: 999;
     padding: 1rem 0 0;
-    transition: padding .4s var(--ease);
+    will-change: transform;
+    transition: padding .4s var(--ease), transform .42s cubic-bezier(.22,1,.36,1), opacity .28s var(--ease);
 }
 .nav.scrolled {
     padding: .7rem 0 0;
+}
+.nav.is-hidden {
+    transform: translate3d(0, calc(-100% - 1.25rem), 0);
+    opacity: 0;
+    pointer-events: none;
 }
 .nav-inner {
     display: flex;
@@ -8915,6 +8921,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
     .skip-link,
+    .nav,
     .nav-mobile,
     .nav-mobile-panel {
         transition: none !important;
@@ -9024,6 +9031,45 @@ body {
     gap: 1.15rem;
     padding-left: 1.4rem;
     border-left: 1px solid var(--border);
+}
+
+.client-feedback-person-identity {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: .9rem;
+}
+
+.client-feedback-person-copy {
+    min-width: 0;
+}
+
+.client-feedback-avatar {
+    width: 58px;
+    height: 58px;
+    display: block;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--a1) 30%, var(--border));
+    border-radius: 1rem;
+    background: var(--bg-2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 12px 28px rgba(2,6,23,.2);
+    object-fit: cover;
+    object-position: center;
+}
+
+.client-feedback-avatar-fallback {
+    display: inline-grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 28% 22%, rgba(139,92,246,.2), transparent 52%),
+        linear-gradient(145deg, rgba(99,102,241,.14), rgba(34,211,238,.07)),
+        var(--bg-2);
+    color: color-mix(in srgb, var(--t0) 88%, var(--a3));
+    font-family: var(--ff-d);
+    font-size: .78rem;
+    font-weight: 750;
+    letter-spacing: .08em;
 }
 
 .client-feedback-person-name,
@@ -9153,6 +9199,12 @@ body {
         padding-left: 0;
         border-top: 1px solid var(--border);
         border-left: 0;
+    }
+
+    .client-feedback-avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: .9rem;
     }
 
     .client-feedback-controls {

@@ -375,6 +375,7 @@
           {
             "id": "demo-testimonial-01",
             "isDemo": true,
+            "image": "assets/testimonial-demo-avatar.svg",
             "quote": "Kristina understood the project quickly and translated our requirements into a solution that felt both polished and technically solid. Communication was clear throughout, and every detail was handled with care.",
             "name": "Sample Client",
             "role": "E-commerce Manager",
@@ -786,7 +787,7 @@
     "sr": {
       "lang": "sr-Latn",
       "meta": {
-        "title": "Kristina Glišović | Web developer i Shopify specijalista",
+        "title": "Kristina Glišović | Web Developer & Shopify Specialist",
         "description": "Web developer za custom sajtove, web aplikacije, e-commerce rešenja i Shopify prodavnice, uz fokus na UX, performanse i tehnički kvalitet.",
         "ogLocale": "sr_RS",
         "ogImageAlt": "Kristina Glišović - Shopify & Web Solutions Developer",
@@ -838,7 +839,7 @@
       "hero": {
         "badge": "Dostupna za nove projekte",
         "title": {
-          "role": "Web Developer · Shopify specijalista",
+          "role": "Web Developer · Shopify Specialist",
           "headlineLine1": "Razvijam sajtove visokih performansi, web aplikacije i e-commerce rešenja",
           "headlineLine2Prefix": "gde je ",
           "headlineLine2Emphasis": "svaki detalj važan."
@@ -1074,6 +1075,7 @@
           {
             "id": "demo-testimonial-01",
             "isDemo": true,
+            "image": "assets/testimonial-demo-avatar.svg",
             "quote": "Kristina je veoma brzo razumela projekat i naše zahteve pretvorila u rešenje koje je istovremeno delovalo profesionalno i bilo tehnički veoma dobro izvedeno. Komunikacija je bila jasna tokom cele saradnje, a svakom detalju pristupila je pažljivo.",
             "name": "Primer klijenta",
             "role": "Menadžer e-commerce prodaje",
@@ -1383,7 +1385,7 @@
         "title": "Za sve što obećam, ličnim imenom stojim iza toga.",
         "primary": "Lično preuzimam odgovornost za kvalitet svakog projekta koji isporučim-od odluka koje donosimo tokom saradnje do detalja koji oblikuju završni rezultat. Rešenje treba da bude promišljeno, pouzdano i spremno za stvarnu upotrebu.",
         "followup": "Ako nešto zahteva doradu, dorađujem ga.",
-        "role": "Web Developer · Shopify specijalista",
+        "role": "Web Developer · Shopify Specialist",
         "signatureNote": "Moj lični potpis na kvalitet, jasnu komunikaciju i odgovornu isporuku."
       },
       "contact": {

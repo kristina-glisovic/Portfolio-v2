@@ -60,6 +60,80 @@
     const navBackgroundTargets = [navLogo, navLinksBar, navCta, navControls, mainContent, footer, skipLink].filter(Boolean);
     const languageMenus = Array.from(document.querySelectorAll('[data-language-menu]'));
     let navFitFrame = 0;
+    const navTopRevealThreshold = 56;
+    const navHideStartThreshold = 112;
+    const navDownTravelThreshold = 18;
+    const navUpTravelThreshold = 10;
+    const navJitterThreshold = 3;
+    let navIsHidden = false;
+    let navLastScrollY = Math.max(window.scrollY, 0);
+    let navScrollDirection = 0;
+    let navDirectionTravel = 0;
+    let navVisibilityFrame = 0;
+    let navVisibilityLockedUntil = 0;
+    let navKeyboardMode = false;
+
+    function navHasActiveInteraction() {
+      const activeElement = document.activeElement;
+      return ham.classList.contains('open')
+        || languageMenus.some(menu => menu.classList.contains('is-open'))
+        || (navKeyboardMode && activeElement instanceof Element && (nav.contains(activeElement) || mob.contains(activeElement)));
+    }
+
+    function setNavHidden(isHidden) {
+      if (navIsHidden === isHidden) return;
+      navIsHidden = isHidden;
+      nav.classList.toggle('is-hidden', isHidden);
+    }
+
+    function revealNavForInteraction(lockDuration = 0) {
+      setNavHidden(false);
+      navLastScrollY = Math.max(window.scrollY, 0);
+      navScrollDirection = 0;
+      navDirectionTravel = 0;
+      if (lockDuration > 0) navVisibilityLockedUntil = performance.now() + lockDuration;
+    }
+
+    function updateNavVisibility() {
+      const currentScrollY = Math.max(window.scrollY, 0);
+      const delta = currentScrollY - navLastScrollY;
+      navLastScrollY = currentScrollY;
+
+      if (currentScrollY <= navTopRevealThreshold || navHasActiveInteraction() || performance.now() < navVisibilityLockedUntil) {
+        setNavHidden(false);
+        navScrollDirection = 0;
+        navDirectionTravel = 0;
+        navVisibilityFrame = 0;
+        return;
+      }
+
+      if (Math.abs(delta) < navJitterThreshold) {
+        navVisibilityFrame = 0;
+        return;
+      }
+
+      const direction = delta > 0 ? 1 : -1;
+      if (direction !== navScrollDirection) {
+        navScrollDirection = direction;
+        navDirectionTravel = Math.abs(delta);
+      } else {
+        navDirectionTravel += Math.abs(delta);
+      }
+
+      if (direction > 0 && currentScrollY > navHideStartThreshold && navDirectionTravel >= navDownTravelThreshold) {
+        setNavHidden(true);
+        navDirectionTravel = 0;
+      } else if (direction < 0 && navDirectionTravel >= navUpTravelThreshold) {
+        setNavHidden(false);
+        navDirectionTravel = 0;
+      }
+
+      navVisibilityFrame = 0;
+    }
+
+    function requestNavVisibilityUpdate() {
+      if (!navVisibilityFrame) navVisibilityFrame = requestAnimationFrame(updateNavVisibility);
+    }
 
     function getLanguageMenuParts(menu) {
       return {
@@ -87,6 +161,7 @@
     function openLanguageMenu(menu, focusTarget = 'current') {
       const { trigger, popover, options } = getLanguageMenuParts(menu);
       if (!trigger || !popover || !options.length) return;
+      revealNavForInteraction();
       closeLanguageMenus(menu);
       menu.classList.add('is-open');
       trigger.setAttribute('aria-expanded', 'true');
@@ -150,6 +225,14 @@
       if (!(event.target instanceof Element) || !event.target.closest('[data-language-menu]')) closeLanguageMenus();
     });
 
+    document.addEventListener('keydown', () => {
+      navKeyboardMode = true;
+    }, true);
+
+    document.addEventListener('pointerdown', () => {
+      navKeyboardMode = false;
+    }, { capture: true, passive: true });
+
     function syncNavSurface() {
       nav.classList.toggle('scrolled', window.scrollY > 24 || ham.classList.contains('open'));
     }
@@ -207,6 +290,7 @@
 
     function setNavOpen(isOpen, { restoreFocus = !isOpen } = {}) {
       closeLanguageMenus();
+      if (isOpen) revealNavForInteraction();
       ham.classList.toggle('open', isOpen);
       ham.setAttribute('aria-expanded', String(isOpen));
       mob.classList.toggle('open', isOpen);
@@ -232,11 +316,15 @@
       }
     }
 
-    window.addEventListener('scroll', syncNavSurface, { passive: true });
+    window.addEventListener('scroll', () => {
+      syncNavSurface();
+      requestNavVisibilityUpdate();
+    }, { passive: true });
     window.addEventListener('resize', () => {
       requestDesktopNavFit();
+      revealNavForInteraction();
 
-      if (window.innerWidth > 860 && ham.classList.contains('open')) {
+      if (window.innerWidth > 1180 && ham.classList.contains('open')) {
         setNavOpen(false, { restoreFocus: false });
       }
     });
@@ -254,6 +342,19 @@
     mob.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         setNavOpen(false);
+      });
+    });
+
+    document.addEventListener('focusin', event => {
+      if (event.target instanceof Element && (nav.contains(event.target) || mob.contains(event.target))) {
+        revealNavForInteraction();
+      }
+    });
+
+    document.querySelectorAll('.nav a[href^="#"], .nav-mobile a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        revealNavForInteraction(700);
+        requestActiveNavLinkUpdate();
       });
     });
 
@@ -293,6 +394,7 @@
 
     setNavOpen(false, { restoreFocus: false });
     syncNavSurface();
+    requestNavVisibilityUpdate();
     requestDesktopNavFit();
 
     if (navInner) {
@@ -657,7 +759,11 @@
     });
 
     /* ── Active nav link ─────────────────────────────────────────────── */
-    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const navSectionIds = [...new Set(navAllLinks
+      .map(link => link.getAttribute('href'))
+      .filter(href => href?.startsWith('#'))
+      .map(href => href.slice(1)))];
+    const sections = navSectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
     function setActiveNavLink(id) {
       navAllLinks.forEach(link => {
@@ -683,6 +789,11 @@
           activeSectionId = section.id;
         }
       });
+
+      const maximumScrollY = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0);
+      if (window.scrollY >= maximumScrollY - 2 && sections.length) {
+        activeSectionId = sections.at(-1).id;
+      }
 
       setActiveNavLink(activeSectionId);
       navSectionFrame = 0;
