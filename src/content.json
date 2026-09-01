@@ -392,90 +392,81 @@
           }
         ]
       },
-      "services": {
-        "label": "Services",
-        "title": "What do you need to build—or improve?",
-        "intro": "From focused websites to complex platforms and online stores, I shape the solution around the problem, the people using it and the way your business works.",
-        "needsLabel": "You may need this if:",
-        "items": [
+    "services": {
+      "label": "Services",
+      "title": "What do you need to build—or improve?",
+      "intro": "From focused websites to complex platforms and online stores, I shape the solution around the problem, the people using it and the way your business works.",
+      "groupLabels": {
+        "bestFor": "Best for",
+        "whatYouGet": "What you get"
+      },
+      "items": [
           {
             "id": "custom-websites",
             "eyebrow": "01 / Websites",
             "title": "Custom Websites & Web Solutions",
-            "description": "Need a website that does more than simply exist online?",
-            "points": [
-              {
-                "id": "point-1",
-                "label": "A completely new business or marketing website"
-              },
-              {
-                "id": "point-2",
-                "label": "An outdated website redesigned around better UX"
-              },
-              {
-                "id": "point-3",
-                "label": "An existing design implemented for production"
-              },
-              {
-                "id": "point-4",
-                "label": "Custom functionality beyond a standard template"
-              }
-            ],
-            "solution": "I design and develop new builds, redesigns and custom functionality around the actual business requirement."
+          "description": "Custom websites built around the way your business actually needs to work.",
+          "points": [
+            {
+              "id": "point-1",
+              "label": "New websites or strategic redesigns"
+            },
+            {
+              "id": "point-2",
+              "label": "Production-ready implementation"
+            },
+            {
+              "id": "point-3",
+              "label": "Custom functionality beyond standard templates"
+            }
+          ],
+          "solution": "A polished, scalable website shaped around your real business requirements."
           },
           {
             "id": "web-applications",
             "eyebrow": "02 / Web Products",
             "title": "Web Applications & Custom Platforms",
-            "description": "Need a digital product people can actively use—not just browse?",
+          "description": "Interactive digital products built around users, data and workflows.",
             "points": [
               {
                 "id": "point-1",
-                "label": "Internal tools, dashboards or operational interfaces"
+              "label": "Internal tools and operational dashboards"
               },
               {
                 "id": "point-2",
-                "label": "Customer portals and data-driven experiences"
+              "label": "Customer portals and data-driven interfaces"
               },
               {
                 "id": "point-3",
-                "label": "Custom business workflows and application functionality"
-              },
-              {
-                "id": "point-4",
-                "label": "API-connected products and custom platforms"
-              }
-            ],
-            "solution": "I turn business requirements and workflows into clear, maintainable web applications and platforms."
+              "label": "Custom workflows, APIs and platforms"
+            }
+          ],
+          "solution": "A clear, maintainable application shaped around the workflow it needs to support."
           },
           {
             "id": "shopify",
             "eyebrow": "03 / E-commerce",
             "title": "Shopify & E-commerce Development",
-            "description": "Need to launch, rebuild or improve an online store?",
+          "description": "Online stores designed around customer experience and daily operations.",
             "points": [
               {
                 "id": "point-1",
-                "label": "New Shopify builds, migrations and restructuring"
+              "label": "Shopify builds, migrations and restructuring"
               },
               {
                 "id": "point-2",
-                "label": "Strategic redesigns and custom theme development"
+              "label": "UX, custom themes and integrations"
               },
               {
                 "id": "point-3",
-                "label": "Purchase-flow UX, localization and integrations"
-              },
-              {
-                "id": "point-4",
-                "label": "Performance and technical SEO improvements"
-              }
-            ],
-            "solution": "I build and improve e-commerce experiences with the customer journey, daily operations and technical quality considered together."
+              "label": "Performance, localization and technical SEO"
+            }
+          ],
+          "solution": "A scalable e-commerce experience built to support selling and managing the store."
           }
         ],
         "expertise": {
-          "label": "Expertise applied across every service",
+        "label": "Applied across every project",
           "ariaLabel": "Supporting expertise",
           "items": [
             {
@@ -1082,90 +1073,81 @@
           }
         ]
       },
-      "services": {
-        "label": "Usluge",
-        "title": "Šta želite da izgradite ili unapredite?",
-        "intro": "Od jasnih poslovnih sajtova do kompleksnih platformi i online prodavnica, rešenje oblikujem prema konkretnom problemu, korisnicima i načinu na koji vaše poslovanje funkcioniše.",
-        "needsLabel": "Ovo je za vas ako vam treba:",
-        "items": [
+    "services": {
+      "label": "Usluge",
+      "title": "Šta želite da izgradite ili unapredite?",
+      "intro": "Od jasnih poslovnih sajtova do kompleksnih platformi i online prodavnica, rešenje oblikujem prema konkretnom problemu, korisnicima i načinu na koji vaše poslovanje funkcioniše.",
+      "groupLabels": {
+        "bestFor": "Najbolje za",
+        "whatYouGet": "Šta dobijate"
+      },
+      "items": [
           {
             "id": "custom-websites",
             "eyebrow": "01 / Sajtovi",
             "title": "Sajtovi i web rešenja po meri",
-            "description": "Potreban vam je sajt koji radi više od samog prisustva na internetu?",
-            "points": [
-              {
-                "id": "point-1",
-                "label": "Potpuno nov poslovni ili marketinški sajt"
-              },
-              {
-                "id": "point-2",
-                "label": "Redizajn zastarelog sajta i bolje korisničko iskustvo"
-              },
-              {
-                "id": "point-3",
-                "label": "Realizacija postojećeg dizajna spremna za produkciju"
-              },
-              {
-                "id": "point-4",
-                "label": "Funkcionalnost koju standardni šablon ne može da podrži"
-              }
-            ],
-            "solution": "Nove sajtove, redizajn i funkcionalnosti po meri oblikujem i razvijam oko stvarnog poslovnog zahteva."
+          "description": "Sajtovi po meri načina na koji vaše poslovanje zaista treba da funkcioniše.",
+          "points": [
+            {
+              "id": "point-1",
+              "label": "Novi sajtovi ili strateški redizajn"
+            },
+            {
+              "id": "point-2",
+              "label": "Realizacija spremna za produkciju"
+            },
+            {
+              "id": "point-3",
+              "label": "Funkcionalnosti po meri izvan standardnih šablona"
+            }
+          ],
+          "solution": "Promišljen, skalabilan sajt oblikovan prema stvarnim poslovnim zahtevima."
           },
           {
             "id": "web-applications",
             "eyebrow": "02 / Web proizvodi",
             "title": "Web aplikacije i platforme po meri",
-            "description": "Potreban vam je digitalni proizvod koji korisnici aktivno koriste, a ne samo pregledaju?",
+          "description": "Interaktivni digitalni proizvodi oblikovani prema korisnicima, podacima i procesima.",
             "points": [
               {
                 "id": "point-1",
-                "label": "Interni alati, dashboardi i operativni interfejsi"
+              "label": "Interni alati i operativni dashboardi"
               },
               {
                 "id": "point-2",
-                "label": "Korisnički portali i interfejsi zasnovani na podacima"
+              "label": "Korisnički portali i interfejsi zasnovani na podacima"
               },
               {
                 "id": "point-3",
-                "label": "Poslovni tokovi i aplikativne funkcionalnosti po meri"
-              },
-              {
-                "id": "point-4",
-                "label": "Proizvodi povezani sa API servisima i prilagođene platforme"
-              }
-            ],
-            "solution": "Poslovne zahteve i procese pretvaram u jasne, održive web aplikacije i platforme."
+              "label": "Tokovi rada, API integracije i platforme po meri"
+            }
+          ],
+          "solution": "Jasna i održiva aplikacija prilagođena procesu koji treba da podrži."
           },
           {
             "id": "shopify",
             "eyebrow": "03 / E-commerce",
             "title": "Razvoj Shopify prodavnica i e-commerce rešenja",
-            "description": "Potrebno vam je lansiranje, redizajn ili unapređenje online prodavnice?",
+          "description": "Online prodavnice oblikovane prema iskustvu kupaca i svakodnevnom poslovanju.",
             "points": [
               {
                 "id": "point-1",
-                "label": "Nova Shopify prodavnica, migracija ili reorganizacija"
+              "label": "Shopify izrada, migracije i reorganizacija"
               },
               {
                 "id": "point-2",
-                "label": "Strateški redizajn i razvoj teme po meri"
+              "label": "UX, teme po meri i integracije"
               },
               {
                 "id": "point-3",
-                "label": "UX kupovnog toka, lokalizacija i integracije"
-              },
-              {
-                "id": "point-4",
-                "label": "Unapređenje performansi i tehničkog SEO-a"
-              }
-            ],
-            "solution": "E-commerce iskustvo razvijam tako da kupovni tok, svakodnevno upravljanje i tehnički kvalitet funkcionišu kao celina."
+              "label": "Performanse, lokalizacija i tehnički SEO"
+            }
+          ],
+          "solution": "Skalabilno e-commerce rešenje koje podržava prodaju i upravljanje prodavnicom."
           }
         ],
         "expertise": {
-          "label": "Ekspertiza koja podržava svaku uslugu",
+        "label": "Primenjeno u svakom projektu",
           "ariaLabel": "Dodatna ekspertiza",
           "items": [
             {
