@@ -366,12 +366,35 @@
         "cta": "Visit MyStar"
       },
       "testimonials": {
-        "label": "Client Notes",
-        "title": "What it’s like to work together.",
+        "label": "Client Feedback",
+        "title": "What it’s like to work with me.",
+        "intro": "Client feedback offers a clearer picture of how I work in practice - from communication and process to the final result.",
         "previousLabel": "Previous testimonial",
         "nextLabel": "Next testimonial",
         "statusTemplate": "Client feedback {current} of {total}",
+        "verifiedLabel": "Verified Client",
         "entries": [
+          {
+            "id": "ljiljana-cirovic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "We have been working with Kristina for three years on the development and continuous improvement of our My Star Optic website. During that time, she has been much more than the person responsible for the technical side of the site. She genuinely understood our business, our customers' needs and the direction in which we wanted to develop the brand.\n\nWhat I especially value is her ability to listen to an idea, consider it from both a business and user perspective, and then find a solution that is functional, visually aligned with the brand and easy to use. She is reliable, highly attentive to detail and always willing to research and solve any challenge that comes up during the work.\n\nThanks to her work, our website has continued to evolve alongside our business. I would recommend Kristina to anyone who is not simply looking for someone to \"build a website\", but for a collaborator who will understand their idea and help turn it into a high-quality digital experience.",
+            "name": "Ljiljana Ćirović",
+            "role": "Owner & Director",
+            "company": "Star Optic",
+            "service": "Shopify & E-commerce Development"
+          },
+          {
+            "id": "vladan-vukanovic",
+            "isDemo": false,
+            "verified": true,
+            "image": "assets/testimonial-vladan-vukanovic.webp",
+            "quote": "I worked with Kristina on both of our websites, SOHO and Blossom, where she was responsible for both the design and the complete implementation.\n\nWhat I especially appreciated about working with her was that she is hardworking, fast and reliable, but above all always willing to help and find a solution. Whenever I had an additional request or something needed to be changed, refined or explained, she was always happy to help.\n\nAt the end of the project, she also prepared video tutorials that explained everything we needed for the ongoing management of the websites, which made it much easier for us to handle them independently.\n\nKristina is very good at what she does and is simply easy and pleasant to work with. I would gladly work with her again.",
+            "name": "Vladan Vukanović",
+            "role": "Owner of SOHO & Blossom",
+            "company": "SOHO & Blossom",
+            "service": "Web Design & Development"
+          },
           {
             "id": "demo-testimonial-01",
             "isDemo": true,
@@ -1066,12 +1089,35 @@
         "cta": "Poseti MyStar"
       },
       "testimonials": {
-        "label": "Utisci",
-        "title": "Kako izgleda naša saradnja.",
+        "label": "Utisci klijenata",
+        "title": "Kako izgleda saradnja sa mnom.",
+        "intro": "Utisci klijenata daju konkretniju sliku o tome kako saradnja izgleda u praksi - od komunikacije i procesa rada do završnog rezultata.",
         "previousLabel": "Prethodni utisak",
         "nextLabel": "Sledeći utisak",
         "statusTemplate": "Utisak klijenta {current} od {total}",
+        "verifiedLabel": "Verifikovan klijent",
         "entries": [
+          {
+            "id": "ljiljana-cirovic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "Sa Kristinom sarađujemo već tri godine na razvoju i unapređenju našeg sajta My Star Optic. Za to vreme nije bila samo osoba zadužena za tehnički deo sajta, već neko ko je zaista razumeo naš posao, potrebe kupaca i pravac u kojem želimo da razvijamo brend.\n\nPosebno cenim njenu sposobnost da sasluša ideju, sagleda je i iz poslovnog i iz korisničkog ugla, a zatim pronađe rešenje koje je funkcionalno, estetski usklađeno sa brendom i jednostavno za korišćenje. Pouzdana je, posvećena detaljima i spremna da istraži i reši svaki izazov koji se pojavi tokom rada.\n\nZahvaljujući njenom radu, naš sajt se tokom godina razvijao zajedno sa našim poslovanjem. Kristinu bih preporučila svakome ko ne traži samo nekoga ko će \"napraviti sajt\", već saradnika koji će razumeti njegovu ideju i pomoći mu da je pretvori u kvalitetno digitalno iskustvo.",
+            "name": "Ljiljana Ćirović",
+            "role": "Vlasnica i direktorka",
+            "company": "Star Optic",
+            "service": "Shopify & E-commerce Development"
+          },
+          {
+            "id": "vladan-vukanovic",
+            "isDemo": false,
+            "verified": true,
+            "image": "assets/testimonial-vladan-vukanovic.webp",
+            "quote": "Sa Kristinom sam sarađivao na izradi oba naša sajta, SOHO i Blossom, gde je bila zadužena i za dizajn i za kompletnu implementaciju.\n\nOno što mi je posebno značilo u saradnji sa njom jeste to što je veoma vredna, brza i pouzdana, ali pre svega što uvek ima želju da pomogne i pronađe rešenje. Kad god sam imao neki dodatni zahtev ili je trebalo nešto promeniti, doraditi ili objasniti, uvek je izlazila u susret.\n\nNa kraju projekta pripremila nam je i video tutorijale u kojima je detaljno objasnila sve što nam je potrebno za dalji rad, što nam je dosta olakšalo samostalno vođenje sajtova.\n\nKristina svoj posao radi stvarno dobro i sa njom je jednostavno i prijatno sarađivati. Rado bih ponovo radio sa njom.",
+            "name": "Vladan Vukanović",
+            "role": "Vlasnik SOHO-a i Blossom-a",
+            "company": "SOHO & Blossom",
+            "service": "Web Design & Development"
+          },
           {
             "id": "demo-testimonial-01",
             "isDemo": true,

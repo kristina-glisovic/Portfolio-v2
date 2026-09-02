@@ -363,24 +363,39 @@ function renderTestimonials(localeContent, locale) {
     if (entry.isDemo !== undefined && typeof entry.isDemo !== 'boolean') {
       fail(`Invalid testimonial isDemo marker at testimonials.entries.${index}`);
     }
+    if (entry.verified !== undefined && typeof entry.verified !== 'boolean') {
+      fail(`Invalid testimonial verified marker at testimonials.entries.${index}`);
+    }
+    if (entry.verified === true && entry.isDemo !== false) {
+      fail(`Verified testimonial must explicitly set isDemo to false at testimonials.entries.${index}`);
+    }
   });
 
   const slides = entries.map((entry, index) => {
-    const personDetails = [entry.role, entry.company].filter(Boolean).map(escapeHtml).join(' · ');
+    const quoteParagraphs = entry.quote.split(/\n{2,}/);
+    const quoteMarkup = quoteParagraphs.map(paragraph => `              <p>${escapeHtml(paragraph)}</p>`).join('\n');
+    const longQuoteClass = entry.quote.length > 600 ? ' client-feedback-slide-long' : '';
+    const companyNames = entry.company?.split(/\s*&\s*/).map(name => name.trim().toLocaleLowerCase()).filter(Boolean) || [];
+    const normalizedRole = entry.role?.toLocaleLowerCase() || '';
+    const companyAlreadyInRole = Boolean(normalizedRole && companyNames.length && companyNames.every(name => normalizedRole.includes(name)));
+    const personDetails = [entry.role, companyAlreadyInRole ? undefined : entry.company].filter(Boolean).map(escapeHtml).join(' · ');
     const detailMarkup = personDetails ? `\n                <p class="client-feedback-person-role">${personDetails}</p>` : '';
+    const verifiedMarkup = entry.verified === true && entry.isDemo === false
+      ? `\n                  <span class="client-feedback-verified"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8 2.75 2.75L12.5 4.5"/></svg><span>${escapeHtml(testimonials.verifiedLabel)}</span></span>`
+      : '';
     const serviceMarkup = entry.service ? `\n              <p class="client-feedback-service">${escapeHtml(entry.service)}</p>` : '';
     const avatarMarkup = entry.image
       ? `<img class="client-feedback-avatar" src="${escapeHtml(`${outputConfig[locale].rootPrefix}${entry.image}`)}" alt="" width="64" height="64" loading="lazy" decoding="async" aria-hidden="true" />`
       : `<span class="client-feedback-avatar client-feedback-avatar-fallback" aria-hidden="true">${escapeHtml(testimonialInitials(entry.name))}</span>`;
-    return `          <article class="client-feedback-slide" data-testimonial-slide data-testimonial-id="${escapeHtml(entry.id)}"${index ? ' hidden' : ''}>
+    return `          <article class="client-feedback-slide${longQuoteClass}" data-testimonial-slide data-testimonial-id="${escapeHtml(entry.id)}"${index ? ' hidden' : ''}>
             <blockquote class="client-feedback-quote">
-              <p>${escapeHtml(entry.quote)}</p>
+${quoteMarkup}
             </blockquote>
             <footer class="client-feedback-person">
               <div class="client-feedback-person-identity">
                 ${avatarMarkup}
                 <div class="client-feedback-person-copy">
-                  <p class="client-feedback-person-name">${escapeHtml(entry.name)}</p>${detailMarkup}
+                  <p class="client-feedback-person-name">${escapeHtml(entry.name)}</p>${verifiedMarkup}${detailMarkup}
                 </div>
               </div>${serviceMarkup}
             </footer>
@@ -396,10 +411,13 @@ function renderTestimonials(localeContent, locale) {
     <div class="container">
       <header class="client-feedback-header">
         <div class="section-label reveal">${escapeHtml(testimonials.label)}</div>
-        <h2 class="section-title reveal reveal-delay-1" id="testimonials-title">${escapeHtml(testimonials.title)}</h2>
+        <div class="client-feedback-header-row">
+          <h2 class="section-title reveal reveal-delay-1" id="testimonials-title">${escapeHtml(testimonials.title)}</h2>
+          <p class="client-feedback-intro reveal reveal-delay-2">${escapeHtml(testimonials.intro)}</p>
+        </div>
       </header>
 
-      <div class="client-feedback-slider reveal reveal-delay-2" data-testimonial-slider data-status-template="${escapeHtml(testimonials.statusTemplate)}">
+      <div class="client-feedback-slider reveal reveal-delay-3" data-testimonial-slider data-status-template="${escapeHtml(testimonials.statusTemplate)}">
         <div class="client-feedback-viewport">
 ${slides}
         </div>
