@@ -10641,6 +10641,15 @@ html[lang='sr-Latn'] .nav-links a {
 }
 
 @media (max-width: 700px) {
+    .process-flow::before {
+        left: .18rem;
+    }
+
+    .process-step-number {
+        padding-left: .82rem;
+        text-align: left;
+    }
+
     .hero-title-copy {
         max-width: 100%;
         font-size: clamp(2.15rem, 10vw, 3.25rem);
@@ -10735,7 +10744,10 @@ html[lang='sr-Latn'] .nav-links a {
     .process-step-marker::after {
         top: .45rem;
         right: auto;
-        left: .84rem;
+        left: 0;
+        width: .36rem;
+        height: .36rem;
+        box-shadow: 0 0 0 4px rgba(34,211,238,.065);
         transform: none;
     }
 
