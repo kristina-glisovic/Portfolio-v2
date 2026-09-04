@@ -9117,21 +9117,42 @@ body {
 }
 
 .client-feedback-viewport {
-    min-height: clamp(15rem, 25vw, 21rem);
+    width: 100%;
+    overflow: hidden;
+    transition: height .38s cubic-bezier(.22,1,.36,1);
+}
+
+.client-feedback-stage {
+    min-width: 0;
+}
+
+.client-feedback-track {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(1.5rem, 2.4vw, 2.25rem);
+    width: 100%;
 }
 
 .client-feedback-slide {
-    display: grid;
-    grid-template-columns: minmax(0, 1.55fr) minmax(13rem, .7fr);
-    gap: clamp(2.5rem, 7vw, 7rem);
-    align-items: end;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 0 0 86%;
+    min-width: 0;
     opacity: 1;
     transform: translateX(0);
-    transition: opacity .36s var(--ease), transform .46s cubic-bezier(.22,1,.36,1);
+    transition: opacity .36s var(--ease), filter .36s var(--ease), transform .46s cubic-bezier(.22,1,.36,1);
 }
 
-.client-feedback-slide[hidden] {
-    display: none;
+.client-feedback-slide[aria-hidden='true'] {
+    opacity: .22;
+    filter: blur(.35px);
+    cursor: pointer;
+    user-select: none;
+}
+
+.client-feedback-slide[aria-hidden='true']:hover {
+    opacity: .3;
 }
 
 .client-feedback-slide.is-entering {
@@ -9145,6 +9166,7 @@ body {
 
 .client-feedback-quote {
     margin: 0;
+    max-width: 50rem;
 }
 
 .client-feedback-quote p {
@@ -9171,8 +9193,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.15rem;
-    padding-left: 1.4rem;
-    border-left: 1px solid var(--border);
+    max-width: 34rem;
+    margin-top: clamp(2rem, 3.5vw, 2.75rem);
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--border);
 }
 
 .client-feedback-person-identity {
@@ -9216,6 +9240,7 @@ body {
 
 .client-feedback-person-name,
 .client-feedback-person-role,
+.client-feedback-location,
 .client-feedback-service {
     margin: 0;
 }
@@ -9253,12 +9278,33 @@ body {
     line-height: 1.55;
 }
 
+.client-feedback-location {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    margin-top: .18rem;
+    color: color-mix(in srgb, var(--t2) 78%, transparent);
+    font-size: .72rem;
+    line-height: 1.45;
+}
+
+.client-feedback-location svg {
+    width: .72rem;
+    height: .72rem;
+    flex: 0 0 auto;
+    color: color-mix(in srgb, var(--a3) 52%, var(--t2));
+}
+
 .client-feedback-service {
     color: color-mix(in srgb, var(--a3) 68%, var(--t1));
     font-size: .72rem;
     font-weight: 700;
     letter-spacing: .09em;
     text-transform: uppercase;
+}
+
+.client-feedback-person .client-feedback-service {
+    margin-top: 0;
 }
 
 .client-feedback-controls {
@@ -9336,15 +9382,19 @@ body {
     .client-feedback-intro {
         max-width: 41rem;
     }
+
+    .client-feedback-track {
+        gap: 1rem;
+    }
+
+    .client-feedback-slide {
+        flex-basis: 88%;
+    }
 }
 
 @media (max-width: 720px) {
     .client-feedback.section {
         padding-block: 4.5rem;
-    }
-
-    .client-feedback-slide {
-        grid-template-columns: 1fr;
     }
 
     .client-feedback-header {
@@ -9364,13 +9414,22 @@ body {
         line-height: 1.62;
     }
 
-    .client-feedback-slide {
-        gap: 2rem;
-        align-items: start;
+    .client-feedback-stage {
+        display: block;
+        overflow: visible;
     }
 
     .client-feedback-viewport {
+        width: 100%;
         min-height: 0;
+    }
+
+    .client-feedback-track {
+        gap: .875rem;
+    }
+
+    .client-feedback-slide {
+        flex-basis: 88.5%;
     }
 
     .client-feedback-quote p {
@@ -9379,10 +9438,8 @@ body {
     }
 
     .client-feedback-person {
+        margin-top: 2rem;
         padding-top: 1.25rem;
-        padding-left: 0;
-        border-top: 1px solid var(--border);
-        border-left: 0;
     }
 
     .client-feedback-avatar {
@@ -9393,11 +9450,12 @@ body {
 
     .client-feedback-controls {
         justify-content: space-between;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .client-feedback-viewport,
     .client-feedback-slide,
     .client-feedback-button {
         transition: none !important;

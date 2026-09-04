@@ -253,6 +253,62 @@ function assertParity(left, right, path = 'locales') {
   }
 }
 
+function validateDraftTestimonialLocales(content) {
+  const drafts = content.draftLocales;
+  if (drafts === undefined) return;
+  if (!drafts || typeof drafts !== 'object' || Array.isArray(drafts)) {
+    fail('draftLocales must be an object when provided');
+  }
+
+  const referenceEntries = content.locales?.[content.localeConfig.defaultLocale]?.testimonials?.entries;
+  if (!Array.isArray(referenceEntries)) fail('Default locale testimonial entries are missing');
+
+  for (const [locale, draft] of Object.entries(drafts)) {
+    const definition = localeDefinitions.find(item => item.id === locale);
+    if (!definition) fail(`Draft locale ${locale} has no localeConfig definition`);
+    if (definition.enabled) fail(`Enabled locale ${locale} cannot use draftLocales`);
+    if (definition.contentStatus !== 'draft') fail(`Draft locale ${locale} must have contentStatus "draft"`);
+    if (!draft || typeof draft !== 'object' || Array.isArray(draft)) fail(`Invalid draft locale object: ${locale}`);
+    if (draft.lang !== definition.htmlLang) fail(`Draft locale ${locale} lang does not match localeConfig`);
+
+    const testimonials = draft.testimonials;
+    if (!testimonials || typeof testimonials !== 'object' || Array.isArray(testimonials)) {
+      fail(`Draft locale ${locale} testimonials must be an object`);
+    }
+    if (typeof testimonials.verifiedLabel !== 'string' || !testimonials.verifiedLabel.trim()) {
+      fail(`Draft locale ${locale} testimonial verifiedLabel is required`);
+    }
+    if (!Array.isArray(testimonials.entries)) fail(`Draft locale ${locale} testimonial entries must be an array`);
+    if (testimonials.entries.length !== referenceEntries.length) {
+      fail(`Draft locale ${locale} testimonial count must match the default locale`);
+    }
+
+    testimonials.entries.forEach((entry, index) => {
+      const reference = referenceEntries[index];
+      if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
+        fail(`Invalid draft testimonial at draftLocales.${locale}.testimonials.entries.${index}`);
+      }
+      if (entry.id !== reference.id) {
+        fail(`Draft locale ${locale} testimonial stable ID/order mismatch at index ${index}`);
+      }
+      for (const field of ['quote', 'name', 'role', 'company', 'location', 'service']) {
+        if (typeof entry[field] !== 'string' || !entry[field].trim()) {
+          fail(`Missing draft testimonial ${field} at draftLocales.${locale}.testimonials.entries.${index}`);
+        }
+      }
+      if (entry.name !== reference.name || entry.company !== reference.company || entry.service !== reference.service) {
+        fail(`Draft locale ${locale} testimonial identity mismatch for ${entry.id}`);
+      }
+      if (entry.isDemo !== false || entry.verified !== true) {
+        fail(`Draft locale ${locale} testimonial ${entry.id} must remain a verified real testimonial`);
+      }
+      if ((entry.image || null) !== (reference.image || null)) {
+        fail(`Draft locale ${locale} testimonial image mismatch for ${entry.id}`);
+      }
+    });
+  }
+}
+
 function setAttribute(tag, name, value) {
   const escaped = escapeHtml(value);
   const attribute = new RegExp(`\\s${name}="[^"]*"`);
@@ -345,7 +401,7 @@ function renderTestimonials(localeContent, locale) {
     if (!/^[a-z0-9-]+$/.test(entry.id || '')) fail(`Invalid testimonial ID at testimonials.entries.${index}`);
     if (ids.has(entry.id)) fail(`Duplicate testimonial ID: ${entry.id}`);
     ids.add(entry.id);
-    ['quote', 'name'].forEach(field => {
+    ['quote', 'name', 'location'].forEach(field => {
       if (typeof entry[field] !== 'string' || !entry[field].trim()) {
         fail(`Missing testimonial ${field} at testimonials.entries.${index}`);
       }
@@ -380,6 +436,7 @@ function renderTestimonials(localeContent, locale) {
     const companyAlreadyInRole = Boolean(normalizedRole && companyNames.length && companyNames.every(name => normalizedRole.includes(name)));
     const personDetails = [entry.role, companyAlreadyInRole ? undefined : entry.company].filter(Boolean).map(escapeHtml).join(' · ');
     const detailMarkup = personDetails ? `\n                <p class="client-feedback-person-role">${personDetails}</p>` : '';
+    const locationMarkup = `\n                <p class="client-feedback-location"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 14s4-3.7 4-7a4 4 0 1 0-8 0c0 3.3 4 7 4 7Z"/><circle cx="8" cy="7" r="1.35"/></svg><span>${escapeHtml(entry.location)}</span></p>`;
     const verifiedMarkup = entry.verified === true && entry.isDemo === false
       ? `\n                  <span class="client-feedback-verified"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3.5 8 2.75 2.75L12.5 4.5"/></svg><span>${escapeHtml(testimonials.verifiedLabel)}</span></span>`
       : '';
@@ -387,7 +444,7 @@ function renderTestimonials(localeContent, locale) {
     const avatarMarkup = entry.image
       ? `<img class="client-feedback-avatar" src="${escapeHtml(`${outputConfig[locale].rootPrefix}${entry.image}`)}" alt="" width="64" height="64" loading="lazy" decoding="async" aria-hidden="true" />`
       : `<span class="client-feedback-avatar client-feedback-avatar-fallback" aria-hidden="true">${escapeHtml(testimonialInitials(entry.name))}</span>`;
-    return `          <article class="client-feedback-slide${longQuoteClass}" data-testimonial-slide data-testimonial-id="${escapeHtml(entry.id)}"${index ? ' hidden' : ''}>
+    return `          <article class="client-feedback-slide${longQuoteClass}${index ? '' : ' is-active'}" data-testimonial-slide data-testimonial-id="${escapeHtml(entry.id)}" aria-hidden="${index ? 'true' : 'false'}">
             <blockquote class="client-feedback-quote">
 ${quoteMarkup}
             </blockquote>
@@ -395,7 +452,7 @@ ${quoteMarkup}
               <div class="client-feedback-person-identity">
                 ${avatarMarkup}
                 <div class="client-feedback-person-copy">
-                  <p class="client-feedback-person-name">${escapeHtml(entry.name)}</p>${verifiedMarkup}${detailMarkup}
+                  <p class="client-feedback-person-name">${escapeHtml(entry.name)}</p>${verifiedMarkup}${detailMarkup}${locationMarkup}
                 </div>
               </div>${serviceMarkup}
             </footer>
@@ -418,8 +475,12 @@ ${quoteMarkup}
       </header>
 
       <div class="client-feedback-slider reveal reveal-delay-3" data-testimonial-slider data-status-template="${escapeHtml(testimonials.statusTemplate)}">
-        <div class="client-feedback-viewport">
+        <div class="client-feedback-stage">
+          <div class="client-feedback-viewport">
+            <div class="client-feedback-track" data-testimonial-track>
 ${slides}
+            </div>
+          </div>
         </div>
         <div class="client-feedback-controls"${controlsHidden}>
           <div class="client-feedback-buttons">
@@ -710,6 +771,7 @@ const defaultLocale = content.localeConfig.defaultLocale;
 for (const locale of localeOrder.filter(item => item !== defaultLocale)) {
   assertParity(content.locales[defaultLocale], content.locales[locale], `locales.${defaultLocale}/${locale}`);
 }
+validateDraftTestimonialLocales(content);
 for (const [key, value] of Object.entries(content.shared.urls)) {
   try {
     const url = new URL(value);

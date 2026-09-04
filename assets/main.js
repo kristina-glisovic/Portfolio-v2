@@ -574,20 +574,36 @@
       const next = slider.querySelector('[data-testimonial-next]');
       const counter = slider.querySelector('[data-testimonial-counter]');
       const status = slider.querySelector('[data-testimonial-status]');
+      const viewport = slider.querySelector('.client-feedback-viewport');
       const statusTemplate = slider.dataset.statusTemplate || '{current} / {total}';
       let currentIndex = 0;
       let touchStartX = null;
       let touchStartY = null;
+      let heightFrame = 0;
 
       if (!slides.length) return;
+
+      const syncActiveHeight = () => {
+        heightFrame = 0;
+        if (!viewport) return;
+        const activeSlide = slides[currentIndex];
+        const activeHeight = activeSlide.offsetHeight;
+        if (activeHeight > 0) viewport.style.height = `${activeHeight}px`;
+      };
+
+      const requestActiveHeightSync = () => {
+        if (heightFrame) return;
+        heightFrame = requestAnimationFrame(syncActiveHeight);
+      };
 
       const updateSlider = (nextIndex, { announce = true, direction = 1 } = {}) => {
         currentIndex = (nextIndex + slides.length) % slides.length;
 
         slides.forEach((slide, index) => {
           const isCurrent = index === currentIndex;
-          slide.hidden = !isCurrent;
           slide.setAttribute('aria-hidden', String(!isCurrent));
+          slide.classList.toggle('is-active', isCurrent);
+          slide.style.order = String((index - currentIndex + slides.length) % slides.length);
 
           if (isCurrent && !prefersReducedMotion.matches) {
             slide.dataset.direction = direction > 0 ? 'next' : 'previous';
@@ -609,10 +625,17 @@
           if (announce) status.textContent = '';
           requestAnimationFrame(() => { status.textContent = message; });
         }
+        requestActiveHeightSync();
       };
 
       previous?.addEventListener('click', () => updateSlider(currentIndex - 1, { direction: -1 }));
       next?.addEventListener('click', () => updateSlider(currentIndex + 1, { direction: 1 }));
+      slides.forEach((slide, index) => {
+        slide.addEventListener('click', event => {
+          if (index === currentIndex || event.target.closest('a, button, input, select, textarea')) return;
+          updateSlider(index, { direction: 1 });
+        });
+      });
 
       slider.addEventListener('keydown', event => {
         if (event.key === 'ArrowLeft') {
@@ -641,6 +664,21 @@
         if (Math.abs(deltaX) < 48 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
         updateSlider(currentIndex + (deltaX < 0 ? 1 : -1), { direction: deltaX < 0 ? 1 : -1 });
       }, { passive: true });
+
+      if ('ResizeObserver' in window) {
+        const activeSlideObserver = new ResizeObserver(entries => {
+          if (entries.some(entry => entry.target === slides[currentIndex])) requestActiveHeightSync();
+        });
+        slides.forEach(slide => activeSlideObserver.observe(slide));
+      }
+
+      window.addEventListener('resize', requestActiveHeightSync);
+      document.fonts?.ready.then(requestActiveHeightSync);
+      slides.forEach(slide => {
+        slide.querySelectorAll('img').forEach(image => {
+          if (!image.complete) image.addEventListener('load', requestActiveHeightSync, { once: true });
+        });
+      });
 
       updateSlider(0, { announce: false });
     });

@@ -40,6 +40,50 @@
       }
     ]
   },
+  "draftLocales": {
+    "de": {
+      "lang": "de",
+      "testimonials": {
+        "verifiedLabel": "Verifizierter Kunde",
+        "entries": [
+          {
+            "id": "vladan-vukanovic",
+            "isDemo": false,
+            "verified": true,
+            "image": "assets/testimonial-vladan-vukanovic.webp",
+            "quote": "Ich habe mit Kristina an unseren beiden Websites, SOHO und Blossom, zusammengearbeitet. Dabei war sie sowohl für das Design als auch für die vollständige Umsetzung verantwortlich.\n\nWas ich an der Zusammenarbeit mit ihr besonders geschätzt habe, ist, dass sie sehr engagiert, schnell und zuverlässig ist, vor allem aber immer bereit ist zu helfen und eine Lösung zu finden. Wenn ich einen zusätzlichen Wunsch hatte oder etwas geändert, angepasst oder erklärt werden musste, war sie jederzeit hilfsbereit.\n\nAm Ende des Projekts hat sie für uns außerdem Video-Tutorials erstellt, in denen sie alles ausführlich erklärt hat, was wir für die weitere Arbeit benötigen. Dadurch wurde es für uns deutlich einfacher, die Websites anschließend selbstständig zu verwalten.\n\nKristina macht ihre Arbeit wirklich sehr gut und die Zusammenarbeit mit ihr ist unkompliziert und angenehm. Ich würde jederzeit wieder mit ihr zusammenarbeiten.",
+            "name": "Vladan Vukanović",
+            "role": "Inhaber von SOHO & Blossom",
+            "company": "SOHO & Blossom",
+            "location": "Belgrad, Serbien",
+            "service": "Web Design & Development"
+          },
+          {
+            "id": "ljiljana-cirovic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "Wir arbeiten seit drei Jahren mit Kristina an der Entwicklung und kontinuierlichen Verbesserung unserer Website My Star Optic zusammen. In dieser Zeit war sie für uns weit mehr als nur die Person, die für die technische Umsetzung der Website verantwortlich war. Sie hat unser Geschäft, die Bedürfnisse unserer Kunden und die Richtung, in die wir unsere Marke weiterentwickeln möchten, wirklich verstanden.\n\nBesonders schätze ich ihre Fähigkeit, eine Idee aufmerksam anzuhören, sie sowohl aus geschäftlicher als auch aus Nutzerperspektive zu betrachten und anschließend eine Lösung zu finden, die funktional, optisch auf die Marke abgestimmt und einfach zu bedienen ist. Sie ist zuverlässig, sehr detailorientiert und immer bereit, sich in neue Herausforderungen einzuarbeiten und eine Lösung zu finden.\n\nDank ihrer Arbeit hat sich unsere Website über die Jahre gemeinsam mit unserem Unternehmen weiterentwickelt. Ich würde Kristina jedem empfehlen, der nicht einfach nur jemanden sucht, der \"eine Website erstellt\", sondern einen Partner, der die Idee versteht und dabei hilft, daraus ein hochwertiges digitales Erlebnis zu machen.",
+            "name": "Ljiljana Ćirović",
+            "role": "Inhaberin und Geschäftsführerin",
+            "company": "Star Optic",
+            "location": "Belgrad, Serbien",
+            "service": "Shopify & E-commerce Development"
+          },
+          {
+            "id": "nikola-asic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "Ich betreibe seit Jahren eine Internetseite mit einem Buchungssystem für die Parkplatzvermietung. Die Zusammenarbeit mit verschiedenen Webdesignern und Programmierern war dabei leider oft sehr schwierig. Häufig hieß es: „Das geht nicht“, oder es wurde immer wieder versucht, mir etwas Neues zu verkaufen.\n\nBis ich auf Kristina gestoßen bin.\n\nSchon im ersten Gespräch hatte ich das Gefühl, dass es bei ihr kein „Das geht nicht“ gibt. Als meine Seite schließlich gehackt wurde, wollten die bisherigen Programmierer mir bereits eine komplett neue Internetseite erstellen, da es ihnen zu aufwendig war, den Fehler zu finden und herauszufinden, wo genau die Seite gehackt worden war.\n\nBei Kristina gab es solche Überlegungen nicht. Sie hat sich direkt an die Arbeit gemacht und das Problem innerhalb kürzester Zeit gelöst.\n\nMittlerweile hat Kristina meine Seite komplett überarbeitet und das Buchungssystem optimiert. Dadurch ist es für mich viel einfacher geworden, die zahlreichen Buchungen zu verwalten und Rechnungen zu erstellen.\n\nIch kann Kristina daher ohne Bedenken weiterempfehlen - ganz egal, ob für einen Kleinunternehmer oder ein größeres Unternehmen. Sie findet für jeden eine passende Lösung und gibt nicht einfach auf, wenn etwas auf den ersten Blick schwierig erscheint.\n\nIch bin wirklich sehr froh, endlich jemanden gefunden zu haben, bei dem ich weiß: Wenn ein Problem auftaucht, findet Kristina eine Lösung.",
+            "name": "Nikola Asić",
+            "role": "Inhaber von Parken2GO",
+            "company": "Parken2GO",
+            "location": "Stuttgart, Deutschland",
+            "service": "Web Development & Booking System Optimization"
+          }
+        ]
+      }
+    }
+  },
   "shared": {
     "name": "Kristina Glišović",
     "email": "hello@kristinaglisovic.dev",
@@ -375,16 +419,6 @@
         "verifiedLabel": "Verified Client",
         "entries": [
           {
-            "id": "ljiljana-cirovic",
-            "isDemo": false,
-            "verified": true,
-            "quote": "We have been working with Kristina for three years on the development and continuous improvement of our My Star Optic website. During that time, she has been much more than the person responsible for the technical side of the site. She genuinely understood our business, our customers' needs and the direction in which we wanted to develop the brand.\n\nWhat I especially value is her ability to listen to an idea, consider it from both a business and user perspective, and then find a solution that is functional, visually aligned with the brand and easy to use. She is reliable, highly attentive to detail and always willing to research and solve any challenge that comes up during the work.\n\nThanks to her work, our website has continued to evolve alongside our business. I would recommend Kristina to anyone who is not simply looking for someone to \"build a website\", but for a collaborator who will understand their idea and help turn it into a high-quality digital experience.",
-            "name": "Ljiljana Ćirović",
-            "role": "Owner & Director",
-            "company": "Star Optic",
-            "service": "Shopify & E-commerce Development"
-          },
-          {
             "id": "vladan-vukanovic",
             "isDemo": false,
             "verified": true,
@@ -393,44 +427,30 @@
             "name": "Vladan Vukanović",
             "role": "Owner of SOHO & Blossom",
             "company": "SOHO & Blossom",
+            "location": "Belgrade, Serbia",
             "service": "Web Design & Development"
           },
           {
-            "id": "demo-testimonial-01",
-            "isDemo": true,
-            "image": "assets/testimonial-demo-avatar.svg",
-            "quote": "Kristina understood the project quickly and translated our requirements into a solution that felt both polished and technically solid. Communication was clear throughout, and every detail was handled with care.",
-            "name": "Sample Client",
-            "role": "E-commerce Manager",
-            "company": "Demo E-commerce Brand",
-            "service": "Custom Web Development"
+            "id": "ljiljana-cirovic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "We have been working with Kristina for three years on the development and continuous improvement of our My Star Optic website. During that time, she has been much more than the person responsible for the technical side of the site. She genuinely understood our business, our customers' needs and the direction in which we wanted to develop the brand.\n\nWhat I especially value is her ability to listen to an idea, consider it from both a business and user perspective, and then find a solution that is functional, visually aligned with the brand and easy to use. She is reliable, highly attentive to detail and always willing to research and solve any challenge that comes up during the work.\n\nThanks to her work, our website has continued to evolve alongside our business. I would recommend Kristina to anyone who is not simply looking for someone to \"build a website\", but for a collaborator who will understand their idea and help turn it into a high-quality digital experience.",
+            "name": "Ljiljana Ćirović",
+            "role": "Owner & Director",
+            "company": "Star Optic",
+            "location": "Belgrade, Serbia",
+            "service": "Shopify & E-commerce Development"
           },
           {
-            "id": "demo-testimonial-02",
-            "isDemo": true,
-            "quote": "What stood out most was the level of ownership. Kristina did not simply implement what was requested - she identified potential issues early, suggested better approaches and made sure the final result worked as a complete experience.",
-            "name": "Sample Client",
-            "role": "Product Lead",
-            "company": "Demo Digital Product",
-            "service": "Web Application Development"
-          },
-          {
-            "id": "demo-testimonial-03",
-            "isDemo": true,
-            "quote": "The collaboration was structured, responsive and very easy to follow. We always knew what was being worked on, what decisions were needed from us and what the next step would be.",
-            "name": "Sample Client",
-            "role": "Founder",
-            "company": "Demo Business",
-            "service": "Website Development"
-          },
-          {
-            "id": "demo-testimonial-04",
-            "isDemo": true,
-            "quote": "Kristina brought together technical implementation, UX thinking and attention to detail in a way that made the project feel much more refined than a standard development handoff.",
-            "name": "Sample Client",
-            "role": "E-commerce Lead",
-            "company": "Demo Retail Brand",
-            "service": "Shopify & E-commerce"
+            "id": "nikola-asic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "I have been running a website with a booking system for parking rentals for years. Unfortunately, working with different web designers and developers was often very difficult. I frequently heard, \"That can’t be done,\" or there were repeated attempts to sell me something new.\n\nThat changed when I found Kristina.\n\nFrom our very first conversation, I had the feeling that \"That can’t be done\" simply wasn’t part of her approach. When my website was eventually hacked, the developers I had worked with before wanted to build an entirely new website because finding the cause of the problem and identifying exactly where the site had been compromised was too much effort for them.\n\nKristina approached it completely differently. She got straight to work and solved the problem in a very short time.\n\nSince then, Kristina has completely reworked my website and optimized the booking system. This has made it much easier for me to manage the large number of bookings and create invoices.\n\nI can recommend Kristina without hesitation, whether for a small business or a larger company. She finds the right solution for each situation and does not simply give up when something looks difficult at first.\n\nI am genuinely very happy to have finally found someone I can rely on and know that when a problem comes up, Kristina will find a solution.",
+            "name": "Nikola Asić",
+            "role": "Owner of Parken2GO",
+            "company": "Parken2GO",
+            "location": "Stuttgart, Germany",
+            "service": "Web Development & Booking System Optimization"
           }
         ]
       },
@@ -1098,16 +1118,6 @@
         "verifiedLabel": "Verifikovan klijent",
         "entries": [
           {
-            "id": "ljiljana-cirovic",
-            "isDemo": false,
-            "verified": true,
-            "quote": "Sa Kristinom sarađujemo već tri godine na razvoju i unapređenju našeg sajta My Star Optic. Za to vreme nije bila samo osoba zadužena za tehnički deo sajta, već neko ko je zaista razumeo naš posao, potrebe kupaca i pravac u kojem želimo da razvijamo brend.\n\nPosebno cenim njenu sposobnost da sasluša ideju, sagleda je i iz poslovnog i iz korisničkog ugla, a zatim pronađe rešenje koje je funkcionalno, estetski usklađeno sa brendom i jednostavno za korišćenje. Pouzdana je, posvećena detaljima i spremna da istraži i reši svaki izazov koji se pojavi tokom rada.\n\nZahvaljujući njenom radu, naš sajt se tokom godina razvijao zajedno sa našim poslovanjem. Kristinu bih preporučila svakome ko ne traži samo nekoga ko će \"napraviti sajt\", već saradnika koji će razumeti njegovu ideju i pomoći mu da je pretvori u kvalitetno digitalno iskustvo.",
-            "name": "Ljiljana Ćirović",
-            "role": "Vlasnica i direktorka",
-            "company": "Star Optic",
-            "service": "Shopify & E-commerce Development"
-          },
-          {
             "id": "vladan-vukanovic",
             "isDemo": false,
             "verified": true,
@@ -1116,44 +1126,30 @@
             "name": "Vladan Vukanović",
             "role": "Vlasnik SOHO-a i Blossom-a",
             "company": "SOHO & Blossom",
+            "location": "Beograd, Srbija",
             "service": "Web Design & Development"
           },
           {
-            "id": "demo-testimonial-01",
-            "isDemo": true,
-            "image": "assets/testimonial-demo-avatar.svg",
-            "quote": "Kristina je veoma brzo razumela projekat i naše zahteve pretvorila u rešenje koje je istovremeno delovalo profesionalno i bilo tehnički veoma dobro izvedeno. Komunikacija je bila jasna tokom cele saradnje, a svakom detalju pristupila je pažljivo.",
-            "name": "Primer klijenta",
-            "role": "Menadžer e-commerce prodaje",
-            "company": "Demo e-commerce brend",
-            "service": "Razvoj web rešenja po meri"
+            "id": "ljiljana-cirovic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "Sa Kristinom sarađujemo već tri godine na razvoju i unapređenju našeg sajta My Star Optic. Za to vreme nije bila samo osoba zadužena za tehnički deo sajta, već neko ko je zaista razumeo naš posao, potrebe kupaca i pravac u kojem želimo da razvijamo brend.\n\nPosebno cenim njenu sposobnost da sasluša ideju, sagleda je i iz poslovnog i iz korisničkog ugla, a zatim pronađe rešenje koje je funkcionalno, estetski usklađeno sa brendom i jednostavno za korišćenje. Pouzdana je, posvećena detaljima i spremna da istraži i reši svaki izazov koji se pojavi tokom rada.\n\nZahvaljujući njenom radu, naš sajt se tokom godina razvijao zajedno sa našim poslovanjem. Kristinu bih preporučila svakome ko ne traži samo nekoga ko će \"napraviti sajt\", već saradnika koji će razumeti njegovu ideju i pomoći mu da je pretvori u kvalitetno digitalno iskustvo.",
+            "name": "Ljiljana Ćirović",
+            "role": "Vlasnica i direktorka",
+            "company": "Star Optic",
+            "location": "Beograd, Srbija",
+            "service": "Shopify & E-commerce Development"
           },
           {
-            "id": "demo-testimonial-02",
-            "isDemo": true,
-            "quote": "Najviše nam je značio nivo odgovornosti koji je preuzela. Kristina nije samo implementirala ono što smo tražili - na vreme je uočavala potencijalne probleme, predlagala bolja rešenja i vodila računa da krajnji rezultat funkcioniše kao celina.",
-            "name": "Primer klijenta",
-            "role": "Vođa razvoja proizvoda",
-            "company": "Demo digitalni proizvod",
-            "service": "Razvoj web aplikacije"
-          },
-          {
-            "id": "demo-testimonial-03",
-            "isDemo": true,
-            "quote": "Saradnja je bila organizovana, jasna i laka za praćenje. U svakom trenutku smo znali na čemu se radi, koje odluke su potrebne sa naše strane i šta je sledeći korak.",
-            "name": "Primer klijenta",
-            "role": "Osnivač",
-            "company": "Demo kompanija",
-            "service": "Razvoj sajta"
-          },
-          {
-            "id": "demo-testimonial-04",
-            "isDemo": true,
-            "quote": "Kristina je spojila tehničku realizaciju, UX razmišljanje i pažnju prema detaljima na način koji je ceo projekat podigao iznad standardne development isporuke.",
-            "name": "Primer klijenta",
-            "role": "E-commerce menadžer",
-            "company": "Demo maloprodajni brend",
-            "service": "Shopify i e-commerce"
+            "id": "nikola-asic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "Već godinama vodim internet sajt sa sistemom za rezervaciju parkinga. Nažalost, saradnja sa različitim web dizajnerima i programerima često je bila veoma teška. Često sam slušao: \"To ne može\", ili su pokušavali da mi stalno prodaju neko novo rešenje.\n\nSve se promenilo kada sam pronašao Kristinu.\n\nVeć tokom prvog razgovora imao sam osećaj da kod nje ne postoji \"To ne može\". Kada je moj sajt kasnije bio hakovan, programeri sa kojima sam prethodno sarađivao želeli su da naprave potpuno novi sajt, jer im je bilo previše zahtevno da pronađu uzrok problema i utvrde gde je tačno došlo do kompromitovanja sajta.\n\nKod Kristine nije bilo takvog razmišljanja. Odmah se prihvatila posla i rešila problem za veoma kratko vreme.\n\nU međuvremenu je Kristina potpuno unapredila moj sajt i optimizovala sistem za rezervacije. Zahvaljujući tome, sada mi je mnogo lakše da upravljam velikim brojem rezervacija i izrađujem račune.\n\nKristinu mogu bez ikakve zadrške da preporučim, bez obzira na to da li je reč o malom preduzetniku ili većoj kompaniji. Za svaki problem pronalazi odgovarajuće rešenje i ne odustaje samo zato što nešto na prvi pogled deluje komplikovano.\n\nZaista mi je veoma drago što sam konačno pronašao nekoga za koga znam da će, kada se pojavi problem, pronaći rešenje.",
+            "name": "Nikola Asić",
+            "role": "Vlasnik Parken2GO",
+            "company": "Parken2GO",
+            "location": "Štutgart, Nemačka",
+            "service": "Web Development & Booking System Optimization"
           }
         ]
       },
