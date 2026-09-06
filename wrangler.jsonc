@@ -1,11 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "portfolio-v2",
-  "main": "./worker/index.js",
   "compatibility_date": "2026-09-06",
   "assets": {
-    "directory": "./deploy-output",
-    "binding": "ASSETS",
-    "run_worker_first": true
+    "directory": "./deploy-output"
   }
 }
