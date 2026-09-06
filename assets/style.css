@@ -9439,21 +9439,48 @@ body {
     }
 
     .client-feedback-track {
-        gap: .875rem;
+        gap: .75rem;
     }
 
     .client-feedback-slide {
-        flex-basis: 88.5%;
+        flex-basis: 91.5%;
     }
 
-    .client-feedback-quote p {
-        font-size: clamp(1.55rem, 7.2vw, 2.15rem);
-        line-height: 1.2;
+    .client-feedback-quote {
+        max-width: none;
+    }
+
+    .client-feedback-quote p,
+    .client-feedback-slide-long .client-feedback-quote p {
+        font-size: clamp(1.08rem, 4.9vw, 1.2rem);
+        letter-spacing: -.012em;
+        line-height: 1.5;
+    }
+
+    .client-feedback-quote p + p {
+        margin-top: 1.15rem;
     }
 
     .client-feedback-person {
-        margin-top: 2rem;
-        padding-top: 1.25rem;
+        gap: .8rem;
+        margin-top: 1.35rem;
+        padding-top: .9rem;
+    }
+
+    .client-feedback-person-identity {
+        gap: .75rem;
+    }
+
+    .client-feedback-verified {
+        margin-top: .2rem;
+    }
+
+    .client-feedback-person-role {
+        margin-top: .25rem;
+    }
+
+    .client-feedback-location {
+        margin-top: .1rem;
     }
 
     .client-feedback-avatar {
@@ -9464,7 +9491,7 @@ body {
 
     .client-feedback-controls {
         justify-content: space-between;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
     }
 }
 
