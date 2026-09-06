@@ -348,7 +348,7 @@ function renderLocaleMenu(locale, context, variant) {
           <span class="language-menu-option-status">${escapeHtml(context.ui.languageUnavailable)}</span>
         </span>`;
     }
-    return `        <a class="language-menu-option${isCurrent ? ' is-current' : ''}" role="menuitem" href="${localeHref(locale, definition.id)}" lang="${definition.htmlLang}" hreflang="${definition.hreflang}"${isCurrent ? ' aria-current="page"' : ''}>
+    return `        <a class="language-menu-option${isCurrent ? ' is-current' : ''}" role="menuitem" href="${localeHref(locale, definition.id)}?locale=${definition.id}" lang="${definition.htmlLang}" hreflang="${definition.hreflang}"${isCurrent ? ' aria-current="page"' : ''}>
           <span>${escapeHtml(definition.label)}</span>
           <span class="language-menu-option-code" aria-hidden="true">${escapeHtml(definition.code)}</span>
         </a>`;

@@ -39,12 +39,42 @@ Until a real origin is configured, normal builds remain in safe pre-launch mode 
 
 ## Enabling German later
 
+Cloudflare initial locale routing reads the same `localeConfig` at Worker bundle time.
+Rebuild and deploy after enabling a locale to activate its country mapping.
+
 1. Add the complete reviewed German content object at `locales.de`, matching the approved locale schema.
 2. Set the German `contentStatus` to `approved` in `localeConfig`.
 3. Set German `enabled` to `true`.
 4. Run `npm run build` and `npm run check`.
 5. Run `npm run check:production` once the production origin, Contact endpoint and other launch requirements are configured.
 6. Verify `/de/`, the language dropdown, canonical/hreflang, Open Graph locale, JSON-LD language and sitemap output before deployment.
+
+## Initial locale preference on Cloudflare
+
+The Worker runs before static assets. Only GET/HEAD requests to `/` receive automatic
+locale selection: a valid saved manual preference first, then RS → SR or DE → DE,
+then English. Disabled/draft locales are never selected; Germany currently receives English.
+Explicit localized URLs and asset paths are passed through unchanged.
+
+Language menu links use the destination route with `?locale=en` (or `sr`, eventually `de`).
+The Worker validates that choice against approved/enabled locales, sets `portfolio_locale`,
+and returns a 302 to the clean destination. Other query parameters are retained. Browsers
+inherit the original fragment when the redirect Location has no fragment; the server never
+receives URL fragments. The cookie is first-party, lasts 180 days, and uses Secure, HttpOnly,
+SameSite=Lax and Path=/. It is only set by explicit selection, never by geolocation.
+The frontend does not read/write cookies or persistent storage. No IP or country is stored.
+
+Redirects and preference-dependent root responses use `Cache-Control: no-store`.
+Known crawler user agents and Cloudflare verified bots bypass automatic selection,
+including saved preferences. Bot detection is best-effort, not an access restriction.
+No external geo service or browser location permission is used. Missing/invalid country
+information falls back to English unless a valid saved manual preference exists.
+
+`npm run serve` remains plain static hosting: locale links work, query parameters are
+ignored, and no geo redirect or preference persistence occurs. The Worker also bypasses
+automatic routing on localhost/loopback; Cloudflare uses trusted `request.cf.country`
+with `CF-IPCountry` as fallback. Run `node --test scripts/locale-routing.test.mjs` to
+simulate country, cookie, crawler and future German scenarios without deployment.
 
 The build fails instead of falling back to English when an enabled locale is incomplete. Do not use draft or machine-translated German as production content.
 
