@@ -207,7 +207,7 @@ const requiredAssets = [
   'assets/favicon-32.png',
   'assets/favicon-16.png',
   'assets/apple-touch-icon.png',
-  'assets/og-portfolio.png',
+  content.shared.site.ogImagePath,
   'favicon.ico'
 ];
 for (const file of requiredAssets) {
