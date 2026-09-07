@@ -10682,6 +10682,14 @@ html[lang='sr-Latn'] .nav-links a {
 }
 
 @media (max-width: 700px) {
+    .hero-title {
+        row-gap: .1rem;
+    }
+
+    .hero-title-role {
+        margin-bottom: .87rem;
+    }
+
     .process-flow::before {
         left: .18rem;
     }
