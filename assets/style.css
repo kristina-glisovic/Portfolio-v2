@@ -9571,8 +9571,8 @@ body {
     gap: .62rem;
     width: min(100%, 70rem);
     max-width: 70rem;
-    margin-bottom: 1.6rem;
-    padding: 0;
+    margin-bottom: 1.1rem;
+    padding: 0 0 .5rem;
     border: 0;
     border-radius: 0;
     background: transparent;
