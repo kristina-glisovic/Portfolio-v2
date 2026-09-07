@@ -992,11 +992,16 @@
           <p class="contact-support">A short project overview, approximate timeline and any useful links are enough to get started.</p>
         </div>
 
-        <form class="contact-form-editorial reveal reveal-delay-2" method="post" novalidate data-contact-form data-contact-endpoint="" data-contact-endpoint-status="unconfigured">
+        <form class="contact-form-editorial reveal reveal-delay-2" method="post" novalidate data-contact-form data-contact-endpoint="/api/contact" data-contact-endpoint-status="configured">
           <header class="contact-form-header">
             <h3>Send a project inquiry</h3>
             <p>Share the essentials below and I’ll reply personally.</p>
           </header>
+
+          <div class="contact-honeypot" aria-hidden="true">
+            <label for="contact-website">Website</label>
+            <input id="contact-website" name="website" type="text" autocomplete="off" tabindex="-1" />
+          </div>
 
           <div class="contact-form-grid">
             <div class="contact-field">

@@ -124,7 +124,8 @@
       "recognition2024": "https://www.its.edu.rs/2026/01/15/its-izabrao-studenta-generacije-i-studente-generacije-na-studijskim-programima-za-2024-25-godinu/"
     },
     "contactForm": {
-      "endpointStatus": "unconfigured"
+      "endpointStatus": "configured",
+      "endpoint": "/api/contact"
     }
   },
   "locales": {

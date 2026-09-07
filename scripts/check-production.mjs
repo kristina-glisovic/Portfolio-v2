@@ -72,15 +72,18 @@ const contactFormConfig = content.shared?.contactForm;
 if (contactFormConfig?.endpointStatus !== 'configured') {
   fail('shared.contactForm.endpointStatus is not "configured"; the inquiry form cannot launch without a real HTTPS endpoint');
 }
-let contactEndpoint;
-try {
-  contactEndpoint = new URL(contactFormConfig.endpoint);
-} catch {
-  fail('shared.contactForm.endpoint is not a valid absolute URL');
-}
-if (contactEndpoint.protocol !== 'https:') fail('the contact form endpoint must use HTTPS');
-if (contactEndpoint.hostname === 'example.com' || contactEndpoint.hostname.endsWith('.example.com')) {
-  fail('example.com cannot be used as the contact form endpoint');
+const contactEndpoint = contactFormConfig.endpoint;
+if (contactEndpoint !== '/api/contact') {
+  let contactEndpointUrl;
+  try {
+    contactEndpointUrl = new URL(contactEndpoint);
+  } catch {
+    fail('shared.contactForm.endpoint must be /api/contact or a valid absolute URL');
+  }
+  if (contactEndpointUrl.protocol !== 'https:') fail('the contact form endpoint must use HTTPS');
+  if (contactEndpointUrl.hostname === 'example.com' || contactEndpointUrl.hostname.endsWith('.example.com')) {
+    fail('example.com cannot be used as the contact form endpoint');
+  }
 }
 if (content.shared?.site?.originStatus !== 'configured') {
   fail('shared.site.originStatus is not "configured"; placeholder mode is intentionally not launch-ready');
@@ -108,10 +111,17 @@ const pages = Object.fromEntries(await Promise.all(Object.entries(routes).map(as
   locale,
   await readFile(resolve(rootDir, route.file), 'utf8')
 ])));
-const [mainJs, template] = await Promise.all([
+const [mainJs, template, workerSource] = await Promise.all([
   readFile(resolve(rootDir, 'assets/main.js'), 'utf8'),
-  readFile(resolve(rootDir, 'src/template.html'), 'utf8')
+  readFile(resolve(rootDir, 'src/template.html'), 'utf8'),
+  readFile(resolve(rootDir, 'worker/index.js'), 'utf8')
 ]);
+if (contactEndpoint === '/api/contact'
+  && (!workerSource.includes("const contactPath = '/api/contact'")
+    || !workerSource.includes('env.RESEND_API_KEY')
+    || !workerSource.includes('https://api.resend.com/emails'))) {
+  fail('the configured same-origin contact endpoint is not backed by the expected Worker implementation');
+}
 const robots = await readFile(resolve(rootDir, 'robots.txt'), 'utf8');
 const sitemap = await readFile(resolve(rootDir, 'sitemap.xml'), 'utf8').catch(() => fail('sitemap.xml is missing'));
 const notFound = await readFile(resolve(rootDir, '404.html'), 'utf8').catch(() => fail('404.html is missing'));
@@ -161,7 +171,7 @@ for (const [locale, route] of Object.entries(routes)) {
   if (/href="#"/.test(html)) fail(`${route.file} contains a placeholder href`);
   if (/handleFormSubmit|Message Sent!|Client Name|Company Name/i.test(html)) fail(`${route.file} contains placeholder or simulated form/proof content`);
   const contactForm = html.match(/<form\b[^>]*\bdata-contact-form[^>]*>/i)?.[0];
-  if (!contactForm || !contactForm.includes(`data-contact-endpoint="${contactEndpoint.href}"`)) {
+  if (!contactForm || !contactForm.includes(`data-contact-endpoint="${contactEndpoint}"`)) {
     fail(`${route.file} does not contain the configured contact form endpoint`);
   }
   if (/<section\b[^>]*\bid="(?:skills|certificates)"/i.test(html)) {

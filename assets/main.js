@@ -715,6 +715,8 @@
       const submitLabel = submit?.querySelector('span');
       const status = form.querySelector('[data-contact-status]');
       const endpoint = form.dataset.contactEndpoint?.trim() || '';
+      const locale = document.documentElement.lang.toLowerCase().startsWith('sr') ? 'sr' : 'en';
+      let submitting = false;
 
       submit?.removeAttribute('disabled');
 
@@ -765,6 +767,7 @@
 
       form.addEventListener('submit', async event => {
         event.preventDefault();
+        if (submitting) return;
         const results = fields.map(validateField);
         const firstInvalid = fields[results.findIndex(result => !result)];
         if (firstInvalid) {
@@ -777,24 +780,30 @@
           return;
         }
 
+        submitting = true;
         submit?.setAttribute('disabled', '');
         submit?.setAttribute('aria-disabled', 'true');
         if (submitLabel) submitLabel.textContent = submit.dataset.labelSending || '';
         setStatus('', 'pending');
 
         try {
+          const payload = Object.fromEntries(new FormData(form));
+          payload.locale = locale;
           const response = await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(Object.fromEntries(new FormData(form)))
+            credentials: 'same-origin',
+            body: JSON.stringify(payload)
           });
-          if (!response.ok) throw new Error(`Contact endpoint returned ${response.status}`);
+          const result = await response.json().catch(() => null);
+          if (!response.ok || result?.ok !== true) throw new Error('Contact request was not accepted');
           form.reset();
           fields.forEach(clearFieldError);
           setStatus(status?.dataset.messageSuccess || '', 'success');
         } catch {
           setStatus(status?.dataset.messageError || '', 'error');
         } finally {
+          submitting = false;
           submit?.removeAttribute('disabled');
           submit?.removeAttribute('aria-disabled');
           if (submitLabel) submitLabel.textContent = submit.dataset.labelDefault || '';

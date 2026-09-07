@@ -80,6 +80,6 @@ The build fails instead of falling back to English when an enabled locale is inc
 
 ## Contact
 
-Direct email remains available through `mailto:hello@kristinaglisovic.dev`. The project-inquiry form is implemented in frontend-preview mode and cannot report success until a real HTTPS endpoint accepts the request. See `CONTACT_FORM_BACKEND.md` for the backend contract and configuration steps.
+Direct email remains available through `mailto:hello@kristinaglisovic.dev`. The project-inquiry form posts to the same-origin Cloudflare Worker endpoint `/api/contact`; the Worker validates the request and sends it through Resend using the `RESEND_API_KEY` Worker secret. The frontend reports success only after the provider accepts the request. See `CONTACT_FORM_BACKEND.md` for the security, rate-limit and live-test requirements.
 
 See [LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md) for the final deployment checklist and host configuration requirements.

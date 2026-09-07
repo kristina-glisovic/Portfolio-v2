@@ -138,6 +138,7 @@ function getContactFormEndpoint(content) {
   if (typeof config.endpoint !== 'string' || !config.endpoint.trim()) {
     fail('shared.contactForm.endpoint is required when the contact form is configured');
   }
+  if (config.endpoint === '/api/contact') return config.endpoint;
   let endpoint;
   try {
     endpoint = new URL(config.endpoint);

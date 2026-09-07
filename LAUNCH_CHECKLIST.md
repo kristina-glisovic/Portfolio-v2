@@ -5,7 +5,8 @@
 - [ ] Confirm the final HTTPS domain and canonical hostname (`www` or non-`www`).
 - [ ] Set `shared.site.origin` in `src/content.json` to that exact origin.
 - [ ] Set `shared.site.originStatus` to `configured`.
-- [ ] Configure `shared.contactForm` with the real HTTPS endpoint described in `CONTACT_FORM_BACKEND.md`.
+- [ ] Confirm the `/api/contact` Worker route is deployed, `RESEND_API_KEY` is configured as a Worker secret and the Resend sending domain is verified.
+- [ ] Configure a Cloudflare-native rate limit for `POST /api/contact`.
 - [ ] Run `npm run build`.
 - [ ] Run `npm run check`.
 - [ ] Run `npm run check:production`.
@@ -44,7 +45,7 @@ Any Content Security Policy must be tested against the final configured producti
 - [ ] Test every navigation hash and footer link.
 - [ ] Open and close the mobile menu with pointer, keyboard and Escape.
 - [ ] Test the Contact email link.
-- [ ] Configure and test the real Contact form HTTPS endpoint.
+- [ ] Submit one EN and one SR inquiry and verify delivery, sender and Reply-To behavior.
 - [ ] Open MyStar and both ITS verification links.
 - [ ] Confirm favicon and Open Graph previews load.
 - [ ] Inspect canonical and reciprocal hreflang on every enabled locale (currently EN and SR; DE remains disabled until approved).
