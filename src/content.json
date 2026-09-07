@@ -942,7 +942,7 @@
           },
           {
             "id": "status",
-            "label": "Aktivan / Kontinuiran rad"
+            "label": "Kontinuiran rad"
           }
         ],
         "ownership": "Samostalni razvoj · Izgrađeno od početka",
