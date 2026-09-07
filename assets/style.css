@@ -9578,6 +9578,7 @@ body {
     background: transparent;
     box-shadow: none;
     backdrop-filter: none;
+    overflow: visible;
 }
 
 .hero-title::before,
