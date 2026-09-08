@@ -1,0 +1,57 @@
+/* Runtime-added line wrappers must be styled before the deferred stylesheet arrives. */
+.scroll-line-reveal.is-line-enhanced {
+    display: grid;
+    gap: .22em;
+    align-content: start;
+}
+
+.scroll-reveal-line {
+    --line-progress: 0;
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
+    padding-inline-end: .18em;
+    margin-inline-end: -.18em;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    transform: translate3d(0, calc((1 - var(--line-progress)) * 8px), 0);
+    opacity: calc(.74 + (var(--line-progress) * .26));
+    transition: transform .36s var(--ease), opacity .36s var(--ease);
+    will-change: transform, opacity;
+}
+
+.scroll-reveal-line-base,
+.scroll-reveal-line-ink {
+    display: block;
+    line-height: inherit;
+    padding-inline-end: .02em;
+    white-space: inherit;
+    overflow-wrap: inherit;
+    word-break: inherit;
+}
+
+.scroll-reveal-line strong,
+.scroll-reveal-line-base strong,
+.scroll-reveal-line-ink strong {
+    font-weight: 700;
+    color: inherit;
+}
+
+.scroll-reveal-line-base {
+    color: var(--line-reveal-muted);
+}
+
+.scroll-reveal-line-ink {
+    position: absolute;
+    inset: 0;
+    color: var(--line-reveal-ink);
+    opacity: var(--line-progress);
+    filter: blur(calc((1 - var(--line-progress)) * 1.8px));
+    text-shadow: 0 0 calc(var(--line-progress) * 8px) var(--line-reveal-glow);
+    transition: opacity .32s var(--ease), filter .32s var(--ease), text-shadow .32s var(--ease);
+    pointer-events: none;
+}

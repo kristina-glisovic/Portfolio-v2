@@ -45,8 +45,13 @@
   {{#if seo.configured}}
   <script type="application/ld+json">{{json:seo.jsonLd}}</script>
   {{/if}}
-  <link rel="stylesheet" href="{{assetPrefix}}devices.min.css">
-  <link rel="stylesheet" href="{{assetPrefix}}style.css?v=20260901-mobile-nav-1">
+  <style data-critical-css>{{criticalCss}}</style>
+  <link rel="preload" href="{{assetPrefix}}style.css?v=20260901-mobile-nav-1" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="{{assetPrefix}}devices.min.css" media="print" onload="this.onload=null;this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="{{assetPrefix}}style.css?v=20260901-mobile-nav-1">
+    <link rel="stylesheet" href="{{assetPrefix}}devices.min.css">
+  </noscript>
 </head>
 <body>
 
@@ -973,7 +978,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════════════════════════════════ -->
-  <script src="{{assetPrefix}}main.js?v=20260901-mobile-nav-1"></script>
+  <script src="{{assetPrefix}}main.js?v=20260901-mobile-nav-1" defer></script>
 
 </body>
 </html>

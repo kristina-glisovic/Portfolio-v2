@@ -1,10 +1,14 @@
 import { access, mkdir, readFile, unlink, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const templatePath = resolve(rootDir, 'src/template.html');
 const contentPath = resolve(rootDir, 'src/content.json');
+const criticalCssPath = resolve(rootDir, 'assets/critical.css');
+const criticalRuntimeCssPath = resolve(rootDir, 'assets/critical-runtime.css');
+const criticalCssSourceHashPath = resolve(rootDir, 'assets/critical-css-source.sha256');
 const checkOnly = process.argv.includes('--check');
 let localeDefinitions = [];
 let enabledLocaleDefinitions = [];
@@ -501,7 +505,7 @@ ${slides}
 `;
 }
 
-function render(template, locale, content) {
+function render(template, locale, content, criticalCss) {
   const localeContent = content.locales[locale];
   const seo = buildSeoContext(locale, content);
   const context = { ...localeContent, shared: content.shared, seo };
@@ -514,6 +518,7 @@ function render(template, locale, content) {
   html = html.replace('{{localeMenu:mobile}}', renderLocaleMenu(locale, context, 'mobile'));
   html = html.replace('{{testimonialsSection}}', renderTestimonials(localeContent, locale));
   html = html.replaceAll('{{contactFormEndpoint}}', escapeHtml(getContactFormEndpoint(content)));
+  html = html.replace('{{criticalCss}}', criticalCss);
   html = html.replace(/<([a-z][\w-]*)([^>]*?)\sdata-content="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/gi,
     (_, tag, before, key, after) => `<${tag}${before}${after}>${escapeHtml(getPath(context, key))}</${tag}>`);
   html = applyAttributeDirective(html, 'aria-label', 'aria-label', context);
@@ -536,6 +541,17 @@ function validateGeneratedHtml(html, locale, content) {
   if (!new RegExp(`<html lang="${localeDefinition.htmlLang}"`).test(html)) fail(`${locale}: incorrect html lang`);
   if (!/<title>\s*[^<]+\s*<\/title>/.test(html)) fail(`${locale}: missing title`);
   if (!/<meta name="description" content="[^"]+"/.test(html)) fail(`${locale}: missing meta description`);
+  if (!/<style data-critical-css>[\s\S]+<\/style>/.test(html)) fail(`${locale}: missing inline critical CSS`);
+  if (!/<link rel="preload" href="[^"]*style\.css[^\"]*" as="style" onload="this\.onload=null;this\.rel='stylesheet'">/.test(html)) {
+    fail(`${locale}: main stylesheet is not loaded through the non-blocking preload strategy`);
+  }
+  if (!/<link rel="stylesheet" href="[^"]*devices\.min\.css" media="print" onload="this\.onload=null;this\.media='all'">/.test(html)) {
+    fail(`${locale}: device stylesheet is not loaded through the non-blocking media strategy`);
+  }
+  if (!/<noscript>[\s\S]*?<link rel="stylesheet" href="[^"]*style\.css[^\"]*">[\s\S]*?<link rel="stylesheet" href="[^"]*devices\.min\.css">[\s\S]*?<\/noscript>/.test(html)) {
+    fail(`${locale}: non-blocking stylesheets are missing their no-script fallback`);
+  }
+  if (!/<script src="[^"]*main\.js[^\"]*" defer><\/script>/.test(html)) fail(`${locale}: main JavaScript must use defer`);
 
   const seo = buildSeoContext(locale, content);
   const head = html.match(/<head>([\s\S]*?)<\/head>/)?.[1] || '';
@@ -757,11 +773,20 @@ function validateCrawlFiles(robots, sitemap, content) {
   }
 }
 
-const [template, contentRaw, mainJs] = await Promise.all([
+const [template, contentRaw, mainJs, styleCss, criticalCssBase, criticalCssRuntime, criticalCssSourceHash] = await Promise.all([
   readFile(templatePath, 'utf8'),
   readFile(contentPath, 'utf8'),
-  readFile(resolve(rootDir, 'assets/main.js'), 'utf8')
+  readFile(resolve(rootDir, 'assets/main.js'), 'utf8'),
+  readFile(resolve(rootDir, 'assets/style.css'), 'utf8'),
+  readFile(criticalCssPath, 'utf8'),
+  readFile(criticalRuntimeCssPath, 'utf8'),
+  readFile(criticalCssSourceHashPath, 'utf8')
 ]);
+const currentStyleCssHash = createHash('sha256').update(styleCss).digest('hex');
+if (currentStyleCssHash !== criticalCssSourceHash.trim()) {
+  fail('assets/critical.css is stale; regenerate it from assets/style.css and update assets/critical-css-source.sha256');
+}
+const criticalCss = `${criticalCssBase}\n${criticalCssRuntime}`;
 const content = JSON.parse(contentRaw);
 if (!content.shared || !content.locales) fail('Required shared and locale content objects are missing');
 validateAndConfigureLocales(content);
@@ -787,7 +812,7 @@ if (content.shared.site.originStatus === 'configured') {
   console.warn(`SEO pre-launch mode active: configure shared.site.origin before launch (current value: ${content.shared.site.origin}).`);
 }
 
-const generated = Object.fromEntries(localeOrder.map(locale => [locale, render(template, locale, content)]));
+const generated = Object.fromEntries(localeOrder.map(locale => [locale, render(template, locale, content, criticalCss)]));
 const robots = renderRobots(content);
 const sitemap = renderSitemap(content);
 await validateRequiredSeoAssets(content);
