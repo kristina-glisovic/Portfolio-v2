@@ -4543,8 +4543,20 @@ ul, ol { list-style: none; }
 .footer { padding-block: var(--space-7); border-top: 1px solid var(--border); background: var(--bg-0); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); flex-wrap: wrap; }
 .footer-copy { font-size: .8125rem; color: var(--t3); }
-.footer-copy a { color: var(--a1); transition: color .2s; }
-.footer-copy a:hover { color: var(--a2); }
+.footer-copy a {
+    color: var(--a1);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: .18em;
+    text-decoration-color: currentColor;
+    text-decoration-skip-ink: auto;
+    transition: color .2s, text-decoration-thickness .2s, text-underline-offset .2s;
+}
+.footer-copy a:hover {
+    color: var(--a2);
+    text-decoration-thickness: 2px;
+    text-underline-offset: .22em;
+}
 .footer-links { display: flex; gap: var(--space-6); }
 .footer-links a { font-size: .8125rem; color: var(--t3); transition: color .25s; }
 .footer-links a:hover { color: var(--t1); }
