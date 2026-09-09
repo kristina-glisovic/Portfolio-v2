@@ -247,28 +247,34 @@
       return navLinksBar.scrollWidth > availableLinkWidth;
     }
 
-    function syncDesktopNavFit() {
-      if (!navInner) return;
-
-      navInner.classList.remove('nav-fit-compact', 'nav-fit-tight');
-
-      if (window.innerWidth <= 860 || !navLinksBar || !navCta) return;
-
-      if (desktopNavNeedsMoreSpace()) {
-        navInner.classList.add('nav-fit-compact');
-      }
-
-      if (desktopNavNeedsMoreSpace()) {
-        navInner.classList.add('nav-fit-tight');
-      }
-    }
-
     function requestDesktopNavFit() {
       if (navFitFrame) return;
 
       navFitFrame = requestAnimationFrame(() => {
-        syncDesktopNavFit();
-        navFitFrame = 0;
+        if (!navInner) {
+          navFitFrame = 0;
+          return;
+        }
+
+        navInner.classList.remove('nav-fit-compact', 'nav-fit-tight');
+
+        if (window.innerWidth <= 1180 || !navLinksBar || !navCta) {
+          navFitFrame = 0;
+          return;
+        }
+
+        navFitFrame = requestAnimationFrame(() => {
+          if (!desktopNavNeedsMoreSpace()) {
+            navFitFrame = 0;
+            return;
+          }
+
+          navInner.classList.add('nav-fit-compact');
+          navFitFrame = requestAnimationFrame(() => {
+            if (desktopNavNeedsMoreSpace()) navInner.classList.add('nav-fit-tight');
+            navFitFrame = 0;
+          });
+        });
       });
     }
 
@@ -404,7 +410,13 @@
     requestDesktopNavFit();
 
     if (navInner) {
-      const navResizeObserver = new ResizeObserver(requestDesktopNavFit);
+      let observedNavWidth = 0;
+      const navResizeObserver = new ResizeObserver(entries => {
+        const nextWidth = entries[0]?.contentRect.width || 0;
+        if (Math.abs(nextWidth - observedNavWidth) < 0.5) return;
+        observedNavWidth = nextWidth;
+        requestDesktopNavFit();
+      });
       navResizeObserver.observe(navInner);
     }
 
@@ -476,16 +488,23 @@
 
         const viewportHeight = window.innerHeight || 1;
 
-        premiumDividers.forEach(divider => {
+        const dividerStates = premiumDividers.map(divider => {
           const rect = divider.getBoundingClientRect();
           const dividerMid = rect.top + (rect.height * 0.5);
           const normalized = clamp((dividerMid - (viewportHeight * 0.5)) / viewportHeight, -1, 1);
-          const strength = 1 - clamp(Math.abs(normalized) * 1.9, 0, 1);
           const travel = clamp(0.5 - (normalized * 0.72), 0, 1);
-          const shellShift = -normalized * 24;
-          const lineShift = -normalized * 10;
-          const lineDrift = (travel - 0.5) * 22;
 
+          return {
+            divider,
+            strength: 1 - clamp(Math.abs(normalized) * 1.9, 0, 1),
+            travel,
+            shellShift: -normalized * 24,
+            lineShift: -normalized * 10,
+            lineDrift: (travel - 0.5) * 22
+          };
+        });
+
+        dividerStates.forEach(({ divider, strength, travel, shellShift, lineShift, lineDrift }) => {
           divider.style.setProperty('--divider-strength', strength.toFixed(3));
           divider.style.setProperty('--divider-travel', travel.toFixed(3));
           divider.style.setProperty('--divider-shell-shift', `${shellShift.toFixed(2)}px`);
@@ -526,12 +545,13 @@
       const end = viewportHeight * 0.5;
       const distance = Math.max(start - end, 1);
 
-      scrollRevealLines.forEach(line => {
+      const lineStates = scrollRevealLines.map(line => {
         const rect = line.getBoundingClientRect();
         const anchor = rect.top + (rect.height * 0.5);
-        const progress = Math.max(0, Math.min(1, (start - anchor) / distance));
-        setScrollRevealProgress(line, progress);
+        return { line, progress: Math.max(0, Math.min(1, (start - anchor) / distance)) };
       });
+
+      lineStates.forEach(({ line, progress }) => setScrollRevealProgress(line, progress));
     };
 
     let scrollRevealFrame = 0;
@@ -588,7 +608,8 @@
         if (!viewport) return;
         const activeSlide = slides[currentIndex];
         const activeHeight = activeSlide.offsetHeight;
-        if (activeHeight > 0) viewport.style.height = `${activeHeight}px`;
+        const nextHeight = `${activeHeight}px`;
+        if (activeHeight > 0 && viewport.style.height !== nextHeight) viewport.style.height = nextHeight;
       };
 
       const requestActiveHeightSync = () => {
@@ -869,13 +890,8 @@
         : '';
     }
 
-    function splitStaticTextIntoLines(element, text) {
+    function createStaticLineMeasurement(element, text) {
       const width = Math.round(element.getBoundingClientRect().width);
-
-      if (!text || width <= 0) {
-        return text ? [text] : [];
-      }
-
       const computedStyle = window.getComputedStyle(element);
       const measure = document.createElement('div');
 
@@ -913,7 +929,11 @@
         measure.appendChild(token);
       });
 
-      document.body.appendChild(measure);
+      return { element, measure, text, width };
+    }
+
+    function readStaticLines({ measure, text, width }) {
+      if (!text || width <= 0) return text ? [text] : [];
 
       const lines = [];
       let currentTop = null;
@@ -946,14 +966,10 @@
         lines.push(trimmedLine);
       }
 
-      measure.remove();
       return lines.length ? lines : [text];
     }
 
-    function renderStaticLines(element, value) {
-      const text = normalizeLineText(value);
-      const lines = splitStaticTextIntoLines(element, text);
-
+    function renderStaticLines(element, lines) {
       element.replaceChildren();
       element.classList.add('is-line-enhanced');
 
@@ -975,27 +991,48 @@
       });
     }
 
-    let staticLineRenderFrame = 0;
+    let staticLineReadFrame = 0;
+    let staticLineWriteFrame = 0;
+    let staticLineRerenderPending = false;
 
-    const rerenderStaticLineBlocks = () => {
-      document.querySelectorAll('[data-line-reveal-source]').forEach(element => {
-        renderStaticLines(element, element._lineRevealSourceHtml || '');
+    const prepareStaticLineBlocks = () => {
+      staticLineReadFrame = 0;
+      const measurements = Array.from(document.querySelectorAll('[data-line-reveal-source]'), element => (
+        createStaticLineMeasurement(element, normalizeLineText(element._lineRevealSourceHtml || ''))
+      ));
+      const fragment = document.createDocumentFragment();
+      measurements.forEach(({ measure }) => fragment.appendChild(measure));
+      document.body.appendChild(fragment);
+
+      staticLineWriteFrame = requestAnimationFrame(() => {
+        const renderedLines = measurements.map(measurement => ({
+          element: measurement.element,
+          lines: readStaticLines(measurement)
+        }));
+
+        measurements.forEach(({ measure }) => measure.remove());
+        renderedLines.forEach(({ element, lines }) => renderStaticLines(element, lines));
+        syncScrollRevealMotion();
+        staticLineWriteFrame = 0;
+        if (staticLineRerenderPending) {
+          staticLineRerenderPending = false;
+          requestStaticLineRerender();
+        }
       });
-
-      syncScrollRevealMotion();
-      staticLineRenderFrame = 0;
     };
 
     const requestStaticLineRerender = () => {
-      if (staticLineRenderFrame) return;
-
-      staticLineRenderFrame = requestAnimationFrame(rerenderStaticLineBlocks);
+      if (staticLineReadFrame || staticLineWriteFrame) {
+        staticLineRerenderPending = true;
+        return;
+      }
+      staticLineReadFrame = requestAnimationFrame(prepareStaticLineBlocks);
     };
 
     document.querySelectorAll('[data-line-reveal-source]').forEach(element => {
       element._lineRevealSourceHtml = element.innerHTML;
     });
-    rerenderStaticLineBlocks();
+    requestStaticLineRerender();
 
     window.addEventListener('resize', requestStaticLineRerender);
 
