@@ -12,5 +12,8 @@
     "test:contact": "node --test scripts/contact-endpoint.test.mjs",
     "test:worker": "node --test scripts/locale-routing.test.mjs scripts/contact-endpoint.test.mjs",
     "serve": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.9"
   }
 }

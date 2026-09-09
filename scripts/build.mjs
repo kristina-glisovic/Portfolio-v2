@@ -2,10 +2,17 @@ import { access, mkdir, readFile, unlink, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { transform } from 'esbuild';
 
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const templatePath = resolve(rootDir, 'src/template.html');
 const contentPath = resolve(rootDir, 'src/content.json');
+const sourceStylePath = resolve(rootDir, 'src/style.css');
+const sourceScriptPath = resolve(rootDir, 'src/main.js');
+const sourceDevicesStylePath = resolve(rootDir, 'src/devices.css');
+const outputStylePath = resolve(rootDir, 'assets/style.css');
+const outputScriptPath = resolve(rootDir, 'assets/main.js');
+const outputDevicesStylePath = resolve(rootDir, 'assets/devices.min.css');
 const criticalCssPath = resolve(rootDir, 'assets/critical.css');
 const criticalRuntimeCssPath = resolve(rootDir, 'assets/critical-runtime.css');
 const criticalCssSourceHashPath = resolve(rootDir, 'assets/critical-css-source.sha256');
@@ -20,6 +27,22 @@ const sitemapPath = resolve(rootDir, 'sitemap.xml');
 const fail = message => {
   throw new Error(message);
 };
+
+async function minifyAsset(source, loader, sourcefile) {
+  const result = await transform(source, {
+    loader,
+    minify: true,
+    legalComments: loader === 'css' ? 'inline' : 'none',
+    sourcefile,
+    target: loader === 'js' ? 'es2022' : undefined
+  });
+  return result.code;
+}
+
+async function assertGeneratedAsset(path, expected, label) {
+  const committed = await readFile(path, 'utf8').catch(() => '');
+  if (committed !== expected) fail(`${label} is stale; run npm run build`);
+}
 
 const escapeHtml = value => String(value)
   .replaceAll('&', '&amp;')
@@ -773,18 +796,24 @@ function validateCrawlFiles(robots, sitemap, content) {
   }
 }
 
-const [template, contentRaw, mainJs, styleCss, criticalCssBase, criticalCssRuntime, criticalCssSourceHash] = await Promise.all([
+const [template, contentRaw, mainJsSource, styleCssSource, devicesCssSource, criticalCssBase, criticalCssRuntime, criticalCssSourceHash] = await Promise.all([
   readFile(templatePath, 'utf8'),
   readFile(contentPath, 'utf8'),
-  readFile(resolve(rootDir, 'assets/main.js'), 'utf8'),
-  readFile(resolve(rootDir, 'assets/style.css'), 'utf8'),
+  readFile(sourceScriptPath, 'utf8'),
+  readFile(sourceStylePath, 'utf8'),
+  readFile(sourceDevicesStylePath, 'utf8'),
   readFile(criticalCssPath, 'utf8'),
   readFile(criticalRuntimeCssPath, 'utf8'),
   readFile(criticalCssSourceHashPath, 'utf8')
 ]);
-const currentStyleCssHash = createHash('sha256').update(styleCss).digest('hex');
+const [mainJs, styleCss, devicesCss] = await Promise.all([
+  minifyAsset(mainJsSource, 'js', 'src/main.js'),
+  minifyAsset(styleCssSource, 'css', 'src/style.css'),
+  minifyAsset(devicesCssSource, 'css', 'src/devices.css')
+]);
+const currentStyleCssHash = createHash('sha256').update(styleCssSource).digest('hex');
 if (currentStyleCssHash !== criticalCssSourceHash.trim()) {
-  fail('assets/critical.css is stale; regenerate it from assets/style.css and update assets/critical-css-source.sha256');
+  fail('assets/critical.css is stale; regenerate it from src/style.css and update assets/critical-css-source.sha256');
 }
 const criticalCss = `${criticalCssBase}\n${criticalCssRuntime}`;
 const content = JSON.parse(contentRaw);
@@ -815,6 +844,19 @@ if (content.shared.site.originStatus === 'configured') {
 const generated = Object.fromEntries(localeOrder.map(locale => [locale, render(template, locale, content, criticalCss)]));
 const robots = renderRobots(content);
 const sitemap = renderSitemap(content);
+if (checkOnly) {
+  await Promise.all([
+    assertGeneratedAsset(outputStylePath, styleCss, 'assets/style.css'),
+    assertGeneratedAsset(outputScriptPath, mainJs, 'assets/main.js'),
+    assertGeneratedAsset(outputDevicesStylePath, devicesCss, 'assets/devices.min.css')
+  ]);
+} else {
+  await Promise.all([
+    writeFile(outputStylePath, styleCss),
+    writeFile(outputScriptPath, mainJs),
+    writeFile(outputDevicesStylePath, devicesCss)
+  ]);
+}
 await validateRequiredSeoAssets(content);
 for (const locale of localeOrder) {
   validateGeneratedHtml(generated[locale], locale, content);
@@ -827,7 +869,7 @@ for (const locale of localeOrder.filter(item => item !== defaultLocale)) {
     fail(`Generated ${defaultLocale.toUpperCase()}/${locale.toUpperCase()} DOM structures differ`);
   }
 }
-if (/translations\.json|localStorage\.getItem\(['"]language|localStorage\.setItem\(['"]language/.test(mainJs)) {
+if (/translations\.json|localStorage\.getItem\(['"]language|localStorage\.setItem\(['"]language/.test(mainJsSource)) {
   fail('Production JavaScript still contains runtime localization code');
 }
 

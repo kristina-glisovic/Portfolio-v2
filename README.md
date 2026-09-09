@@ -1,6 +1,6 @@
 # Kristina Glišović — Portfolio
 
-A dependency-free static multilingual portfolio with two currently enabled locales:
+A lightweight static multilingual portfolio with two currently enabled locales:
 
 - `/` — English
 - `/sr/` — Serbian Latin
@@ -9,9 +9,9 @@ German is prepared in `localeConfig` as `/de/`, but remains `enabled: false` and
 
 ## Source of truth
 
-Edit [src/template.html](src/template.html) for shared markup and [src/content.json](src/content.json) for content and site configuration.
+Edit [src/template.html](src/template.html) for shared markup, [src/content.json](src/content.json) for content and site configuration, [src/style.css](src/style.css) for site styles, [src/devices.css](src/devices.css) for the two supported device mockups, and [src/main.js](src/main.js) for browser behavior.
 
-`index.html` and `sr/index.html` are generated production files and are intentionally committed to Git. Do not edit them directly. Only enabled, approved locales produce public HTML.
+`index.html`, `sr/index.html`, `assets/style.css`, `assets/devices.min.css`, and `assets/main.js` are generated production files and are intentionally committed to Git. Do not edit them directly. The build minifies the readable CSS/JavaScript sources while preserving the existing public asset paths. Only enabled, approved locales produce public HTML.
 
 ## Commands
 
@@ -22,7 +22,7 @@ npm run serve             # serve the repository at http://127.0.0.1:4173
 npm run check:production  # validate launch-only domain, SEO and crawl requirements
 ```
 
-Node.js 20 or newer is recommended. The project has no third-party npm dependencies.
+Node.js 20 or newer is recommended. Run `npm ci` after cloning to install the pinned build-time minifier.
 
 ## Before launch
 
