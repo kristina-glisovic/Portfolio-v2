@@ -8862,6 +8862,55 @@ body {
     line-height: 1.65;
 }
 
+.contact-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .35rem 1.1rem;
+    margin-top: 1.15rem;
+}
+
+.contact-social-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    gap: .38rem;
+    color: var(--t1);
+    font-family: var(--ff-d);
+    font-size: .78rem;
+    font-weight: 650;
+    letter-spacing: .04em;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: .2em;
+    text-decoration-color: color-mix(in srgb, currentColor 58%, transparent);
+    text-decoration-skip-ink: auto;
+    transition: color .22s ease, text-decoration-color .22s ease;
+}
+
+.contact-social-link:hover {
+    color: var(--t0);
+    text-decoration-color: var(--a3);
+}
+
+.contact-social-link:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--a3) 72%, white 28%);
+    outline-offset: 4px;
+    border-radius: .15rem;
+}
+
+.contact-social-link-icon {
+    color: color-mix(in srgb, var(--a3) 72%, var(--t1));
+    font-size: .82rem;
+    line-height: 1;
+    transition: transform .22s ease;
+}
+
+.contact-social-link:hover .contact-social-link-icon,
+.contact-social-link:focus-visible .contact-social-link-icon {
+    transform: translate(1px, -1px);
+}
+
 .footer {
     min-height: 6.25rem;
     display: flex;
@@ -8989,6 +9038,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
     .contact-email-link,
+    .contact-social-link,
+    .contact-social-link-icon,
     .footer-copy a,
     .footer-links a {
         transition: none !important;

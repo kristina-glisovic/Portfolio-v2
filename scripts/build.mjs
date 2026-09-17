@@ -201,6 +201,10 @@ function buildSeoContext(locale, content) {
         name: content.shared.name,
         url: defaultUrl,
         jobTitle: localeMeta.schemaJobTitle,
+        sameAs: [
+          content.shared.urls.linkedin,
+          content.shared.urls.instagram
+        ],
         homeLocation: {
           '@type': 'Country',
           name: content.shared.site.country

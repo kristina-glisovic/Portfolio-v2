@@ -873,6 +873,16 @@
           <p class="contact-email-label" data-content="contact.emailLabel"></p>
           <a href="mailto:{{attr:shared.email}}" class="contact-email-link" aria-label="" data-content-aria-label="contact.emailAria">{{text:shared.email}}</a>
           <p class="contact-support" data-content="contact.support"></p>
+          <nav class="contact-social-links" aria-label="" data-content-aria-label="contact.socialAria">
+            <a class="contact-social-link" href="{{attr:shared.urls.linkedin}}" target="_blank" rel="noopener noreferrer">
+              <span>LinkedIn</span>
+              <span class="contact-social-link-icon" aria-hidden="true">↗</span>
+            </a>
+            <a class="contact-social-link" href="{{attr:shared.urls.instagram}}" target="_blank" rel="noopener noreferrer">
+              <span>Instagram</span>
+              <span class="contact-social-link-icon" aria-hidden="true">↗</span>
+            </a>
+          </nav>
         </div>
 
         <form class="contact-form-editorial reveal reveal-delay-2" method="post" novalidate data-contact-form data-contact-endpoint="{{contactFormEndpoint}}" data-contact-endpoint-status="{{text:shared.contactForm.endpointStatus}}">

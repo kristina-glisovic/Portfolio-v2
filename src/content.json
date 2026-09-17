@@ -121,7 +121,9 @@
     "urls": {
       "mystar": "https://mystaroptic.com",
       "recognition2023": "https://www.its.edu.rs/2025/03/18/its-obelezio-svecanu-dodelu-diploma-160-novih-its-diplomaca/",
-      "recognition2024": "https://www.its.edu.rs/2026/01/15/its-izabrao-studenta-generacije-i-studente-generacije-na-studijskim-programima-za-2024-25-godinu/"
+      "recognition2024": "https://www.its.edu.rs/2026/01/15/its-izabrao-studenta-generacije-i-studente-generacije-na-studijskim-programima-za-2024-25-godinu/",
+      "linkedin": "https://www.linkedin.com/in/kristina-glišović",
+      "instagram": "https://www.instagram.com/kristinaglisovic.dev/"
     },
     "contactForm": {
       "endpointStatus": "configured",
@@ -738,6 +740,7 @@
         "intro": "Tell me what you’re building, improving or trying to solve. I’ll respond personally and let you know how I can help.",
         "emailLabel": "Email me directly",
         "emailAria": "Email Kristina at hello@kristinaglisovic.dev",
+        "socialAria": "Social profiles",
         "support": "A short project overview, approximate timeline and any useful links are enough to get started.",
         "form": {
           "title": "Send a project inquiry",
@@ -1437,6 +1440,7 @@
         "intro": "Pišite mi šta razvijate, unapređujete ili pokušavate da rešite. Odgovoriću vam lično i jasno reći kako mogu da pomognem.",
         "emailLabel": "Pišite mi direktno",
         "emailAria": "Pošaljite email Kristini na hello@kristinaglisovic.dev",
+        "socialAria": "Društvene mreže",
         "support": "Za početak su dovoljni kratak opis projekta, okvirni rok i relevantni linkovi.",
         "form": {
           "title": "Pošaljite upit za projekat",
