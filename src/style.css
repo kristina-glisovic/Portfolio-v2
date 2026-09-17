@@ -8893,6 +8893,14 @@ body {
     text-decoration-color: var(--a3);
 }
 
+.contact-social-brand-icon {
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 auto;
+    display: block;
+    color: currentColor;
+}
+
 .contact-social-link:focus-visible {
     outline: 3px solid color-mix(in srgb, var(--a3) 72%, white 28%);
     outline-offset: 4px;
