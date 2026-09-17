@@ -10944,7 +10944,8 @@ html[lang='sr-Latn'] .nav-links a {
     }
 
     .case-study-primary-visual-feature .case-study-device-stage {
-        padding: .6rem;
+        align-items: flex-start;
+        padding: .75rem .5rem 2.55rem;
     }
 
     .case-study-primary-visual-feature .case-study-laptop-shell {
