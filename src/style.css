@@ -10164,7 +10164,17 @@ body {
 }
 
 .case-study-primary-visual-feature .case-study-phone-shell {
-    right: 5%;
+    --case-study-phone-scale: .27;
+    z-index: 2;
+    right: auto;
+    left: calc(50% + clamp(175px, 17vw, 210px));
+    bottom: 1.4rem;
+    width: calc(428px * var(--case-study-phone-scale));
+    height: calc(798px * var(--case-study-phone-scale));
+}
+
+.case-study-primary-visual-feature .case-study-phone-device {
+    transform: translateX(-50%) scale(var(--case-study-phone-scale)) rotate(-1deg);
 }
 
 /* Premium device apertures follow the exact approved screenshot ratios. */
