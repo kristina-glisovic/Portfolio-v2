@@ -5,12 +5,21 @@
     <loc>https://kristinaglisovic.dev/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kristinaglisovic.dev/" />
     <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://kristinaglisovic.dev/sr/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://kristinaglisovic.dev/de/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kristinaglisovic.dev/" />
   </url>
   <url>
     <loc>https://kristinaglisovic.dev/sr/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kristinaglisovic.dev/" />
     <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://kristinaglisovic.dev/sr/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://kristinaglisovic.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kristinaglisovic.dev/" />
+  </url>
+  <url>
+    <loc>https://kristinaglisovic.dev/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kristinaglisovic.dev/" />
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://kristinaglisovic.dev/sr/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://kristinaglisovic.dev/de/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kristinaglisovic.dev/" />
   </url>
 </urlset>

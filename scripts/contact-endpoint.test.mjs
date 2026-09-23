@@ -142,9 +142,19 @@ test('configured production origin rejects an unexpected browser origin', async 
 
 test('invalid locale is rejected instead of being trusted', async () => {
   const { handler, calls } = setup();
-  const response = await submit(handler, { ...validPayload, locale: 'de' });
+  const response = await submit(handler, { ...validPayload, locale: 'fr' });
   assert.equal(response.status, 400);
   assert.equal(calls.length, 0);
+});
+
+test('German subject and email labels are localized', async () => {
+  const { handler, calls } = setup();
+  const response = await submit(handler, { ...validPayload, name: 'Anna', locale: 'de' });
+  assert.equal(response.status, 200);
+  const email = JSON.parse(calls[0].options.body);
+  assert.equal(email.subject, 'Neue Portfolio-Anfrage - Anna');
+  assert.match(email.text, /Projekttyp:/);
+  assert.match(email.text, /Quelle: Portfolio-Kontaktformular/);
 });
 
 test('Serbian subject is localized and user HTML is escaped', async () => {

@@ -12,6 +12,9 @@ const allowedProjectTypes = ['custom-website', 'web-application', 'shopify-ecomm
 const allowedTimelines = ['', 'asap', '1-2-months', '3-6-months', 'flexible'];
 const allowedBudgets = ['', 'under-2500', '2500-5000', '5000-10000', '10000-plus', 'not-sure'];
 const allowedContactFields = new Set(['name', 'email', 'company', 'projectType', 'details', 'timeline', 'budget', 'locale', 'website']);
+const publicContactLocales = new Set(content.localeConfig.locales
+  .filter(locale => locale.enabled && locale.contentStatus === 'approved')
+  .map(locale => locale.id));
 
 const contactResponse = (status, payload, extraHeaders = {}) => new Response(JSON.stringify(payload), {
   status,
@@ -46,17 +49,37 @@ function getContactCopy(locale) {
     const index = values.indexOf(value);
     return form.fields[field].options[index];
   };
-  const sr = locale === 'sr';
-  return {
-    heading: sr ? 'Novi upit sa portfolio sajta' : 'New portfolio inquiry',
-    subjectPrefix: sr ? 'Novi upit sa portfolio sajta' : 'New portfolio inquiry',
-    labels: sr ? {
-      name: 'Ime', email: 'Email', company: 'Kompanija', projectType: 'Tip projekta',
-      timeline: 'Okvirni rok', budget: 'Okvirni budžet', details: 'Poruka', source: 'Izvor',
-    } : {
-      name: 'Name', email: 'Email', company: 'Company', projectType: 'Project type',
-      timeline: 'Timeline', budget: 'Budget', details: 'Message', source: 'Source',
+  const localized = {
+    en: {
+      heading: 'New portfolio inquiry',
+      labels: {
+        name: 'Name', email: 'Email', company: 'Company', projectType: 'Project type',
+        timeline: 'Timeline', budget: 'Budget', details: 'Message', source: 'Source',
+      },
+      sourceValue: 'Portfolio contact form',
     },
+    sr: {
+      heading: 'Novi upit sa portfolio sajta',
+      labels: {
+        name: 'Ime', email: 'Email', company: 'Kompanija', projectType: 'Tip projekta',
+        timeline: 'Okvirni rok', budget: 'Okvirni budžet', details: 'Poruka', source: 'Izvor',
+      },
+      sourceValue: 'Portfolio contact form',
+    },
+    de: {
+      heading: 'Neue Portfolio-Anfrage',
+      labels: {
+        name: 'Name', email: 'E-Mail', company: 'Unternehmen', projectType: 'Projekttyp',
+        timeline: 'Zeitrahmen', budget: 'Budget', details: 'Nachricht', source: 'Quelle',
+      },
+      sourceValue: 'Portfolio-Kontaktformular',
+    },
+  }[locale];
+  return {
+    heading: localized.heading,
+    subjectPrefix: localized.heading,
+    labels: localized.labels,
+    sourceValue: localized.sourceValue,
     projectType: value => optionValue('projectType', allowedProjectTypes, value),
     timeline: value => optionValue('timeline', allowedTimelines.slice(1), value),
     budget: value => optionValue('budget', allowedBudgets.slice(1), value),
@@ -82,7 +105,7 @@ function validateContactPayload(payload) {
   if ([name, email, company, projectType, details, timeline, budget].includes(null)) return null;
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return null;
   if (!allowedProjectTypes.includes(projectType) || !allowedTimelines.includes(timeline) || !allowedBudgets.includes(budget)) return null;
-  if (!['en', 'sr'].includes(locale)) return null;
+  if (!publicContactLocales.has(locale)) return null;
   return { name, email, company, projectType, details, timeline, budget, locale };
 }
 
@@ -116,12 +139,12 @@ function createEmailPayload(data) {
     `${copy.labels.details}:`,
     data.details,
     '',
-    `${copy.labels.source}: Portfolio contact form`,
+    `${copy.labels.source}: ${copy.sourceValue}`,
   ].join('\n');
   const htmlRows = rows.map(([label, value]) => (
     `<tr><th align="left" style="padding:4px 16px 4px 0;color:#667085;font-weight:600;vertical-align:top">${escapeHtml(label)}</th><td style="padding:4px 0;color:#101828">${escapeHtml(value)}</td></tr>`
   )).join('');
-  const html = `<div style="font-family:Arial,sans-serif;line-height:1.6;color:#101828"><h1 style="font-size:22px">${escapeHtml(copy.heading)}</h1><table style="border-collapse:collapse">${htmlRows}</table><h2 style="margin:24px 0 8px;font-size:16px">${escapeHtml(copy.labels.details)}</h2><p style="white-space:pre-wrap">${escapeHtml(data.details)}</p><p style="margin-top:24px;color:#667085;font-size:13px">${escapeHtml(copy.labels.source)}: Portfolio contact form</p></div>`;
+  const html = `<div style="font-family:Arial,sans-serif;line-height:1.6;color:#101828"><h1 style="font-size:22px">${escapeHtml(copy.heading)}</h1><table style="border-collapse:collapse">${htmlRows}</table><h2 style="margin:24px 0 8px;font-size:16px">${escapeHtml(copy.labels.details)}</h2><p style="white-space:pre-wrap">${escapeHtml(data.details)}</p><p style="margin-top:24px;color:#667085;font-size:13px">${escapeHtml(copy.labels.source)}: ${escapeHtml(copy.sourceValue)}</p></div>`;
   return {
     from: contactFrom,
     to: [contactTo],

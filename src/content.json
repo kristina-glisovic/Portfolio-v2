@@ -35,54 +35,10 @@
         "output": "de/index.html",
         "code": "DE",
         "label": "Deutsch",
-        "enabled": false,
-        "contentStatus": "draft"
+        "enabled": true,
+        "contentStatus": "approved"
       }
     ]
-  },
-  "draftLocales": {
-    "de": {
-      "lang": "de",
-      "testimonials": {
-        "verifiedLabel": "Verifizierter Kunde",
-        "entries": [
-          {
-            "id": "vladan-vukanovic",
-            "isDemo": false,
-            "verified": true,
-            "image": "assets/testimonial-vladan-vukanovic.webp",
-            "quote": "Ich habe mit Kristina an unseren beiden Websites, SOHO und Blossom, zusammengearbeitet. Dabei war sie sowohl für das Design als auch für die vollständige Umsetzung verantwortlich.\n\nWas ich an der Zusammenarbeit mit ihr besonders geschätzt habe, ist, dass sie sehr engagiert, schnell und zuverlässig ist, vor allem aber immer bereit ist zu helfen und eine Lösung zu finden. Wenn ich einen zusätzlichen Wunsch hatte oder etwas geändert, angepasst oder erklärt werden musste, war sie jederzeit hilfsbereit.\n\nAm Ende des Projekts hat sie für uns außerdem Video-Tutorials erstellt, in denen sie alles ausführlich erklärt hat, was wir für die weitere Arbeit benötigen. Dadurch wurde es für uns deutlich einfacher, die Websites anschließend selbstständig zu verwalten.\n\nKristina macht ihre Arbeit wirklich sehr gut und die Zusammenarbeit mit ihr ist unkompliziert und angenehm. Ich würde jederzeit wieder mit ihr zusammenarbeiten.",
-            "name": "Vladan Vukanović",
-            "role": "Inhaber von SOHO & Blossom",
-            "company": "SOHO & Blossom",
-            "location": "Belgrad, Serbien",
-            "service": "Web Design & Development"
-          },
-          {
-            "id": "ljiljana-cirovic",
-            "isDemo": false,
-            "verified": true,
-            "quote": "Wir arbeiten seit drei Jahren mit Kristina an der Entwicklung und kontinuierlichen Verbesserung unserer Website My Star Optic zusammen. In dieser Zeit war sie für uns weit mehr als nur die Person, die für die technische Umsetzung der Website verantwortlich war. Sie hat unser Geschäft, die Bedürfnisse unserer Kunden und die Richtung, in die wir unsere Marke weiterentwickeln möchten, wirklich verstanden.\n\nBesonders schätze ich ihre Fähigkeit, eine Idee aufmerksam anzuhören, sie sowohl aus geschäftlicher als auch aus Nutzerperspektive zu betrachten und anschließend eine Lösung zu finden, die funktional, optisch auf die Marke abgestimmt und einfach zu bedienen ist. Sie ist zuverlässig, sehr detailorientiert und immer bereit, sich in neue Herausforderungen einzuarbeiten und eine Lösung zu finden.\n\nDank ihrer Arbeit hat sich unsere Website über die Jahre gemeinsam mit unserem Unternehmen weiterentwickelt. Ich würde Kristina jedem empfehlen, der nicht einfach nur jemanden sucht, der \"eine Website erstellt\", sondern einen Partner, der die Idee versteht und dabei hilft, daraus ein hochwertiges digitales Erlebnis zu machen.",
-            "name": "Ljiljana Ćirović",
-            "role": "Inhaberin und Geschäftsführerin",
-            "company": "Star Optic",
-            "location": "Belgrad, Serbien",
-            "service": "Shopify & E-commerce Development"
-          },
-          {
-            "id": "nikola-asic",
-            "isDemo": false,
-            "verified": true,
-            "quote": "Ich betreibe seit Jahren eine Internetseite mit einem Buchungssystem für die Parkplatzvermietung. Die Zusammenarbeit mit verschiedenen Webdesignern und Programmierern war dabei leider oft sehr schwierig. Häufig hieß es: „Das geht nicht“, oder es wurde immer wieder versucht, mir etwas Neues zu verkaufen.\n\nBis ich auf Kristina gestoßen bin.\n\nSchon im ersten Gespräch hatte ich das Gefühl, dass es bei ihr kein „Das geht nicht“ gibt. Als meine Seite schließlich gehackt wurde, wollten die bisherigen Programmierer mir bereits eine komplett neue Internetseite erstellen, da es ihnen zu aufwendig war, den Fehler zu finden und herauszufinden, wo genau die Seite gehackt worden war.\n\nBei Kristina gab es solche Überlegungen nicht. Sie hat sich direkt an die Arbeit gemacht und das Problem innerhalb kürzester Zeit gelöst.\n\nMittlerweile hat Kristina meine Seite komplett überarbeitet und das Buchungssystem optimiert. Dadurch ist es für mich viel einfacher geworden, die zahlreichen Buchungen zu verwalten und Rechnungen zu erstellen.\n\nIch kann Kristina daher ohne Bedenken weiterempfehlen - ganz egal, ob für einen Kleinunternehmer oder ein größeres Unternehmen. Sie findet für jeden eine passende Lösung und gibt nicht einfach auf, wenn etwas auf den ersten Blick schwierig erscheint.\n\nIch bin wirklich sehr froh, endlich jemanden gefunden zu haben, bei dem ich weiß: Wenn ein Problem auftaucht, findet Kristina eine Lösung.",
-            "name": "Nikola Asić",
-            "role": "Inhaber von Parken2GO",
-            "company": "Parken2GO",
-            "location": "Stuttgart, Deutschland",
-            "service": "Web Development & Booking System Optimization"
-          }
-        ]
-      }
-    }
   },
   "shared": {
     "name": "Kristina Glišović",
@@ -457,81 +413,81 @@
           }
         ]
       },
-    "services": {
-      "label": "Services",
-      "title": "What do you need to build-or improve?",
-      "intro": "From focused websites to complex platforms and online stores, I shape the solution around the problem, the people using it and the way your business works.",
-      "groupLabels": {
-        "bestFor": "Best for",
-        "whatYouGet": "What you get"
-      },
-      "items": [
+      "services": {
+        "label": "Services",
+        "title": "What do you need to build-or improve?",
+        "intro": "From focused websites to complex platforms and online stores, I shape the solution around the problem, the people using it and the way your business works.",
+        "groupLabels": {
+          "bestFor": "Best for",
+          "whatYouGet": "What you get"
+        },
+        "items": [
           {
             "id": "custom-websites",
             "eyebrow": "01 / Websites",
             "title": "Custom Websites & Web Solutions",
-          "description": "Custom websites built around the way your business actually needs to work.",
-          "points": [
-            {
-              "id": "point-1",
-              "label": "New websites or strategic redesigns"
-            },
-            {
-              "id": "point-2",
-              "label": "Production-ready implementation"
-            },
-            {
-              "id": "point-3",
-              "label": "Custom functionality beyond standard templates"
-            }
-          ],
-          "solution": "A polished, scalable website shaped around your real business requirements."
+            "description": "Custom websites built around the way your business actually needs to work.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "New websites or strategic redesigns"
+              },
+              {
+                "id": "point-2",
+                "label": "Production-ready implementation"
+              },
+              {
+                "id": "point-3",
+                "label": "Custom functionality beyond standard templates"
+              }
+            ],
+            "solution": "A polished, scalable website shaped around your real business requirements."
           },
           {
             "id": "web-applications",
             "eyebrow": "02 / Web Products",
             "title": "Web Applications & Custom Platforms",
-          "description": "Interactive digital products built around users, data and workflows.",
+            "description": "Interactive digital products built around users, data and workflows.",
             "points": [
               {
                 "id": "point-1",
-              "label": "Internal tools and operational dashboards"
+                "label": "Internal tools and operational dashboards"
               },
               {
                 "id": "point-2",
-              "label": "Customer portals and data-driven interfaces"
+                "label": "Customer portals and data-driven interfaces"
               },
               {
                 "id": "point-3",
-              "label": "Custom workflows, APIs and platforms"
-            }
-          ],
-          "solution": "A clear, maintainable application shaped around the workflow it needs to support."
+                "label": "Custom workflows, APIs and platforms"
+              }
+            ],
+            "solution": "A clear, maintainable application shaped around the workflow it needs to support."
           },
           {
             "id": "shopify",
             "eyebrow": "03 / E-commerce",
             "title": "Shopify & E-commerce Development",
-          "description": "Online stores designed around customer experience and daily operations.",
+            "description": "Online stores designed around customer experience and daily operations.",
             "points": [
               {
                 "id": "point-1",
-              "label": "Shopify builds, migrations and restructuring"
+                "label": "Shopify builds, migrations and restructuring"
               },
               {
                 "id": "point-2",
-              "label": "UX, custom themes and integrations"
+                "label": "UX, custom themes and integrations"
               },
               {
                 "id": "point-3",
-              "label": "Performance, localization and technical SEO"
-            }
-          ],
-          "solution": "A scalable e-commerce experience built to support selling and managing the store."
+                "label": "Performance, localization and technical SEO"
+              }
+            ],
+            "solution": "A scalable e-commerce experience built to support selling and managing the store."
           }
         ],
         "expertise": {
-        "label": "Applied across every project",
+          "label": "Applied across every project",
           "ariaLabel": "Supporting expertise",
           "items": [
             {
@@ -1157,81 +1113,81 @@
           }
         ]
       },
-    "services": {
-      "label": "Usluge",
-      "title": "Šta želite da izgradite ili unapredite?",
-      "intro": "Od jasnih poslovnih sajtova do kompleksnih platformi i online prodavnica, rešenje oblikujem prema konkretnom problemu, korisnicima i načinu na koji vaše poslovanje funkcioniše.",
-      "groupLabels": {
-        "bestFor": "Najbolje za",
-        "whatYouGet": "Šta dobijate"
-      },
-      "items": [
+      "services": {
+        "label": "Usluge",
+        "title": "Šta želite da izgradite ili unapredite?",
+        "intro": "Od jasnih poslovnih sajtova do kompleksnih platformi i online prodavnica, rešenje oblikujem prema konkretnom problemu, korisnicima i načinu na koji vaše poslovanje funkcioniše.",
+        "groupLabels": {
+          "bestFor": "Najbolje za",
+          "whatYouGet": "Šta dobijate"
+        },
+        "items": [
           {
             "id": "custom-websites",
             "eyebrow": "01 / Sajtovi",
             "title": "Sajtovi i web rešenja po meri",
-          "description": "Sajtovi po meri načina na koji vaše poslovanje zaista treba da funkcioniše.",
-          "points": [
-            {
-              "id": "point-1",
-              "label": "Novi sajtovi ili strateški redizajn"
-            },
-            {
-              "id": "point-2",
-              "label": "Realizacija spremna za produkciju"
-            },
-            {
-              "id": "point-3",
-              "label": "Funkcionalnosti po meri izvan standardnih šablona"
-            }
-          ],
-          "solution": "Promišljen, skalabilan sajt oblikovan prema stvarnim poslovnim zahtevima."
+            "description": "Sajtovi po meri načina na koji vaše poslovanje zaista treba da funkcioniše.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Novi sajtovi ili strateški redizajn"
+              },
+              {
+                "id": "point-2",
+                "label": "Realizacija spremna za produkciju"
+              },
+              {
+                "id": "point-3",
+                "label": "Funkcionalnosti po meri izvan standardnih šablona"
+              }
+            ],
+            "solution": "Promišljen, skalabilan sajt oblikovan prema stvarnim poslovnim zahtevima."
           },
           {
             "id": "web-applications",
             "eyebrow": "02 / Web proizvodi",
             "title": "Web aplikacije i platforme po meri",
-          "description": "Interaktivni digitalni proizvodi oblikovani prema korisnicima, podacima i procesima.",
+            "description": "Interaktivni digitalni proizvodi oblikovani prema korisnicima, podacima i procesima.",
             "points": [
               {
                 "id": "point-1",
-              "label": "Interni alati i operativni dashboardi"
+                "label": "Interni alati i operativni dashboardi"
               },
               {
                 "id": "point-2",
-              "label": "Korisnički portali i interfejsi zasnovani na podacima"
+                "label": "Korisnički portali i interfejsi zasnovani na podacima"
               },
               {
                 "id": "point-3",
-              "label": "Tokovi rada, API integracije i platforme po meri"
-            }
-          ],
-          "solution": "Jasna i održiva aplikacija prilagođena procesu koji treba da podrži."
+                "label": "Tokovi rada, API integracije i platforme po meri"
+              }
+            ],
+            "solution": "Jasna i održiva aplikacija prilagođena procesu koji treba da podrži."
           },
           {
             "id": "shopify",
             "eyebrow": "03 / E-commerce",
             "title": "Razvoj Shopify prodavnica i e-commerce rešenja",
-          "description": "Online prodavnice oblikovane prema iskustvu kupaca i svakodnevnom poslovanju.",
+            "description": "Online prodavnice oblikovane prema iskustvu kupaca i svakodnevnom poslovanju.",
             "points": [
               {
                 "id": "point-1",
-              "label": "Shopify izrada, migracije i reorganizacija"
+                "label": "Shopify izrada, migracije i reorganizacija"
               },
               {
                 "id": "point-2",
-              "label": "UX, teme po meri i integracije"
+                "label": "UX, teme po meri i integracije"
               },
               {
                 "id": "point-3",
-              "label": "Performanse, lokalizacija i tehnički SEO"
-            }
-          ],
-          "solution": "Skalabilno e-commerce rešenje koje podržava prodaju i upravljanje prodavnicom."
+                "label": "Performanse, lokalizacija i tehnički SEO"
+              }
+            ],
+            "solution": "Skalabilno e-commerce rešenje koje podržava prodaju i upravljanje prodavnicom."
           }
         ],
         "expertise": {
-        "label": "Primenjeno u svakom projektu",
+          "label": "Primenjeno u svakom projektu",
           "ariaLabel": "Dodatna ekspertiza",
           "items": [
             {
@@ -1523,6 +1479,706 @@
           {
             "id": "about",
             "label": "O meni"
+          },
+          {
+            "id": "contact",
+            "label": "Kontakt"
+          }
+        ]
+      }
+    },
+    "de": {
+      "lang": "de",
+      "meta": {
+        "title": "Kristina Glišović | Webentwicklerin & Shopify-Spezialistin",
+        "description": "Kristina Glišović entwickelt individuelle Websites, Webanwendungen sowie Shopify- und E-Commerce-Lösungen mit Fokus auf UX, Performance und technische Qualität.",
+        "ogLocale": "de_DE",
+        "ogImageAlt": "Signatur von Kristina Glišović auf dunklem Hintergrund - Webentwicklerin · Shopify-Spezialistin",
+        "schemaLanguage": "de",
+        "schemaJobTitle": "Entwicklerin für Web- und Shopify-Lösungen",
+        "schemaWebsiteName": "Kristina Glišović - Portfolio"
+      },
+      "a11y": {
+        "skip": "Zum Inhalt springen"
+      },
+      "ui": {
+        "menuOpen": "Menü öffnen",
+        "menuClose": "Menü schließen",
+        "languageMenuLabel": "Sprache auswählen",
+        "languageCurrent": "Aktuelle Sprache",
+        "languageUnavailable": "Demnächst"
+      },
+      "nav": {
+        "primaryAria": "Hauptnavigation",
+        "mobileAria": "Mobile Navigation",
+        "cta": "Projekt besprechen",
+        "items": [
+          {
+            "id": "services",
+            "label": "Leistungen"
+          },
+          {
+            "id": "projects",
+            "label": "Projekte"
+          },
+          {
+            "id": "about",
+            "label": "Über mich"
+          },
+          {
+            "id": "experience-education",
+            "label": "Erfahrung & Ausbildung"
+          },
+          {
+            "id": "process",
+            "label": "Ablauf"
+          },
+          {
+            "id": "contact",
+            "label": "Kontakt"
+          }
+        ]
+      },
+      "hero": {
+        "badge": "Verfügbar für neue Projekte",
+        "title": {
+          "role": "Entwicklerin für Weblösungen · Shopify-Spezialistin",
+          "headlineLine1": "Ich entwickle leistungsstarke Websites, Webanwendungen und E-Commerce-Lösungen",
+          "headlineLine2Prefix": "bei denen ",
+          "headlineLine2Emphasis": "jedes Detail zählt."
+        },
+        "description": {
+          "prefix": "Ich konzipiere und entwickle ",
+          "emphasis1": "individuelle Websites, Webanwendungen und Shopify-Shops",
+          "middle": " mit klarem Fokus auf ",
+          "emphasis2": "UX, Performance, technisches SEO und pixelgenaue Umsetzung",
+          "suffix": "."
+        },
+        "ctas": [
+          {
+            "id": "projects",
+            "label": "Ausgewählte Projekte"
+          },
+          {
+            "id": "contact",
+            "label": "Projekt besprechen"
+          }
+        ],
+        "proof": [
+          {
+            "id": "proof-1",
+            "value": "6+ Jahre",
+            "label": "Entwicklungserfahrung"
+          },
+          {
+            "id": "proof-2",
+            "value": "Web + E-Commerce",
+            "label": "Ganzheitliche Entwicklung"
+          },
+          {
+            "id": "proof-3",
+            "value": "Weltweit",
+            "label": "Standort Serbien"
+          }
+        ]
+      },
+      "projects": {
+        "label": "Ausgewähltes Projekt",
+        "title": "MyStar - vom stationären Handel zum E-Commerce",
+        "intro": "Ich habe MyStar von Grund auf als zweisprachigen Shopify-Vertriebskanal von Staroptic für Brillen und Bestellungen von Brillen mit Sehstärke entwickelt.",
+        "metaAria": "Projektmetadaten",
+        "meta": [
+          {
+            "id": "storefront",
+            "label": "Shopify-Storefront"
+          },
+          {
+            "id": "role",
+            "label": "Alleinige Entwicklerin"
+          },
+          {
+            "id": "languages",
+            "label": "Serbisch & Englisch"
+          },
+          {
+            "id": "status",
+            "label": "Live / laufende Betreuung"
+          }
+        ],
+        "ownership": "Alleinige Entwicklerin · Von Grund auf umgesetzt",
+        "snapshot": [
+          {
+            "id": "challenge",
+            "title": "Herausforderung",
+            "copy": "Einen komplexen Brillenkatalog und den optischen Verkaufsprozess in ein klares Online-Erlebnis zu übersetzen."
+          },
+          {
+            "id": "role",
+            "title": "Meine Rolle",
+          "copy": "Shop-Architektur, Shopify- und Frontend-Entwicklung, UX/UI, Lokalisierung, Integrationen und Qualitätssicherung."
+          },
+          {
+            "id": "result",
+            "title": "Ergebnis",
+            "copy": "Ein zweisprachiger, responsiver Shopify-Vertriebskanal mit Online-Bestellung für Brillen mit Sehstärke."
+          }
+        ],
+        "overview": [
+          {
+            "id": "context",
+            "title": "Geschäftlicher Kontext",
+            "copy": "Staroptic hat MyStar als eigenständige Online-Marke mit eigenem Vertriebskanal eingeführt."
+          },
+          {
+            "id": "challenge",
+            "title": "Herausforderung",
+            "copy": "Ein komplexer Brillenkatalog und wesentliche Teile des stationären optischen Verkaufsprozesses brauchten eine klare Online-Struktur."
+          },
+          {
+            "id": "role",
+            "title": "Meine Rolle",
+          "copy": "Ich verantwortete Shop-Architektur, Shopify- und Frontend-Entwicklung, UX/UI, Lokalisierung, technisches SEO, App-Integration, Qualitätssicherung und laufende Verbesserungen."
+          }
+        ],
+        "highlightsAria": "Wichtige Details der Umsetzung",
+        "highlights": [
+          {
+            "id": "highlight-1",
+            "title": "Shop-Architektur",
+            "copy": "Eine klare Struktur verbindet Sonnenbrillen, Brillen mit Sehstärke sowie Damen- und Herrenkollektionen im gesamten Shop."
+          },
+          {
+            "id": "highlight-2",
+            "title": "Produktfindung",
+            "copy": "Kollektionen und Filter helfen Kundinnen und Kunden, den Katalog nach relevanten Brillenmerkmalen einzugrenzen."
+          },
+          {
+            "id": "highlight-3",
+            "title": "UX der Produktseite",
+            "copy": "Preise, Fassungsdetails, Größen und Kaufoptionen sind so strukturiert, dass Unsicherheiten reduziert werden."
+          }
+        ],
+        "prescription": {
+          "label": "Besondere Funktion",
+          "title": "Brillenbestellung mit Sehstärke, abgestimmt auf den realen Verkaufsprozess",
+          "summary": "Ich habe den Bestellablauf einer Drittanbieter-App für Brillen mit Sehstärke an den tatsächlichen Verkaufsprozess von Staroptic angepasst.",
+          "copy": "Ich habe eine Drittanbieter-App integriert und konfiguriert und den Ablauf an die Anforderungen von Staroptic sowie an die Informationen angepasst, die Kundinnen und Kunden bei der Bestellung einer Brille mit Sehstärke benötigen.",
+          "contributionsAria": "Beiträge zur Bestellung mit Sehstärke",
+          "contributions": [
+            {
+              "id": "contribution-1",
+              "label": "App-Integration"
+            },
+            {
+              "id": "contribution-2",
+              "label": "Konfiguration & Anpassung"
+            },
+            {
+              "id": "contribution-3",
+              "label": "UX-Ablauf"
+            },
+            {
+              "id": "contribution-4",
+              "label": "Zusammenarbeit mit dem Optikteam"
+            }
+          ]
+        },
+        "proof": {
+          "label": "Visueller Einblick"
+        },
+        "details": {
+          "title": "Mehr zu den Überlegungen hinter dem Online-Shop",
+          "copy": "Die UX der Bestellung mit Sehstärke wurde gemeinsam mit Mitarbeitenden von Staroptic definiert, damit der Online-Ablauf den realen optischen Verkaufsprozess widerspiegelt.",
+          "expand": "Mehr Details anzeigen",
+          "collapse": "Weniger anzeigen"
+        },
+        "visuals": {
+          "home": {
+            "alt": "Serbische MyStar-Startseite in einer Desktop-Browseransicht",
+            "caption": "Eigener Online-Shop für Staroptic"
+          },
+          "mobile": {
+            "alt": "Responsiver MyStar-Shop auf einem Mobilgerät"
+          },
+          "prescription": {
+            "alt": "MyStar-Oberfläche zur Auswahl der benötigten Sehkorrektur bei einer Brillenbestellung",
+            "caption": "Bestellablauf für Brillen mit Sehstärke"
+          },
+          "collection": {
+            "alt": "MyStar-Kollektion für Damenbrillen mit Sehstärke und Filtern für Farbe, Form und Material",
+            "caption": "Kollektionsarchitektur und Produktfindung"
+          },
+          "product": {
+            "alt": "MyStar-Produktseite für eine Brille mit Sehstärke mit Bildern, Preis und Bestellinformationen",
+            "caption": "Produktinformationen, klar strukturiert gegen Unsicherheiten"
+          }
+        },
+        "outcomes": {
+          "label": "Umgesetzt & laufend betreut",
+          "title": "Entwickelt, veröffentlicht und kontinuierlich weiterentwickelt.",
+          "items": [
+            {
+              "id": "outcome-1",
+              "label": "Aktiver Shopify-Vertriebskanal"
+            },
+            {
+              "id": "outcome-2",
+              "label": "Shop auf Serbisch & Englisch"
+            },
+            {
+              "id": "outcome-3",
+              "label": "Online-Bestellung mit Sehstärke"
+            },
+            {
+              "id": "outcome-4",
+              "label": "Responsive Nutzung auf Desktop und Mobilgeräten"
+            }
+          ]
+        },
+        "capabilitiesAria": "Projektkompetenzen",
+        "capabilities": [
+          {
+            "id": "capability-1",
+            "label": "Shopify-Entwicklung"
+          },
+          {
+            "id": "capability-2",
+            "label": "Frontend-Entwicklung"
+          },
+          {
+            "id": "capability-3",
+            "label": "Shop-Architektur"
+          },
+          {
+            "id": "capability-4",
+            "label": "UX/UI"
+          },
+          {
+            "id": "capability-5",
+            "label": "App-Integration"
+          },
+          {
+            "id": "capability-6",
+            "label": "Lokalisierung"
+          },
+          {
+            "id": "capability-7",
+            "label": "Technisches SEO"
+          }
+        ],
+        "cta": "MyStar besuchen"
+      },
+      "testimonials": {
+        "label": "Kundenstimmen",
+        "title": "So fühlt sich die Zusammenarbeit mit mir an.",
+        "intro": "Kundenstimmen zeigen konkret, wie ich in der Praxis arbeite - von Kommunikation und Prozess bis zum fertigen Ergebnis.",
+        "previousLabel": "Vorherige Kundenstimme",
+        "nextLabel": "Nächste Kundenstimme",
+        "statusTemplate": "Kundenstimme {current} von {total}",
+        "verifiedLabel": "Verifizierter Kunde",
+        "entries": [
+          {
+            "id": "vladan-vukanovic",
+            "isDemo": false,
+            "verified": true,
+            "image": "assets/testimonial-vladan-vukanovic.webp",
+            "quote": "Ich habe mit Kristina an unseren beiden Websites, SOHO und Blossom, zusammengearbeitet. Dabei war sie sowohl für das Design als auch für die vollständige Umsetzung verantwortlich.\n\nWas ich an der Zusammenarbeit mit ihr besonders geschätzt habe, ist, dass sie sehr engagiert, schnell und zuverlässig ist, vor allem aber immer bereit ist zu helfen und eine Lösung zu finden. Wenn ich einen zusätzlichen Wunsch hatte oder etwas geändert, angepasst oder erklärt werden musste, war sie jederzeit hilfsbereit.\n\nAm Ende des Projekts hat sie für uns außerdem Video-Tutorials erstellt, in denen sie alles ausführlich erklärt hat, was wir für die weitere Arbeit benötigen. Dadurch wurde es für uns deutlich einfacher, die Websites anschließend selbstständig zu verwalten.\n\nKristina macht ihre Arbeit wirklich sehr gut und die Zusammenarbeit mit ihr ist unkompliziert und angenehm. Ich würde jederzeit wieder mit ihr zusammenarbeiten.",
+            "name": "Vladan Vukanović",
+            "role": "Inhaber von SOHO & Blossom",
+            "company": "SOHO & Blossom",
+            "location": "Belgrad, Serbien",
+            "service": "Webdesign & Entwicklung"
+          },
+          {
+            "id": "ljiljana-cirovic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "Wir arbeiten seit drei Jahren mit Kristina an der Entwicklung und kontinuierlichen Verbesserung unserer Website My Star Optic zusammen. In dieser Zeit war sie für uns weit mehr als nur die Person, die für die technische Umsetzung der Website verantwortlich war. Sie hat unser Geschäft, die Bedürfnisse unserer Kunden und die Richtung, in die wir unsere Marke weiterentwickeln möchten, wirklich verstanden.\n\nBesonders schätze ich ihre Fähigkeit, eine Idee aufmerksam anzuhören, sie sowohl aus geschäftlicher als auch aus Nutzerperspektive zu betrachten und anschließend eine Lösung zu finden, die funktional, optisch auf die Marke abgestimmt und einfach zu bedienen ist. Sie ist zuverlässig, sehr detailorientiert und immer bereit, sich in neue Herausforderungen einzuarbeiten und eine Lösung zu finden.\n\nDank ihrer Arbeit hat sich unsere Website über die Jahre gemeinsam mit unserem Unternehmen weiterentwickelt. Ich würde Kristina jedem empfehlen, der nicht einfach nur jemanden sucht, der \"eine Website erstellt\", sondern einen Partner, der die Idee versteht und dabei hilft, daraus ein hochwertiges digitales Erlebnis zu machen.",
+            "name": "Ljiljana Ćirović",
+            "role": "Inhaberin und Geschäftsführerin",
+            "company": "Star Optic",
+            "location": "Belgrad, Serbien",
+            "service": "Shopify- und E-Commerce-Entwicklung"
+          },
+          {
+            "id": "nikola-asic",
+            "isDemo": false,
+            "verified": true,
+            "quote": "Ich betreibe seit Jahren eine Internetseite mit einem Buchungssystem für die Parkplatzvermietung. Die Zusammenarbeit mit verschiedenen Webdesignern und Programmierern war dabei leider oft sehr schwierig. Häufig hieß es: „Das geht nicht“, oder es wurde immer wieder versucht, mir etwas Neues zu verkaufen.\n\nBis ich auf Kristina gestoßen bin.\n\nSchon im ersten Gespräch hatte ich das Gefühl, dass es bei ihr kein „Das geht nicht“ gibt. Als meine Seite schließlich gehackt wurde, wollten die bisherigen Programmierer mir bereits eine komplett neue Internetseite erstellen, da es ihnen zu aufwendig war, den Fehler zu finden und herauszufinden, wo genau die Seite gehackt worden war.\n\nBei Kristina gab es solche Überlegungen nicht. Sie hat sich direkt an die Arbeit gemacht und das Problem innerhalb kürzester Zeit gelöst.\n\nMittlerweile hat Kristina meine Seite komplett überarbeitet und das Buchungssystem optimiert. Dadurch ist es für mich viel einfacher geworden, die zahlreichen Buchungen zu verwalten und Rechnungen zu erstellen.\n\nIch kann Kristina daher ohne Bedenken weiterempfehlen - ganz egal, ob für einen Kleinunternehmer oder ein größeres Unternehmen. Sie findet für jeden eine passende Lösung und gibt nicht einfach auf, wenn etwas auf den ersten Blick schwierig erscheint.\n\nIch bin wirklich sehr froh, endlich jemanden gefunden zu haben, bei dem ich weiß: Wenn ein Problem auftaucht, findet Kristina eine Lösung.",
+            "name": "Nikola Asić",
+            "role": "Inhaber von Parken2GO",
+            "company": "Parken2GO",
+            "location": "Stuttgart, Deutschland",
+            "service": "Webentwicklung & Optimierung von Buchungssystemen"
+          }
+        ]
+      },
+      "services": {
+        "label": "Leistungen",
+        "title": "Was möchten Sie entwickeln oder verbessern?",
+        "intro": "Von fokussierten Websites bis zu komplexen Plattformen und Online-Shops: Ich richte die Lösung am Problem, an den Nutzenden und an den Abläufen Ihres Unternehmens aus.",
+        "groupLabels": {
+          "bestFor": "Ideal für",
+          "whatYouGet": "Das erhalten Sie"
+        },
+        "items": [
+          {
+            "id": "custom-websites",
+            "eyebrow": "01 / Websites",
+            "title": "Individuelle Websites & Weblösungen",
+            "description": "Individuelle Websites, die auf die tatsächlichen Anforderungen Ihres Unternehmens abgestimmt sind.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Neue Websites oder strategische Redesigns"
+              },
+              {
+                "id": "point-2",
+                "label": "Produktionsreife Umsetzung"
+              },
+              {
+                "id": "point-3",
+                "label": "Individuelle Funktionen jenseits von Standardvorlagen"
+              }
+            ],
+            "solution": "Eine hochwertige, skalierbare Website, ausgerichtet an Ihren realen geschäftlichen Anforderungen."
+          },
+          {
+            "id": "web-applications",
+            "eyebrow": "02 / Webprodukte",
+            "title": "Webanwendungen & individuelle Plattformen",
+            "description": "Interaktive digitale Produkte, entwickelt rund um Nutzende, Daten und Arbeitsabläufe.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Interne Tools und operative Dashboards"
+              },
+              {
+                "id": "point-2",
+                "label": "Kundenportale und datenbasierte Oberflächen"
+              },
+              {
+                "id": "point-3",
+                "label": "Individuelle Workflows, APIs und Plattformen"
+              }
+            ],
+            "solution": "Eine klare, wartbare Anwendung, abgestimmt auf den Arbeitsablauf, den sie unterstützen soll."
+          },
+          {
+            "id": "shopify",
+            "eyebrow": "03 / E-Commerce",
+            "title": "Shopify- und E-Commerce-Entwicklung",
+            "description": "Online-Shops, ausgerichtet auf Kundenerlebnis und tägliche Abläufe.",
+            "points": [
+              {
+                "id": "point-1",
+                "label": "Shopify-Umsetzungen, Migrationen und Neustrukturierungen"
+              },
+              {
+                "id": "point-2",
+                "label": "UX, individuelle Themes und Integrationen"
+              },
+              {
+                "id": "point-3",
+                "label": "Performance, Lokalisierung und technisches SEO"
+              }
+            ],
+            "solution": "Ein skalierbares E-Commerce-Erlebnis, das Verkauf und tägliche Shop-Verwaltung unterstützt."
+          }
+        ],
+        "expertise": {
+          "label": "In jedem Projekt berücksichtigt",
+          "ariaLabel": "Ergänzende Kompetenzen",
+          "items": [
+            {
+              "id": "ux",
+              "label": "UX/UI-Umsetzung"
+            },
+            {
+              "id": "seo",
+              "label": "Technisches SEO"
+            },
+            {
+              "id": "performance",
+              "label": "Performance-Optimierung"
+            },
+            {
+              "id": "integrations",
+              "label": "Integrationen"
+            },
+            {
+              "id": "localization",
+              "label": "Lokalisierung"
+            },
+            {
+              "id": "qa",
+              "label": "Qualitätssicherung & Veröffentlichung"
+            }
+          ]
+        },
+        "cta": "Projekt besprechen"
+      },
+      "about": {
+        "label": "Warum mit mir arbeiten?",
+        "title": "Durchdachte Entscheidungen, präzise Umsetzung und klare Verantwortung.",
+        "intro": "Ich behalte sowohl das Geschäftsziel als auch die Umsetzung im Blick, stelle früh die richtigen Fragen, erkenne UX- und technische Risiken und führe jede Entscheidung bis zu einem veröffentlichungsreifen Ergebnis.",
+        "portraitAlt": "Porträt von Kristina Glišović",
+        "differentiators": [
+          {
+            "id": "differentiator-1",
+            "title": "Präzision über das Visuelle hinaus",
+            "description": "Visuelle Genauigkeit ist nur ein Teil eines ausgereiften Ergebnisses. Ebenso wichtig sind für mich Inhaltshierarchie, Interaktionszustände, responsives Verhalten und die kleinen Inkonsistenzen, die das Nutzungserlebnis prägen."
+          },
+          {
+            "id": "differentiator-2",
+            "title": "Technische Tiefe über die Oberfläche hinaus",
+            "description": "Ich arbeite über einfache Theme-Konfiguration und visuelle Umsetzung hinaus und berücksichtige Struktur, Daten, Integrationen und Wartbarkeit, damit das fertige Produkt praktisch verwaltet und erweitert werden kann."
+          },
+          {
+            "id": "differentiator-3",
+            "title": "Eine klare Verantwortliche",
+            "description": "Vom Verständnis der Anforderungen und der Planung bis zu Entwicklung, Qualitätssicherung und Veröffentlichung bleibe ich direkt beteiligt. Die Kommunikation bleibt klar, Entscheidungen behalten ihren Kontext und bei Übergaben gehen weniger Details verloren."
+          },
+          {
+            "id": "differentiator-4",
+            "title": "Qualität als Teil der Entwicklung",
+            "description": "Performance, technisches SEO und Barrierefreiheit werden bereits während der Entwicklung berücksichtigt und nicht erst nach Abschluss der Hauptarbeit als letzte Checkliste ergänzt."
+          }
+        ],
+        "credibility": {
+          "emphasis": "6+ Jahre",
+          "remainder": " Erfahrung in Shopify-Agenturen und strukturierten Softwareentwicklungsumgebungen prägen meine Verbindung aus geschäftlichem Verständnis und disziplinierter Umsetzung."
+        }
+      },
+      "credibility": {
+        "label": "Erfahrung & Ausbildung",
+        "title": "Shopify-Spezialisierung, getragen von technischer Tiefe und akademischer Auszeichnung.",
+        "intro": "Mein beruflicher Weg verbindet aktuelle Shopify-Agenturerfahrung mit leitender Verantwortung in der Unternehmenssoftwareentwicklung und einer akademischen Laufbahn mit herausragenden Leistungen und mehrfacher offizieller Anerkennung.",
+        "current": "Aktuell",
+        "present": "Heute",
+        "experienceTitle": "Berufserfahrung",
+        "roles": [
+          {
+            "id": "codersy",
+            "company": "Codersy",
+            "context": "Shopify Plus Partner Agency",
+            "role": "Shopify Developer · Freelance",
+            "start": "Dezember 2024",
+            "description": "In einer Shopify Plus Partner Agency arbeite ich an der Umsetzung von Kunden-Shops, E-Commerce-Entwicklung und Frontend-Implementierung. Dadurch bleibt meine Shopify-Spezialisierung fest in realen Agenturprozessen und Kundenprojekten verankert."
+          },
+          {
+            "id": "bvk",
+            "company": "PUC Belgrade Waterworks & Sewerage",
+            "context": "Softwareentwicklung für Unternehmenssysteme",
+            "progression": [
+              {
+                "id": "current",
+                "role": "Lead Software Developer",
+                "start": "Oktober 2025"
+              },
+              {
+                "id": "previous",
+                "role": "Software Developer",
+                "start": "Oktober 2023",
+                "end": "Oktober 2025"
+              }
+            ],
+            "description": "In einer strukturierten Entwicklungsumgebung für unternehmensweite und geschäftskritische interne Systeme entwickelte ich mich von Software Developer zu Lead Software Developer. Diese Erfahrung steht für langfristige Anwendungsentwicklung, technische Verantwortung und disziplinierte Umsetzung."
+          },
+          {
+            "id": "nelt",
+            "label": "Frühe berufliche Grundlage",
+            "company": "Nelt Group",
+            "role": "Software Developer · Internship",
+            "start": "Februar 2023",
+            "end": "Juli 2023",
+            "description": "Eine frühe Position in der Softwareentwicklung innerhalb eines großen Unternehmens, die praktische Erfahrung mit Geschäftssystemen, strukturierten Teamprozessen und professioneller Softwarebereitstellung vermittelte."
+          }
+        ],
+        "education": {
+          "title": "Ausbildung & akademische Auszeichnungen",
+          "intro": "Eine kontinuierliche Entwicklung von praxisorientierten Grundlagen der Informationstechnologie bis zum Masterabschluss, begleitet von herausragenden akademischen Leistungen und offiziellen Auszeichnungen in zwei Studienzyklen.",
+          "its": {
+            "stage": "Masterstudium",
+            "institution": "ITS - College of Vocational Studies for Information Technologies",
+            "degree": "Masterabschluss in Informationstechnologie",
+            "start": "Oktober 2022",
+            "end": "September 2024",
+            "gpaLabel": "Abschlussnote"
+          },
+          "recognitions": [
+            {
+              "id": "2023",
+              "label": "ITS-Gesamtauszeichnung",
+              "items": [
+                {
+                  "id": "item-1",
+                  "label": "Jahrgangsbeste - ITS"
+                },
+                {
+                  "id": "item-2",
+                  "label": "Beste Studentin im Masterstudiengang Informationstechnologien"
+                },
+                {
+                  "id": "item-3",
+                  "label": "Goldmedaille für akademische Leistungen"
+                }
+              ],
+              "verify": "Auszeichnung prüfen ↗",
+              "verifyAria": "Auszeichnung 2023/24 auf der offiziellen ITS-Website prüfen (wird in einem neuen Tab geöffnet)"
+            },
+            {
+              "id": "2024",
+              "label": "Auszeichnung auf Studiengangebene",
+              "items": [
+                {
+                  "id": "item-1",
+                  "label": "Jahrgangsbeste im Masterstudiengang Informationstechnologien"
+                },
+                {
+                  "id": "item-2",
+                  "label": "Veröffentlichter Notendurchschnitt 9,86"
+                }
+              ],
+              "verify": "Auszeichnung prüfen ↗",
+              "verifyAria": "Auszeichnung 2024/25 auf der offiziellen ITS-Website prüfen (wird in einem neuen Tab geöffnet)"
+            }
+          ],
+          "ict": {
+            "stage": "Akademische Grundlage",
+            "institution": "ICT College of Vocational Studies",
+            "degree": "Bachelor (angewandt) in Elektro- und Informationstechnik, Fachrichtung Informationstechnologie",
+            "start": "Oktober 2019",
+            "end": "September 2022",
+            "description": "Das praxisorientierte Bachelorstudium legte meine Grundlage in Informationstechnologie, Web- und Internettechnologien sowie praktischer Softwareentwicklung, bevor ich mein Masterstudium am ITS begann."
+          }
+        }
+      },
+      "process": {
+        "label": "So arbeiten wir zusammen",
+        "title": "Ein klarer Weg vom ersten Gespräch bis zur Veröffentlichung.",
+        "intro": "Sie wissen jederzeit, was entschieden wird, was als Nächstes ansteht und was ich von Ihnen benötige. Ich halte den Prozess fokussiert und beziehe Sie genau dann ein, wenn Ihr Input wichtig ist.",
+        "steps": [
+          {
+            "id": "step-1",
+            "title": "Kennenlernen & Abstimmung",
+            "description": "Wir beginnen mit einem fokussierten Gespräch über Ihr Unternehmen, Ihre Zielgruppe, Ihre Anforderungen und das Ziel des Projekts. Ich erkenne Prioritäten, Abhängigkeiten und wichtige Rahmenbedingungen früh, damit wir mit einem gemeinsamen Verständnis starten."
+          },
+          {
+            "id": "step-2",
+            "title": "Umfang & technische Richtung",
+            "description": "Gemeinsam bestätigen wir Ergebnisse, Verantwortlichkeiten, Meilensteine und Projektgrenzen. Ich definiere die technische Richtung und kläre, welche Inhalte, Materialien und Zugänge vor Entwicklungsbeginn benötigt werden."
+          },
+          {
+            "id": "step-3",
+            "title": "Design, Entwicklung & Abstimmungen",
+            "description": "Ich überführe die abgestimmte Richtung in funktionierende Oberflächen und Funktionen und treffe UX/UI- sowie Umsetzungsentscheidungen im jeweiligen Kontext. Sie prüfen den Fortschritt an geplanten Punkten, häufig in einer Vorschau- oder Staging-Umgebung, damit Feedback rechtzeitig erfolgt und Überarbeitungen fokussiert bleiben."
+          },
+          {
+            "id": "step-4",
+            "title": "Qualitätssicherung, Veröffentlichung & Übergabe",
+            "description": "Vor der Veröffentlichung teste ich responsives Verhalten, Funktionen und die finale technische Einrichtung auf relevanten Geräten und in passenden Szenarien. Anschließend übernehme oder unterstütze ich die Veröffentlichung und liefere die vereinbarte Übergabe, Dokumentation oder Schulung für die Verwaltung des fertigen Produkts."
+          }
+        ],
+        "support": "Optionale laufende Betreuung und Weiterentwicklung sind nach der Veröffentlichung verfügbar."
+      },
+      "guarantee": {
+        "label": "Mein persönlicher Anspruch",
+        "title": "Für alles, was ich verspreche, stehe ich ein.",
+        "primary": "Ich übernehme persönlich Verantwortung für die Qualität jedes Projekts, das ich liefere - von den Entscheidungen im Prozess bis zu den Details, die das fertige Ergebnis prägen. Die Arbeit soll durchdacht, zuverlässig und für den realen Einsatz bereit sein.",
+        "followup": "Wenn etwas verfeinert werden muss, verfeinere ich es.",
+        "role": "Entwicklerin für Weblösungen · Shopify-Spezialistin",
+        "signatureNote": "Mein persönliches Versprechen für Qualität, klare Kommunikation und konsequente Umsetzung."
+      },
+      "contact": {
+        "label": "Gespräch beginnen",
+        "title": "Sie haben ein Projekt im Kopf? Schreiben Sie mir.",
+        "intro": "Erzählen Sie mir, was Sie entwickeln, verbessern oder lösen möchten. Ich antworte persönlich und sage Ihnen, wie ich helfen kann.",
+        "emailLabel": "Direkt per E-Mail schreiben",
+        "emailAria": "E-Mail an Kristina unter hello@kristinaglisovic.dev senden",
+        "socialAria": "Social-Media-Profile",
+        "support": "Eine kurze Projektübersicht, ein ungefährer Zeitrahmen und hilfreiche Links genügen für den Einstieg.",
+        "form": {
+          "title": "Projektanfrage senden",
+          "intro": "Teilen Sie die wichtigsten Informationen mit, und ich antworte Ihnen persönlich.",
+          "required": "Erforderlich",
+          "optional": "Optional",
+          "fields": {
+            "name": {
+              "label": "Name",
+              "autocomplete": "name"
+            },
+            "email": {
+              "label": "E-Mail",
+              "autocomplete": "email"
+            },
+            "company": {
+              "label": "Unternehmen / Marke",
+              "autocomplete": "organization"
+            },
+            "projectType": {
+              "label": "Wobei benötigen Sie Unterstützung?",
+              "placeholder": "Projekttyp auswählen",
+              "options": [
+                "Individuelle Website",
+                "Webanwendung / Plattform",
+                "Shopify / E-Commerce",
+                "Redesign / Verbesserungen",
+                "Sonstiges"
+              ]
+            },
+            "details": {
+              "label": "Projektdetails",
+              "placeholder": "Eine kurze Übersicht über Ziel, aktuelle Situation und hilfreiche Links."
+            },
+            "timeline": {
+              "label": "Ungefährer Zeitrahmen",
+              "placeholder": "Zeitrahmen auswählen",
+              "options": [
+                "So bald wie möglich",
+                "Innerhalb von 1-2 Monaten",
+                "Innerhalb von 3-6 Monaten",
+                "Flexibel / Noch nicht festgelegt"
+              ]
+            },
+            "budget": {
+              "label": "Budgetrahmen",
+              "placeholder": "Budgetrahmen auswählen",
+              "options": [
+                "Unter 2.500 €",
+                "2.500-5.000 €",
+                "5.000-10.000 €",
+                "Über 10.000 €",
+                "Noch nicht sicher"
+              ]
+            }
+          },
+          "submit": "Projektanfrage senden",
+          "sending": "Anfrage wird gesendet…",
+          "success": "Ihre Anfrage wurde gesendet. Ich antworte Ihnen so bald wie möglich persönlich.",
+          "error": "Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt per E-Mail.",
+          "unavailable": "Online-Anfragen sind noch nicht verbunden. Schreiben Sie mir bitte direkt per E-Mail, um ein Gespräch zu beginnen.",
+          "requiredError": "Dieses Feld ist erforderlich.",
+          "emailError": "Geben Sie eine gültige E-Mail-Adresse ein.",
+          "detailsError": "Bitte ergänzen Sie einige weitere Informationen zum Projekt.",
+          "privacy": "Ihre Angaben werden ausschließlich zur Beantwortung dieser Anfrage verwendet."
+        }
+      },
+      "footer": {
+        "copySuffix": ". Alle Rechte vorbehalten.",
+        "navAria": "Navigation im Footer",
+        "items": [
+          {
+            "id": "projects",
+            "label": "Projekte"
+          },
+          {
+            "id": "services",
+            "label": "Leistungen"
+          },
+          {
+            "id": "about",
+            "label": "Über mich"
           },
           {
             "id": "contact",

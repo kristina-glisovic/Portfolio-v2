@@ -736,7 +736,8 @@
       const submitLabel = submit?.querySelector('span');
       const status = form.querySelector('[data-contact-status]');
       const endpoint = form.dataset.contactEndpoint?.trim() || '';
-      const locale = document.documentElement.lang.toLowerCase().startsWith('sr') ? 'sr' : 'en';
+      const pageLanguage = document.documentElement.lang.toLowerCase();
+      const locale = pageLanguage.startsWith('sr') ? 'sr' : pageLanguage.startsWith('de') ? 'de' : 'en';
       let submitting = false;
 
       submit?.removeAttribute('disabled');

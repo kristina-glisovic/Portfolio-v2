@@ -17,8 +17,8 @@ async function request(path = '/', options = {}, handler = worker) {
   } } });
 }
 
-test('country mapping, disabled DE, missing and invalid country', async () => {
-  for (const [country, status, location] of [['RS', 302, '/sr/'], ['DE', 200], ['US', 200], [undefined, 200], ['invalid', 200]]) {
+test('country mapping, enabled DE, missing and invalid country', async () => {
+  for (const [country, status, location] of [['RS', 302, '/sr/'], ['DE', 302, '/de/'], ['US', 200], [undefined, 200], ['invalid', 200]]) {
     const response = await request('/', { country });
     assert.equal(response.status, status);
     assert.equal(response.headers.get('Set-Cookie'), null);
@@ -36,7 +36,7 @@ test('explicit paths, assets and unsafe methods bypass routing', async () => {
 });
 
 test('manual selection sets exact cookie, retains query and clears intent without looping', async () => {
-  for (const [locale, path] of [['en', '/'], ['sr', '/sr/']]) {
+  for (const [locale, path] of [['en', '/'], ['sr', '/sr/'], ['de', '/de/']]) {
     const response = await request(`${path}?campaign=one&locale=${locale}&tag=two`, { country: 'RS' });
     assert.equal(response.status, 302);
     assert.equal(response.headers.get('Location'), `https://portfolio.test${path}?campaign=one&tag=two`);
@@ -46,11 +46,11 @@ test('manual selection sets exact cookie, retains query and clears intent withou
   }
 });
 
-test('saved preference wins over country; invalid/disabled choices never set cookies', async () => {
+test('saved preference wins over country; invalid choices never set cookies', async () => {
   assert.equal((await request('/', { country: 'RS', cookie: 'en' })).status, 200);
   assert.equal((await request('/', { country: 'US', cookie: 'sr' })).headers.get('Location'), 'https://portfolio.test/sr/');
-  assert.equal((await request('/', { country: 'US', cookie: 'de' })).status, 200);
-  for (const path of ['/?locale=de', '/?locale=https://evil.test', '/?locale=en&locale=sr', '/sr/?locale=en']) {
+  assert.equal((await request('/', { country: 'US', cookie: 'de' })).headers.get('Location'), 'https://portfolio.test/de/');
+  for (const path of ['/?locale=fr', '/?locale=https://evil.test', '/?locale=en&locale=sr', '/sr/?locale=en']) {
     const response = await request(path);
     assert.equal(response.headers.get('Set-Cookie'), null);
     assert.equal(new URL(response.headers.get('Location')).origin, 'https://portfolio.test');
